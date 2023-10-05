@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core
+namespace Vectors.Interfaces
 {
     /// <summary>
     /// A 2x2 (4 element) matrix where each element is a templated type. Nesting is allowed.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core
+namespace Vectors.Interfaces
 {
     /// <summary>
     /// Interface to a single-precision floating point, 3-component vector.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core
+namespace Vectors.Interfaces
 {
     /// <summary>
     /// A double precision floating point, 3-component vector.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core
+namespace Vectors.Interfaces
 {
     /// <summary>
     /// Interace to a double-precision floating point, 4x4 (16 element) matrix.
