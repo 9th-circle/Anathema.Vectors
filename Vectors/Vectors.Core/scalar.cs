@@ -9,7 +9,7 @@ namespace Vectors.Core
     public class scalar
     {
         const float REALLY_SMALL_VALUE = 0.000000001f;    //using float.epsilon is not better - floating point granularity is nonlinear
-        
+        const double EVEN_SMALLER_VALUE = 0.000000000000001;
         //Yes: this sucks. 
 
         public static bool isClose(float x, float y)
@@ -18,7 +18,7 @@ namespace Vectors.Core
         }
         public static bool isClose(double x, double y)
         {
-            return Math.Abs(x - y) <= REALLY_SMALL_VALUE;
+            return Math.Abs(x - y) <= EVEN_SMALLER_VALUE;
         }
     }
 }

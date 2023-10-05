@@ -8,5 +8,6 @@ namespace Vectors.Core
 {
     public class dquat
     {
+
     }
 }
