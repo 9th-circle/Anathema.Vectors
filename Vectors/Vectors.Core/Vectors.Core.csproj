@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>$(DefineConstants);TEMPLATES_ENABLED;SWIZZLES_ENABLED</DefineConstants>
+    <DefineConstants>TRACE;TEMPLATES_ENABLED;SWIZZLES_ENABLED;NESTING_ENABLED</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DefineConstants>$(DefineConstants);TEMPLATES_ENABLED;SWIZZLES_ENABLED</DefineConstants>
+    <DefineConstants>$(DefineConstants);TEMPLATES_ENABLED;SWIZZLES_ENABLED;NESTING_ENABLED</DefineConstants>
   </PropertyGroup>
 
 </Project>
