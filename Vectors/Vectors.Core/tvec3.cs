@@ -196,7 +196,7 @@ namespace Vectors.Core
             return output;
         }
 #endif
-        public T this[int i]
+        public new T this[int i]
         {
             get
             {

@@ -716,7 +716,7 @@ namespace Vectors.Core
         }
 
 #endif
-        public double this[int i]
+        public new double this[int i]
         {
             get
             {

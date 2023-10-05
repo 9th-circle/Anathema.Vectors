@@ -371,7 +371,7 @@ namespace Vectors.Core
 
 #endif
 
-        public float this[int i]
+        public new float this[int i]
         {
             get
             {

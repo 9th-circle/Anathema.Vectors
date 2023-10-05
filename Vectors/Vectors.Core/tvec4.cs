@@ -509,7 +509,7 @@ namespace Vectors.Core
         }
 
 #endif
-        public T this[int i]
+        public new T this[int i]
         {
             get
             {
