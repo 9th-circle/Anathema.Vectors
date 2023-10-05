@@ -12,8 +12,4 @@
     <DefineConstants>$(DefineConstants);TEMPLATES_ENABLED;SWIZZLES_ENABLED</DefineConstants>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Vectors.Interfaces\Vectors.Interfaces.csproj" />
-  </ItemGroup>
-
 </Project>
