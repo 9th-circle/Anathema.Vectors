@@ -9,7 +9,7 @@ namespace Vectors.Core
     /// <summary>
     /// A double-precision floating point, 4x4 (16 element) matrix.
     /// </summary>
-    public class dmat4 : dmat3
+    public class dmat4 : dmat3, idmat4
     {
 
         ///////////////////////////
@@ -111,7 +111,14 @@ namespace Vectors.Core
         //      Transforms       //
         ///////////////////////////
 
-        public new dmat4 transposed
+        public new idmat4 transposed
+        {
+            get
+            {
+                return transposedRaw;
+            }
+        }
+        public new dmat4 transposedRaw
         {
             get
             {
@@ -123,6 +130,7 @@ namespace Vectors.Core
             }
         }
 
+
         ///////////////////////////
         //       Mutators        //
         ///////////////////////////
@@ -132,7 +140,7 @@ namespace Vectors.Core
             assign(transposed);
         }
 
-        public void assign(dmat4 other)
+        public void assign(idmat4 other)
         {
             for (int i = 0; i < other.data.Length && i < data.Length; i++)
                 data[i] = other.data[i];

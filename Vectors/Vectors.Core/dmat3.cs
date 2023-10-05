@@ -9,7 +9,7 @@ namespace Vectors.Core
     /// <summary>
     /// A double-precision floating point, 3x3 (9 element) matrix.
     /// </summary>
-    public class dmat3 : dmat2
+    public class dmat3 : dmat2, idmat3
     {
 
         ///////////////////////////
@@ -117,7 +117,7 @@ namespace Vectors.Core
             assign(transposed);
         }
 
-        public void assign(dmat3 other)
+        public void assign(idmat3 other)
         {
             for (int i = 0; i < other.data.Length && i < data.Length; i++)
                 data[i] = other.data[i];
