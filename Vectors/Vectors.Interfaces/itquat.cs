@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vectors.Core
 {
-    public class tquat<T>
+    public interface itquat<T>
     {
     }
 }

@@ -10,17 +10,8 @@ namespace Vectors.Core
     /// <summary>
     /// A 3x3 (9 element) matrix where each element is a templated type. Nesting is allowed.
     /// </summary>
-    internal class tmat3 <T> : tmat2<T>
+    public interface itmat3 <T> : itmat2<T>
     {
-        public tmat3()
-        {
-            data = new T[9];
-        }
-
-
-
-
-
 
     }
 }
