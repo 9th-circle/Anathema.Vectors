@@ -481,6 +481,32 @@ namespace Vectors.Core
 
             return output;
         }
+        public static tvec4<tvec4<float>> fromFMat4(fmat4 input)
+        {
+            var output = new tvec4<tvec4<float>>();
+
+            output.x.x = input.getValue(0, 0);
+            output.x.y = input.getValue(0, 1);
+            output.x.z = input.getValue(0, 2);
+            output.x.w = input.getValue(0, 3);
+
+            output.y.x = input.getValue(1, 0);
+            output.y.y = input.getValue(1, 1);
+            output.y.z = input.getValue(1, 2);
+            output.y.w = input.getValue(1, 3);
+
+            output.z.x = input.getValue(2, 0);
+            output.z.y = input.getValue(2, 1);
+            output.z.z = input.getValue(2, 2);
+            output.z.w = input.getValue(2, 3);
+
+            output.w.x = input.getValue(3, 0);
+            output.w.y = input.getValue(3, 1);
+            output.w.z = input.getValue(3, 2);
+            output.w.w = input.getValue(3, 3);
+
+            return output;
+        }
 
 #endif
     }

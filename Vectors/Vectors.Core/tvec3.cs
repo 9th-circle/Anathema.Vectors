@@ -177,6 +177,24 @@ namespace Vectors.Core
 
             return output;
         }
+        public static tvec3<tvec3<float>> fromFMat3(fmat3 input)
+        {
+            var output = new tvec3<tvec3<float>>();
+
+            output.x.x = input.getValue(0, 0);
+            output.x.y = input.getValue(0, 1);
+            output.x.z = input.getValue(0, 2);
+
+            output.y.x = input.getValue(1, 0);
+            output.y.y = input.getValue(1, 1);
+            output.y.z = input.getValue(1, 2);
+
+            output.z.x = input.getValue(2, 0);
+            output.z.y = input.getValue(2, 1);
+            output.z.z = input.getValue(2, 2);
+
+            return output;
+        }
 #endif
     }
 }
