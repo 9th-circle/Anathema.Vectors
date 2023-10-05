@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Vectors.Core
 {
     /// <summary>
-    /// A double-precision floating point, 3-component vector.
+    /// A double precision floating point, 3-component vector.
     /// </summary>
     public class dvec3 : dvec2
     {
@@ -50,6 +50,39 @@ namespace Vectors.Core
             z = xyz.z;
         }
 
+
+
+        ///////////////////////////
+        //      Derivations      //
+        ///////////////////////////
+
+
+        public override double length
+        {
+            get
+            {
+                return Math.Sqrt((x * x) + (y * y) + (z * z));
+            }
+        }
+        public new dvec3 normalised
+        {
+            get
+            {
+                return this / length;
+            }
+        }
+
+
+        ///////////////////////////
+        //       Mutators        //
+        ///////////////////////////
+
+        public override void normalise()
+        {
+            double f = length;
+            x /= f;
+            y /= f;
+        }
 
         ///////////////////////////
         //        Swizzles       //
@@ -148,5 +181,154 @@ namespace Vectors.Core
                 x = value.z;
             }
         }
+
+
+        ///////////////////////////
+        //       Operators       //
+        ///////////////////////////
+
+
+        public dvec3 dot(dvec3 b)
+        {
+            return dot(this, b);
+        }
+        public static dvec3 dot(dvec3 a, dvec3 b)
+        {
+            return a * b;
+        }
+
+
+        public dvec3 cross(dvec3 b)
+        {
+            return cross(this, b);
+        }
+        public static dvec3 cross(dvec3 a, dvec3 b)
+        {
+            return new dvec3((a.y * b.z) - (a.z * b.y),
+                                    (a.z * b.x) - (a.x * b.z),
+                                    (a.x * b.y) - (a.y * b.x));
+        }
+
+
+        public static dvec3 operator *(dvec3 a, dvec3 b)
+        {
+            return new dvec3(a.x * b.x, a.y * b.y, a.z * b.z);
+        }
+        public static dvec3 operator /(dvec3 a, dvec3 b)
+        {
+            return new dvec3(a.x / b.x, a.y / b.y, a.z / b.z);
+        }
+        public static dvec3 operator +(dvec3 a, dvec3 b)
+        {
+            return new dvec3(a.x + b.x, a.y + b.y, a.z + b.z);
+        }
+        public static dvec3 operator -(dvec3 a, dvec3 b)
+        {
+            return new dvec3(a.x - b.x, a.y - b.y, a.z - b.z);
+        }
+
+
+
+        public static dvec3 operator *(dvec2 a, dvec3 b)
+        {
+            return new dvec3(a.x * b.x, a.y * b.y, b.z);
+        }
+        public static dvec3 operator /(dvec2 a, dvec3 b)
+        {
+            return new dvec3(a.x / b.x, a.y / b.y, b.z);
+        }
+        public static dvec3 operator +(dvec2 a, dvec3 b)
+        {
+            return new dvec3(a.x + b.x, a.y + b.y, b.z);
+        }
+        public static dvec3 operator -(dvec2 a, dvec3 b)
+        {
+            return new dvec3(a.x - b.x, a.y - b.y, b.z);
+        }
+
+
+
+        public static dvec3 operator *(dvec3 a, dvec2 b)
+        {
+            return new dvec3(a.x * b.x, a.y * b.y, a.z);
+        }
+        public static dvec3 operator /(dvec3 a, dvec2 b)
+        {
+            return new dvec3(a.x / b.x, a.y / b.y, a.z);
+        }
+        public static dvec3 operator +(dvec3 a, dvec2 b)
+        {
+            return new dvec3(a.x + b.x, a.y + b.y, a.z);
+        }
+        public static dvec3 operator -(dvec3 a, dvec2 b)
+        {
+            return new dvec3(a.x - b.x, a.y - b.y, a.z);
+        }
+
+
+        public static dvec3 operator *(dvec3 a, double b)
+        {
+            return new dvec3(a.x * b, a.y * b, a.z * b);
+        }
+        public static dvec3 operator /(dvec3 a, double b)
+        {
+            return new dvec3(a.x / b, a.y / b, a.z / b);
+        }
+        public static dvec3 operator +(dvec3 a, double b)
+        {
+            return new dvec3(a.x + b, a.y + b, a.z + b);
+        }
+        public static dvec3 operator -(dvec3 a, double b)
+        {
+            return new dvec3(a.x - b, a.y - b, a.z - b);
+        }
+
+
+        public static dvec3 operator *(double b, dvec3 a)
+        {
+            return new dvec3(a.x * b, a.y * b, a.z * b);
+        }
+        public static dvec3 operator /(double b, dvec3 a)
+        {
+            return new dvec3(a.x / b, a.y / b, a.z / b);
+        }
+        public static dvec3 operator +(double b, dvec3 a)
+        {
+            return new dvec3(a.x + b, a.y + b, a.z + b);
+        }
+        public static dvec3 operator -(double b, dvec3 a)
+        {
+            return new dvec3(a.x - b, a.y - b, a.z - b);
+        }
+        public static dvec3 operator -(dvec3 a)
+        {
+            return new dvec3(-a.x, -a.y, -a.z);
+        }
+
+
+        public static dvec3 operator *(dvec3 a, fmat3 b)
+        {
+            return new dvec3((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)),
+                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)),
+                                 (a.x * b.getValue(2, 0)) + (a.y * b.getValue(2, 1)) + (a.z * b.getValue(2, 2)));
+        }
+        public static dvec3 operator *(fmat3 b, dvec3 a)
+        {
+            return a * b.transposed;
+        }
+
+        public static dvec3 operator *(dvec3 a, fmat4 b)
+        {
+            return new dvec4(a.x, a.y, a.z, 1.0f) * b;
+        }
+        public static dvec3 operator *(fmat4 b, dvec3 a)
+        {
+            return a * b.transposed;
+        }
+
+
+
+
+
     }
 }
