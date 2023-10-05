@@ -8,5 +8,6 @@ namespace Vectors.Core
 {
     public class fquat
     {
+        //todo: implement quaternions
     }
 }

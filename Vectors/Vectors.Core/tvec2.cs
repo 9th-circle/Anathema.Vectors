@@ -93,11 +93,22 @@ namespace Vectors.Core
         }
 #endif
 
-        public static fvec2 floatTVec2ToFVec2()
+
+        public fvec2 floatTVec2ToFVec2()
         {
+            if (typeof(T) != typeof(float))
+                throw new ArgumentException();
+            
             throw new NotImplementedException();
         }
 
+        public dvec2 doubleTVec2ToDVec2()
+        {
+            if (typeof(T) != typeof(double))
+                throw new ArgumentException();
+
+            throw new NotImplementedException();
+        }
 
 
 
@@ -168,11 +179,19 @@ namespace Vectors.Core
         }
 
 
+
+        public static bool operator !=(tvec2<T> a, tvec2<T> b)
+        {
+            throw new NotImplementedException();
+        }
+        public static bool operator ==(tvec2<T> a, tvec2<T> b)
+        {
+            throw new NotImplementedException();
+        }
+
         public static tvec2<T> operator *(tvec2<T> a, tvec2<T> b)
         {
-
             throw new NotImplementedException();
-
         }
         public static tvec2<T> operator /(tvec2<T> a, tvec2<T> b)
         {

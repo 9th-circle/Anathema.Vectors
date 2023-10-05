@@ -89,11 +89,13 @@ namespace Vectors.Core
 
         public static new fmat4 translate(fvec3 basis)
         {
+            //todo: implement 3D translations
             throw new NotImplementedException();
         }
 
         public static fmat4 projection()
         {
+            //todo: implement projection matrices
             throw new NotImplementedException();
         }
 

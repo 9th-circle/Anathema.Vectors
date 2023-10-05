@@ -9,7 +9,7 @@ namespace Vectors.Core
 {
     public class dquat
     {
-
+        //todo: implement quaternions
     }
 }
 #endif

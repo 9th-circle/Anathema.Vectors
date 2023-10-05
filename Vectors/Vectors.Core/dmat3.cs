@@ -47,11 +47,13 @@ namespace Vectors.Core
         }
         public static dmat3 rotateRadians(fvec3 axis, double angle)
         {
+            //todo: implement 3D rotations
             throw new NotImplementedException();
         }
 
         public static dmat3 rotateRadians(double eulerX, double eulerY, double eulerZ)
         {
+            //todo: implement 3D rotations
             throw new NotImplementedException();
         }
         public static dmat3 rotateDegrees(fvec3 axis, double angle)

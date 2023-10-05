@@ -70,11 +70,13 @@ namespace Vectors.Core
 
         public static new dmat4 rotateRadians(fvec3 axis, double angle)
         {
+            //todo: implement 3D rotations
             throw new NotImplementedException();
         }
 
         public static new dmat4 rotateRadians(double eulerX, double eulerY, double eulerZ)
         {
+            //todo: implement 3D rotations
             throw new NotImplementedException();
         }
         public static new dmat4 rotateDegrees(fvec3 axis, double angle)
@@ -112,11 +114,13 @@ namespace Vectors.Core
 
         public static new dmat4 translate(fvec3 basis)
         {
+            //todo: implement 3D translations
             throw new NotImplementedException();
         }
 
         public static dmat4 projection()
         {
+            //todo: implement projection matrices
             throw new NotImplementedException();
         }
 
