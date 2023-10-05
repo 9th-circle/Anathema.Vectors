@@ -125,13 +125,6 @@ namespace Vectors.Core
         {
             get
             {
-                return transposedRaw;
-            }
-        }
-        public dmat2 transposedRaw
-        {
-            get
-            {
                 dmat2 output = new dmat2();
                 for (int x = 0; x < rowCount; x++)
                     for (int y = 0; y < columnCount; y++)
