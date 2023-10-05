@@ -56,12 +56,20 @@ namespace Vectors.Core
 
         public static fmat3 scale(fvec3 basis)
         {
-            throw new NotImplementedException();
+            fmat3 output = new fmat3();
+            output.setValue(0, 0, basis.x);
+            output.setValue(1, 1, basis.y);
+            output.setValue(2, 2, basis.z);
+            return output;
         }
 
-        public static fmat3 scale(float size)
+        public static new fmat3 scale(float size)
         {
-            throw new NotImplementedException();
+            fmat3 output = new fmat3();
+            output.setValue(0, 0, size);
+            output.setValue(1, 1, size);
+            output.setValue(2, 2, size);
+            return output;
         }
 
         public static fmat3 translate(fvec3 basis)

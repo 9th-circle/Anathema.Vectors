@@ -48,6 +48,22 @@ namespace Vectors.Core
             throw new NotImplementedException();
         }
 
+        public static fmat2 scale(fvec2 basis)
+        {
+            fmat2 output = new fmat2();
+            output.setValue(0, 0, basis.x);
+            output.setValue(1, 1, basis.y);
+            return output;
+        }
+
+        public static fmat2 scale(float size)
+        {
+            fmat2 output = new fmat2();
+            output.setValue(0, 0, size);
+            output.setValue(1, 1, size);
+            return output;
+        }
+
         ///////////////////////////
         //      Conversions      //
         ///////////////////////////

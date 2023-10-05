@@ -49,6 +49,22 @@ namespace Vectors.Core
             throw new NotImplementedException();
         }
 
+        public static dmat2 scale(dvec2 basis)
+        {
+            dmat2 output = new dmat2();
+            output.setValue(0, 0, basis.x);
+            output.setValue(1, 1, basis.y);
+            return output;
+        }
+
+        public static dmat2 scale(double size)
+        {
+            dmat2 output = new dmat2();
+            output.setValue(0, 0, size);
+            output.setValue(1, 1, size);
+            return output;
+        }
+
         ///////////////////////////
         //      Conversions      //
         ///////////////////////////

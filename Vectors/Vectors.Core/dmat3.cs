@@ -54,14 +54,22 @@ namespace Vectors.Core
             throw new NotImplementedException();
         }
 
-        public static dmat3 scale(fvec3 basis)
+        public static dmat3 scale(dvec3 basis)
         {
-            throw new NotImplementedException();
+            dmat3 output = new dmat3();
+            output.setValue(0, 0, basis.x);
+            output.setValue(1, 1, basis.y);
+            output.setValue(2, 2, basis.z);
+            return output;
         }
 
         public static dmat3 scale(double size)
         {
-            throw new NotImplementedException();
+            dmat3 output = new dmat3();
+            output.setValue(0, 0, size);
+            output.setValue(1, 1, size);
+            output.setValue(2, 2, size);
+            return output;
         }
 
         public static dmat3 translate(fvec3 basis)
