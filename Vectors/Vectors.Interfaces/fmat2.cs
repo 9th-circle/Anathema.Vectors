@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 namespace Vectors.Core
 {
     /// <summary>
-    /// A double-precision floating point, 2x2 (4 element) matrix.
+    /// A single-precision floating point, 2x2 (4 element) matrix.
     /// </summary>
-    public class dmat2 : idmat2
+    public class fmat2
     {
         ///////////////////////////
         //        Values         //
         ///////////////////////////
 
-        public double[] data { get; protected set; } = new double[4];
+        public float[] data { get; protected set; } = new float[4];
 
         public virtual int rowCount { get { return 2; } }
         public virtual int columnCount { get { return 2; } }
@@ -24,10 +24,10 @@ namespace Vectors.Core
         //     Constructors      //
         ///////////////////////////
 
-        public dmat2()
+        public fmat2()
         {
         }
-        public dmat2(dmat2 template)
+        public fmat2(fmat2 template)
         {
             Array.Copy(template.data, data, data.Length);
         }
@@ -36,14 +36,14 @@ namespace Vectors.Core
         //      Generators       //
         ///////////////////////////
 
-        public static dmat2 identity()
+        public static fmat2 identity()
         {
-            dmat2 output = new dmat2();
+            fmat2 output = new fmat2();
             for (int i = 0; i < output.rowCount && i < output.columnCount; i++)
                 output.setValue(i, i, 1);
             return output;
         }
-        public static dmat2 rotate(double angle)
+        public static fmat2 rotate(float angle)
         {
             throw new NotImplementedException();
         }
@@ -53,9 +53,9 @@ namespace Vectors.Core
         ///////////////////////////
 
         //todo: check if this causes a transpose
-        public static dmat2 fromNestedVector(tvec2<tvec2<double>> input)
+        public static fmat2 fromNestedVector(tvec2<tvec2<float>> input)
         {
-            dmat4 output = new dmat4();
+            fmat4 output = new fmat4();
 
             output.setValue(0, 0, input.x.x);
             output.setValue(0, 1, input.x.y);
@@ -71,7 +71,7 @@ namespace Vectors.Core
         ///////////////////////////
 
         //todo: check rows and columns aren't being swapped (transposed)
-        public double getValue(int row, int column)
+        public float getValue(int row, int column)
         {
             //Design decision: we should be able to pass around a mat2 in a mat3
             // reference and simply use the columns that are present.
@@ -82,7 +82,7 @@ namespace Vectors.Core
         }
 
         //todo: check rows and columns aren't being swapped (transposed)
-        public void setValue(int row, int column, double value)
+        public void setValue(int row, int column, float value)
         {
             //Design decision: writing to a matrix out of its bounds
             // should fail. This is so that if you're passing around a
@@ -100,18 +100,11 @@ namespace Vectors.Core
         //      Transforms       //
         ///////////////////////////
 
-        public idmat2 transposed
+        public fmat2 transposed
         {
             get
             {
-                return transposedRaw;
-            }
-        }
-        public dmat2 transposedRaw
-        {
-            get
-            {
-                dmat2 output = new dmat2();
+                fmat2 output = new fmat2();
                 for (int x = 0; x < rowCount; x++)
                     for (int y = 0; y < columnCount; y++)
                         output.setValue(x, y, getValue(y, x));
@@ -128,7 +121,7 @@ namespace Vectors.Core
             assign(transposed);
         }
 
-        public void assign(idmat2 other)
+        public void assign(fmat2 other)
         {
             for (int i = 0; i < other.data.Length && i < data.Length; i++)
                 data[i] = other.data[i];
@@ -139,7 +132,7 @@ namespace Vectors.Core
         ///////////////////////////
 
 
-        public double this[int i] { get { return data[i]; } set { data[i] = value; } }
+        public float this[int i] => data[i];
 
     }
 }
