@@ -92,6 +92,7 @@ namespace Vectors.Core
 
         //Starting with X (6)
 
+#if SWIZZLES_ENABLED
         public tvec4<T> xyzw
         {
             get
@@ -447,12 +448,13 @@ namespace Vectors.Core
             }
         }
 
-
+#endif
 
         ///////////////////////////
         //      Conversions      //
         ///////////////////////////
 
+#if NESTING_ENABLED
         public static tvec4<tvec4<double>> fromDMat4(dmat4 input)
         {
             var output = new tvec4<tvec4<double>>();
@@ -480,7 +482,7 @@ namespace Vectors.Core
             return output;
         }
 
-
+#endif
     }
 }
 #endif

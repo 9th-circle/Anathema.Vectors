@@ -104,11 +104,11 @@ namespace Vectors.Core
         //        Swizzles       //
         ///////////////////////////
 
-        // 4! = 4 * 3 * 2 * 1 = 24
-        // There are 24 swizzles, in 4 groups of 6
+// 4! = 4 * 3 * 2 * 1 = 24
+// There are 24 swizzles, in 4 groups of 6
 
-        //Starting with X (6)
-
+//Starting with X (6)
+#if SWIZZLES_ENABLED
         public dvec4 xyzw
         {
             get
@@ -463,6 +463,7 @@ namespace Vectors.Core
                 x = value.w;
             }
         }
+#endif
 
 
         ///////////////////////////

@@ -99,6 +99,7 @@ namespace Vectors.Core
 
         //Starting with X (2)
 
+#if SWIZZLES_ENABLED
         public fvec3 xyz
         {
             get
@@ -187,6 +188,7 @@ namespace Vectors.Core
                 x = value.z;
             }
         }
+#endif
 
 
         ///////////////////////////

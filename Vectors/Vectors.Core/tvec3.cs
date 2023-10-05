@@ -61,6 +61,7 @@ namespace Vectors.Core
 
         //Starting with X (2)
 
+#if SWIZZLES_ENABLED
         public tvec3<T> xyz
         {
             get
@@ -149,13 +150,15 @@ namespace Vectors.Core
                 x = value.z;
             }
         }
-
+#endif
 
 
         ///////////////////////////
         //      Conversions      //
         ///////////////////////////
 
+
+#if NESTING_ENABLED
         public static tvec3<tvec3<double>> fromDMat3(dmat3 input)
         {
             var output = new tvec3<tvec3<double>>();
@@ -174,7 +177,7 @@ namespace Vectors.Core
 
             return output;
         }
-
+#endif
     }
 }
 #endif

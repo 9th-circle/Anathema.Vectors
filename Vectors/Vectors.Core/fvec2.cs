@@ -108,7 +108,7 @@ namespace Vectors.Core
         ///////////////////////////
         //        Swizzles       //
         ///////////////////////////
-
+#if SWIZZLES_ENABLED
         public fvec2 xy
         {
             get
@@ -133,7 +133,7 @@ namespace Vectors.Core
                 x = value.y;
             }
         }
-
+#endif
 
         ///////////////////////////
         //       Operators       //

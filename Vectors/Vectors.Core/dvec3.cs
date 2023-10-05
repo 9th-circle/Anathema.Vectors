@@ -95,10 +95,12 @@ namespace Vectors.Core
         //        Swizzles       //
         ///////////////////////////
 
-        // 3! = 3 * 2 * 1 = 6
-        // There are 6 swizzles, in 3 groups of 2
+// 3! = 3 * 2 * 1 = 6
+// There are 6 swizzles, in 3 groups of 2
 
-        //Starting with X (2)
+//Starting with X (2)
+
+#if SWIZZLES_ENABLED
 
         public dvec3 xyz
         {
@@ -188,7 +190,7 @@ namespace Vectors.Core
                 x = value.z;
             }
         }
-
+#endif
 
         ///////////////////////////
         //       Operators       //

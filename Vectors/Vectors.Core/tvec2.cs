@@ -44,6 +44,8 @@ namespace Vectors.Core
         //        Swizzles       //
         ///////////////////////////
 
+#if SWIZZLES_ENABLED
+
         public tvec2<T> xy
         {
             get
@@ -69,12 +71,14 @@ namespace Vectors.Core
             }
         }
 
-
+#endif
 
         ///////////////////////////
         //      Conversions      //
         ///////////////////////////
 
+
+#if NESTING_ENABLED
         public static tvec2<tvec2<double>> fromDMat2(dmat2 input)
         {
             var output = new tvec2<tvec2<double>>();
@@ -87,6 +91,7 @@ namespace Vectors.Core
 
             return output;
         }
+#endif
 
         public static fvec2 floatTVec2ToFVec2()
         {
