@@ -72,10 +72,6 @@ namespace Vectors.Core
             return output;
         }
 
-        public static fmat3 translate(fvec3 basis)
-        {
-            throw new NotImplementedException();
-        }
 
         ///////////////////////////
         //      Conversions      //
