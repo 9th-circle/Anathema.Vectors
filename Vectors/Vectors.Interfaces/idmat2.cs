@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Vectors.Core
 {
     /// <summary>
-    /// A double-precision floating point, 2x2 (4 element) matrix.
+    /// Interface to a double-precision floating point, 2x2 (4 element) matrix.
     /// </summary>
     public interface idmat2
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Vectors.Core
 {
     /// <summary>
-    /// A single-precision floating point, 3-component vector.
+    /// Interface to a single-precision floating point, 3-component vector.
     /// </summary>
     public interface ifvec3 : ifvec2
     {
