@@ -76,7 +76,15 @@ namespace Vectors.Core
 
         public static tvec2<tvec2<double>> fromDMat2(dmat2 input)
         {
-            throw new NotImplementedException();
+            var output = new tvec2<tvec2<double>>();
+
+            output.x.x = input.getValue(0, 0);
+            output.x.y = input.getValue(0, 1);
+
+            output.y.x = input.getValue(1, 0);
+            output.y.y = input.getValue(1, 1);
+
+            return output;
         }
 
     }
