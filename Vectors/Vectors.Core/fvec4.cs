@@ -90,6 +90,15 @@ namespace Vectors.Core
 
 
         ///////////////////////////
+        //      Derivations      //
+        ///////////////////////////
+
+        public fvec3 scaledToFVec3()
+        {
+            return new fvec3(x / w, y / w, z / w);
+        }
+
+        ///////////////////////////
         //        Swizzles       //
         ///////////////////////////
 

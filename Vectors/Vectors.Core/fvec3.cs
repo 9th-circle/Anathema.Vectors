@@ -325,7 +325,9 @@ namespace Vectors.Core
 
         public static fvec3 operator *(fvec3 a, fmat4 b)
         {
-            return new fvec4(a.x, a.y, a.z, 1.0f) * b;
+            fvec4 result = new fvec4(a.x, a.y, a.z, 1.0f) * b;
+
+            return result.scaledToFVec3();
         }
         public static fvec3 operator *(fmat4 b, fvec3 a)
         {

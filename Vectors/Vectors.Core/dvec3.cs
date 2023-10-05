@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Vectors.Interfaces;
 
 namespace Vectors.Core
 {
@@ -312,26 +313,27 @@ namespace Vectors.Core
         }
 
 
-        public static dvec3 operator *(dvec3 a, fmat3 b)
+        public static dvec3 operator *(dvec3 a, dmat3 b)
         {
             return new dvec3((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)),
                                  (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)),
                                  (a.x * b.getValue(2, 0)) + (a.y * b.getValue(2, 1)) + (a.z * b.getValue(2, 2)));
         }
-        public static dvec3 operator *(fmat3 b, dvec3 a)
+        public static dvec3 operator *(dmat3 b, dvec3 a)
         {
             return a * b.transposed;
         }
 
-        public static dvec3 operator *(dvec3 a, fmat4 b)
+        public static dvec3 operator *(dvec3 a, idmat4 b)
         {
-            return new dvec4(a.x, a.y, a.z, 1.0f) * b;
+            dvec4 result = new dvec4(a.x, a.y, a.z, 1.0f) * b;
+
+            return result.scaledToDVec3();
         }
-        public static dvec3 operator *(fmat4 b, dvec3 a)
+        public static dvec3 operator *(idmat4 b, dvec3 a)
         {
             return a * b.transposed;
         }
-
 
 
 
