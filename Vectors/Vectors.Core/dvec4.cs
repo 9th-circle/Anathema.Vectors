@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Vectors.Core
 {
     /// <summary>
-    /// A double-precision floating point, 4-component vector.
+    /// A double precision floating point, 4-component vector.
     /// </summary>
     public class dvec4 : dvec3
     {
@@ -444,6 +444,171 @@ namespace Vectors.Core
                 y = value.z;
                 x = value.w;
             }
+        }
+
+
+        ///////////////////////////
+        //       Operators       //
+        ///////////////////////////
+
+
+        public dvec4 dot(dvec4 b)
+        {
+            return dot(this, b);
+        }
+        public static dvec4 dot(dvec4 a, dvec4 b)
+        {
+            return a * b;
+        }
+
+
+        public static dvec4 operator *(dvec4 a, dvec4 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
+        }
+        public static dvec4 operator /(dvec4 a, dvec4 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w);
+        }
+        public static dvec4 operator +(dvec4 a, dvec4 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
+        }
+        public static dvec4 operator -(dvec4 a, dvec4 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
+        }
+
+
+
+        public static dvec4 operator *(dvec2 a, dvec4 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, b.z, b.w);
+        }
+        public static dvec4 operator /(dvec2 a, dvec4 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, b.z, b.w);
+        }
+        public static dvec4 operator +(dvec2 a, dvec4 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, b.z, b.w);
+        }
+        public static dvec4 operator -(dvec2 a, dvec4 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, b.z, b.w);
+        }
+
+
+
+        public static dvec4 operator *(dvec4 a, dvec2 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z, a.w);
+        }
+        public static dvec4 operator /(dvec4 a, dvec2 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z, a.w);
+        }
+        public static dvec4 operator +(dvec4 a, dvec2 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z, a.w);
+        }
+        public static dvec4 operator -(dvec4 a, dvec2 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z, a.w);
+        }
+
+
+
+        public static dvec4 operator *(dvec3 a, dvec4 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, b.w);
+        }
+        public static dvec4 operator /(dvec3 a, dvec4 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, b.w);
+        }
+        public static dvec4 operator +(dvec3 a, dvec4 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, b.w);
+        }
+        public static dvec4 operator -(dvec3 a, dvec4 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, b.w);
+        }
+
+
+
+        public static dvec4 operator *(dvec4 a, dvec3 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w);
+        }
+        public static dvec4 operator /(dvec4 a, dvec3 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w);
+        }
+        public static dvec4 operator +(dvec4 a, dvec3 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w);
+        }
+        public static dvec4 operator -(dvec4 a, dvec3 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w);
+        }
+
+
+
+
+
+        public static dvec4 operator *(dvec4 a, double b)
+        {
+            return new dvec4(a.x * b, a.y * b, a.z * b, a.w * b);
+        }
+        public static dvec4 operator /(dvec4 a, double b)
+        {
+            return new dvec4(a.x / b, a.y / b, a.z / b, a.w / b);
+        }
+        public static dvec4 operator +(dvec4 a, double b)
+        {
+            return new dvec4(a.x + b, a.y + b, a.z + b, a.w + b);
+        }
+        public static dvec4 operator -(dvec4 a, double b)
+        {
+            return new dvec4(a.x - b, a.y - b, a.z - b, a.w - b);
+        }
+
+
+        public static dvec4 operator *(double b, dvec4 a)
+        {
+            return new dvec4(a.x * b, a.y * b, a.z * b, a.w * b);
+        }
+        public static dvec4 operator /(double b, dvec4 a)
+        {
+            return new dvec4(a.x / b, a.y / b, a.z / b, a.w / b);
+        }
+        public static dvec4 operator +(double b, dvec4 a)
+        {
+            return new dvec4(a.x + b, a.y + b, a.z + b, a.w + b);
+        }
+        public static dvec4 operator -(double b, dvec4 a)
+        {
+            return new dvec4(a.x - b, a.y - b, a.z - b, a.w + b);
+        }
+        public static dvec4 operator -(dvec4 a)
+        {
+            return new dvec4(-a.x, -a.y, -a.z, -a.w);
+        }
+
+        public static dvec4 operator *(dvec4 a, fmat4 b)
+        {
+            return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
+                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)) + (a.w * b.getValue(1, 3)),
+                                 (a.x * b.getValue(2, 0)) + (a.y * b.getValue(2, 1)) + (a.z * b.getValue(2, 2)) + (a.w * b.getValue(2, 3)),
+                                 (a.x * b.getValue(3, 0)) + (a.y * b.getValue(3, 1)) + (a.z * b.getValue(3, 2)) + (a.w * b.getValue(3, 3))
+                                 );
+        }
+        public static dvec4 operator *(fmat4 b, dvec4 a)
+        {
+            return a * b.transposed;
         }
 
 
