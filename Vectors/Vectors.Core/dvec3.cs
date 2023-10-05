@@ -251,6 +251,50 @@ namespace Vectors.Core
 
 
 
+
+        public static dvec3 operator *(fvec3 a, dvec3 b)
+        {
+            return new dvec3(a.x * b.x, a.y * b.y, a.z * b.z);
+        }
+        public static dvec3 operator /(fvec3 a, dvec3 b)
+        {
+            return new dvec3(a.x / b.x, a.y / b.y, a.z / b.z);
+        }
+        public static dvec3 operator +(fvec3 a, dvec3 b)
+        {
+            return new dvec3(a.x + b.x, a.y + b.y, a.z + b.z);
+        }
+        public static dvec3 operator -(fvec3 a, dvec3 b)
+        {
+            return new dvec3(a.x - b.x, a.y - b.y, a.z - b.z);
+        }
+
+
+
+
+        public static dvec3 operator *(dvec3 a, fvec3 b)
+        {
+            return new dvec3(a.x * b.x, a.y * b.y, a.z * b.z);
+        }
+        public static dvec3 operator /(dvec3 a, fvec3 b)
+        {
+            return new dvec3(a.x / b.x, a.y / b.y, a.z / b.z);
+        }
+        public static dvec3 operator +(dvec3 a, fvec3 b)
+        {
+            return new dvec3(a.x + b.x, a.y + b.y, a.z + b.z);
+        }
+        public static dvec3 operator -(dvec3 a, fvec3 b)
+        {
+            return new dvec3(a.x - b.x, a.y - b.y, a.z - b.z);
+        }
+
+
+
+
+
+
+
         public static dvec3 operator *(dvec2 a, dvec3 b)
         {
             return new dvec3(a.x * b.x, a.y * b.y, b.z);

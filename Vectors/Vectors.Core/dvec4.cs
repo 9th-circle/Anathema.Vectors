@@ -513,6 +513,48 @@ namespace Vectors.Core
 
 
 
+
+
+        public static dvec4 operator *(fvec4 a, dvec4 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
+        }
+        public static dvec4 operator /(fvec4 a, dvec4 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w);
+        }
+        public static dvec4 operator +(fvec4 a, dvec4 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
+        }
+        public static dvec4 operator -(fvec4 a, dvec4 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
+        }
+
+
+
+
+
+        public static dvec4 operator *(dvec4 a, fvec4 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
+        }
+        public static dvec4 operator /(dvec4 a, fvec4 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w);
+        }
+        public static dvec4 operator +(dvec4 a, fvec4 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
+        }
+        public static dvec4 operator -(dvec4 a, fvec4 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
+        }
+
+
+
         public static dvec4 operator *(dvec2 a, dvec4 b)
         {
             return new dvec4(a.x * b.x, a.y * b.y, b.z, b.w);
