@@ -44,12 +44,21 @@ namespace Vectors.Core
                 output.setValue(i, i, 1);
             return output;
         }
-        public static fmat3 rotate(fvec3 axis, float angle)
+        public static fmat3 rotateRadians(fvec3 axis, float angle)
         {
             throw new NotImplementedException();
         }
 
-        public static fmat3 rotate(float eulerX, float eulerY, float eulerZ)
+        public static fmat3 rotateRadians(float eulerX, float eulerY, float eulerZ)
+        {
+            throw new NotImplementedException();
+        }
+        public static fmat3 rotateDegrees(fvec3 axis, float angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static fmat3 rotateDegrees(float eulerX, float eulerY, float eulerZ)
         {
             throw new NotImplementedException();
         }

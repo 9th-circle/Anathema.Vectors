@@ -43,10 +43,15 @@ namespace Vectors.Core
                 output.setValue(i, i, 1);
             return output;
         }
-        public static fmat2 rotate(float angle)
+        public static fmat2 rotateRadians(float angle)
         {
             throw new NotImplementedException();
         }
+        public static fmat2 rotateDegrees(float angle)
+        {
+            throw new NotImplementedException();
+        }
+
 
         public static fmat2 scale(fvec2 basis)
         {

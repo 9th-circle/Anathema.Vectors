@@ -44,7 +44,11 @@ namespace Vectors.Core
                 output.setValue(i, i, 1);
             return output;
         }
-        public static dmat2 rotate(double angle)
+        public static dmat2 rotateRadians(double angle)
+        {
+            throw new NotImplementedException();
+        }
+        public static dmat2 rotateDegrees(double angle)
         {
             throw new NotImplementedException();
         }

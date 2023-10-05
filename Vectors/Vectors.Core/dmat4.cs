@@ -47,12 +47,21 @@ namespace Vectors.Core
             return output;
         }
 
-        public static new dmat4 rotate(fvec3 axis, double angle)
+        public static new dmat4 rotateRadians(fvec3 axis, double angle)
         {
             throw new NotImplementedException();
         }
 
-        public static new dmat4 rotate(double eulerX, double eulerY, double eulerZ)
+        public static new dmat4 rotateRadians(double eulerX, double eulerY, double eulerZ)
+        {
+            throw new NotImplementedException();
+        }
+        public static new dmat4 rotateDegrees(fvec3 axis, double angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static new dmat4 rotateDegrees(double eulerX, double eulerY, double eulerZ)
         {
             throw new NotImplementedException();
         }

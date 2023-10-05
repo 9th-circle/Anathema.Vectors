@@ -46,12 +46,22 @@ namespace Vectors.Core
             return output;
         }
 
-        public static new fmat4 rotate(fvec3 axis, float angle)
+        public static new fmat4 rotateRadians(fvec3 axis, float angle)
         {
             throw new NotImplementedException();
         }
 
-        public static new fmat4 rotate(float eulerX, float eulerY, float eulerZ)
+        public static new fmat4 rotateRadians(float eulerX, float eulerY, float eulerZ)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static new fmat4 rotateDegrees(fvec3 axis, float angle)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static new fmat4 rotateDegrees(float eulerX, float eulerY, float eulerZ)
         {
             throw new NotImplementedException();
         }
