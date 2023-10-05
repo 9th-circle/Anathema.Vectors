@@ -160,7 +160,7 @@ namespace Vectors.Core
         ///////////////////////////
 
 
-        public float this[int i] => data[i];
+        public float this[int i] { get { return data[i]; } set { data[i] = value; } }
 
     }
 }
