@@ -452,7 +452,7 @@ namespace Vectors.Core
         //      Conversions      //
         ///////////////////////////
 
-        public tvec4<tvec4<double>> fromDMat3(dmat4 input)
+        public static tvec4<tvec4<double>> fromDMat3(dmat4 input)
         {
             throw new NotImplementedException();
         }

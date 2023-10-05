@@ -74,7 +74,7 @@ namespace Vectors.Core
         //      Conversions      //
         ///////////////////////////
 
-        public tvec2<tvec2<double>> fromDMat2(dmat2 input)
+        public static tvec2<tvec2<double>> fromDMat2(dmat2 input)
         {
             throw new NotImplementedException();
         }

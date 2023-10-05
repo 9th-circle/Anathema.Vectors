@@ -9,77 +9,13 @@ namespace Vectors.Interfaces
     /// <summary>
     /// A 3-component vector where each element is a templated type. Nesting is allowed.
     /// </summary>
-    public class tvec4<T> : tvec3<T>
+    public interface itvec4<T> : itvec3<T>
     {
         ///////////////////////////
         //        Members        //
         ///////////////////////////
 
         public T w { get; set; }
-
-        ///////////////////////////
-        //     Constructors      //
-        ///////////////////////////
-
-        public tvec4()
-        {
-        }
-        public tvec4(tvec3<T> xyz, T w)
-        {
-            x = xyz.x;
-            y = xyz.y;
-            z = xyz.z;
-            this.w = w;
-        }
-        public tvec4(T x, tvec3<T> yzw)
-        {
-            this.x = x;
-            y = yzw.x;
-            z = yzw.y;
-            w = yzw.z;
-        }
-        public tvec4(tvec2<T> xy, tvec2<T> zw)
-        {
-            x = xy.x;
-            y = xy.y;
-            z = zw.x;
-            w = zw.y;
-        }
-        public tvec4(T x, T y, tvec2<T> zw)
-        {
-            this.x = x;
-            this.y = y;
-            z = zw.x;
-            w = zw.y;
-        }
-        public tvec4(T x, tvec2<T> yz, T w)
-        {
-            this.x = x;
-            y = yz.x;
-            z = yz.y;
-            this.w = w;
-        }
-        public tvec4(tvec2<T> xy, T z, T w)
-        {
-            x = xy.x;
-            y = xy.y;
-            this.z = z;
-            this.w = w;
-        }
-        public tvec4(T x, T y, T z, T w)
-        {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-            this.w = w;
-        }
-        public tvec4(tvec4<T> xyzw)
-        {
-            x = xyzw.x;
-            y = xyzw.y;
-            z = xyzw.z;
-            w = xyzw.w;
-        }
 
 
         ///////////////////////////
@@ -91,89 +27,35 @@ namespace Vectors.Interfaces
 
         //Starting with X (6)
 
-        public tvec4<T> xyzw
+        public itvec4<T> xyzw
         {
-            get
-            {
-                return new tvec4<T>(x, y, z, w);
-            }
-            set
-            {
-                x = value.x;
-                y = value.y;
-                z = value.z;
-                w = value.w;
-            }
+            get;
+            set;
         }
-        public tvec4<T> xwzy
+        public itvec4<T> xwzy
         {
-            get
-            {
-                return new tvec4<T>(x, w, z, y);
-            }
-            set
-            {
-                x = value.x;
-                w = value.y;
-                z = value.z;
-                y = value.w;
-            }
+            get;
+            set;
         }
-        public tvec4<T> xwyz
+        public itvec4<T> xwyz
         {
-            get
-            {
-                return new tvec4<T>(x, w, y, z);
-            }
-            set
-            {
-                x = value.x;
-                w = value.y;
-                y = value.z;
-                z = value.w;
-            }
+            get;
+            set;
         }
-        public tvec4<T> xywz
+        public itvec4<T> xywz
         {
-            get
-            {
-                return new tvec4<T>(x, y, w, z);
-            }
-            set
-            {
-                x = value.x;
-                y = value.y;
-                w = value.z;
-                z = value.w;
-            }
+            get;
+            set;
         }
-        public tvec4<T> xzyw
+        public itvec4<T> xzyw
         {
-            get
-            {
-                return new tvec4<T>(x, z, y, w);
-            }
-            set
-            {
-                x = value.x;
-                z = value.y;
-                y = value.z;
-                w = value.w;
-            }
+            get;
+            set;
         }
-        public tvec4<T> xzwy
+        public itvec4<T> xzwy
         {
-            get
-            {
-                return new tvec4<T>(x, z, w, y);
-            }
-            set
-            {
-                x = value.x;
-                z = value.y;
-                w = value.z;
-                y = value.w;
-            }
+            get;
+            set;
         }
 
 
@@ -182,7 +64,7 @@ namespace Vectors.Interfaces
 
         //Starting with Y (6)
 
-        public tvec4<T> yxzw
+        public itvec4<T> yxzw
         {
             get
             {
@@ -196,7 +78,7 @@ namespace Vectors.Interfaces
                 w = value.w;
             }
         }
-        public tvec4<T> yxwz
+        public itvec4<T> yxwz
         {
             get
             {
@@ -210,7 +92,7 @@ namespace Vectors.Interfaces
                 z = value.w;
             }
         }
-        public tvec4<T> yzxw
+        public itvec4<T> yzxw
         {
             get
             {
@@ -224,7 +106,7 @@ namespace Vectors.Interfaces
                 w = value.w;
             }
         }
-        public tvec4<T> yzwx
+        public itvec4<T> yzwx
         {
             get
             {
@@ -238,7 +120,7 @@ namespace Vectors.Interfaces
                 x = value.w;
             }
         }
-        public tvec4<T> ywzx
+        public itvec4<T> ywzx
         {
             get
             {
@@ -252,7 +134,7 @@ namespace Vectors.Interfaces
                 x = value.w;
             }
         }
-        public tvec4<T> ywxz
+        public itvec4<T> ywxz
         {
             get
             {
@@ -271,7 +153,7 @@ namespace Vectors.Interfaces
 
         //Starting with Z (6)
 
-        public tvec4<T> zxyw
+        public itvec4<T> zxyw
         {
             get
             {
@@ -285,7 +167,7 @@ namespace Vectors.Interfaces
                 w = value.w;
             }
         }
-        public tvec4<T> zyxw
+        public itvec4<T> zyxw
         {
             get
             {
@@ -299,7 +181,7 @@ namespace Vectors.Interfaces
                 w = value.w;
             }
         }
-        public tvec4<T> zywx
+        public itvec4<T> zywx
         {
             get
             {
@@ -313,7 +195,7 @@ namespace Vectors.Interfaces
                 x = value.w;
             }
         }
-        public tvec4<T> zxwy
+        public itvec4<T> zxwy
         {
             get
             {
@@ -327,7 +209,7 @@ namespace Vectors.Interfaces
                 y = value.w;
             }
         }
-        public tvec4<T> zwxy
+        public itvec4<T> zwxy
         {
             get
             {
@@ -341,7 +223,7 @@ namespace Vectors.Interfaces
                 y = value.w;
             }
         }
-        public tvec4<T> zwyx
+        public itvec4<T> zwyx
         {
             get
             {
@@ -360,7 +242,7 @@ namespace Vectors.Interfaces
 
         //Starting with W (6)
 
-        public tvec4<T> wxyz
+        public itvec4<T> wxyz
         {
             get
             {
@@ -375,7 +257,7 @@ namespace Vectors.Interfaces
             }
         }
 
-        public tvec4<T> wxzy
+        public itvec4<T> wxzy
         {
             get
             {
@@ -389,7 +271,7 @@ namespace Vectors.Interfaces
                 y = value.w;
             }
         }
-        public tvec4<T> wyxz
+        public itvec4<T> wyxz
         {
             get
             {
@@ -403,7 +285,7 @@ namespace Vectors.Interfaces
                 z = value.w;
             }
         }
-        public tvec4<T> wyzx
+        public itvec4<T> wyzx
         {
             get
             {
@@ -417,7 +299,7 @@ namespace Vectors.Interfaces
                 x = value.w;
             }
         }
-        public tvec4<T> wzxy
+        public itvec4<T> wzxy
         {
             get
             {
@@ -431,7 +313,7 @@ namespace Vectors.Interfaces
                 y = value.w;
             }
         }
-        public tvec4<T> wzyx
+        public itvec4<T> wzyx
         {
             get
             {
@@ -452,7 +334,7 @@ namespace Vectors.Interfaces
         //      Conversions      //
         ///////////////////////////
 
-        public tvec4<tvec4<double>> fromDMat3(idmat4 input)
+        public itvec4<itvec4<double>> fromDMat3(idmat4 input)
         {
             throw new NotImplementedException();
         }

@@ -53,7 +53,7 @@ namespace Vectors.Interfaces
         ///////////////////////////
 
         //todo: check if this causes a transpose
-        public static fmat2 fromNestedVector(tvec2<tvec2<float>> input)
+        public static fmat2 fromNestedVector(itvec2<itvec2<float>> input)
         {
             fmat4 output = new fmat4();
 
