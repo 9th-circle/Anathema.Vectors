@@ -196,6 +196,30 @@ namespace Vectors.Core
             return output;
         }
 #endif
+        public T this[int i]
+        {
+            get
+            {
+                if (i == 0)
+                    return x;
+                if (i == 1)
+                    return y;
+                if (i == 2)
+                    return z;
+                throw new IndexOutOfRangeException();
+            }
+            set
+            {
+                if (i == 0)
+                { x = value; return; }
+                if (i == 1)
+                { y = value; return; }
+                if (i == 2)
+                { z = value; return; }
+                throw new IndexOutOfRangeException();
+            }
+        }
+
     }
 }
 #endif

@@ -206,6 +206,25 @@ namespace Vectors.Core
             throw new NotImplementedException();
         }
 
+        public T this[int i]
+        {
+            get
+            {
+                if (i == 0)
+                    return x;
+                if (i == 1)
+                    return y;
+                throw new IndexOutOfRangeException();
+            }
+            set
+            {
+                if (i == 0)
+                { x = value; return; }
+                if (i == 1)
+                { y = value; return; }
+                throw new IndexOutOfRangeException();
+            }
+        }
     }
 }
 #endif
