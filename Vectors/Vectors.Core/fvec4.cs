@@ -681,7 +681,7 @@ namespace Vectors.Core
                 if (i == 2)
                     return z;
                 if (i == 3)
-                    return z;
+                    return w;
                 throw new IndexOutOfRangeException();
             }
             set
@@ -693,7 +693,7 @@ namespace Vectors.Core
                 if (i == 2)
                 { z = value; return; }
                 if (i == 3)
-                { z = value; return; }
+                { w = value; return; }
                 throw new IndexOutOfRangeException();
             }
         }
