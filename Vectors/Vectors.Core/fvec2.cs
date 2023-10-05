@@ -74,7 +74,7 @@ namespace Vectors.Core
         {
             get
             {
-                return angleRadians * (180.0f/(float)Math.PI);
+                return angleRadians * (180.0f / (float)Math.PI);
             }
         }
 
@@ -230,7 +230,7 @@ namespace Vectors.Core
 
         public static fvec2 operator *(fvec2 a, fmat2 b)
         {
-            return new fvec2(   (a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)), 
+            return new fvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)));
         }
         public static fvec2 operator *(fmat2 b, fvec2 a)
@@ -262,5 +262,24 @@ namespace Vectors.Core
         }
 
 #endif
+        public float this[int i]
+        {
+            get
+            {
+                if (i == 0)
+                    return x;
+                if (i == 1)
+                    return y;
+                throw new IndexOutOfRangeException();
+            }
+            set
+            {
+                if (i == 0)
+                { x = value; return; }
+                if (i == 1)
+                { y = value; return; }
+                throw new IndexOutOfRangeException();
+            }
+        }
     }
 }

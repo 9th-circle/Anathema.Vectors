@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Vectors.Core
 {
     /// <summary>
-    /// A 3-component vector where each element is a templated type. Nesting is allowed.
+    /// A 4-component vector where each element is a templated type. Nesting is allowed.
     /// </summary>
     public class tvec4<T> : tvec3<T>
     {
