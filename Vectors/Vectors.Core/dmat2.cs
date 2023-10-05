@@ -162,6 +162,7 @@ namespace Vectors.Core
 
 
         public double this[int i] { get { return data[i]; } set { data[i] = value; } }
+        public double this[int x, int y] { get { return getValue(x, y); } set { setValue(x, y, value); } }
 
     }
 }

@@ -161,6 +161,7 @@ namespace Vectors.Core
 
 
         public float this[int i] { get { return data[i]; } set { data[i] = value; } }
+        public float this[int x, int y] { get { return getValue(x,y); } set { setValue(x,y,value); } }
 
     }
 }
