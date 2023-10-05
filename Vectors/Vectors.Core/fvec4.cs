@@ -639,6 +639,21 @@ namespace Vectors.Core
             return a * b.transposed;
         }
 
+#if NESTING_ENABLED
+        public static fvec4 operator *(fvec4 a, tvec4<tvec4<float>> b)
+        {
+            fmat4 matrix = fmat4.fromNestedVector(b);
+
+            return a * matrix;
+        }
+        public static fvec4 operator *(tvec4<tvec4<float>> b, fvec4 a)
+        {
+            fmat4 matrix = fmat4.fromNestedVector(b);
+
+            return a * matrix.transposed;
+        }
+
+#endif
 
     }
 }

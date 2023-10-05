@@ -230,15 +230,30 @@ namespace Vectors.Core
         }
 
 
-        public static dvec2 operator *(dvec2 a, fmat2 b)
+        public static dvec2 operator *(dvec2 a, dmat2 b)
         {
             return new dvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)));
         }
-        public static dvec2 operator *(fmat2 b, dvec2 a)
+        public static dvec2 operator *(dmat2 b, dvec2 a)
         {
             return a * b.transposed;
         }
 
+#if NESTING_ENABLED
+        public static dvec2 operator *(dvec2 a, tvec2<tvec2<double>> b)
+        {
+            dmat2 matrix = dmat2.fromNestedVector(b);
+
+            return a * matrix;
+        }
+        public static dvec2 operator *(tvec2<tvec2<double>> b, dvec2 a)
+        {
+            dmat2 matrix = dmat2.fromNestedVector(b);
+
+            return a * matrix.transposed;
+        }
+
+#endif
     }
 }

@@ -644,5 +644,20 @@ namespace Vectors.Core
         }
 
 
+#if NESTING_ENABLED
+        public static dvec4 operator *(dvec4 a, tvec4<tvec4<double>> b)
+        {
+            dmat4 matrix = dmat4.fromNestedVector(b);
+
+            return a * matrix;
+        }
+        public static dvec4 operator *(tvec4<tvec4<double>> b, dvec4 a)
+        {
+            dmat4 matrix = dmat4.fromNestedVector(b);
+
+            return a * matrix.transposed;
+        }
+
+#endif
     }
 }

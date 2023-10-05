@@ -345,6 +345,21 @@ namespace Vectors.Core
         }
 
 
+#if NESTING_ENABLED
+        public static fvec3 operator *(fvec3 a, tvec3<tvec3<float>> b)
+        {
+            fmat3 matrix = fmat3.fromNestedVector(b);
+
+            return a * matrix;
+        }
+        public static fvec3 operator *(tvec3<tvec3<float>> b, fvec3 a)
+        {
+            fmat3 matrix = fmat3.fromNestedVector(b);
+
+            return a * matrix.transposed;
+        }
+
+#endif
 
 
 
