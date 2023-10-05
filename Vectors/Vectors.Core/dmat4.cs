@@ -40,6 +40,26 @@ namespace Vectors.Core
         //      Generators       //
         ///////////////////////////
 
+        public dmat4 toDMat4()
+        {
+            dmat4 output = new dmat4();
+            output.setValue(0, 0, getValue(0, 0));
+            output.setValue(0, 1, getValue(0, 1));
+            output.setValue(0, 2, getValue(0, 2));
+
+            output.setValue(1, 0, getValue(1, 0));
+            output.setValue(1, 1, getValue(1, 1));
+            output.setValue(1, 2, getValue(1, 2));
+
+            output.setValue(2, 0, getValue(2, 0));
+            output.setValue(2, 1, getValue(2, 1));
+            output.setValue(2, 2, getValue(2, 2));
+
+            return output;
+        }
+
+
+
         public new static dmat4 identity()
         {
             dmat4 output = new dmat4();

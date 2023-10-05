@@ -48,12 +48,12 @@ namespace Vectors.Core
 
         public static new fmat4 rotateRadians(fvec3 axis, float angle)
         {
-            throw new NotImplementedException();
+            return fmat3.rotateRadians(axis, angle).toFMat4();
         }
 
         public static new fmat4 rotateRadians(float eulerX, float eulerY, float eulerZ)
         {
-            throw new NotImplementedException();
+            return fmat3.rotateRadians(eulerX, eulerY, eulerZ).toFMat4();
         }
 
         public static new fmat4 rotateDegrees(fvec3 axis, float angle)
