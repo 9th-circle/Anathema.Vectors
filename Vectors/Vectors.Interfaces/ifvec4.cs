@@ -15,7 +15,7 @@ namespace Vectors.Core
         //        Members        //
         ///////////////////////////
 
-        public float w { get; set; }
+        float w { get; set; }
 
 
         ///////////////////////////
@@ -27,32 +27,32 @@ namespace Vectors.Core
 
         //Starting with X (6)
 
-        public ifvec4 xyzw
+        ifvec4 xyzw
         {
             get;
             set;
         }
-        public ifvec4 xwzy
+        ifvec4 xwzy
         {
             get;
             set;
         }
-        public ifvec4 xwyz
+        ifvec4 xwyz
         {
             get;
             set;
         }
-        public ifvec4 xywz
+        ifvec4 xywz
         {
             get;
             set;
         }
-        public ifvec4 xzyw
+        ifvec4 xzyw
         {
             get;
             set;
         }
-        public ifvec4 xzwy
+        ifvec4 xzwy
         {
             get;
             set;
@@ -64,32 +64,32 @@ namespace Vectors.Core
 
         //Starting with Y (6)
 
-        public ifvec4 yxzw
+        ifvec4 yxzw
         {
             get;
             set;
         }
-        public ifvec4 yxwz
+        ifvec4 yxwz
         {
             get;
             set;
         }
-        public ifvec4 yzxw
+        ifvec4 yzxw
         {
             get;
             set;
         }
-        public ifvec4 yzwx
+        ifvec4 yzwx
         {
             get;
             set;
         }
-        public ifvec4 ywzx
+        ifvec4 ywzx
         {
             get;
             set;
         }
-        public ifvec4 ywxz
+        ifvec4 ywxz
         {
             get;
             set;
@@ -99,32 +99,32 @@ namespace Vectors.Core
 
         //Starting with Z (6)
 
-        public ifvec4 zxyw
+        ifvec4 zxyw
         {
             get;
             set;
         }
-        public ifvec4 zyxw
+        ifvec4 zyxw
         {
             get;
             set;
         }
-        public ifvec4 zywx
+        ifvec4 zywx
         {
             get;
             set;
         }
-        public ifvec4 zxwy
+        ifvec4 zxwy
         {
             get;
             set;
         }
-        public ifvec4 zwxy
+        ifvec4 zwxy
         {
             get;
             set;
         }
-        public ifvec4 zwyx
+        ifvec4 zwyx
         {
             get;
             set;
@@ -134,33 +134,33 @@ namespace Vectors.Core
 
         //Starting with W (6)
 
-        public ifvec4 wxyz
+        ifvec4 wxyz
         {
             get;
             set;
         }
 
-        public ifvec4 wxzy
+        ifvec4 wxzy
         {
             get;
             set;
         }
-        public ifvec4 wyxz
+        ifvec4 wyxz
         {
             get;
             set;
         }
-        public ifvec4 wyzx
+        ifvec4 wyzx
         {
             get;
             set;
         }
-        public ifvec4 wzxy
+        ifvec4 wzxy
         {
             get;
             set;
         }
-        public ifvec4 wzyx
+        ifvec4 wzyx
         {
             get;
             set;
@@ -171,7 +171,7 @@ namespace Vectors.Core
         //       Operators       //
         ///////////////////////////
 
-        public ifvec4 dot(ifvec4 b);
+        ifvec4 dot(ifvec4 b);
 
     }
 }

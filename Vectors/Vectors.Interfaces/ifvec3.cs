@@ -15,7 +15,7 @@ namespace Vectors.Core
         //        Members        //
         ///////////////////////////
 
-        public float z { get; set; }
+        float z { get; set; }
 
 
 
@@ -23,7 +23,7 @@ namespace Vectors.Core
         //      Derivations      //
         ///////////////////////////
 
-        public new ifvec3 normalised { get; }
+        new ifvec3 normalised { get; }
 
 
         ///////////////////////////
@@ -35,12 +35,12 @@ namespace Vectors.Core
 
         //Starting with X (2)
 
-        public ifvec3 xyz
+        ifvec3 xyz
         {
             get;
             set;
         }
-        public ifvec3 xzy
+        ifvec3 xzy
         {
             get;
             set;
@@ -50,12 +50,12 @@ namespace Vectors.Core
         //Starting with Y (2)
 
 
-        public ifvec3 yxz
+        ifvec3 yxz
         {
             get;
             set;
         }
-        public ifvec3 yzx
+        ifvec3 yzx
         {
             get;
             set;
@@ -65,12 +65,12 @@ namespace Vectors.Core
         //Starting with Z (2)
 
 
-        public ifvec3 zxy
+        ifvec3 zxy
         {
             get;
             set;
         }
-        public ifvec3 zyx
+        ifvec3 zyx
         {
             get;
             set;
@@ -82,8 +82,8 @@ namespace Vectors.Core
         ///////////////////////////
 
 
-        public ifvec3 dot(ifvec3 b);
+        ifvec3 dot(ifvec3 b);
 
-        public ifvec3 cross(ifvec3 b);
+        ifvec3 cross(ifvec3 b);
     }
 }

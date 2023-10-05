@@ -15,8 +15,8 @@ namespace Vectors.Core
         //        Members        //
         ///////////////////////////
 
-        public float x { get; set; }
-        public float y { get; set; }
+        float x { get; set; }
+        float y { get; set; }
 
 
         ///////////////////////////
@@ -24,28 +24,28 @@ namespace Vectors.Core
         ///////////////////////////
 
 
-        public float angleRadians { get; }
-        public float angleDegrees { get; }
-        public float length { get; }
-        public ifvec2 normalised { get; }
+        float angleRadians { get; }
+        float angleDegrees { get; }
+        float length { get; }
+        ifvec2 normalised { get; }
 
 
         ///////////////////////////
         //       Mutators        //
         ///////////////////////////
 
-        public void normalise();
+        void normalise();
 
         ///////////////////////////
         //        Swizzles       //
         ///////////////////////////
 
-        public ifvec2 xy
+        ifvec2 xy
         {
             get;
             set;
         }
-        public ifvec2 yx
+        ifvec2 yx
         {
             get;
             set;
@@ -57,9 +57,9 @@ namespace Vectors.Core
         ///////////////////////////
 
 
-        public ifvec2 dot(ifvec2 b);
+        ifvec2 dot(ifvec2 b);
 
-        public ifvec2 cross();
+        ifvec2 cross();
 
     }
 }

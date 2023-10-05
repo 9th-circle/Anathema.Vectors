@@ -11,7 +11,7 @@ namespace Vectors.Core
     /// </summary>
     public interface idmat3 : idmat2
     {
-        public void assign(idmat3 other);
+        void assign(idmat3 other);
 
     }
 }

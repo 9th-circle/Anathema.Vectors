@@ -11,7 +11,7 @@ namespace Vectors.Core
     /// </summary>
     public interface idmat4 : idmat3
     {
-        public new idmat4 transposed{ get; }
-        public void assign(idmat4 other);
+        new idmat4 transposed{ get; }
+        void assign(idmat4 other);
     }
 }

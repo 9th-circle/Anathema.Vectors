@@ -15,37 +15,37 @@ namespace Vectors.Core
         //        Values         //
         ///////////////////////////
 
-        public double[] data { get; }
+        double[] data { get; }
 
-        public virtual int rowCount { get { return 2; } }
-        public virtual int columnCount { get { return 2; } }
+        virtual int rowCount { get { return 2; } }
+        virtual int columnCount { get { return 2; } }
 
         ///////////////////////////
         //      Accessors        //
         ///////////////////////////
 
-        public double getValue(int row, int column);
-        public void setValue(int row, int column, double value);
+        double getValue(int row, int column);
+        void setValue(int row, int column, double value);
 
         ///////////////////////////
         //      Transforms       //
         ///////////////////////////
 
-        public idmat2 transposed { get; }
+        idmat2 transposed { get; }
 
         ///////////////////////////
         //       Mutators        //
         ///////////////////////////
 
-        public void transpose();
+        void transpose();
 
-        public void assign(idmat2 other);
+        void assign(idmat2 other);
 
         ///////////////////////////
         //       Operators       //
         ///////////////////////////
 
-        public double this[int i] { get; set; }
+        double this[int i] { get; set; }
 
     }
 }
