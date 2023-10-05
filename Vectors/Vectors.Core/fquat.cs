@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vectors.Core
 {
-    public static class QuaternionFactory
+    public class fquat
     {
     }
 }

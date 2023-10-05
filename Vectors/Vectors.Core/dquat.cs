@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core.Matrices
+namespace Vectors.Core
 {
-    public class fmat3
+    public class dquat
     {
     }
 }

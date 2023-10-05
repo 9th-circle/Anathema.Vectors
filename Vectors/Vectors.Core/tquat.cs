@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core.Tensors
+namespace Vectors.Core
 {
-    public class naive_ftensor : ftensor
+    public class tquat<T>
     {
     }
 }
