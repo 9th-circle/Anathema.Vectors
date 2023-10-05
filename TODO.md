@@ -14,7 +14,10 @@
   - rotate (3d)
   - translate
 - Tests
+  - Literally everything else
   - Check a mat4 with a mat2 reference can access correct rows/cols
 - Commenting
 - Documenting
   - README
+- Benchmarking
+  - Everything
