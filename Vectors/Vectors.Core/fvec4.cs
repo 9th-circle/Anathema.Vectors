@@ -639,6 +639,21 @@ namespace Vectors.Core
             return a * b.transposed;
         }
 
+
+
+        public static dvec4 operator *(fvec4 a, dmat4 b)
+        {
+            return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
+                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)) + (a.w * b.getValue(1, 3)),
+                                 (a.x * b.getValue(2, 0)) + (a.y * b.getValue(2, 1)) + (a.z * b.getValue(2, 2)) + (a.w * b.getValue(2, 3)),
+                                 (a.x * b.getValue(3, 0)) + (a.y * b.getValue(3, 1)) + (a.z * b.getValue(3, 2)) + (a.w * b.getValue(3, 3))
+                                 );
+        }
+        public static dvec4 operator *(dmat4 b, fvec4 a)
+        {
+            return a * b.transposed;
+        }
+
 #if NESTING_ENABLED
         public static fvec4 operator *(fvec4 a, tvec4<tvec4<float>> b)
         {

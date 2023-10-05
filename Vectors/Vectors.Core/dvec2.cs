@@ -279,6 +279,15 @@ namespace Vectors.Core
         {
             return a * b.transposed;
         }
+        public static dvec2 operator *(dvec2 a, fmat2 b)
+        {
+            return new dvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
+                                (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)));
+        }
+        public static dvec2 operator *(fmat2 b, dvec2 a)
+        {
+            return a * b.transposed;
+        }
 
 #if NESTING_ENABLED
         public static dvec2 operator *(dvec2 a, tvec2<tvec2<double>> b)

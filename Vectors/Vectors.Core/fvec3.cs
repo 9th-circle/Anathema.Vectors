@@ -344,6 +344,16 @@ namespace Vectors.Core
             return a * b.transposed;
         }
 
+        public static dvec3 operator *(fvec3 a, dmat4 b)
+        {
+            dvec4 result = new dvec4(a.x, a.y, a.z, 1.0f) * b;
+
+            return result.scaledToDVec3();
+        }
+        public static dvec3 operator *(dmat4 b, fvec3 a)
+        {
+            return a * b.transposed;
+        }
 
 #if NESTING_ENABLED
         public static fvec3 operator *(fvec3 a, tvec3<tvec3<float>> b)
