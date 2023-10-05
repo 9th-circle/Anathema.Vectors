@@ -58,12 +58,14 @@ namespace Vectors.Core
         }
         public static new dmat4 rotateDegrees(fvec3 axis, double angle)
         {
-            throw new NotImplementedException();
+            return rotateRadians(axis, angle * (Math.PI / 180.0));
         }
 
         public static new dmat4 rotateDegrees(double eulerX, double eulerY, double eulerZ)
         {
-            throw new NotImplementedException();
+            return rotateRadians(eulerX * (Math.PI / 180.0),
+                                    eulerY * (Math.PI / 180.0),
+                                    eulerZ * (Math.PI / 180.0));
         }
 
         public static dmat4 scale(dvec4 basis)

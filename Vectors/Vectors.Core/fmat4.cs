@@ -58,14 +58,15 @@ namespace Vectors.Core
 
         public static new fmat4 rotateDegrees(fvec3 axis, float angle)
         {
-            throw new NotImplementedException();
+            return rotateRadians(axis, angle * (float)(Math.PI / 180.0));
         }
 
         public static new fmat4 rotateDegrees(float eulerX, float eulerY, float eulerZ)
         {
-            throw new NotImplementedException();
+            return rotateRadians(eulerX * (float)(Math.PI / 180.0),
+                                    eulerY * (float)(Math.PI / 180.0),
+                                    eulerZ * (float)(Math.PI / 180.0));
         }
-
         public static fmat4 scale(fvec4 basis)
         {
             fmat4 output = new fmat4();
