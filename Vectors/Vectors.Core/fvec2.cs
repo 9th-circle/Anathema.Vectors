@@ -223,6 +223,17 @@ namespace Vectors.Core
         {
             return a * b.transposed;
         }
+        public static fvec2 operator *(fvec2 a, tvec2<tvec2<float>> b)
+        {
+            throw new NotImplementedException();
+            //return new fvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
+           //                     (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)));
+        }
+        public static fvec2 operator *(tvec2<tvec2<float>> b, fvec2 a)
+        {
+            throw new NotImplementedException();
+            //return a * b.transposed;
+        }
 
     }
 }
