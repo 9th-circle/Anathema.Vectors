@@ -37,7 +37,7 @@ namespace Vectors.Core
             x = xy.x;
             y = xy.y;
         }
-        public dvec2(fvec2 xy)
+        public dvec2(ifvec2 xy)
         {
             x = xy.x;
             y = xy.y;

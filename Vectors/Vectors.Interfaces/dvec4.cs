@@ -80,7 +80,7 @@ namespace Vectors.Core
             z = xyzw.z;
             w = xyzw.w;
         }
-        public dvec4(fvec4 xyzw)
+        public dvec4(ifvec4 xyzw)
         {
             x = xyzw.x;
             y = xyzw.y;

@@ -46,7 +46,7 @@ namespace Vectors.Core
             return output;
         }
 
-        public static new fmat4 rotate(fvec3 axis, float angle)
+        public static new fmat4 rotate(ifvec3 axis, float angle)
         {
             throw new NotImplementedException();
         }
@@ -56,7 +56,7 @@ namespace Vectors.Core
             throw new NotImplementedException();
         }
 
-        public static new fmat4 scale(fvec3 basis)
+        public static new fmat4 scale(ifvec3 basis)
         {
             throw new NotImplementedException();
         }
@@ -66,7 +66,7 @@ namespace Vectors.Core
             throw new NotImplementedException();
         }
 
-        public static new fmat4 translate(fvec3 basis)
+        public static new fmat4 translate(ifvec3 basis)
         {
             throw new NotImplementedException();
         }

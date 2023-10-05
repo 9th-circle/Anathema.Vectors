@@ -20,7 +20,6 @@ namespace Vectors.Core
         public virtual int rowCount { get { return 2; } }
         public virtual int columnCount { get { return 2; } }
 
-
         ///////////////////////////
         //      Accessors        //
         ///////////////////////////
@@ -45,7 +44,6 @@ namespace Vectors.Core
         ///////////////////////////
         //       Operators       //
         ///////////////////////////
-
 
         public double this[int i] { get; set; }
 

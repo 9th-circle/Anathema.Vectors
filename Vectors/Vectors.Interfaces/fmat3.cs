@@ -44,7 +44,7 @@ namespace Vectors.Core
                 output.setValue(i, i, 1);
             return output;
         }
-        public static fmat3 rotate(fvec3 axis, float angle)
+        public static fmat3 rotate(ifvec3 axis, float angle)
         {
             throw new NotImplementedException();
         }
@@ -54,7 +54,7 @@ namespace Vectors.Core
             throw new NotImplementedException();
         }
 
-        public static fmat3 scale(fvec3 basis)
+        public static fmat3 scale(ifvec3 basis)
         {
             throw new NotImplementedException();
         }
@@ -64,7 +64,7 @@ namespace Vectors.Core
             throw new NotImplementedException();
         }
 
-        public static fmat3 translate(fvec3 basis)
+        public static fmat3 translate(ifvec3 basis)
         {
             throw new NotImplementedException();
         }
