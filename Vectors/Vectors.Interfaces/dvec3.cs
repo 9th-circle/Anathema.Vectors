@@ -312,22 +312,22 @@ namespace Vectors.Interfaces
         }
 
 
-        public static dvec3 operator *(dvec3 a, fmat3 b)
+        public static dvec3 operator *(dvec3 a, ifmat3 b)
         {
             return new dvec3((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)),
                                  (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)),
                                  (a.x * b.getValue(2, 0)) + (a.y * b.getValue(2, 1)) + (a.z * b.getValue(2, 2)));
         }
-        public static dvec3 operator *(fmat3 b, dvec3 a)
+        public static dvec3 operator *(ifmat3 b, dvec3 a)
         {
             return a * b.transposed;
         }
 
-        public static dvec3 operator *(dvec3 a, fmat4 b)
+        public static dvec3 operator *(dvec3 a, ifmat4 b)
         {
             return new dvec4(a.x, a.y, a.z, 1.0f) * b;
         }
-        public static dvec3 operator *(fmat4 b, dvec3 a)
+        public static dvec3 operator *(ifmat4 b, dvec3 a)
         {
             return a * b.transposed;
         }

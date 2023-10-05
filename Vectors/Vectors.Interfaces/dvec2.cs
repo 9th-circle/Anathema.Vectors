@@ -218,12 +218,12 @@ namespace Vectors.Interfaces
         }
 
 
-        public static dvec2 operator *(dvec2 a, fmat2 b)
+        public static dvec2 operator *(dvec2 a, ifmat2 b)
         {
             return new dvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)));
         }
-        public static dvec2 operator *(fmat2 b, dvec2 a)
+        public static dvec2 operator *(ifmat2 b, dvec2 a)
         {
             return a * b.transposed;
         }
