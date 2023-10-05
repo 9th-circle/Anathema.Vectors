@@ -44,11 +44,18 @@ namespace Vectors.Core
         ///////////////////////////
 
 
-        public float angle
+        public float angleRadians
         {
             get
             {
                 return (float)Math.Atan2(y, x);
+            }
+        }
+        public float angleDegrees
+        {
+            get
+            {
+                return angleRadians * (180.0f/(float)Math.PI);
             }
         }
 
