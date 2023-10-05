@@ -45,11 +45,18 @@ namespace Vectors.Core
         }
         public static fmat2 rotateRadians(float angle)
         {
-            throw new NotImplementedException();
+            fmat2 output = new fmat2();
+
+            output.setValue(0, 0, (float)Math.Cos(angle));
+            output.setValue(0, 1, (float)-Math.Sin(angle));
+            output.setValue(1, 0, (float)Math.Sin(angle));
+            output.setValue(1, 1, (float)Math.Cos(angle));
+
+            return output;
         }
         public static fmat2 rotateDegrees(float angle)
         {
-            throw new NotImplementedException();
+            return rotateRadians(angle * (float)(Math.PI / 180.0));
         }
 
 

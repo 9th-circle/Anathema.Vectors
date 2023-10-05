@@ -46,11 +46,18 @@ namespace Vectors.Core
         }
         public static dmat2 rotateRadians(double angle)
         {
-            throw new NotImplementedException();
+            dmat2 output = new dmat2();
+
+            output.setValue(0, 0, (double)Math.Cos(angle));
+            output.setValue(0, 1, (double)-Math.Sin(angle));
+            output.setValue(1, 0, (double)Math.Sin(angle));
+            output.setValue(1, 1, (double)Math.Cos(angle));
+
+            return output;
         }
         public static dmat2 rotateDegrees(double angle)
         {
-            throw new NotImplementedException();
+            return rotateRadians(angle * (Math.PI / 180.0));
         }
 
         public static dmat2 scale(dvec2 basis)
