@@ -38,6 +38,20 @@ namespace Vectors.Core
             y = xy.y;
         }
 
+        ///////////////////////////
+        //      Conversions      //
+        ///////////////////////////
+
+
+        public static fvec2 fromAngle(float angle)
+        {
+            return new fvec2((float)Math.Cos(angle), (float)Math.Sin(angle));
+        }
+        public static fvec2 fromAngleAndLength(float angle, float length)
+        {
+            return new fvec2((float)Math.Cos(angle) * length, (float)Math.Sin(angle) * length);
+        }
+
 
         ///////////////////////////
         //      Derivations      //
