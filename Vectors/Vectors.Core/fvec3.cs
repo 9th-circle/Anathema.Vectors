@@ -49,6 +49,12 @@ namespace Vectors.Core
             y = xyz.y;
             z = xyz.z;
         }
+        public fvec3(dvec3 xyz)
+        {
+            x = (float)xyz.x;
+            y = (float)xyz.y;
+            z = (float)xyz.z;
+        }
 
 
 

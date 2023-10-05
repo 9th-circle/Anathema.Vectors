@@ -37,6 +37,11 @@ namespace Vectors.Core
             x = xy.x;
             y = xy.y;
         }
+        public fvec2(dvec2 xy)
+        {
+            x = (float)xy.x;
+            y = (float)xy.y;
+        }
 
         ///////////////////////////
         //      Conversions      //

@@ -80,6 +80,13 @@ namespace Vectors.Core
             z = xyzw.z;
             w = xyzw.w;
         }
+        public fvec4(dvec4 xyzw)
+        {
+            x = (float)xyzw.x;
+            y = (float)xyzw.y;
+            z = (float)xyzw.z;
+            w = (float)xyzw.w;
+        }
 
 
         ///////////////////////////

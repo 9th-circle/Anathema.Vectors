@@ -37,6 +37,11 @@ namespace Vectors.Core
             x = xy.x;
             y = xy.y;
         }
+        public dvec2(fvec2 xy)
+        {
+            x = xy.x;
+            y = xy.y;
+        }
 
         ///////////////////////////
         //      Conversions      //
@@ -51,7 +56,6 @@ namespace Vectors.Core
         {
             return new dvec2(Math.Cos(angle) * length, Math.Sin(angle) * length);
         }
-
 
         ///////////////////////////
         //      Derivations      //
