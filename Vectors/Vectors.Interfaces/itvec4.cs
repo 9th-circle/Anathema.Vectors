@@ -15,7 +15,7 @@ namespace Vectors.Interfaces
         //        Members        //
         ///////////////////////////
 
-        public T w { get; set; }
+        T w { get; set; }
 
 
         ///////////////////////////
@@ -27,32 +27,32 @@ namespace Vectors.Interfaces
 
         //Starting with X (6)
 
-        public itvec4<T> xyzw
+        itvec4<T> xyzw
         {
             get;
             set;
         }
-        public itvec4<T> xwzy
+        itvec4<T> xwzy
         {
             get;
             set;
         }
-        public itvec4<T> xwyz
+        itvec4<T> xwyz
         {
             get;
             set;
         }
-        public itvec4<T> xywz
+        itvec4<T> xywz
         {
             get;
             set;
         }
-        public itvec4<T> xzyw
+        itvec4<T> xzyw
         {
             get;
             set;
         }
-        public itvec4<T> xzwy
+        itvec4<T> xzwy
         {
             get;
             set;
@@ -64,32 +64,32 @@ namespace Vectors.Interfaces
 
         //Starting with Y (6)
 
-        public itvec4<T> yxzw
+        itvec4<T> yxzw
         {
             get;
             set;
         }
-        public itvec4<T> yxwz
+        itvec4<T> yxwz
         {
             get;
             set;
         }
-        public itvec4<T> yzxw
+        itvec4<T> yzxw
         {
             get;
             set;
         }
-        public itvec4<T> yzwx
+        itvec4<T> yzwx
         {
             get;
             set;
         }
-        public itvec4<T> ywzx
+        itvec4<T> ywzx
         {
             get;
             set;
         }
-        public itvec4<T> ywxz
+        itvec4<T> ywxz
         {
             get;
             set;
@@ -99,32 +99,32 @@ namespace Vectors.Interfaces
 
         //Starting with Z (6)
 
-        public itvec4<T> zxyw
+        itvec4<T> zxyw
         {
             get;
             set;
         }
-        public itvec4<T> zyxw
+        itvec4<T> zyxw
         {
             get;
             set;
         }
-        public itvec4<T> zywx
+        itvec4<T> zywx
         {
             get;
             set;
         }
-        public itvec4<T> zxwy
+        itvec4<T> zxwy
         {
             get;
             set;
         }
-        public itvec4<T> zwxy
+        itvec4<T> zwxy
         {
             get;
             set;
         }
-        public itvec4<T> zwyx
+        itvec4<T> zwyx
         {
             get;
             set;
@@ -134,33 +134,33 @@ namespace Vectors.Interfaces
 
         //Starting with W (6)
 
-        public itvec4<T> wxyz
+        itvec4<T> wxyz
         {
             get;
             set;
         }
 
-        public itvec4<T> wxzy
+        itvec4<T> wxzy
         {
             get;
             set;
         }
-        public itvec4<T> wyxz
+        itvec4<T> wyxz
         {
             get;
             set;
         }
-        public itvec4<T> wyzx
+        itvec4<T> wyzx
         {
             get;
             set;
         }
-        public itvec4<T> wzxy
+        itvec4<T> wzxy
         {
             get;
             set;
         }
-        public itvec4<T> wzyx
+        itvec4<T> wzyx
         {
             get;
             set;

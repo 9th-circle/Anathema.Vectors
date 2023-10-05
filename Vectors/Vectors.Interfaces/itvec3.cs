@@ -15,7 +15,7 @@ namespace Vectors.Interfaces
         //        Members        //
         ///////////////////////////
 
-        public T z { get; set; }
+        T z { get; set; }
 
         ///////////////////////////
         //        Swizzles       //
@@ -26,12 +26,12 @@ namespace Vectors.Interfaces
 
         //Starting with X (2)
 
-        public itvec3<T> xyz
+        itvec3<T> xyz
         {
             get;
             set;
         }
-        public itvec3<T> xzy
+        itvec3<T> xzy
         {
             get;
             set;
@@ -41,12 +41,12 @@ namespace Vectors.Interfaces
         //Starting with Y (2)
 
 
-        public itvec3<T> yxz
+        itvec3<T> yxz
         {
             get;
             set;
         }
-        public itvec3<T> yzx
+        itvec3<T> yzx
         {
             get;
             set;
@@ -56,12 +56,12 @@ namespace Vectors.Interfaces
         //Starting with Z (2)
 
 
-        public itvec3<T> zxy
+        itvec3<T> zxy
         {
             get;
             set;
         }
-        public itvec3<T> zyx
+        itvec3<T> zyx
         {
             get;
             set;

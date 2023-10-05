@@ -15,20 +15,20 @@ namespace Vectors.Interfaces
         //        Members        //
         ///////////////////////////
 
-        public T x { get; set; }
-        public T y { get; set; }
+        T x { get; set; }
+        T y { get; set; }
 
 
         ///////////////////////////
         //        Swizzles       //
         ///////////////////////////
 
-        public itvec2<T> xy
+        itvec2<T> xy
         {
             get;
             set;
         }
-        public itvec2<T> yx
+        itvec2<T> yx
         {
             get;
             set;
