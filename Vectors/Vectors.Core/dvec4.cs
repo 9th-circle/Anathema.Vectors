@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vectors.Interfaces;
+
 
 namespace Vectors.Core
 {
@@ -481,6 +481,19 @@ namespace Vectors.Core
         }
 
 
+
+        public static bool operator !=(dvec4 a, dvec4 b)
+        {
+            return !(a == b);
+        }
+        public static bool operator ==(dvec4 a, dvec4 b)
+        {
+            return scalar.isClose(a.x, b.x) && scalar.isClose(a.y, b.y) && scalar.isClose(a.z, b.z) && scalar.isClose(a.w, b.w);
+        }
+
+
+
+
         public static dvec4 operator *(dvec4 a, dvec4 b)
         {
             return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
@@ -617,7 +630,7 @@ namespace Vectors.Core
             return new dvec4(-a.x, -a.y, -a.z, -a.w);
         }
 
-        public static dvec4 operator *(dvec4 a, idmat4 b)
+        public static dvec4 operator *(dvec4 a, dmat4 b)
         {
             return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
                                  (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)) + (a.w * b.getValue(1, 3)),
@@ -625,7 +638,7 @@ namespace Vectors.Core
                                  (a.x * b.getValue(3, 0)) + (a.y * b.getValue(3, 1)) + (a.z * b.getValue(3, 2)) + (a.w * b.getValue(3, 3))
                                  );
         }
-        public static dvec4 operator *(idmat4 b, dvec4 a)
+        public static dvec4 operator *(dmat4 b, dvec4 a)
         {
             return a * b.transposed;
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vectors.Interfaces;
+
 
 namespace Vectors.Core
 {
@@ -157,6 +157,16 @@ namespace Vectors.Core
         public static dvec2 cross(dvec2 a)
         {
             return new dvec2(a.y, a.x);
+        }
+
+
+        public static bool operator !=(dvec2 a, dvec2 b)
+        {
+            return !(a == b);
+        }
+        public static bool operator ==(dvec2 a, dvec2 b)
+        {
+            return scalar.isClose(a.x, b.x) && scalar.isClose(a.y, b.y);
         }
 
 

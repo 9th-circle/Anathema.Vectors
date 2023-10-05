@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vectors.Interfaces;
+
 
 namespace Vectors.Core
 {
     /// <summary>
     /// A double-precision floating point, 4x4 (16 element) matrix.
     /// </summary>
-    public class dmat4 : dmat3, idmat4
+    public class dmat4 : dmat3
     {
 
         ///////////////////////////
@@ -112,7 +112,7 @@ namespace Vectors.Core
         //      Transforms       //
         ///////////////////////////
 
-        public new idmat4 transposed
+        public new dmat4 transposed
         {
             get
             {
@@ -141,7 +141,7 @@ namespace Vectors.Core
             assign(transposed);
         }
 
-        public void assign(idmat4 other)
+        public void assign(dmat4 other)
         {
             for (int i = 0; i < other.data.Length && i < data.Length; i++)
                 data[i] = other.data[i];

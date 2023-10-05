@@ -217,6 +217,14 @@ namespace Vectors.Core
                                     (a.x * b.y) - (a.y * b.x));
         }
 
+        public static bool operator !=(fvec3 a, fvec3 b)
+        {
+            return !(a == b);
+        }
+        public static bool operator ==(fvec3 a, fvec3 b)
+        {
+            return scalar.isClose(a.x, b.x) && scalar.isClose(a.y, b.y) && scalar.isClose(a.z, b.z);
+        }
 
         public static fvec3 operator *(fvec3 a, fvec3 b)
         {

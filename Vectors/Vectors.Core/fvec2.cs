@@ -159,6 +159,15 @@ namespace Vectors.Core
         }
 
 
+        public static bool operator !=(fvec2 a, fvec2 b)
+        {
+            return !(a == b);
+        }
+        public static bool operator ==(fvec2 a, fvec2 b)
+        {
+            return scalar.isClose(a.x, b.x) && scalar.isClose(a.y, b.y);
+        }
+
         public static fvec2 operator *(fvec2 a, fvec2 b)
         {
             return new fvec2(a.x * b.x, a.y * b.y);

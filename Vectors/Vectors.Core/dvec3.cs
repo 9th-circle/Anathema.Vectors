@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Vectors.Interfaces;
+
 
 namespace Vectors.Core
 {
@@ -219,6 +219,19 @@ namespace Vectors.Core
         }
 
 
+
+        public static bool operator !=(dvec3 a, dvec3 b)
+        {
+            return !(a == b);
+        }
+        public static bool operator ==(dvec3 a, dvec3 b)
+        {
+            return scalar.isClose(a.x, b.x) && scalar.isClose(a.y, b.y) && scalar.isClose(a.z, b.z);
+        }
+
+
+
+
         public static dvec3 operator *(dvec3 a, dvec3 b)
         {
             return new dvec3(a.x * b.x, a.y * b.y, a.z * b.z);
@@ -326,13 +339,13 @@ namespace Vectors.Core
             return a * b.transposed;
         }
 
-        public static dvec3 operator *(dvec3 a, idmat4 b)
+        public static dvec3 operator *(dvec3 a, dmat4 b)
         {
             dvec4 result = new dvec4(a.x, a.y, a.z, 1.0f) * b;
 
             return result.scaledToDVec3();
         }
-        public static dvec3 operator *(idmat4 b, dvec3 a)
+        public static dvec3 operator *(dmat4 b, dvec3 a)
         {
             return a * b.transposed;
         }
