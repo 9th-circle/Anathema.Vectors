@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Vectors.Interfaces
 {
     /// <summary>
-    /// A single-precision floating point, 3x3 (9 element) matrix.
+    /// Interface to a single-precision floating point, 3x3 (9 element) matrix.
     /// </summary>
     public interface ifmat3 : ifmat2
     {

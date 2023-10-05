@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vectors.Interfaces
 {
-    public class dquat
+    public interface idquat
     {
     }
 }
