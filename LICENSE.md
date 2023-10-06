@@ -1,7 +1,3 @@
-# Trademarks
-
-"9th Circle", "Anathema" and the Anathema icon and logo are trademarks of 9th Circle.
-
 # BSD 3-Clause License
 
 Copyright © 2023 9th Circle
