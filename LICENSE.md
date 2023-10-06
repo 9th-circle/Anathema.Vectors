@@ -1,4 +1,6 @@
-# BSD 3-Clause License
+# Anathema - Vectors
+
+## BSD 3-Clause License
 
 Copyright © 2023 9th Circle
 

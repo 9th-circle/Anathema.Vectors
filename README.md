@@ -1,4 +1,4 @@
-# Vectors
+# Anathema Vectors
 
 Basic linear algebra, mostly for computer graphics.
 
