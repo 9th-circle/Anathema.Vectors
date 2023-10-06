@@ -13,6 +13,7 @@
 - Matrix generators (3/4)
   - rotate (3d)
   - translate
+- Investigate whether template vectors can be used to create functional tensors
 - Tests
   - Literally everything else
   - Check a mat4 with a mat2 reference can access correct rows/cols
@@ -21,3 +22,4 @@
   - README
 - Benchmarking
   - Everything
+
