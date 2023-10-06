@@ -1,13 +1,13 @@
-﻿#if DOUBLES_ENABLED
+﻿#if FLOATS_ENABLED
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core
+namespace Anathema.Vectors.Core
 {
-    public class dquat
+    public class fquat
     {
         //todo: implement quaternions
     }

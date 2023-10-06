@@ -1,103 +1,106 @@
-﻿#if FLOATS_ENABLED
+﻿#if DOUBLES_ENABLED
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core
+
+namespace Anathema.Vectors.Core
 {
     /// <summary>
-    /// A single-precision floating point, 4-component vector.
+    /// A double precision floating point, 4-component vector.
     /// </summary>
-    public class fvec4 : fvec3
+    public class dvec4 : dvec3
     {
         ///////////////////////////
         //        Members        //
         ///////////////////////////
 
-        public float w { get; set; }
+        public double w { get; set; }
 
         ///////////////////////////
         //     Constructors      //
         ///////////////////////////
 
-        public fvec4()
+        public dvec4()
         {
         }
-        public fvec4(fvec3 xyz, float w)
+        public dvec4(dvec3 xyz, double w)
         {
             x = xyz.x;
             y = xyz.y;
             z = xyz.z;
             this.w = w;
         }
-        public fvec4(float x, fvec3 yzw)
+        public dvec4(double x, dvec3 yzw)
         {
             this.x = x;
             y = yzw.x;
             z = yzw.y;
             w = yzw.z;
         }
-        public fvec4(fvec2 xy, fvec2 zw)
+        public dvec4(dvec2 xy, dvec2 zw)
         {
             x = xy.x;
             y = xy.y;
             z = zw.x;
             w = zw.y;
         }
-        public fvec4(float x, float y, fvec2 zw)
+        public dvec4(double x, double y, dvec2 zw)
         {
             this.x = x;
             this.y = y;
             z = zw.x;
             w = zw.y;
         }
-        public fvec4(float x, fvec2 yz, float w)
+        public dvec4(double x, dvec2 yz, double w)
         {
             this.x = x;
             y = yz.x;
             z = yz.y;
             this.w = w;
         }
-        public fvec4(fvec2 xy, float z, float w)
+        public dvec4(dvec2 xy, double z, double w)
         {
             x = xy.x;
             y = xy.y;
             this.z = z;
             this.w = w;
         }
-        public fvec4(float x, float y, float z, float w)
+        public dvec4(double x, double y, double z, double w)
         {
             this.x = x;
             this.y = y;
             this.z = z;
             this.w = w;
         }
-        public fvec4(fvec4 xyzw)
+        public dvec4(dvec4 xyzw)
         {
             x = xyzw.x;
             y = xyzw.y;
             z = xyzw.z;
             w = xyzw.w;
         }
-        public fvec4(dvec4 xyzw)
+        public dvec4(fvec4 xyzw)
         {
-            x = (float)xyzw.x;
-            y = (float)xyzw.y;
-            z = (float)xyzw.z;
-            w = (float)xyzw.w;
+            x = xyzw.x;
+            y = xyzw.y;
+            z = xyzw.z;
+            w = xyzw.w;
         }
-
 
         ///////////////////////////
         //      Derivations      //
         ///////////////////////////
 
-        public fvec3 scaledToFVec3()
+        public dvec3 scaledToDVec3()
         {
-            return new fvec3(x / w, y / w, z / w);
+            return new dvec3(x / w, y / w, z / w);
         }
+
+
 
         ///////////////////////////
         //        Swizzles       //
@@ -107,14 +110,12 @@ namespace Vectors.Core
 // There are 24 swizzles, in 4 groups of 6
 
 //Starting with X (6)
-
 #if SWIZZLES_ENABLED
-
-        public fvec4 xyzw
+        public dvec4 xyzw
         {
             get
             {
-                return new fvec4(x, y, z, w);
+                return new dvec4(x, y, z, w);
             }
             set
             {
@@ -124,11 +125,11 @@ namespace Vectors.Core
                 w = value.w;
             }
         }
-        public fvec4 xwzy
+        public dvec4 xwzy
         {
             get
             {
-                return new fvec4(x, w, z, y);
+                return new dvec4(x, w, z, y);
             }
             set
             {
@@ -138,11 +139,11 @@ namespace Vectors.Core
                 y = value.w;
             }
         }
-        public fvec4 xwyz
+        public dvec4 xwyz
         {
             get
             {
-                return new fvec4(x, w, y, z);
+                return new dvec4(x, w, y, z);
             }
             set
             {
@@ -152,11 +153,11 @@ namespace Vectors.Core
                 z = value.w;
             }
         }
-        public fvec4 xywz
+        public dvec4 xywz
         {
             get
             {
-                return new fvec4(x, y, w, z);
+                return new dvec4(x, y, w, z);
             }
             set
             {
@@ -166,11 +167,11 @@ namespace Vectors.Core
                 z = value.w;
             }
         }
-        public fvec4 xzyw
+        public dvec4 xzyw
         {
             get
             {
-                return new fvec4(x, z, y, w);
+                return new dvec4(x, z, y, w);
             }
             set
             {
@@ -180,11 +181,11 @@ namespace Vectors.Core
                 w = value.w;
             }
         }
-        public fvec4 xzwy
+        public dvec4 xzwy
         {
             get
             {
-                return new fvec4(x, z, w, y);
+                return new dvec4(x, z, w, y);
             }
             set
             {
@@ -201,11 +202,11 @@ namespace Vectors.Core
 
         //Starting with Y (6)
 
-        public fvec4 yxzw
+        public dvec4 yxzw
         {
             get
             {
-                return new fvec4(y, x, z, w);
+                return new dvec4(y, x, z, w);
             }
             set
             {
@@ -215,11 +216,11 @@ namespace Vectors.Core
                 w = value.w;
             }
         }
-        public fvec4 yxwz
+        public dvec4 yxwz
         {
             get
             {
-                return new fvec4(y, x, w, z);
+                return new dvec4(y, x, w, z);
             }
             set
             {
@@ -229,11 +230,11 @@ namespace Vectors.Core
                 z = value.w;
             }
         }
-        public fvec4 yzxw
+        public dvec4 yzxw
         {
             get
             {
-                return new fvec4(y, z, x, w);
+                return new dvec4(y, z, x, w);
             }
             set
             {
@@ -243,11 +244,11 @@ namespace Vectors.Core
                 w = value.w;
             }
         }
-        public fvec4 yzwx
+        public dvec4 yzwx
         {
             get
             {
-                return new fvec4(y, z, w, x);
+                return new dvec4(y, z, w, x);
             }
             set
             {
@@ -257,11 +258,11 @@ namespace Vectors.Core
                 x = value.w;
             }
         }
-        public fvec4 ywzx
+        public dvec4 ywzx
         {
             get
             {
-                return new fvec4(y, w, z, x);
+                return new dvec4(y, w, z, x);
             }
             set
             {
@@ -271,11 +272,11 @@ namespace Vectors.Core
                 x = value.w;
             }
         }
-        public fvec4 ywxz
+        public dvec4 ywxz
         {
             get
             {
-                return new fvec4(y, w, x, z);
+                return new dvec4(y, w, x, z);
             }
             set
             {
@@ -290,11 +291,11 @@ namespace Vectors.Core
 
         //Starting with Z (6)
 
-        public fvec4 zxyw
+        public dvec4 zxyw
         {
             get
             {
-                return new fvec4(z, x, y, w);
+                return new dvec4(z, x, y, w);
             }
             set
             {
@@ -304,11 +305,11 @@ namespace Vectors.Core
                 w = value.w;
             }
         }
-        public fvec4 zyxw
+        public dvec4 zyxw
         {
             get
             {
-                return new fvec4(z, y, x, w);
+                return new dvec4(z, y, x, w);
             }
             set
             {
@@ -318,11 +319,11 @@ namespace Vectors.Core
                 w = value.w;
             }
         }
-        public fvec4 zywx
+        public dvec4 zywx
         {
             get
             {
-                return new fvec4(z, y, w, x);
+                return new dvec4(z, y, w, x);
             }
             set
             {
@@ -332,11 +333,11 @@ namespace Vectors.Core
                 x = value.w;
             }
         }
-        public fvec4 zxwy
+        public dvec4 zxwy
         {
             get
             {
-                return new fvec4(z, x, w, y);
+                return new dvec4(z, x, w, y);
             }
             set
             {
@@ -346,11 +347,11 @@ namespace Vectors.Core
                 y = value.w;
             }
         }
-        public fvec4 zwxy
+        public dvec4 zwxy
         {
             get
             {
-                return new fvec4(z, w, x, y);
+                return new dvec4(z, w, x, y);
             }
             set
             {
@@ -360,11 +361,11 @@ namespace Vectors.Core
                 y = value.w;
             }
         }
-        public fvec4 zwyx
+        public dvec4 zwyx
         {
             get
             {
-                return new fvec4(z, w, y, x);
+                return new dvec4(z, w, y, x);
             }
             set
             {
@@ -379,11 +380,11 @@ namespace Vectors.Core
 
         //Starting with W (6)
 
-        public fvec4 wxyz
+        public dvec4 wxyz
         {
             get
             {
-                return new fvec4(w, x, y, z);
+                return new dvec4(w, x, y, z);
             }
             set
             {
@@ -394,11 +395,11 @@ namespace Vectors.Core
             }
         }
 
-        public fvec4 wxzy
+        public dvec4 wxzy
         {
             get
             {
-                return new fvec4(w, x, z, y);
+                return new dvec4(w, x, z, y);
             }
             set
             {
@@ -408,11 +409,11 @@ namespace Vectors.Core
                 y = value.w;
             }
         }
-        public fvec4 wyxz
+        public dvec4 wyxz
         {
             get
             {
-                return new fvec4(w, y, x, z);
+                return new dvec4(w, y, x, z);
             }
             set
             {
@@ -422,11 +423,11 @@ namespace Vectors.Core
                 z = value.w;
             }
         }
-        public fvec4 wyzx
+        public dvec4 wyzx
         {
             get
             {
-                return new fvec4(w, y, z, x);
+                return new dvec4(w, y, z, x);
             }
             set
             {
@@ -436,11 +437,11 @@ namespace Vectors.Core
                 x = value.w;
             }
         }
-        public fvec4 wzxy
+        public dvec4 wzxy
         {
             get
             {
-                return new fvec4(w, z, x, y);
+                return new dvec4(w, z, x, y);
             }
             set
             {
@@ -450,11 +451,11 @@ namespace Vectors.Core
                 y = value.w;
             }
         }
-        public fvec4 wzyx
+        public dvec4 wzyx
         {
             get
             {
-                return new fvec4(w, z, y, x);
+                return new dvec4(w, z, y, x);
             }
             set
             {
@@ -464,185 +465,216 @@ namespace Vectors.Core
                 x = value.w;
             }
         }
-
 #endif
+
 
         ///////////////////////////
         //       Operators       //
         ///////////////////////////
 
 
-        public fvec4 dot(fvec4 b)
+        public dvec4 dot(dvec4 b)
         {
             return dot(this, b);
         }
-        public static fvec4 dot(fvec4 a, fvec4 b)
+        public static dvec4 dot(dvec4 a, dvec4 b)
         {
             return a * b;
         }
 
-        public static bool operator !=(fvec4 a, fvec4 b)
+
+
+        public static bool operator !=(dvec4 a, dvec4 b)
         {
             return !(a == b);
         }
-        public static bool operator ==(fvec4 a, fvec4 b)
+        public static bool operator ==(dvec4 a, dvec4 b)
         {
             return scalar.isClose(a.x, b.x) && scalar.isClose(a.y, b.y) && scalar.isClose(a.z, b.z) && scalar.isClose(a.w, b.w);
         }
 
 
-        public static fvec4 operator *(fvec4 a, fvec4 b)
-        {
-            return new fvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
-        }
-        public static fvec4 operator /(fvec4 a, fvec4 b)
-        {
-            return new fvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w);
-        }
-        public static fvec4 operator +(fvec4 a, fvec4 b)
-        {
-            return new fvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
-        }
-        public static fvec4 operator -(fvec4 a, fvec4 b)
-        {
-            return new fvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
-        }
 
 
-
-        public static fvec4 operator *(fvec2 a, fvec4 b)
+        public static dvec4 operator *(dvec4 a, dvec4 b)
         {
-            return new fvec4(a.x * b.x, a.y * b.y, b.z, b.w);
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
         }
-        public static fvec4 operator /(fvec2 a, fvec4 b)
+        public static dvec4 operator /(dvec4 a, dvec4 b)
         {
-            return new fvec4(a.x / b.x, a.y / b.y, b.z, b.w);
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w);
         }
-        public static fvec4 operator +(fvec2 a, fvec4 b)
+        public static dvec4 operator +(dvec4 a, dvec4 b)
         {
-            return new fvec4(a.x + b.x, a.y + b.y, b.z, b.w);
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
         }
-        public static fvec4 operator -(fvec2 a, fvec4 b)
+        public static dvec4 operator -(dvec4 a, dvec4 b)
         {
-            return new fvec4(a.x - b.x, a.y - b.y, b.z, b.w);
-        }
-
-
-
-        public static fvec4 operator *(fvec4 a, fvec2 b)
-        {
-            return new fvec4(a.x * b.x, a.y * b.y, a.z, a.w);
-        }
-        public static fvec4 operator /(fvec4 a, fvec2 b)
-        {
-            return new fvec4(a.x / b.x, a.y / b.y, a.z, a.w);
-        }
-        public static fvec4 operator +(fvec4 a, fvec2 b)
-        {
-            return new fvec4(a.x + b.x, a.y + b.y, a.z, a.w);
-        }
-        public static fvec4 operator -(fvec4 a, fvec2 b)
-        {
-            return new fvec4(a.x - b.x, a.y - b.y, a.z, a.w);
-        }
-
-
-
-        public static fvec4 operator *(fvec3 a, fvec4 b)
-        {
-            return new fvec4(a.x * b.x, a.y * b.y, a.z * b.z, b.w);
-        }
-        public static fvec4 operator /(fvec3 a, fvec4 b)
-        {
-            return new fvec4(a.x / b.x, a.y / b.y, a.z / b.z, b.w);
-        }
-        public static fvec4 operator +(fvec3 a, fvec4 b)
-        {
-            return new fvec4(a.x + b.x, a.y + b.y, a.z + b.z, b.w);
-        }
-        public static fvec4 operator -(fvec3 a, fvec4 b)
-        {
-            return new fvec4(a.x - b.x, a.y - b.y, a.z - b.z, b.w);
-        }
-
-
-
-        public static fvec4 operator *(fvec4 a, fvec3 b)
-        {
-            return new fvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w);
-        }
-        public static fvec4 operator /(fvec4 a, fvec3 b)
-        {
-            return new fvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w);
-        }
-        public static fvec4 operator +(fvec4 a, fvec3 b)
-        {
-            return new fvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w);
-        }
-        public static fvec4 operator -(fvec4 a, fvec3 b)
-        {
-            return new fvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w);
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
         }
 
 
 
 
 
-        public static fvec4 operator *(fvec4 a, float b)
+        public static dvec4 operator *(fvec4 a, dvec4 b)
         {
-            return new fvec4(a.x * b, a.y * b, a.z * b, a.w * b);
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
         }
-        public static fvec4 operator /(fvec4 a, float b)
+        public static dvec4 operator /(fvec4 a, dvec4 b)
         {
-            return new fvec4(a.x / b, a.y / b, a.z / b, a.w / b);
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w);
         }
-        public static fvec4 operator +(fvec4 a, float b)
+        public static dvec4 operator +(fvec4 a, dvec4 b)
         {
-            return new fvec4(a.x + b, a.y + b, a.z + b, a.w + b);
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
         }
-        public static fvec4 operator -(fvec4 a, float b)
+        public static dvec4 operator -(fvec4 a, dvec4 b)
         {
-            return new fvec4(a.x - b, a.y - b, a.z - b, a.w - b);
-        }
-
-
-        public static fvec4 operator *(float b, fvec4 a)
-        {
-            return new fvec4(a.x * b, a.y * b, a.z * b, a.w * b);
-        }
-        public static fvec4 operator /(float b, fvec4 a)
-        {
-            return new fvec4(a.x / b, a.y / b, a.z / b, a.w / b);
-        }
-        public static fvec4 operator +(float b, fvec4 a)
-        {
-            return new fvec4(a.x + b, a.y + b, a.z + b, a.w + b);
-        }
-        public static fvec4 operator -(float b, fvec4 a)
-        {
-            return new fvec4(a.x - b, a.y - b, a.z - b, a.w + b);
-        }
-        public static fvec4 operator -(fvec4 a)
-        {
-            return new fvec4(-a.x, -a.y, -a.z, -a.w);
-        }
-
-        public static fvec4 operator *(fvec4 a, fmat4 b)
-        {
-            return new fvec4(    (a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
-                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)) + (a.w * b.getValue(1, 3)),
-                                 (a.x * b.getValue(2, 0)) + (a.y * b.getValue(2, 1)) + (a.z * b.getValue(2, 2)) + (a.w * b.getValue(2, 3)),
-                                 (a.x * b.getValue(3, 0)) + (a.y * b.getValue(3, 1)) + (a.z * b.getValue(3, 2)) + (a.w * b.getValue(3, 3))
-                                 );
-        }
-        public static fvec4 operator *(fmat4 b, fvec4 a)
-        {
-            return a * b.transposed;
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
         }
 
 
 
-        public static dvec4 operator *(fvec4 a, dmat4 b)
+
+
+        public static dvec4 operator *(dvec4 a, fvec4 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
+        }
+        public static dvec4 operator /(dvec4 a, fvec4 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w);
+        }
+        public static dvec4 operator +(dvec4 a, fvec4 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
+        }
+        public static dvec4 operator -(dvec4 a, fvec4 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
+        }
+
+
+
+        public static dvec4 operator *(dvec2 a, dvec4 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, b.z, b.w);
+        }
+        public static dvec4 operator /(dvec2 a, dvec4 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, b.z, b.w);
+        }
+        public static dvec4 operator +(dvec2 a, dvec4 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, b.z, b.w);
+        }
+        public static dvec4 operator -(dvec2 a, dvec4 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, b.z, b.w);
+        }
+
+
+
+        public static dvec4 operator *(dvec4 a, dvec2 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z, a.w);
+        }
+        public static dvec4 operator /(dvec4 a, dvec2 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z, a.w);
+        }
+        public static dvec4 operator +(dvec4 a, dvec2 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z, a.w);
+        }
+        public static dvec4 operator -(dvec4 a, dvec2 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z, a.w);
+        }
+
+
+
+        public static dvec4 operator *(dvec3 a, dvec4 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, b.w);
+        }
+        public static dvec4 operator /(dvec3 a, dvec4 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, b.w);
+        }
+        public static dvec4 operator +(dvec3 a, dvec4 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, b.w);
+        }
+        public static dvec4 operator -(dvec3 a, dvec4 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, b.w);
+        }
+
+
+
+        public static dvec4 operator *(dvec4 a, dvec3 b)
+        {
+            return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w);
+        }
+        public static dvec4 operator /(dvec4 a, dvec3 b)
+        {
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w);
+        }
+        public static dvec4 operator +(dvec4 a, dvec3 b)
+        {
+            return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w);
+        }
+        public static dvec4 operator -(dvec4 a, dvec3 b)
+        {
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w);
+        }
+
+
+
+
+
+        public static dvec4 operator *(dvec4 a, double b)
+        {
+            return new dvec4(a.x * b, a.y * b, a.z * b, a.w * b);
+        }
+        public static dvec4 operator /(dvec4 a, double b)
+        {
+            return new dvec4(a.x / b, a.y / b, a.z / b, a.w / b);
+        }
+        public static dvec4 operator +(dvec4 a, double b)
+        {
+            return new dvec4(a.x + b, a.y + b, a.z + b, a.w + b);
+        }
+        public static dvec4 operator -(dvec4 a, double b)
+        {
+            return new dvec4(a.x - b, a.y - b, a.z - b, a.w - b);
+        }
+
+
+        public static dvec4 operator *(double b, dvec4 a)
+        {
+            return new dvec4(a.x * b, a.y * b, a.z * b, a.w * b);
+        }
+        public static dvec4 operator /(double b, dvec4 a)
+        {
+            return new dvec4(a.x / b, a.y / b, a.z / b, a.w / b);
+        }
+        public static dvec4 operator +(double b, dvec4 a)
+        {
+            return new dvec4(a.x + b, a.y + b, a.z + b, a.w + b);
+        }
+        public static dvec4 operator -(double b, dvec4 a)
+        {
+            return new dvec4(a.x - b, a.y - b, a.z - b, a.w + b);
+        }
+        public static dvec4 operator -(dvec4 a)
+        {
+            return new dvec4(-a.x, -a.y, -a.z, -a.w);
+        }
+
+        public static dvec4 operator *(dvec4 a, dmat4 b)
         {
             return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
                                  (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)) + (a.w * b.getValue(1, 3)),
@@ -650,28 +682,41 @@ namespace Vectors.Core
                                  (a.x * b.getValue(3, 0)) + (a.y * b.getValue(3, 1)) + (a.z * b.getValue(3, 2)) + (a.w * b.getValue(3, 3))
                                  );
         }
-        public static dvec4 operator *(dmat4 b, fvec4 a)
+        public static dvec4 operator *(dmat4 b, dvec4 a)
         {
             return a * b.transposed;
         }
 
-#if NESTING_ENABLED
-        public static fvec4 operator *(fvec4 a, tvec4<tvec4<float>> b)
+        public static dvec4 operator *(dvec4 a, fmat4 b)
         {
-            fmat4 matrix = fmat4.fromNestedVector(b);
+            return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
+                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)) + (a.w * b.getValue(1, 3)),
+                                 (a.x * b.getValue(2, 0)) + (a.y * b.getValue(2, 1)) + (a.z * b.getValue(2, 2)) + (a.w * b.getValue(2, 3)),
+                                 (a.x * b.getValue(3, 0)) + (a.y * b.getValue(3, 1)) + (a.z * b.getValue(3, 2)) + (a.w * b.getValue(3, 3))
+                                 );
+        }
+        public static dvec4 operator *(fmat4 b, dvec4 a)
+        {
+            return a * b.transposed;
+        }
+
+
+#if NESTING_ENABLED
+        public static dvec4 operator *(dvec4 a, tvec4<tvec4<double>> b)
+        {
+            dmat4 matrix = dmat4.fromNestedVector(b);
 
             return a * matrix;
         }
-        public static fvec4 operator *(tvec4<tvec4<float>> b, fvec4 a)
+        public static dvec4 operator *(tvec4<tvec4<double>> b, dvec4 a)
         {
-            fmat4 matrix = fmat4.fromNestedVector(b);
+            dmat4 matrix = dmat4.fromNestedVector(b);
 
             return a * matrix.transposed;
         }
 
 #endif
-
-        public new float this[int i]
+        public new double this[int i]
         {
             get
             {

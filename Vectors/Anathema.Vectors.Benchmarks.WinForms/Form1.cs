@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vectors.Benchmarks.WinForms
+namespace Anathema.Vectors.Benchmarks.WinForms
 {
     public partial class Form1 : Form
     {

@@ -1,23 +1,22 @@
-﻿#if DOUBLES_ENABLED
+﻿#if FLOATS_ENABLED
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace Vectors.Core
+namespace Anathema.Vectors.Core
 {
     /// <summary>
-    /// A double-precision floating point, 2x2 (4 element) matrix.
+    /// A single-precision floating point, 2x2 (4 element) matrix.
     /// </summary>
-    public class dmat2
+    public class fmat2
     {
         ///////////////////////////
         //        Values         //
         ///////////////////////////
 
-        public double[] data { get; protected set; } = new double[4];
+        public float[] data { get; protected set; } = new float[4];
 
         public virtual int rowCount { get { return 2; } }
         public virtual int columnCount { get { return 2; } }
@@ -26,10 +25,10 @@ namespace Vectors.Core
         //     Constructors      //
         ///////////////////////////
 
-        public dmat2()
+        public fmat2()
         {
         }
-        public dmat2(dmat2 template)
+        public fmat2(fmat2 template)
         {
             Array.Copy(template.data, data, data.Length);
         }
@@ -38,40 +37,41 @@ namespace Vectors.Core
         //      Generators       //
         ///////////////////////////
 
-        public static dmat2 identity()
+        public static fmat2 identity()
         {
-            dmat2 output = new dmat2();
+            fmat2 output = new fmat2();
             for (int i = 0; i < output.rowCount && i < output.columnCount; i++)
                 output.setValue(i, i, 1);
             return output;
         }
-        public static dmat2 rotateRadians(double angle)
+        public static fmat2 rotateRadians(float angle)
         {
-            dmat2 output = new dmat2();
+            fmat2 output = new fmat2();
 
-            output.setValue(0, 0, (double)Math.Cos(angle));
-            output.setValue(0, 1, (double)-Math.Sin(angle));
-            output.setValue(1, 0, (double)Math.Sin(angle));
-            output.setValue(1, 1, (double)Math.Cos(angle));
+            output.setValue(0, 0, (float)Math.Cos(angle));
+            output.setValue(0, 1, (float)-Math.Sin(angle));
+            output.setValue(1, 0, (float)Math.Sin(angle));
+            output.setValue(1, 1, (float)Math.Cos(angle));
 
             return output;
         }
-        public static dmat2 rotateDegrees(double angle)
+        public static fmat2 rotateDegrees(float angle)
         {
-            return rotateRadians(angle * (Math.PI / 180.0));
+            return rotateRadians(angle * (float)(Math.PI / 180.0));
         }
 
-        public static dmat2 scale(dvec2 basis)
+
+        public static fmat2 scale(fvec2 basis)
         {
-            dmat2 output = new dmat2();
+            fmat2 output = new fmat2();
             output.setValue(0, 0, basis.x);
             output.setValue(1, 1, basis.y);
             return output;
         }
 
-        public static dmat2 scale(double size)
+        public static fmat2 scale(float size)
         {
-            dmat2 output = new dmat2();
+            fmat2 output = new fmat2();
             output.setValue(0, 0, size);
             output.setValue(1, 1, size);
             return output;
@@ -82,9 +82,9 @@ namespace Vectors.Core
         ///////////////////////////
 
         //todo: check if this causes a transpose
-        public static dmat2 fromNestedVector(tvec2<tvec2<double>> input)
+        public static fmat2 fromNestedVector(tvec2<tvec2<float>> input)
         {
-            dmat4 output = new dmat4();
+            fmat4 output = new fmat4();
 
             output.setValue(0, 0, input.x.x);
             output.setValue(0, 1, input.x.y);
@@ -100,7 +100,7 @@ namespace Vectors.Core
         ///////////////////////////
 
         //todo: check rows and columns aren't being swapped (transposed)
-        public double getValue(int row, int column)
+        public float getValue(int row, int column)
         {
             //Design decision: we should be able to pass around a mat2 in a mat3
             // reference and simply use the columns that are present.
@@ -111,7 +111,7 @@ namespace Vectors.Core
         }
 
         //todo: check rows and columns aren't being swapped (transposed)
-        public void setValue(int row, int column, double value)
+        public void setValue(int row, int column, float value)
         {
             //Design decision: writing to a matrix out of its bounds
             // should fail. This is so that if you're passing around a
@@ -129,11 +129,11 @@ namespace Vectors.Core
         //      Transforms       //
         ///////////////////////////
 
-        public dmat2 transposed
+        public fmat2 transposed
         {
             get
             {
-                dmat2 output = new dmat2();
+                fmat2 output = new fmat2();
                 for (int x = 0; x < rowCount; x++)
                     for (int y = 0; y < columnCount; y++)
                         output.setValue(x, y, getValue(y, x));
@@ -150,7 +150,7 @@ namespace Vectors.Core
             assign(transposed);
         }
 
-        public void assign(dmat2 other)
+        public void assign(fmat2 other)
         {
             for (int i = 0; i < other.data.Length && i < data.Length; i++)
                 data[i] = other.data[i];
@@ -161,8 +161,8 @@ namespace Vectors.Core
         ///////////////////////////
 
 
-        public double this[int i] { get { return data[i]; } set { data[i] = value; } }
-        public double this[int x, int y] { get { return getValue(x, y); } set { setValue(x, y, value); } }
+        public float this[int i] { get { return data[i]; } set { data[i] = value; } }
+        public float this[int x, int y] { get { return getValue(x,y); } set { setValue(x,y,value); } }
 
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vectors.Benchmarks.WinForms
+namespace Anathema.Vectors.Benchmarks.WinForms
 {
     static class Program
     {

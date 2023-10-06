@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core
+namespace Anathema.Vectors.Core
 {
     /// <summary>
     /// A 2-component vector where each element is a templated type. Nesting is allowed.

@@ -1,5 +1,5 @@
 ﻿
-namespace Vectors.Benchmarks.WinForms
+namespace Anathema.Vectors.Benchmarks.WinForms
 {
     partial class Form1
     {

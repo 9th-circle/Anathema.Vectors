@@ -1,16 +1,17 @@
-﻿#if FLOATS_ENABLED
+﻿#if DOUBLES_ENABLED
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vectors.Core
+
+namespace Anathema.Vectors.Core
 {
     /// <summary>
-    /// A single-precision floating point, 4x4 (16 element) matrix.
+    /// A double-precision floating point, 4x4 (16 element) matrix.
     /// </summary>
-    public class fmat4 : fmat3
+    public class dmat4 : dmat3
     {
 
         ///////////////////////////
@@ -24,14 +25,14 @@ namespace Vectors.Core
         //     Constructors      //
         ///////////////////////////
 
-        public fmat4()
+        public dmat4()
         {
-            data = new float[16];
+            data = new double[16];
         }
 
-        public fmat4(fmat4 template)
+        public dmat4(dmat4 template)
         {
-            data = new float[16];
+            data = new double[16];
             Array.Copy(template.data, data, data.Length);
         }
 
@@ -39,38 +40,60 @@ namespace Vectors.Core
         //      Generators       //
         ///////////////////////////
 
-        public new static fmat4 identity()
+        public dmat4 toDMat4()
         {
-            fmat4 output = new fmat4();
+            dmat4 output = new dmat4();
+            output.setValue(0, 0, getValue(0, 0));
+            output.setValue(0, 1, getValue(0, 1));
+            output.setValue(0, 2, getValue(0, 2));
+
+            output.setValue(1, 0, getValue(1, 0));
+            output.setValue(1, 1, getValue(1, 1));
+            output.setValue(1, 2, getValue(1, 2));
+
+            output.setValue(2, 0, getValue(2, 0));
+            output.setValue(2, 1, getValue(2, 1));
+            output.setValue(2, 2, getValue(2, 2));
+
+            return output;
+        }
+
+
+
+        public new static dmat4 identity()
+        {
+            dmat4 output = new dmat4();
             for (int i = 0; i < output.rowCount && i < output.columnCount; i++)
                 output.setValue(i, i, 1);
             return output;
         }
 
-        public static new fmat4 rotateRadians(fvec3 axis, float angle)
+        public static new dmat4 rotateRadians(fvec3 axis, double angle)
         {
-            return fmat3.rotateRadians(axis, angle).toFMat4();
+            //todo: implement 3D rotations
+            throw new NotImplementedException();
         }
 
-        public static new fmat4 rotateRadians(float eulerX, float eulerY, float eulerZ)
+        public static new dmat4 rotateRadians(double eulerX, double eulerY, double eulerZ)
         {
-            return fmat3.rotateRadians(eulerX, eulerY, eulerZ).toFMat4();
+            //todo: implement 3D rotations
+            throw new NotImplementedException();
+        }
+        public static new dmat4 rotateDegrees(fvec3 axis, double angle)
+        {
+            return rotateRadians(axis, angle * (Math.PI / 180.0));
         }
 
-        public static new fmat4 rotateDegrees(fvec3 axis, float angle)
+        public static new dmat4 rotateDegrees(double eulerX, double eulerY, double eulerZ)
         {
-            return rotateRadians(axis, angle * (float)(Math.PI / 180.0));
+            return rotateRadians(eulerX * (Math.PI / 180.0),
+                                    eulerY * (Math.PI / 180.0),
+                                    eulerZ * (Math.PI / 180.0));
         }
 
-        public static new fmat4 rotateDegrees(float eulerX, float eulerY, float eulerZ)
+        public static dmat4 scale(dvec4 basis)
         {
-            return rotateRadians(eulerX * (float)(Math.PI / 180.0),
-                                    eulerY * (float)(Math.PI / 180.0),
-                                    eulerZ * (float)(Math.PI / 180.0));
-        }
-        public static fmat4 scale(fvec4 basis)
-        {
-            fmat4 output = new fmat4();
+            dmat4 output = new dmat4();
             output.setValue(0, 0, basis.x);
             output.setValue(1, 1, basis.y);
             output.setValue(2, 2, basis.z);
@@ -78,9 +101,9 @@ namespace Vectors.Core
             return output;
         }
 
-        public static new fmat4 scale(float size)
+        public static new dmat4 scale(double size)
         {
-            fmat4 output = new fmat4();
+            dmat4 output = new dmat4();
             output.setValue(0, 0, size);
             output.setValue(1, 1, size);
             output.setValue(2, 2, size);
@@ -88,13 +111,14 @@ namespace Vectors.Core
             return output;
         }
 
-        public static new fmat4 translate(fvec3 basis)
+
+        public static new dmat4 translate(fvec3 basis)
         {
             //todo: implement 3D translations
             throw new NotImplementedException();
         }
 
-        public static fmat4 projection()
+        public static dmat4 projection()
         {
             //todo: implement projection matrices
             throw new NotImplementedException();
@@ -105,9 +129,9 @@ namespace Vectors.Core
         ///////////////////////////
 
         //todo: check if this causes a transpose
-        public static fmat4 fromNestedVector(tvec4<tvec4<float>> input)
+        public static dmat4 fromNestedVector(tvec4<tvec4<double>> input)
         {
-            fmat4 output = new fmat4();
+            dmat4 output = new dmat4();
             output.setValue(0, 0, input.x.x);
             output.setValue(0, 1, input.x.y);
             output.setValue(0, 2, input.x.z);
@@ -135,17 +159,18 @@ namespace Vectors.Core
         //      Transforms       //
         ///////////////////////////
 
-        public new fmat4 transposed
+        public new dmat4 transposed
         {
             get
             {
-                fmat4 output = new fmat4();
+                dmat4 output = new dmat4();
                 for (int x = 0; x < rowCount; x++)
                     for (int y = 0; y < columnCount; y++)
                         output.setValue(x, y, getValue(y, x));
                 return output;
             }
         }
+
 
         ///////////////////////////
         //       Mutators        //
@@ -156,7 +181,7 @@ namespace Vectors.Core
             assign(transposed);
         }
 
-        public void assign(fmat4 other)
+        public void assign(dmat4 other)
         {
             for (int i = 0; i < other.data.Length && i < data.Length; i++)
                 data[i] = other.data[i];
