@@ -2,9 +2,7 @@
 
 # Vectors
 
-
-
-
+Basic linear algebra, mostly for computer graphics.
 
 ## Approach
 
@@ -16,17 +14,25 @@
 
 ## Notation
 
-d = double precision floating point data type
+`d` = double precision floating point data type
 
-f = single precision floating point data type
+`f` = single precision floating point data type
 
-t = generic (template) defined data type
+`t` = generic (template) defined data type
 
-mat = matrix
+`mat` = matrix
 
-vec = vector
+`vec` = vector
 
-quat = quaternion
+`quat` = quaternion
+
+Number at end = number of components (per row/column for matrices).
+
+
+
+So, for example, `dmat2` = double precision floating point 2x2 matrix.
+
+Or, `tvec3<int>`  = 32-bit integer 3-component vector.
 
 ## Nested Template Vectors
 
