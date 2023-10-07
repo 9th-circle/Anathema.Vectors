@@ -90,8 +90,14 @@ namespace Anathema.Vectors.Core
 
         public static new fmat4 translate(fvec3 basis)
         {
-            //todo: implement 3D translations
-            throw new NotImplementedException();
+            fmat4 output = fmat4.identity();
+
+            //todo: check transposition
+            output[3, 0] = basis.x;
+            output[3, 1] = basis.y;
+            output[3, 2] = basis.z;
+
+            return output;
         }
 
         public static fmat4 projection()

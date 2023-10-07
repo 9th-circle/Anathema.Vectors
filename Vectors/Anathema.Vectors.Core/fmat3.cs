@@ -64,15 +64,20 @@ namespace Anathema.Vectors.Core
                 output.setValue(i, i, 1);
             return output;
         }
+
+        //Derived from https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle
         public static fmat3 rotateRadians(fvec3 axis, float angle)
         {
+            fmat3 output = new fmat3();
 
+            return output;
 
             throw new NotImplementedException();
         }
 
         //Derivation from https://en.wikipedia.org/wiki/Rotation_matrix#General_3D_rotations
-        //pitch, yaw, roll
+        //a=pitch, b=yaw, g=roll
+        //todo: when this is verified to work, swap those names
         public static fmat3 rotateRadians(float a, float b, float g)
         {
             fmat3 output = new fmat3();
