@@ -72,17 +72,24 @@ namespace Anathema.Vectors.Core
         }
 
         //Derivation from https://en.wikipedia.org/wiki/Rotation_matrix#General_3D_rotations
-        public static fmat3 rotateRadians(float yaw, float pitch, float roll)
+        //pitch, yaw, roll
+        public static fmat3 rotateRadians(float a, float b, float g)
         {
             fmat3 output = new fmat3();
 
-            output[0, 0] = (float)(Math.Cos(yaw) * Math.Cos(pitch));
-            output[0, 1] = (float)((Math.Cos(yaw) * Math.Sin(pitch) * Math.Sin(roll))-(Math.Sin(pitch)*Math.Cos(roll)));
+            output[0, 0] = (float)(Math.Cos(a) * Math.Cos(b));
+            output[0, 1] = (float)((Math.Cos(a) * Math.Sin(b) * Math.Sin(g))-(Math.Sin(a)*Math.Cos(g)));
+            output[0, 2] = (float)((Math.Cos(a) * Math.Sin(b) * Math.Cos(g)) + (Math.Sin(a) * Math.Sin(g)));
 
+            output[1, 0] = (float)(Math.Sin(a) * Math.Cos(b));
+            output[1, 1] = (float)((Math.Sin(a) * Math.Sin(b) * Math.Sin(g)) + (Math.Cos(a) * Math.Cos(g)));
+            output[1, 2] = (float)((Math.Sin(a) * Math.Sin(b) * Math.Cos(g)) - (Math.Cos(a) * Math.Sin(g)));
 
+            output[2, 0] = (float)-Math.Sin(b);
+            output[2, 1] = (float)(Math.Cos(b) * Math.Sin(g));
+            output[2, 2] = (float)(Math.Cos(b) * Math.Cos(g));
 
-
-            throw new NotImplementedException();
+            return output;
         }
         public static fmat3 rotateDegrees(fvec3 axis, float angle)
         {
