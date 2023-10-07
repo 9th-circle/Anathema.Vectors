@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -65,13 +66,22 @@ namespace Anathema.Vectors.Core
         }
         public static fmat3 rotateRadians(fvec3 axis, float angle)
         {
-            //todo: implement 3D rotations
+
+
             throw new NotImplementedException();
         }
 
-        public static fmat3 rotateRadians(float eulerX, float eulerY, float eulerZ)
+        //Derivation from https://en.wikipedia.org/wiki/Rotation_matrix#General_3D_rotations
+        public static fmat3 rotateRadians(float yaw, float pitch, float roll)
         {
-            //todo: implement 3D rotations
+            fmat3 output = new fmat3();
+
+            output[0, 0] = (float)(Math.Cos(yaw) * Math.Cos(pitch));
+            output[0, 1] = (float)((Math.Cos(yaw) * Math.Sin(pitch) * Math.Sin(roll))-(Math.Sin(pitch)*Math.Cos(roll)));
+
+
+
+
             throw new NotImplementedException();
         }
         public static fmat3 rotateDegrees(fvec3 axis, float angle)
