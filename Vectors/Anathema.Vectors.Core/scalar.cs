@@ -8,7 +8,7 @@ namespace Anathema.Vectors.Core
 {
     public class scalar
     {
-        const float REALLY_SMALL_VALUE = 0.0000001f;    //using float.epsilon is not better - floating point granularity is nonlinear
+        const float REALLY_SMALL_VALUE = 0.00005f;    //using float.epsilon is not better - floating point granularity is nonlinear
 
         //Yes: this sucks. 
 #if FLOATS_ENABLED

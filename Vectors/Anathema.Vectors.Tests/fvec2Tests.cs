@@ -12,10 +12,9 @@ namespace Anathema.Vectors.Tests
 
     public class fvec2Tests
     {
-        const float REALLY_SMALL_VALUE = 0.0000001f;
+        const float REALLY_SMALL_VALUE = 0.00005f;
 
         //todo:
-        // - from angle/length (degrees + radians)
         // - dot
         // - [] index
 
@@ -79,6 +78,8 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(-1, west.normalised.x);
             Assert.Equal(0, west.normalised.y);
         }
+
+
         [Fact]
         public void getCardinalAnglesDegrees()
         {
@@ -94,6 +95,7 @@ namespace Anathema.Vectors.Tests
             fvec2 west = new fvec2(-1, 0);
             Assert.Equal(270, west.angleDegrees);
         }
+
 
         [Fact]
         public void fromCardinalAnglesDegrees()
@@ -114,6 +116,47 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(west.x + 1) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
         }
+        [Fact]
+        public void fromCardinalAnglesAndLengthDegrees()
+        {
+            //todo: convert to theory
+            fvec2 north = fvec2.fromAngleDegreesAndLength(0, 20);
+            Assert.True(Math.Abs(north.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(north.y + 20) < REALLY_SMALL_VALUE);
+
+            fvec2 south = fvec2.fromAngleDegreesAndLength(180,123);
+            Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(south.y - 123) < REALLY_SMALL_VALUE);
+
+            fvec2 east = fvec2.fromAngleDegreesAndLength(90,-10);
+            Assert.True(Math.Abs(east.x + 10) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
+
+            fvec2 west = fvec2.fromAngleDegreesAndLength(270,0.1f);
+            Assert.True(Math.Abs(west.x + 0.1) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
+        }
+
+        [Fact]
+        public void fromCardinalAnglesAndLengthRadians()
+        {
+            //todo: convert to theory
+            fvec2 north = fvec2.fromAngleRadiansAndLength(0, 20);
+            Assert.True(Math.Abs(north.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(north.y + 20) < REALLY_SMALL_VALUE);
+
+            fvec2 south = fvec2.fromAngleRadiansAndLength((float)Math.PI, 123);
+            Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(south.y - 123) < REALLY_SMALL_VALUE);
+
+            fvec2 east = fvec2.fromAngleRadiansAndLength((float)Math.PI/2.0f, -10);
+            Assert.True(Math.Abs(east.x + 10) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
+
+            fvec2 west = fvec2.fromAngleRadiansAndLength((float)(float)Math.PI * (3/2.0f), 0.1f);
+            Assert.True(Math.Abs(west.x + 0.1) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
+        }
 
         [Fact]
         public void getCardinalAnglesRadians()
@@ -130,6 +173,7 @@ namespace Anathema.Vectors.Tests
             fvec2 west = new fvec2(-1, 0);
             Assert.True(west.angleRadians - (Math.PI * (3/2.0)) < REALLY_SMALL_VALUE);
         }
+
 
         [Fact]
         public void fromCardinalAnglesRadians()
@@ -151,6 +195,7 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
         }
 
+
         [Fact]
         public void construct()
         {
@@ -171,6 +216,7 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(8, fromDVec2.x);
             Assert.Equal(5, fromDVec2.y);
         }
+
 
         [Fact]
         public void equality()
