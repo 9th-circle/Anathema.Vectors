@@ -1,6 +1,7 @@
 - Change project to .NET FX 2.0 and put out any fires that result
 
 - Constructors for matrices with a simple scalar array
+- Colour swizzles (rgba) with compile time flag
 - Mutation operators ( *= += /= -=)
 - Matrix-matrix multiplication
   - Basic use case
