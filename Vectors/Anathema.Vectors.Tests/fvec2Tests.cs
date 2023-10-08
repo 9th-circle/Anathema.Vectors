@@ -1,9 +1,5 @@
 ﻿#pragma warning disable CS1718 // Comparison made to same variable
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 using Anathema.Vectors.Core;
 
