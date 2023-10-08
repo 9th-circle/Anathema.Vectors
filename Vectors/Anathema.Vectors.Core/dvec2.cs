@@ -50,13 +50,21 @@ namespace Anathema.Vectors.Core
         ///////////////////////////
 
 
-        public static dvec2 fromAngle(double angle)
+        public static dvec2 fromAngleRadians(double angle)
         {
             return new dvec2(Math.Cos(angle), Math.Sin(angle));
         }
-        public static dvec2 fromAngleAndLength(double angle, double length)
+        public static dvec2 fromAngleRadiansAndLength(double angle, double length)
         {
             return new dvec2(Math.Cos(angle) * length, Math.Sin(angle) * length);
+        }
+        public static dvec2 fromAngleDegrees(double angle)
+        {
+            return fromAngleRadians(angle * (Math.PI / 180.0f));
+        }
+        public static dvec2 fromAngleDegreesAndLength(double angle, double length)
+        {
+            return fromAngleRadiansAndLength(angle * (Math.PI / 180.0f), length);
         }
 
         ///////////////////////////
