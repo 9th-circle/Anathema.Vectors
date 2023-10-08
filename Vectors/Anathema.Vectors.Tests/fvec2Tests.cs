@@ -15,12 +15,8 @@ namespace Anathema.Vectors.Tests
         const float REALLY_SMALL_VALUE = 0.00005f;
 
         //todo:
-        // - dot
+        // - cross
         // - [] index
-
-        //out of scope:
-        // - nested templates
-        // - matrix operations
 
         [Theory]
         [InlineData(new object[] { 1, 2 })]
@@ -56,6 +52,27 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(working.length - length) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(x - working.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(y - working.y) < REALLY_SMALL_VALUE);
+        }
+
+
+        [Theory]
+        [InlineData(new object[] { 0, 0, 0, 0, 0 })]
+        [InlineData(new object[] { 6, 0, 0, 1, 0 })]
+        [InlineData(new object[] { 5, 0, 5, 0, 25 })]
+        [InlineData(new object[] { 5, 0, -10, 0, -50 })]
+        [InlineData(new object[] { 1, 0, 0, 1, 0 })]
+        [InlineData(new object[] { 1, 0, 1, 0, 1 })]
+        [InlineData(new object[] { 0, 1, 0, 1, 1 })]
+        [InlineData(new object[] { 0, 1, 0, -1, -1 })]
+        [InlineData(new object[] { -1, 0, 1, 0, -1 })]
+        public void dotProduct(float x1, float y1, float x2, float y2, float expectedResult)
+        {
+            fvec2 a = new fvec2(x1, y1);
+            fvec2 b = new fvec2(x2, y2);
+
+            float result = a.dot(b);
+
+            Assert.True(Math.Abs(result - expectedResult) < REALLY_SMALL_VALUE);
         }
 
 

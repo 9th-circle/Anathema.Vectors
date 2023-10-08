@@ -150,13 +150,13 @@ namespace Anathema.Vectors.Core
         ///////////////////////////
 
 
-        public fvec2 dot(fvec2 b)
+        public float dot(fvec2 b)
         {
             return dot(this, b);
         }
-        public static fvec2 dot(fvec2 a, fvec2 b)
+        public static float dot(fvec2 a, fvec2 b)
         {
-            return a * b;
+            return (a.x * b.x) + (a.y * b.y);
         }
 
         public fvec2 cross()
