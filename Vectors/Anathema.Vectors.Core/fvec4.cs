@@ -32,6 +32,7 @@ namespace Anathema.Vectors.Core
             z = xyz.z;
             this.w = w;
         }
+#if CONVERSIONS_ENABLED
         public fvec4(float x, fvec3 yzw)
         {
             this.x = x;
@@ -67,20 +68,6 @@ namespace Anathema.Vectors.Core
             this.z = z;
             this.w = w;
         }
-        public fvec4(float x, float y, float z, float w)
-        {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-            this.w = w;
-        }
-        public fvec4(fvec4 xyzw)
-        {
-            x = xyzw.x;
-            y = xyzw.y;
-            z = xyzw.z;
-            w = xyzw.w;
-        }
         public fvec4(dvec4 xyzw)
         {
             x = (float)xyzw.x;
@@ -88,7 +75,21 @@ namespace Anathema.Vectors.Core
             z = (float)xyzw.z;
             w = (float)xyzw.w;
         }
-
+#endif
+        public fvec4(fvec4 xyzw)
+        {
+            x = xyzw.x;
+            y = xyzw.y;
+            z = xyzw.z;
+            w = xyzw.w;
+        }
+        public fvec4(float x, float y, float z, float w)
+        {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+            this.w = w;
+        }
 
         ///////////////////////////
         //      Derivations      //
@@ -1011,7 +1012,7 @@ namespace Anathema.Vectors.Core
         }
 
 
-
+#if CONVERSIONS_ENABLED
         public static dvec4 operator *(fvec4 a, dmat4 b)
         {
             return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
@@ -1024,7 +1025,7 @@ namespace Anathema.Vectors.Core
         {
             return a * b.transposed;
         }
-
+#endif
 #if NESTING_ENABLED
         public static fvec4 operator *(fvec4 a, tvec4<tvec4<float>> b)
         {

@@ -2,7 +2,8 @@
 
 - Constructors for vecs and matrices with a simple scalar array
 - ToArray() implementation
-- Colour swizzles (rgba) with compile time flag
+- Copy colour swizzles to d and t types
+- Roll out CONVERSIONS_ENABLED
 - Mutation operators ( *= += /= -=)
 - Matrix-matrix multiplication
   - Basic use case

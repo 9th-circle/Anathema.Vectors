@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE;TEMPLATES_ENABLED;SWIZZLES_ENABLED;NESTING_ENABLED;DOUBLES_ENABLED;FLOATS_ENABLED;COMPLEX_ENABLED;COLOURS_ENABLED</DefineConstants>
+    <DefineConstants>TRACE;TEMPLATES_ENABLED;SWIZZLES_ENABLED;NESTING_ENABLED;DOUBLES_ENABLED;FLOATS_ENABLED;COMPLEX_ENABLED;COLOURS_ENABLED;CONVERSIONS_ENABLED</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

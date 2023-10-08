@@ -26,18 +26,6 @@ namespace Anathema.Vectors.Core
         public fvec3()
         {
         }
-        public fvec3(fvec2 a, float z)
-        {
-            x = a.x;
-            y = a.y;
-            this.z = z;
-        }
-        public fvec3(float x, fvec2 yz)
-        {
-            this.x = x;
-            y = yz.x;
-            z = yz.y;
-        }
         public fvec3(float x, float y, float z)
         {
             this.x = x;
@@ -50,12 +38,26 @@ namespace Anathema.Vectors.Core
             y = xyz.y;
             z = xyz.z;
         }
+#if CONVERSIONS_ENABLED
+        public fvec3(fvec2 a, float z)
+        {
+            x = a.x;
+            y = a.y;
+            this.z = z;
+        }
+        public fvec3(float x, fvec2 yz)
+        {
+            this.x = x;
+            y = yz.x;
+            z = yz.y;
+        }
         public fvec3(dvec3 xyz)
         {
             x = (float)xyz.x;
             y = (float)xyz.y;
             z = (float)xyz.z;
         }
+#endif
 
 
 
@@ -440,6 +442,7 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 
+#if CONVERSIONS_ENABLED
         public static dvec3 operator *(fvec3 a, dmat4 b)
         {
             dvec4 result = new dvec4(a.x, a.y, a.z, 1.0f) * b;
@@ -450,7 +453,7 @@ namespace Anathema.Vectors.Core
         {
             return a * b.transposed;
         }
-
+#endif
 #if NESTING_ENABLED
         public static fvec3 operator *(fvec3 a, tvec3<tvec3<float>> b)
         {

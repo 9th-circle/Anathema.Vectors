@@ -34,11 +34,13 @@ namespace Anathema.Vectors.Core
             x = xy.x;
             y = xy.y;
         }
+#if CONVERSIONS_ENABLED
         public fvec2(dvec2 xy)
         {
             x = (float)xy.x;
             y = (float)xy.y;
         }
+#endif
 
         ///////////////////////////
         //      Conversions      //
@@ -298,10 +300,12 @@ namespace Anathema.Vectors.Core
             return new dvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)));
         }
+#if CONVERSIONS_ENABLED
         public static dvec2 operator *(dmat2 b, fvec2 a)
         {
             return a * b.transposed;
         }
+#endif
 
 #if NESTING_ENABLED
         public static fvec2 operator *(fvec2 a, tvec2<tvec2<float>> b)
