@@ -53,15 +53,15 @@ namespace Anathema.Vectors.Core
 
             output[0, 0] = (Math.Cos(angle) + (axis.x * (1 - Math.Cos(angle))));
             output[0, 1] = (axis.x * (1 - Math.Cos(angle)) - (axis.z * Math.Sin(angle)));
-            output[0, 2] = (axis.x * axis.z * (1 - Math.Cos(angle)) + (axis.y * Math.Sin(angle));
+            output[0, 2] = (axis.x * axis.z * (1 - Math.Cos(angle)) + (axis.y * Math.Sin(angle)));
 
             output[1, 0] = (axis.y * axis.x * (1 - Math.Cos(angle)) + (axis.z * Math.Sin(angle)));
             output[1, 1] = (Math.Cos(angle) + (axis.y * (1 - Math.Cos(angle))));
-            output[1, 2] = (axis.y * axis.z * (1 - Math.Cos(angle)) - (axis.x * Math.Sin(angle));
+            output[1, 2] = (axis.y * axis.z * (1 - Math.Cos(angle)) - (axis.x * Math.Sin(angle)));
 
             output[2, 0] = (axis.z * axis.x * (1 - Math.Cos(angle)) - (axis.y * Math.Sin(angle)));
             output[2, 1] = (axis.z * axis.y * (1 - Math.Cos(angle)) + (axis.x * Math.Sin(angle)));
-            output[2, 2] = (Math.Cos(angle) + (axis.z * (1 - Math.Cos(angle)));
+            output[2, 2] = (Math.Cos(angle) + (axis.z * (1 - Math.Cos(angle))));
 
             return output;
         }
@@ -88,7 +88,7 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
-        public static dmat3 rotateDegrees(fvec3 axis, double angle)
+        public static dmat3 rotateDegrees(dvec3 axis, double angle)
         {
             return rotateRadians(axis, angle * (Math.PI / 180.0));
         }

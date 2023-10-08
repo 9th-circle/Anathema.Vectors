@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Anathema.Vectors.Core\Anathema.Vectors.Core.csproj" />
+  </ItemGroup>
+
 </Project>
