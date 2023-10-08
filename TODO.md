@@ -1,4 +1,4 @@
-
+- Change project to .NET FX 2.0 and put out any fires that result
 
 - Matrix-matrix multiplication
   - Basic use case
