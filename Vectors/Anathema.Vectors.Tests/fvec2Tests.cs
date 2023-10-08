@@ -32,6 +32,27 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(5, fromDVec2.y);
         }
 
+        [Fact]
+        public void equality()
+        {
+            float a = 1.0f;
+            float b = a / 3.0f;
+            float c = b * 3.0f;
+            float d = 0.999999999999f;
+
+            fvec2 x = new fvec2(a, c);
+            fvec2 y = new fvec2(c, a);
+            fvec2 z = new fvec2(d, d);
+            fvec2 w = new fvec2(1.1f, a);
+
+            Assert.True(x == y);
+            Assert.True(y == z);
+            Assert.True(z == x);
+            Assert.False(w == x);
+            Assert.False(w == y);
+            Assert.False(w == z);
+            Assert.True(w == w);
+        }
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
