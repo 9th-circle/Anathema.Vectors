@@ -11,6 +11,7 @@ Basic linear algebra, mostly for computer graphics.
 
 - Interactions between the various entities are extensive (you can usually mix and match types), but not exhaustive (there will still be times where you have to do intermediate steps to get it done).
 - Performance is pretty lousy, both from the extensive use of object oriented language features, and the lack of SIMD vector CPU extension usage.
+- Goal is for the codebase to only use .NET FX 2.0 features, so it can be compiled against any runtime from that one onwards.
 
 ## Notation
 
@@ -37,6 +38,8 @@ Or, `tvec3<int>`  = 32-bit integer 3-component vector.
 ## Nested Template Vectors
 
 - One quirk of the use of templates which are *not* constrained to numeric values is that a template vector can use another vector as its template type.
+  - I am aware that .NET 7 allows the use of an `INumeric<T>` constraint on template types, obviating the need for explicit conversions. This project is not targeting .NET 7.
+
 - This means that you can construct a matrix out of template vectors
 - You can even take it further and create a tensor if you're feeling keen
 - I do not know that this is actually a useful feature but it's kind of a cool emergent property we get mostly for free
