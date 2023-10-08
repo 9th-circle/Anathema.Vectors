@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anathema.Vectors.Core", "An
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anathema.Vectors.Tests", "Anathema.Vectors.Tests\Anathema.Vectors.Tests.csproj", "{9C62F302-9AAB-44DE-B992-AE5865DD2F36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anathema.Vectors.Demo.WinForms", "Anathema.Vectors.Demo.WinForms\Anathema.Vectors.Demo.WinForms.csproj", "{DD962454-EC16-41E3-9355-922E7D427DD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9C62F302-9AAB-44DE-B992-AE5865DD2F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C62F302-9AAB-44DE-B992-AE5865DD2F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C62F302-9AAB-44DE-B992-AE5865DD2F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD962454-EC16-41E3-9355-922E7D427DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD962454-EC16-41E3-9355-922E7D427DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD962454-EC16-41E3-9355-922E7D427DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD962454-EC16-41E3-9355-922E7D427DD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
