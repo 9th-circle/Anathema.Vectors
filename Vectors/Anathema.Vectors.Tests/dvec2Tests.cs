@@ -9,8 +9,6 @@ namespace Anathema.Vectors.Tests
     {
         const double REALLY_SMALL_VALUE = 0.00005f;
 
-        //Todo: Mutator operators (+= etc)
-
         [Theory]
         [InlineData(new object[] { 1, 2 })]
         [InlineData(new object[] { 300000000, 2 })]
