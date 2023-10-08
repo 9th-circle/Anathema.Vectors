@@ -315,6 +315,20 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(a.yx.y, a.x);
         }
 
+        [Theory]
+        [InlineData(new object[] { 1, 2 })]
+        [InlineData(new object[] { 5.2f, 10.00001f })]
+        [InlineData(new object[] { -37, 0 })]
+        public void colourSwizzles(double x1, double y1)
+        {
+            dvec2 a = new dvec2(x1, y1);
+
+            Assert.Equal(a.rg.r, a.x);
+            Assert.Equal(a.rg.g, a.y);
+
+            Assert.Equal(a.gr.r, a.y);
+            Assert.Equal(a.gr.g, a.x);
+        }
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
