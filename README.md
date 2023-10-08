@@ -2,6 +2,10 @@
 
 Basic linear algebra, mostly for computer graphics.
 
+## Status
+
+- The output of this project has not been tested or validated yet - the code has been written but undeniably makes mistakes in calculations. This is a work in progress right now.
+
 ## Approach
 
 - The notation is terse and annotations are minimal. The assumption is that you either have a decent understanding of basic linear algebra, or that you are willing to learn it on your own.
