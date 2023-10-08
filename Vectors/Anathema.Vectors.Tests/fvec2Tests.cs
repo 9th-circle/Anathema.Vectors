@@ -1,4 +1,5 @@
-﻿using System;
+﻿#pragma warning disable CS1718 // Comparison made to same variable
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,27 @@ using System.Threading.Tasks;
 using Xunit;
 using Anathema.Vectors.Core;
 
-#pragma warning disable CS1718 // Comparison made to same variable
 namespace Anathema.Vectors.Tests
 {
 
     public class fvec2Tests
     {
+
+
+        //todo:
+        // - angle
+        // - normalise
+        // - normalised
+        // - from angle
+        // - from angle/length
+        // - dot
+        // - [] index
+
+        //out of scope:
+        // - nested templates
+        // - matrix operations
+
+
         [Fact]
         public void construct()
         {
@@ -80,6 +96,21 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(x1 + x2, d.x);
             Assert.Equal(y1 + y2, c.y);
             Assert.Equal(y1 + y2, d.y);
+        }
+
+        [Theory]
+        [InlineData(new object[] { 1, 2 })]
+        [InlineData(new object[] { 5.2f, 10.00001f })]
+        [InlineData(new object[] { -37, 0 })]
+        public void swizzles(float x1, float y1)
+        {
+            fvec2 a = new fvec2(x1, y1);
+
+            Assert.Equal(a.xy.x, a.x);
+            Assert.Equal(a.xy.y, a.y);
+
+            Assert.Equal(a.yx.x, a.y);
+            Assert.Equal(a.yx.y, a.x);
         }
 
         [Theory]
