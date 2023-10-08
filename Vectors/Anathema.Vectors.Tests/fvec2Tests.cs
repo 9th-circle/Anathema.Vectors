@@ -31,11 +31,13 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(8, fromDVec2.x);
             Assert.Equal(5, fromDVec2.y);
         }
+
+
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
         [InlineData(new object[] { -37, 0, 2, -5 })]
-        public void vec2addition(float x1, float y1, float x2, float y2)
+        public void vec2Addition(float x1, float y1, float x2, float y2)
         {
             fvec2 a = new fvec2(x1, y1);
             fvec2 b = new fvec2(x2, y2);
@@ -48,6 +50,8 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(y1 + y2, c.y);
             Assert.Equal(y1 + y2, d.y);
         }
+
+
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f })]
@@ -63,6 +67,121 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(x + scalar, d.x);
             Assert.Equal(y + scalar, c.y);
             Assert.Equal(y + scalar, d.y);
+        }
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void vec2Subtraction(float x1, float y1, float x2, float y2)
+        {
+            fvec2 a = new fvec2(x1, y1);
+            fvec2 b = new fvec2(x2, y2);
+
+            fvec2 c = a - b;
+            fvec2 d = b - a;
+
+            Assert.Equal(x1 - x2, c.x);
+            Assert.Equal(x2 - x1, d.x);
+            Assert.Equal(y1 - y2, c.y);
+            Assert.Equal(y2 - y1, d.y);
+        }
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2 })]
+        public void scalarSubtraction(float x, float y, float scalar)
+        {
+            fvec2 a = new fvec2(x, y);
+
+            fvec2 c = a - scalar;
+            fvec2 d = scalar - a;
+
+            Assert.Equal(x - scalar, c.x);
+            Assert.Equal(y - scalar, c.y);
+            Assert.Equal(scalar - x, d.x);
+            Assert.Equal(scalar - y, d.y);
+        }
+
+
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void vec2Multiplication(float x1, float y1, float x2, float y2)
+        {
+            fvec2 a = new fvec2(x1, y1);
+            fvec2 b = new fvec2(x2, y2);
+
+            fvec2 c = a * b;
+            fvec2 d = b * a;
+
+            Assert.Equal(x1 * x2, c.x);
+            Assert.Equal(x1 * x2, d.x);
+            Assert.Equal(y1 * y2, c.y);
+            Assert.Equal(y1 * y2, d.y);
+        }
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2 })]
+        public void scalarMultiplication(float x, float y, float scalar)
+        {
+            fvec2 a = new fvec2(x, y);
+
+            fvec2 c = a * scalar;
+            fvec2 d = scalar * a;
+
+            Assert.Equal(x * scalar, c.x);
+            Assert.Equal(x * scalar, d.x);
+            Assert.Equal(y * scalar, c.y);
+            Assert.Equal(y * scalar, d.y);
+        }
+
+
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void vec2Division(float x1, float y1, float x2, float y2)
+        {
+            fvec2 a = new fvec2(x1, y1);
+            fvec2 b = new fvec2(x2, y2);
+
+            fvec2 c = a / b;
+            fvec2 d = b / a;
+
+            Assert.Equal(x1 / x2, c.x);
+            Assert.Equal(y1 / y2, c.y);
+            Assert.Equal(x2 / x1, d.x);
+            Assert.Equal(y2 / y1, d.y);
+        }
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2 })]
+        public void scalarDivision(float x, float y, float scalar)
+        {
+            fvec2 a = new fvec2(x, y);
+
+            fvec2 c = a / scalar;
+            fvec2 d = scalar / a;
+
+            Assert.Equal(x / scalar, c.x);
+            Assert.Equal(y / scalar, c.y);
+            Assert.Equal(scalar / x, d.x);
+            Assert.Equal(scalar / y, d.y);
         }
     }
 }

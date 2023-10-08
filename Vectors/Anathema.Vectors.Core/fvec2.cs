@@ -213,7 +213,7 @@ namespace Anathema.Vectors.Core
         }
         public static fvec2 operator /(float b, fvec2 a)
         {
-            return new fvec2(a.x / b, a.y / b);
+            return new fvec2(b / a.x, b / a.y);
         }
         public static fvec2 operator +(float b, fvec2 a)
         {
@@ -221,7 +221,7 @@ namespace Anathema.Vectors.Core
         }
         public static fvec2 operator -(float b, fvec2 a)
         {
-            return new fvec2(a.x - b, a.y - b);
+            return new fvec2(b - a.x, b - a.y);
         }
         public static fvec2 operator -(fvec2 a)
         {
