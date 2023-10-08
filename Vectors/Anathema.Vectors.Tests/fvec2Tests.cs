@@ -15,10 +15,8 @@ namespace Anathema.Vectors.Tests
 
 
         //todo:
-        // - angles (radians)
         // - normalise
         // - normalised
-        // - from angle (radians)
         // - from angle/length (degrees + radians)
         // - dot
         // - [] index
@@ -65,6 +63,42 @@ namespace Anathema.Vectors.Tests
         }
 
         [Fact]
+        public void getCardinalAnglesRadians()
+        {
+            fvec2 north = new fvec2(0, -1);
+            Assert.Equal(0, north.angleRadians);
+
+            fvec2 south = new fvec2(0, 1);
+            Assert.True(south.angleRadians-(Math.PI) < REALLY_SMALL_VALUE);
+
+            fvec2 east = new fvec2(1, 0);
+            Assert.True(east.angleRadians - (Math.PI/2) < REALLY_SMALL_VALUE);
+
+            fvec2 west = new fvec2(-1, 0);
+            Assert.True(west.angleRadians - (Math.PI * (3/2.0)) < REALLY_SMALL_VALUE);
+        }
+
+        [Fact]
+        public void fromCardinalAnglesRadians()
+        {
+            fvec2 north = fvec2.fromAngleRadians(0);
+            Assert.True(Math.Abs(north.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(north.y + 1) < REALLY_SMALL_VALUE);
+
+            fvec2 south = fvec2.fromAngleRadians((float)Math.PI);
+            Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(south.y - 1) < REALLY_SMALL_VALUE);
+
+            fvec2 east = fvec2.fromAngleRadians((float)(Math.PI/2.0));
+            Assert.True(Math.Abs(east.x - 1) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
+
+            fvec2 west = fvec2.fromAngleRadians((float)(Math.PI * (3/2.0f)));
+            Assert.True(Math.Abs(west.x + 1) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
+        }
+
+        [Fact]
         public void construct()
         {
             fvec2 defaultConstructed = new fvec2();
@@ -105,7 +139,6 @@ namespace Anathema.Vectors.Tests
             Assert.False(w == y);
             Assert.False(w == z);
             Assert.True(w == w);
-
 
             Assert.False(x != y);
             Assert.False(y != z);
