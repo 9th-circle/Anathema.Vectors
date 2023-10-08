@@ -1,4 +1,6 @@
-﻿using System;
+﻿#if DOUBLES_ENABLED
+#if COMPLEX_ENABLED
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,3 +12,5 @@ namespace Anathema.Vectors.Core
     {
     }
 }
+#endif
+#endif

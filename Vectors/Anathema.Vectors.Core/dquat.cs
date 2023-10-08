@@ -1,4 +1,5 @@
 ﻿#if DOUBLES_ENABLED
+#if COMPLEX_ENABLED
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,4 +13,5 @@ namespace Anathema.Vectors.Core
         //todo: implement quaternions
     }
 }
+#endif
 #endif
