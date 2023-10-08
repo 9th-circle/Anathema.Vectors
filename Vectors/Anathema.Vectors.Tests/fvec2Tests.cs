@@ -14,8 +14,18 @@ namespace Anathema.Vectors.Tests
     {
         const float REALLY_SMALL_VALUE = 0.00005f;
 
-        //todo:
-        // - [] index
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2 })]
+        [InlineData(new object[] { 300000000, 2 })]
+        [InlineData(new object[] { -1, 2.2342 })]
+        public void indices(float x, float y)
+        {
+            fvec2 a = new fvec2(x, y);
+            Assert.Equal(a[0], x);
+            Assert.Equal(a[1], y);
+        }
 
         [Theory]
         [InlineData(new object[] { 1, 2 })]
