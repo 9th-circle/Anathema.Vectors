@@ -317,6 +317,21 @@ namespace Anathema.Vectors.Tests
         }
 
         [Theory]
+        [InlineData(new object[] { 1, 2 })]
+        [InlineData(new object[] { 5.2f, 10.00001f })]
+        [InlineData(new object[] { -37, 0 })]
+        public void colourSwizzles(float x1, float y1)
+        {
+            fvec2 a = new fvec2(x1, y1);
+
+            Assert.Equal(a.rg.r, a.x);
+            Assert.Equal(a.rg.g, a.y);
+
+            Assert.Equal(a.gr.r, a.y);
+            Assert.Equal(a.gr.g, a.x);
+        }
+
+        [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
         [InlineData(new object[] { -37, 0, 2, -5 })]
