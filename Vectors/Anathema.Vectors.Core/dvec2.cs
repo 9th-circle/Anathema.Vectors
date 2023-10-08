@@ -262,7 +262,7 @@ namespace Anathema.Vectors.Core
         }
         public static dvec2 operator /(double b, dvec2 a)
         {
-            return new dvec2(a.x / b, a.y / b);
+            return new dvec2(b / a.x, b / a.y);
         }
         public static dvec2 operator +(double b, dvec2 a)
         {
@@ -270,7 +270,7 @@ namespace Anathema.Vectors.Core
         }
         public static dvec2 operator -(double b, dvec2 a)
         {
-            return new dvec2(a.x - b, a.y - b);
+            return new dvec2(b - a.x, b - a.y);
         }
         public static dvec2 operator -(dvec2 a)
         {
