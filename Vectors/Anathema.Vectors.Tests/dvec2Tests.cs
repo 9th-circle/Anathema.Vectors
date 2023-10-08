@@ -5,7 +5,6 @@ using Anathema.Vectors.Core;
 
 namespace Anathema.Vectors.Tests
 {
-
     public class dvec2Tests
     {
         const double REALLY_SMALL_VALUE = 0.00005f;
