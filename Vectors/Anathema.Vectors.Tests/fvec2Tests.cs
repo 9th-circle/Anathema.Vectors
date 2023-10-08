@@ -52,13 +52,22 @@ namespace Anathema.Vectors.Tests
             Assert.False(w == y);
             Assert.False(w == z);
             Assert.True(w == w);
+
+
+            Assert.False(x != y);
+            Assert.False(y != z);
+            Assert.False(z != x);
+            Assert.True(w != x);
+            Assert.True(w != y);
+            Assert.True(w != z);
+            Assert.False(w != w);
         }
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
         [InlineData(new object[] { -37, 0, 2, -5 })]
-        public void vec2Addition(float x1, float y1, float x2, float y2)
+        public void fvec2Addition(float x1, float y1, float x2, float y2)
         {
             fvec2 a = new fvec2(x1, y1);
             fvec2 b = new fvec2(x2, y2);
@@ -72,6 +81,23 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(y1 + y2, d.y);
         }
 
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void dvec2Addition(float x1, float y1, double x2, double y2)
+        {
+            fvec2 a = new fvec2(x1, y1);
+            dvec2 b = new dvec2(x2, y2);
+
+            dvec2 c = a + b;
+            dvec2 d = b + a;
+
+            Assert.True(x1 + x2 == c.x);
+            Assert.True(x1 + x2 == d.x);
+            Assert.True(y1 + y2 == c.y);
+            Assert.True(y1 + y2 == d.y);
+        }
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
@@ -109,6 +135,24 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(y2 - y1, d.y);
         }
 
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void dvec2Subtraction(float x1, float y1, double x2, double y2)
+        {
+            fvec2 a = new fvec2(x1, y1);
+            dvec2 b = new dvec2(x2, y2);
+
+            dvec2 c = a - b;
+            dvec2 d = b - a;
+
+            Assert.True(x1 - x2 == c.x);
+            Assert.True(y1 - y2 == c.y);
+            Assert.True(x2 - x1 == d.x);
+            Assert.True(y2 - y1 == d.y);
+        }
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
@@ -150,6 +194,25 @@ namespace Anathema.Vectors.Tests
 
 
         [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void dvec2Multiplication(float x1, float y1, double x2, double y2)
+        {
+            fvec2 a = new fvec2(x1, y1);
+            dvec2 b = new dvec2(x2, y2);
+
+            dvec2 c = a * b;
+            dvec2 d = b * a;
+
+            Assert.True(x1 * x2 == c.x);
+            Assert.True(x1 * x2 == d.x);
+            Assert.True(y1 * y2 == c.y);
+            Assert.True(y1 * y2 == d.y);
+        }
+
+
+        [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f })]
         [InlineData(new object[] { -37, 0, 2 })]
@@ -186,6 +249,25 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(x2 / x1, d.x);
             Assert.Equal(y2 / y1, d.y);
         }
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void dvec2Division(float x1, float y1, double x2, double y2)
+        {
+            fvec2 a = new fvec2(x1, y1);
+            dvec2 b = new dvec2(x2, y2);
+
+            dvec2 c = a / b;
+            dvec2 d = b / a;
+
+            Assert.True(x1 / x2 == c.x);
+            Assert.True(y1 / y2 == c.y);
+            Assert.True(x2 / x1 == d.x);
+            Assert.True(y2 / y1 == d.y);
+        }
+
 
 
         [Theory]
