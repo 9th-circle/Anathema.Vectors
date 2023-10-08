@@ -65,11 +65,15 @@ namespace Anathema.Vectors.Core
             return output;
         }
 
-        //Derived from https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle
+        //Derivation from https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle
         public static fmat3 rotateRadians(fvec3 axis, float angle)
         {
             fmat3 output = new fmat3();
+            
             output[0, 0] = (float)(Math.Cos(angle) + (axis.x * (1 - Math.Cos(angle))));
+            output[0, 1] = (float)(axis.x * (1 - Math.Cos(angle)) - (axis.z * Math.Sin(angle)));
+            output[0, 2] = (float)(axis.x * axis.z * (1 - Math.Cos(angle)) + (axis.y * Math.Sin(angle));
+
 
 
             return output;
