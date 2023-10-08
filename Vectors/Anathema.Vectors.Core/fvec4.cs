@@ -478,7 +478,363 @@ namespace Anathema.Vectors.Core
                 w = value;
             }
         }
-        //todo: implement colour swizzles
+
+        // Starting with r
+
+        public fvec4 rgba
+        {
+            get
+            {
+                return new fvec4(r, g, b, a);
+            }
+            set
+            {
+                r = value.r;
+                g = value.g;
+                b = value.b;
+                a = value.a;
+            }
+        }
+        public fvec4 rabg
+        {
+            get
+            {
+                return new fvec4(r, a, b, g);
+            }
+            set
+            {
+                r = value.r;
+                a = value.g;
+                b = value.b;
+                g = value.a;
+            }
+        }
+        public fvec4 ragb
+        {
+            get
+            {
+                return new fvec4(r, a, g, b);
+            }
+            set
+            {
+                r = value.r;
+                a = value.g;
+                g = value.b;
+                b = value.a;
+            }
+        }
+        public fvec4 rgab
+        {
+            get
+            {
+                return new fvec4(r, g, a, b);
+            }
+            set
+            {
+                r = value.r;
+                g = value.g;
+                a = value.b;
+                b = value.a;
+            }
+        }
+        public fvec4 rbga
+        {
+            get
+            {
+                return new fvec4(r, b, g, a);
+            }
+            set
+            {
+                r = value.r;
+                b = value.g;
+                g = value.b;
+                a = value.a;
+            }
+        }
+        public fvec4 rbag
+        {
+            get
+            {
+                return new fvec4(r, b, a, g);
+            }
+            set
+            {
+                r = value.r;
+                b = value.g;
+                a = value.b;
+                g = value.a;
+            }
+        }
+
+
+
+
+
+        //Starting with g (6)
+
+        public fvec4 grba
+        {
+            get
+            {
+                return new fvec4(g, r, b, a);
+            }
+            set
+            {
+                g = value.r;
+                r = value.g;
+                b = value.b;
+                a = value.a;
+            }
+        }
+        public fvec4 grab
+        {
+            get
+            {
+                return new fvec4(g, r, a, b);
+            }
+            set
+            {
+                g = value.r;
+                r = value.g;
+                a = value.b;
+                b = value.a;
+            }
+        }
+        public fvec4 gbra
+        {
+            get
+            {
+                return new fvec4(g, b, r, a);
+            }
+            set
+            {
+                g = value.r;
+                b = value.g;
+                r = value.b;
+                a = value.a;
+            }
+        }
+        public fvec4 gbar
+        {
+            get
+            {
+                return new fvec4(g, b, a, r);
+            }
+            set
+            {
+                g = value.r;
+                b = value.g;
+                a = value.b;
+                r = value.a;
+            }
+        }
+        public fvec4 gabr
+        {
+            get
+            {
+                return new fvec4(g, a, b, r);
+            }
+            set
+            {
+                g = value.r;
+                a = value.g;
+                b = value.b;
+                r = value.a;
+            }
+        }
+        public fvec4 garb
+        {
+            get
+            {
+                return new fvec4(g, a, r, b);
+            }
+            set
+            {
+                g = value.r;
+                a = value.g;
+                r = value.b;
+                b = value.a;
+            }
+        }
+
+
+
+        //Starting with b (6)
+
+        public fvec4 brga
+        {
+            get
+            {
+                return new fvec4(b, r, g, a);
+            }
+            set
+            {
+                b = value.r;
+                r = value.g;
+                g = value.b;
+                a = value.a;
+            }
+        }
+        public fvec4 bgra
+        {
+            get
+            {
+                return new fvec4(b, g, r, a);
+            }
+            set
+            {
+                b = value.r;
+                g = value.g;
+                r = value.b;
+                a = value.a;
+            }
+        }
+        public fvec4 bgar
+        {
+            get
+            {
+                return new fvec4(b, g, a, r);
+            }
+            set
+            {
+                b = value.r;
+                g = value.g;
+                a = value.b;
+                r = value.a;
+            }
+        }
+        public fvec4 brag
+        {
+            get
+            {
+                return new fvec4(b, r, a, g);
+            }
+            set
+            {
+                b = value.r;
+                r = value.g;
+                a = value.b;
+                g = value.a;
+            }
+        }
+        public fvec4 barg
+        {
+            get
+            {
+                return new fvec4(b, a, r, g);
+            }
+            set
+            {
+                b = value.r;
+                a = value.g;
+                r = value.b;
+                g = value.a;
+            }
+        }
+        public fvec4 bagr
+        {
+            get
+            {
+                return new fvec4(b, a, g, r);
+            }
+            set
+            {
+                b = value.r;
+                a = value.g;
+                g = value.b;
+                r = value.a;
+            }
+        }
+
+
+
+        //Starting with a (6)
+
+        public fvec4 argb
+        {
+            get
+            {
+                return new fvec4(a, r, g, b);
+            }
+            set
+            {
+                a = value.r;
+                r = value.g;
+                g = value.b;
+                b = value.a;
+            }
+        }
+
+        public fvec4 arbg
+        {
+            get
+            {
+                return new fvec4(a, r, b, g);
+            }
+            set
+            {
+                a = value.r;
+                r = value.g;
+                b = value.b;
+                g = value.a;
+            }
+        }
+        public fvec4 agrb
+        {
+            get
+            {
+                return new fvec4(a, g, r, b);
+            }
+            set
+            {
+                a = value.r;
+                g = value.g;
+                r = value.b;
+                b = value.a;
+            }
+        }
+        public fvec4 agbr
+        {
+            get
+            {
+                return new fvec4(a, g, b, r);
+            }
+            set
+            {
+                a = value.r;
+                g = value.g;
+                b = value.b;
+                r = value.a;
+            }
+        }
+        public fvec4 abrg
+        {
+            get
+            {
+                return new fvec4(a, b, r, g);
+            }
+            set
+            {
+                a = value.r;
+                b = value.g;
+                r = value.b;
+                g = value.a;
+            }
+        }
+        public fvec4 abgr
+        {
+            get
+            {
+                return new fvec4(a, b, g, r);
+            }
+            set
+            {
+                a = value.r;
+                b = value.g;
+                g = value.b;
+                r = value.a;
+            }
+        }
 
 #endif
         ///////////////////////////
