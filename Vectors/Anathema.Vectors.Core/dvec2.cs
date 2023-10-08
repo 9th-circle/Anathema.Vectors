@@ -150,13 +150,13 @@ namespace Anathema.Vectors.Core
         ///////////////////////////
 
 
-        public dvec2 dot(dvec2 b)
+        public double dot(dvec2 b)
         {
             return dot(this, b);
         }
-        public static dvec2 dot(dvec2 a, dvec2 b)
+        public static double dot(dvec2 a, dvec2 b)
         {
-            return a * b;
+            return (a.x * b.x) + (a.y * b.y);
         }
 
         public dvec2 cross()
