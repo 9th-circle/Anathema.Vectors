@@ -15,8 +15,6 @@ namespace Anathema.Vectors.Tests
         const float REALLY_SMALL_VALUE = 0.0000001f;
 
         //todo:
-        // - normalise
-        // - normalised
         // - from angle/length (degrees + radians)
         // - dot
         // - [] index
@@ -24,6 +22,43 @@ namespace Anathema.Vectors.Tests
         //out of scope:
         // - nested templates
         // - matrix operations
+
+        [Theory]
+        [InlineData(new object[] { 1, 2 })]
+        [InlineData(new object[] { 5.2f, 10.00001f })]
+        [InlineData(new object[] { -37, 0 })]
+        [InlineData(new object[] { 3, 4 })]
+        [InlineData(new object[] { 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { 2, -5 })]
+        public void arbitaryNormalisation(float x, float y)
+        {
+            fvec2 original = new fvec2(x, y);
+            fvec2 normalised = original.normalised;
+            fvec2 reconstructed = normalised * original.length;
+
+            Assert.True(Math.Abs(reconstructed.x - original.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(reconstructed.y - original.y) < REALLY_SMALL_VALUE);
+        }
+
+        [Theory]
+        [InlineData(new object[] { 1, 2 })]
+        [InlineData(new object[] { 5.2f, 10.00001f })]
+        [InlineData(new object[] { -37, 0 })]
+        [InlineData(new object[] { 3, 4 })]
+        [InlineData(new object[] { 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { 2, -5 })]
+        public void normaliseImperative(float x, float y)
+        {
+            fvec2 working = new fvec2(x, y);
+            float length = working.length;
+            working.normalise();
+            Assert.True(Math.Abs(working.length - 1) < REALLY_SMALL_VALUE);
+            working *= length;
+            Assert.True(Math.Abs(working.length - length) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(x - working.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(y - working.y) < REALLY_SMALL_VALUE);
+        }
+
 
         [Fact]
         public void cardinalNormalisation()
