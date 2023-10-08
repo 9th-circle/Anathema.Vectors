@@ -1,4 +1,4 @@
-﻿#if FLOATS_ENABLED
+﻿#if DOUBLES_ENABLED
 #if COMPLEX_ENABLED
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Anathema.Vectors.Core
 {
-    public class fcomplex
+    public class dcom
     {
     }
 }

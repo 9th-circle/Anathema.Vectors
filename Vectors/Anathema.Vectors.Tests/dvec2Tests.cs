@@ -7,6 +7,8 @@ namespace Anathema.Vectors.Tests
 {
     public class dvec2Tests
     {
+        //todo: include some cross tests for fvec2 conversions
+
         const double REALLY_SMALL_VALUE = 0.00005f;
 
         [Theory]
