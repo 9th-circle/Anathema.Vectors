@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Anathema.Vectors.Core;
 
+#pragma warning disable CS1718 // Comparison made to same variable
 namespace Anathema.Vectors.Tests
 {
 
