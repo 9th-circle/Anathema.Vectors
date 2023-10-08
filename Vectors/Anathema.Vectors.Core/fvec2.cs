@@ -8,6 +8,9 @@ namespace Anathema.Vectors.Core
     /// </summary>
     public class fvec2
     {
+        //todo: implement mutator operators ( *= += -= /= )
+
+
         ///////////////////////////
         //        Members        //
         ///////////////////////////
