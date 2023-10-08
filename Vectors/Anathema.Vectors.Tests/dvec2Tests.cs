@@ -430,6 +430,19 @@ namespace Anathema.Vectors.Tests
             Assert.True(y1 * y2 == d.y);
         }
 
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void fvec2MutatorMultiplication(double x1, double y1, double x2, double y2)
+        {
+            dvec2 a = new dvec2(x1, y1);
+            dvec2 b = new dvec2(x2, y2);
+
+            a *= b;
+
+            Assert.True(x1 * x2 == a.x);
+        }
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
