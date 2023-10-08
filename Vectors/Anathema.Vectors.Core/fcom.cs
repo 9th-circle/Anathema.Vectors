@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Anathema.Vectors.Core
 {
+    /// <summary>
+    /// Single precision floating point complex number
+    /// </summary>
     public class fcom
     {
     }
