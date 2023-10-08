@@ -49,14 +49,23 @@ namespace Anathema.Vectors.Core
         ///////////////////////////
 
 
-        public static fvec2 fromAngle(float angle)
+        public static fvec2 fromAngleRadians(float angle)
         {
-            return new fvec2((float)Math.Cos(angle), (float)Math.Sin(angle));
+            return new fvec2((float)Math.Cos(angle - (Math.PI / 2)), (float)Math.Sin(angle - (Math.PI / 2)));
         }
-        public static fvec2 fromAngleAndLength(float angle, float length)
+        public static fvec2 fromAngleRadiansAndLength(float angle, float length)
         {
-            return new fvec2((float)Math.Cos(angle) * length, (float)Math.Sin(angle) * length);
+            return fromAngleRadians(angle) * length;
         }
+        public static fvec2 fromAngleDegrees(float angle)
+        {
+            return fromAngleRadians(angle * (float)(Math.PI / 180.0f));
+        }
+        public static fvec2 fromAngleDegreesAndLength(float angle, float length)
+        {
+            return fromAngleRadiansAndLength(angle * (float)(Math.PI / 180.0f), length);
+        }
+
 
 
         ///////////////////////////
@@ -68,7 +77,7 @@ namespace Anathema.Vectors.Core
         {
             get
             {
-                return (float)Math.Atan2(y, x);
+                return (float)(Math.Atan2(y, x) + (Math.PI/2));
             }
         }
         public float angleDegrees

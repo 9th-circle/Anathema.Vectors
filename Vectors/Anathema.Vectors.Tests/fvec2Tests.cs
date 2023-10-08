@@ -15,11 +15,11 @@ namespace Anathema.Vectors.Tests
 
 
         //todo:
-        // - angle
+        // - angles (radians)
         // - normalise
         // - normalised
-        // - from angle
-        // - from angle/length
+        // - from angle (radians)
+        // - from angle/length (degrees + radians)
         // - dot
         // - [] index
 
@@ -27,6 +27,42 @@ namespace Anathema.Vectors.Tests
         // - nested templates
         // - matrix operations
 
+        [Fact]
+        public void getCardinalAnglesDegrees()
+        {
+            fvec2 north = new fvec2(0, -1);
+            Assert.Equal(0, north.angleDegrees);
+
+            fvec2 south = new fvec2(0, 1);
+            Assert.Equal(180, south.angleDegrees);
+
+            fvec2 east = new fvec2(1, 0);
+            Assert.Equal(90, east.angleDegrees);
+
+            fvec2 west = new fvec2(-1, 0);
+            Assert.Equal(270, west.angleDegrees);
+        }
+        const float REALLY_SMALL_VALUE = 0.0000001f;
+
+        [Fact]
+        public void fromCardinalAnglesDegrees()
+        {
+            fvec2 north = fvec2.fromAngleDegrees(0);
+            Assert.True(Math.Abs(north.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(north.y+1) < REALLY_SMALL_VALUE);
+
+            fvec2 south = fvec2.fromAngleDegrees(180);
+            Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(south.y-1) < REALLY_SMALL_VALUE);
+
+            fvec2 east = fvec2.fromAngleDegrees(90);
+            Assert.True(Math.Abs(east.x-1) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
+
+            fvec2 west = fvec2.fromAngleDegrees(270);
+            Assert.True(Math.Abs(west.x + 1) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
+        }
 
         [Fact]
         public void construct()
