@@ -12,7 +12,7 @@ namespace Anathema.Vectors.Tests
 
     public class fvec2Tests
     {
-
+        const float REALLY_SMALL_VALUE = 0.0000001f;
 
         //todo:
         // - normalise
@@ -25,6 +25,25 @@ namespace Anathema.Vectors.Tests
         // - nested templates
         // - matrix operations
 
+        [Fact]
+        public void cardinalNormalisation()
+        {
+            fvec2 north = new fvec2(0, -100);
+            Assert.Equal(0, north.normalised.x);
+            Assert.Equal(-1, north.normalised.y);
+
+            fvec2 south = new fvec2(0, 25);
+            Assert.Equal(0, south.normalised.x);
+            Assert.Equal(1, south.normalised.y);
+
+            fvec2 east = new fvec2(5.23487927342f, 0);
+            Assert.Equal(1, east.normalised.x);
+            Assert.Equal(0, east.normalised.y);
+
+            fvec2 west = new fvec2(-1, 0);
+            Assert.Equal(-1, west.normalised.x);
+            Assert.Equal(0, west.normalised.y);
+        }
         [Fact]
         public void getCardinalAnglesDegrees()
         {
@@ -40,7 +59,6 @@ namespace Anathema.Vectors.Tests
             fvec2 west = new fvec2(-1, 0);
             Assert.Equal(270, west.angleDegrees);
         }
-        const float REALLY_SMALL_VALUE = 0.0000001f;
 
         [Fact]
         public void fromCardinalAnglesDegrees()
@@ -69,7 +87,7 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(0, north.angleRadians);
 
             fvec2 south = new fvec2(0, 1);
-            Assert.True(south.angleRadians-(Math.PI) < REALLY_SMALL_VALUE);
+            Assert.True(south.angleRadians-Math.PI < REALLY_SMALL_VALUE);
 
             fvec2 east = new fvec2(1, 0);
             Assert.True(east.angleRadians - (Math.PI/2) < REALLY_SMALL_VALUE);
