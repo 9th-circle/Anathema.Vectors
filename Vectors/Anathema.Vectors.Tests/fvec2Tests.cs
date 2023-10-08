@@ -15,7 +15,6 @@ namespace Anathema.Vectors.Tests
         const float REALLY_SMALL_VALUE = 0.00005f;
 
         //todo:
-        // - cross
         // - [] index
 
         [Theory]
@@ -75,6 +74,21 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(result - expectedResult) < REALLY_SMALL_VALUE);
         }
 
+        [Theory]
+        [InlineData(new object[] { 0, 0, 0, 0 })]
+        [InlineData(new object[] { 0, 1, 1, 0 })]
+        [InlineData(new object[] { 0, -1, -1, 0 })]
+        [InlineData(new object[] { 1, 0, 0, 1 })]
+        [InlineData(new object[] { -1, 0, 0, -1 })]
+        public void crossProduct(float x, float y, float expectedX, float expectedY)
+        {
+            fvec2 a = new fvec2(x, y);
+            fvec2 b = a.cross();
+
+
+            Assert.True(Math.Abs(b.x - expectedX) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(b.y - expectedY) < REALLY_SMALL_VALUE);
+        }
 
         [Fact]
         public void cardinalNormalisation()
