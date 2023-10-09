@@ -450,6 +450,377 @@ namespace Anathema.Vectors.Core
 
 #endif
 
+#if COLOURS_ENABLED
+        public T a
+        {
+            get
+            {
+                return w;
+            }
+            set
+            {
+                w = value;
+            }
+        }
+
+        // Starting with r
+
+        public tvec4<T> rgba
+        {
+            get
+            {
+                return new tvec4<T>(r, g, b, a);
+            }
+            set
+            {
+                r = value.r;
+                g = value.g;
+                b = value.b;
+                a = value.a;
+            }
+        }
+        public tvec4<T> rabg
+        {
+            get
+            {
+                return new tvec4<T>(r, a, b, g);
+            }
+            set
+            {
+                r = value.r;
+                a = value.g;
+                b = value.b;
+                g = value.a;
+            }
+        }
+        public tvec4<T> ragb
+        {
+            get
+            {
+                return new tvec4<T>(r, a, g, b);
+            }
+            set
+            {
+                r = value.r;
+                a = value.g;
+                g = value.b;
+                b = value.a;
+            }
+        }
+        public tvec4<T> rgab
+        {
+            get
+            {
+                return new tvec4<T>(r, g, a, b);
+            }
+            set
+            {
+                r = value.r;
+                g = value.g;
+                a = value.b;
+                b = value.a;
+            }
+        }
+        public tvec4<T> rbga
+        {
+            get
+            {
+                return new tvec4<T>(r, b, g, a);
+            }
+            set
+            {
+                r = value.r;
+                b = value.g;
+                g = value.b;
+                a = value.a;
+            }
+        }
+        public tvec4<T> rbag
+        {
+            get
+            {
+                return new tvec4<T>(r, b, a, g);
+            }
+            set
+            {
+                r = value.r;
+                b = value.g;
+                a = value.b;
+                g = value.a;
+            }
+        }
+
+
+
+
+
+        //Starting with g (6)
+
+        public tvec4<T> grba
+        {
+            get
+            {
+                return new tvec4<T>(g, r, b, a);
+            }
+            set
+            {
+                g = value.r;
+                r = value.g;
+                b = value.b;
+                a = value.a;
+            }
+        }
+        public tvec4<T> grab
+        {
+            get
+            {
+                return new tvec4<T>(g, r, a, b);
+            }
+            set
+            {
+                g = value.r;
+                r = value.g;
+                a = value.b;
+                b = value.a;
+            }
+        }
+        public tvec4<T> gbra
+        {
+            get
+            {
+                return new tvec4<T>(g, b, r, a);
+            }
+            set
+            {
+                g = value.r;
+                b = value.g;
+                r = value.b;
+                a = value.a;
+            }
+        }
+        public tvec4<T> gbar
+        {
+            get
+            {
+                return new tvec4<T>(g, b, a, r);
+            }
+            set
+            {
+                g = value.r;
+                b = value.g;
+                a = value.b;
+                r = value.a;
+            }
+        }
+        public tvec4<T> gabr
+        {
+            get
+            {
+                return new tvec4<T>(g, a, b, r);
+            }
+            set
+            {
+                g = value.r;
+                a = value.g;
+                b = value.b;
+                r = value.a;
+            }
+        }
+        public tvec4<T> garb
+        {
+            get
+            {
+                return new tvec4<T>(g, a, r, b);
+            }
+            set
+            {
+                g = value.r;
+                a = value.g;
+                r = value.b;
+                b = value.a;
+            }
+        }
+
+
+
+        //Starting with b (6)
+
+        public tvec4<T> brga
+        {
+            get
+            {
+                return new tvec4<T>(b, r, g, a);
+            }
+            set
+            {
+                b = value.r;
+                r = value.g;
+                g = value.b;
+                a = value.a;
+            }
+        }
+        public tvec4<T> bgra
+        {
+            get
+            {
+                return new tvec4<T>(b, g, r, a);
+            }
+            set
+            {
+                b = value.r;
+                g = value.g;
+                r = value.b;
+                a = value.a;
+            }
+        }
+        public tvec4<T> bgar
+        {
+            get
+            {
+                return new tvec4<T>(b, g, a, r);
+            }
+            set
+            {
+                b = value.r;
+                g = value.g;
+                a = value.b;
+                r = value.a;
+            }
+        }
+        public tvec4<T> brag
+        {
+            get
+            {
+                return new tvec4<T>(b, r, a, g);
+            }
+            set
+            {
+                b = value.r;
+                r = value.g;
+                a = value.b;
+                g = value.a;
+            }
+        }
+        public tvec4<T> barg
+        {
+            get
+            {
+                return new tvec4<T>(b, a, r, g);
+            }
+            set
+            {
+                b = value.r;
+                a = value.g;
+                r = value.b;
+                g = value.a;
+            }
+        }
+        public tvec4<T> bagr
+        {
+            get
+            {
+                return new tvec4<T>(b, a, g, r);
+            }
+            set
+            {
+                b = value.r;
+                a = value.g;
+                g = value.b;
+                r = value.a;
+            }
+        }
+
+
+
+        //Starting with a (6)
+
+        public tvec4<T> argb
+        {
+            get
+            {
+                return new tvec4<T>(a, r, g, b);
+            }
+            set
+            {
+                a = value.r;
+                r = value.g;
+                g = value.b;
+                b = value.a;
+            }
+        }
+
+        public tvec4<T> arbg
+        {
+            get
+            {
+                return new tvec4<T>(a, r, b, g);
+            }
+            set
+            {
+                a = value.r;
+                r = value.g;
+                b = value.b;
+                g = value.a;
+            }
+        }
+        public tvec4<T> agrb
+        {
+            get
+            {
+                return new tvec4<T>(a, g, r, b);
+            }
+            set
+            {
+                a = value.r;
+                g = value.g;
+                r = value.b;
+                b = value.a;
+            }
+        }
+        public tvec4<T> agbr
+        {
+            get
+            {
+                return new tvec4<T>(a, g, b, r);
+            }
+            set
+            {
+                a = value.r;
+                g = value.g;
+                b = value.b;
+                r = value.a;
+            }
+        }
+        public tvec4<T> abrg
+        {
+            get
+            {
+                return new tvec4<T>(a, b, r, g);
+            }
+            set
+            {
+                a = value.r;
+                b = value.g;
+                r = value.b;
+                g = value.a;
+            }
+        }
+        public tvec4<T> abgr
+        {
+            get
+            {
+                return new tvec4<T>(a, b, g, r);
+            }
+            set
+            {
+                a = value.r;
+                b = value.g;
+                g = value.b;
+                r = value.a;
+            }
+        }
+
+#endif
         ///////////////////////////
         //      Conversions      //
         ///////////////////////////
