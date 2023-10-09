@@ -62,16 +62,26 @@ Or, `tvec3<int>`  = 32-bit integer 3-component vector.
 
 ## Compile-Time Flags
 
-FLOATS_ENABLED
+##### FLOATS_ENABLED
 
-DOUBLES_ENABLED
+##### DOUBLES_ENABLED
 
-NESTING_ENABLED
+##### NESTING_ENABLED
 
-TEMPLATES_ENABLED
+##### TEMPLATES_ENABLED
 
-SWIZZLES_ENABLED
+##### SWIZZLES_ENABLED
 
-COMPLEX_ENABLED
+- Combining different subsets of a vector's components, possibly out of order, ie vec3.xy
 
-CONVERSIONS_ENABLED
+##### COLOURS_ENABLED
+
+- Scalar and swizzle aliases for RGBA in the place of XYZW
+
+##### COMPLEX_ENABLED
+
+- Complex numbers and quaternion support
+
+##### CONVERSIONS_ENABLED
+
+##### 
