@@ -494,6 +494,10 @@ namespace Anathema.Vectors.Core
             }
         }
 
+        public override float[] ToArray()
+        {
+            return new float[] { x, y, z};
+        }
 
     }
 }

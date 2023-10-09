@@ -542,6 +542,10 @@ namespace Anathema.Vectors.Core
             }
         }
 
+        public overide double[] ToArray()
+        {
+            return new double[] { x, y, z };
+        }
     }
 }
 #endif

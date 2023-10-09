@@ -374,6 +374,11 @@ namespace Anathema.Vectors.Core
                 throw new IndexOutOfRangeException();
             }
         }
+
+        public virtual double[] ToArray()
+        {
+            return new double[] { x, y };
+        }
     }
 }
 #endif

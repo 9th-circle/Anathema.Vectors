@@ -225,6 +225,12 @@ namespace Anathema.Vectors.Core
                 throw new IndexOutOfRangeException();
             }
         }
+
+
+        public virtual T[] ToArray()
+        {
+            return new T[] { x, y };
+        }
     }
 }
 #endif

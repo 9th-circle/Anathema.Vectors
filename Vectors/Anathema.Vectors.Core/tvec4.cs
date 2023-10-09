@@ -536,6 +536,13 @@ namespace Anathema.Vectors.Core
                 throw new IndexOutOfRangeException();
             }
         }
+
+
+
+        public override T[] ToArray()
+        {
+            return new T[] { x, y, z, w };
+        }
     }
 }
 #endif

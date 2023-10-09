@@ -220,6 +220,10 @@ namespace Anathema.Vectors.Core
             }
         }
 
+        public override T[] ToArray()
+        {
+            return new T[] { x, y, z };
+        }
     }
 }
 #endif

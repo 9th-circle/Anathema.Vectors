@@ -1114,6 +1114,12 @@ namespace Anathema.Vectors.Core
                 throw new IndexOutOfRangeException();
             }
         }
+
+
+        public override double[] ToArray()
+        {
+            return new double[] { x, y, z, w };
+        }
     }
 }
 #endif

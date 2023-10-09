@@ -341,6 +341,11 @@ namespace Anathema.Vectors.Core
                 throw new IndexOutOfRangeException();
             }
         }
+
+        public virtual float[] ToArray()
+        {
+            return new float[] { x, y };
+        }
     }
 }
 #endif
