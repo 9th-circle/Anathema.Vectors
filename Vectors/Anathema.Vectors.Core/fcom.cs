@@ -36,8 +36,7 @@ namespace Anathema.Vectors.Core
         }
         public static fcom operator /(fcom a, fcom b)
         {
-            return new fcom((a.real / b.real) - (a.imaginary / b.imaginary),
-                (a.real / b.imaginary) + (b.real / a.imaginary));
+            throw new NotImplementedException();
         }
     }
 }
