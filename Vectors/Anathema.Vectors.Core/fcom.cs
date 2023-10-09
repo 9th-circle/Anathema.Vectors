@@ -16,6 +16,10 @@ namespace Anathema.Vectors.Core
         public float real { get; set; }
         public float imaginary { get; set; }
 
+        public fcom()
+        {
+
+        }
         public fcom(float real, float imaginary) {
             this.real = real;
             this.imaginary = imaginary;
@@ -43,6 +47,42 @@ namespace Anathema.Vectors.Core
                 (a.imaginary * b.real) - (a.real * b.imaginary) /
                 ((b.real * b.real) + (b.imaginary * b.imaginary)));
         }
+
+        public static fcom operator +(fcom a, float b)
+        {
+            throw new NotImplementedException();
+        }
+        public static fcom operator -(fcom a, float b)
+        {
+            throw new NotImplementedException();
+        }
+        public static fcom operator *(fcom a, float b)
+        {
+            throw new NotImplementedException();
+        }
+        public static fcom operator /(fcom a, float b)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static fcom operator +(float a, fcom b)
+        {
+            throw new NotImplementedException();
+        }
+        public static fcom operator -(float a, fcom b)
+        {
+            throw new NotImplementedException();
+        }
+        public static fcom operator *(float a, fcom b)
+        {
+            throw new NotImplementedException();
+        }
+        public static fcom operator /(float a, fcom b)
+        {
+            throw new NotImplementedException();
+        }
+
+
 
         public static bool operator !=(fcom a, fcom b)
         {
