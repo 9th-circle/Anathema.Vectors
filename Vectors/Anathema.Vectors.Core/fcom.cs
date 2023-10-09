@@ -15,6 +15,20 @@ namespace Anathema.Vectors.Core
     {
         public float real { get; set; }
         public float imaginary { get; set; }
+
+        public fcom(float real, float imaginary) {
+            this.real = real;
+            this.imaginary = imaginary;
+        }
+
+
+        public static fcom operator +(fcom a, fcom b) {
+            return new fcom(a.real + b.real, a.imaginary + b.imaginary);
+        }
+        public static fcom operator -(fcom a, fcom b)
+        {
+            return new fcom(a.real - b.real, a.imaginary - b.imaginary);
+        }
     }
 }
 #endif
