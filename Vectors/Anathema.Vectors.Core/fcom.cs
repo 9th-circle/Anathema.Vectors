@@ -29,6 +29,16 @@ namespace Anathema.Vectors.Core
         {
             return new fcom(a.real - b.real, a.imaginary - b.imaginary);
         }
+        public static fcom operator *(fcom a, fcom b)
+        {
+            return new fcom((a.real * b.real) - (a.imaginary * b.imaginary),
+                (a.real * b.imaginary) + (b.real * a.imaginary));
+        }
+        public static fcom operator /(fcom a, fcom b)
+        {
+            return new fcom((a.real / b.real) - (a.imaginary / b.imaginary),
+                (a.real / b.imaginary) + (b.real / a.imaginary));
+        }
     }
 }
 #endif
