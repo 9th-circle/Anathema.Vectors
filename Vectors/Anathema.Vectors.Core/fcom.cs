@@ -43,6 +43,15 @@ namespace Anathema.Vectors.Core
                 (a.imaginary * b.real) - (a.real * b.imaginary) /
                 ((b.real * b.real) + (b.imaginary * b.imaginary)));
         }
+
+        public static bool operator !=(fcom a, fcom b)
+        {
+            return !(a == b);
+        }
+        public static bool operator ==(fcom a, fcom b)
+        {
+            return scalar.isClose(a.real, b.real) && scalar.isClose(a.imaginary, b.imaginary);
+        }
     }
 }
 #endif
