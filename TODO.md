@@ -3,7 +3,6 @@
 - Constructors for vecs and matrices with a simple scalar array
 - ToArray() implementation
 - Roll out CONVERSIONS_ENABLED
-- Mutation operators ( *= += /= -=)
 - Matrix-matrix multiplication
   - Basic use case
   - Of different data types (float/double/T)
