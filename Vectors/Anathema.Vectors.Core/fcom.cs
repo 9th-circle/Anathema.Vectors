@@ -13,6 +13,8 @@ namespace Anathema.Vectors.Core
     /// </summary>
     public class fcom
     {
+        public float real { get; set; }
+        public float imaginary { get; set; }
     }
 }
 #endif

@@ -13,6 +13,8 @@ namespace Anathema.Vectors.Core
     /// </summary>
     public class dcom
     {
+        public double real { get; set; }
+        public double imaginary { get; set; }
     }
 }
 #endif
