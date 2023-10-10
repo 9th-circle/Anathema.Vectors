@@ -9,7 +9,7 @@ using System.Text;
 namespace Anathema.Vectors.Core
 {
     /// <summary>
-    /// Double precision doubleing point complex number
+    /// Double precision floating point complex number
     /// </summary>
     public class dcom
     {
