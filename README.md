@@ -70,15 +70,21 @@ Todo: fill out
 
 ## Compile-Time Flags
 
-Todo: finish explaining the flags
-
 ##### FLOATS_ENABLED
+
+- Everything to do with single precision floating point
 
 ##### DOUBLES_ENABLED
 
+- Everything to do with double precision floating point
+
 ##### NESTING_ENABLED
 
+- Template vectors which contain other template vectors (used to create effective matrices)
+
 ##### TEMPLATES_ENABLED
+
+- Template vectors (vectors which can have any other type of components)
 
 ##### SWIZZLES_ENABLED
 
@@ -94,7 +100,11 @@ Todo: finish explaining the flags
 
 ##### CONVERSIONS_ENABLED
 
+- Conversions between single and double precision floating point types
+
 ##### INTERPOLATION_ENABLED
+
+- Linear and Bezier interpolation of vectors
 
 ##### THREED_ENABLED
 
