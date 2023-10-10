@@ -12,7 +12,6 @@
 - Templates
   - Conversions to normal vectors - this has been started
   - Operations between template vectors of the same type
-- Investigate whether template vectors can be used to create functional tensors
 - Double check all the matrix code doesn't transpose when it shouldn't
 - Tests
   - Literally everything
