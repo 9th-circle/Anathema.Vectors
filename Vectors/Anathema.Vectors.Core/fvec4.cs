@@ -1090,6 +1090,17 @@ namespace Anathema.Vectors.Core
         }
 
 
+        public static fvec4 quadraticBezierInterpolate(fvec4 a, fvec4 b, fvec4 c, float position)
+        {
+            return linearInterpolate(
+                linearInterpolate(a, b, position),
+                linearInterpolate(b, c, position),
+                position);
+        }
+        public fvec4 quadraticBezierInterpolateTo(fvec4 b, fvec4 c, float position)
+        {
+            return quadraticBezierInterpolate(this, b, c, position);
+        }
 
 
 #endif

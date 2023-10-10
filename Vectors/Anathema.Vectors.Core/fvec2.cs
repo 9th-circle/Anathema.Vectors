@@ -361,6 +361,17 @@ namespace Anathema.Vectors.Core
         {
             return linearInterpolate(this, b, position);
         }
+        public static fvec2 quadraticBezierInterpolate(fvec2 a, fvec2 b, fvec2 c, float position)
+        {
+            return linearInterpolate(
+                linearInterpolate(a, b, position),
+                linearInterpolate(b, c, position),
+                position);
+        }
+        public fvec2 quadraticBezierInterpolateTo(fvec2 b, fvec2 c, float position)
+        {
+            return quadraticBezierInterpolate(this, b, c, position);
+        }
 
 
 

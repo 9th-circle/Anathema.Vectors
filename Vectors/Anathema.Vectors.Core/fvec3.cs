@@ -523,8 +523,7 @@ namespace Anathema.Vectors.Core
             return quadraticBezierInterpolate(this, b, c, position);
         }
 
-
 #endif
-        }
+    }
 }
 #endif
