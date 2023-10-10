@@ -15,7 +15,7 @@ Basic linear algebra, mostly for computer graphics.
 
 - Interactions between the various entities are extensive (you can usually mix and match types), but not exhaustive (there will still be times where you have to do intermediate steps to get it done).
 - Performance is pretty lousy, both from the extensive use of object oriented language features, and the lack of SIMD vector CPU extension usage.
-- Core codebase builds against .NET 2.0 and up, so it can be compiled against any runtime you're likely to come across.
+- Core codebase builds against .NET Framework 2.0 and up, so it can be compiled against any runtime you're likely to come across.
 - No external dependencies whatsoever (apart from test infrastructure etc) - maximise portability.
 
 ## Notation
