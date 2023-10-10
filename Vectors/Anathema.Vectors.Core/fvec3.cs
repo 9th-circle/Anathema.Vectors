@@ -511,11 +511,20 @@ namespace Anathema.Vectors.Core
         {
             return linearInterpolate(this, b, position);
         }
-
-
+        public static fvec3 quadraticBezierInterpolate(fvec3 a, fvec3 b, fvec3 c, float position)
+        {
+            return linearInterpolate(
+                linearInterpolate(a,b,position),
+                linearInterpolate(b,c,position),
+                position);
+        }
+        public fvec3 quadraticBezierInterpolateTo(fvec3 b, fvec3 c, float position)
+        {
+            return quadraticBezierInterpolate(this, b, c, position);
+        }
 
 
 #endif
-    }
+        }
 }
 #endif
