@@ -60,7 +60,17 @@ Or, `tvec3<int>`  = 32-bit integer 3-component vector.
 
 - Matrices and vectors (except 2) are subclasses of the rank lower than it (ie a vec4 is a subclass of vec3 which is a subclass of vec2). This cuts out a lot of redundant code, and makes porting data between them easier, but it also means that if a method asks for a vec2 you can pass it a vec4 instead. Which will work in a sense, but could cause problems later.
 
+## Complex Numbers and Quaternions
+
+Todo: fill out
+
+## Interpolation
+
+Todo: fill out
+
 ## Compile-Time Flags
+
+Todo: finish explaining the flags
 
 ##### FLOATS_ENABLED
 
