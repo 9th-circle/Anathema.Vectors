@@ -12,7 +12,6 @@
 - Templates
   - Conversions to normal vectors - this has been started
   - Operations between template vectors of the same type
-- Double check all the matrix code doesn't transpose when it shouldn't
 - Tests
   - Literally everything
   - Check a mat4 with a mat2 reference can access correct rows/cols
