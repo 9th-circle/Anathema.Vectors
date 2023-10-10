@@ -3,7 +3,6 @@
 #if THREED_ENABLED
 using System;
 
-
 namespace Anathema.Vectors.Core
 {
     /// <summary>

@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace Anathema.Vectors.Core
 {
     public class scalar

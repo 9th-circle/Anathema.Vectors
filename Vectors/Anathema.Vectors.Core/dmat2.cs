@@ -1,10 +1,5 @@
 ﻿#if DOUBLES_ENABLED
 using System;
-using System.Collections.Generic;
-
-using System.Text;
-
-
 
 namespace Anathema.Vectors.Core
 {
