@@ -84,4 +84,4 @@ Or, `tvec3<int>`  = 32-bit integer 3-component vector.
 
 ##### CONVERSIONS_ENABLED
 
-##### 
+##### INTERPOLATION_ENABLED
