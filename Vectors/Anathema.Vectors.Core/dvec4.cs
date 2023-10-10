@@ -101,16 +101,30 @@ namespace Anathema.Vectors.Core
             return new dvec3(x / w, y / w, z / w);
         }
 
+        public override double length
+        {
+            get
+            {
+                return Math.Sqrt((x * x) + (y * y) + (z * z) + (w * w));
+            }
+        }
+        public new dvec4 normalised
+        {
+            get
+            {
+                return this / length;
+            }
+        }
 
 
         ///////////////////////////
         //        Swizzles       //
         ///////////////////////////
 
-// 4! = 4 * 3 * 2 * 1 = 24
-// There are 24 swizzles, in 4 groups of 6
+        // 4! = 4 * 3 * 2 * 1 = 24
+        // There are 24 swizzles, in 4 groups of 6
 
-//Starting with X (6)
+        //Starting with X (6)
 #if SWIZZLES_ENABLED
         public dvec4 xyzw
         {
