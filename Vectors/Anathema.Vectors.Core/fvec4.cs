@@ -1113,7 +1113,20 @@ namespace Anathema.Vectors.Core
         {
             return quadraticBezierInterpolate(this, b, c, position);
         }
-        //todo: cubic interpolation
+
+
+        //todo: validate this
+        public static fvec4 cubicBezierInterpolate(fvec4 a, fvec4 b, fvec4 c, fvec4 d, float position)
+        {
+            return linearInterpolate(
+                quadraticBezierInterpolate(a, b, c, position),
+                quadraticBezierInterpolate(b, c, d, position),
+                position);
+        }
+        public fvec4 cubicBezierInterpolateTo(fvec4 b, fvec4 c, fvec4 d, float position)
+        {
+            return cubicBezierInterpolate(this, b, c, d, position);
+        }
         //todo: rational bezier interpolation (ie with weights)
 
 #endif
