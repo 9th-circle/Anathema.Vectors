@@ -1,0 +1,3 @@
+- Rational Bezier curves
+- Quaternions
+- Complex arithmetic
