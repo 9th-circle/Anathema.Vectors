@@ -15,7 +15,7 @@ namespace Anathema.Vectors.Core
         //We're almost entirely here for the SLERPing
         //The reason we need quaternions is for spherical linear interpolation
 
-        public dquat(float eulerX, float eulerY, float eulerZ)
+        public dquat(double eulerX, double eulerY, double eulerZ)
         {
 
         }
