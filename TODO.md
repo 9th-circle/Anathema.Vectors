@@ -26,3 +26,8 @@
   - Everything
 
 - Consider adding a separate module which extends the appropriate fields on the modern System.Numerics SIMD implementation (so that code can be ported over to it trivially)
+
+- Interpolation
+  - Bezier
+  - Hermite
+  - Splines
