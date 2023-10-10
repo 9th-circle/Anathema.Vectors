@@ -1120,6 +1120,39 @@ namespace Anathema.Vectors.Core
         {
             return new double[] { x, y, z, w };
         }
+
+
+        ///////////////////////////
+        //     Interpolation     //
+        ///////////////////////////
+#if INTERPOLATION_ENABLED
+        public static dvec4 linearInterpolate(dvec4 a, dvec4 b, double position)
+        {
+            return (a * (1 - position)) + (b * position);
+        }
+        public dvec4 linearInterpolateTo(dvec4 b, double position)
+        {
+            return linearInterpolate(this, b, position);
+        }
+
+
+        public static dvec4 quadraticBezierInterpolate(dvec4 a, dvec4 b, dvec4 c, double position)
+        {
+            return linearInterpolate(
+                linearInterpolate(a, b, position),
+                linearInterpolate(b, c, position),
+                position);
+        }
+        public dvec4 quadraticBezierInterpolateTo(dvec4 b, dvec4 c, double position)
+        {
+            return quadraticBezierInterpolate(this, b, c, position);
+        }
+        //todo: cubic interpolation
+        //todo: rational bezier interpolation (ie with weights)
+
+#endif
+
+
     }
 }
 #endif
