@@ -1076,6 +1076,23 @@ namespace Anathema.Vectors.Core
             return new float[] { x, y, z, w};
         }
 
+        ///////////////////////////
+        //     Interpolation     //
+        ///////////////////////////
+#if INTERPOLATION_ENABLED
+        public static fvec4 linearInterpolate(fvec4 a, fvec4 b, float position)
+        {
+            return (a * (1 - position)) + (b * position);
+        }
+        public fvec4 linearInterpolateTo(fvec4 b, float position)
+        {
+            return linearInterpolate(this, b, position);
+        }
+
+
+
+
+#endif
     }
 }
 #endif
