@@ -13,11 +13,19 @@ namespace Anathema.Vectors.Core
         {
             return Math.Abs(x - y) <= REALLY_SMALL_VALUE;
         }
+        public static float linearInterpolate(float a, float b, float position)
+        {
+            return (a * (1 - position)) + (b * position);
+        }
 #endif
 #if DOUBLES_ENABLED
         public static bool isClose(double x, double y)
         {
             return Math.Abs(x - y) <= REALLY_SMALL_VALUE;
+        }
+        public static double linearInterpolate(double a, double b, double position)
+        {
+            return (a * (1 - position)) + (b * position);
         }
 #endif
     }
