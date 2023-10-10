@@ -25,6 +25,18 @@ namespace Anathema.Vectors.Core
         {
 
         }
+        public dquat(double a, double b, double c, double d)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
+        }
+
+        public double a { get; set; }
+        public double b { get; set; }
+        public double c { get; set; }
+        public double d { get; set; }
 
         public static dquat slerp(dquat a, dquat b, float position)
         {

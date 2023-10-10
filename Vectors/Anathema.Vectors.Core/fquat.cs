@@ -21,6 +21,18 @@ namespace Anathema.Vectors.Core
         {
 
         }
+        public fquat(float a, float b, float c, float d)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
+        }
+
+        public float a { get; set; }
+        public float b { get; set; }
+        public float c { get; set; }
+        public float d { get; set; }
 
         public static fquat slerp(fquat a, fquat b, float position)
         {
