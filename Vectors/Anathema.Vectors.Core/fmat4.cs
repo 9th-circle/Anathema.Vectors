@@ -1,4 +1,6 @@
 ﻿#if FLOATS_ENABLED
+#if THREED_ENABLED
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -176,4 +178,5 @@ namespace Anathema.Vectors.Core
 
     }
 }
+#endif
 #endif

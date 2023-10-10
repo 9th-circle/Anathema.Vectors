@@ -95,3 +95,7 @@ Todo: finish explaining the flags
 ##### CONVERSIONS_ENABLED
 
 ##### INTERPOLATION_ENABLED
+
+##### THREED_ENABLED
+
+- Three dimensional vectors, and the matrices and quaternions used to support them.

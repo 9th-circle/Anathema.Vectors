@@ -1,4 +1,6 @@
 ﻿#if TEMPLATES_ENABLED
+#if THREED_ENABLED
+
 using System;
 using System.Collections.Generic;
 
@@ -320,4 +322,5 @@ namespace Anathema.Vectors.Core
         }
     }
 }
+#endif
 #endif

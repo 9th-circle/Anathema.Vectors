@@ -1,5 +1,7 @@
 ﻿#if DOUBLES_ENABLED
 #if COMPLEX_ENABLED
+#if THREED_ENABLED
+
 using System;
 using System.Collections.Generic;
 
@@ -50,5 +52,6 @@ namespace Anathema.Vectors.Core
 
     }
 }
+#endif
 #endif
 #endif
