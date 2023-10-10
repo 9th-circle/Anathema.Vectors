@@ -1,6 +1,5 @@
-- Change project to .NET FX 2.0 and put out any fires that result
-
 - Constructors for vecs and matrices with a simple scalar array
+
 - Roll out CONVERSIONS_ENABLED
 - Matrix-matrix multiplication
   - Basic use case

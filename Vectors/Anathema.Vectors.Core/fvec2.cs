@@ -373,8 +373,8 @@ namespace Anathema.Vectors.Core
             return quadraticBezierInterpolate(this, b, c, position);
         }
 
-
-
+        //todo: cubic interpolation
+        //todo: rational bezier interpolation (ie with weights)
 
 #endif
     }

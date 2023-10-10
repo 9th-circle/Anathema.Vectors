@@ -1,9 +1,5 @@
 ﻿#if FLOATS_ENABLED
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Anathema.Vectors.Core
 {
@@ -1101,7 +1097,8 @@ namespace Anathema.Vectors.Core
         {
             return quadraticBezierInterpolate(this, b, c, position);
         }
-
+        //todo: cubic interpolation
+        //todo: rational bezier interpolation (ie with weights)
 
 #endif
     }
