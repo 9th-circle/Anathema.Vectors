@@ -5,7 +5,6 @@ using Anathema.Vectors.Core;
 
 namespace Anathema.Vectors.Tests
 {
-
     public class fvec2Tests
     {
         //todo: replace InlineData with MemberData
@@ -201,7 +200,7 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(0, north.angleRadians);
 
             fvec2 south = new fvec2(0, 1);
-            Assert.True(south.angleRadians-Math.PI < REALLY_SMALL_VALUE);
+            Assert.True(south.angleRadians - Math.PI < REALLY_SMALL_VALUE);
 
             fvec2 east = new fvec2(1, 0);
             Assert.True(east.angleRadians - (Math.PI/2) < REALLY_SMALL_VALUE);
@@ -278,6 +277,7 @@ namespace Anathema.Vectors.Tests
             Assert.False(x != y);
             Assert.False(y != z);
             Assert.False(z != x);
+
             Assert.True(w != x);
             Assert.True(w != y);
             Assert.True(w != z);
