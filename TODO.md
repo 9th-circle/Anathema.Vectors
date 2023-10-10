@@ -1,5 +1,4 @@
 - Constructors for vecs and matrices with a simple scalar array
-
 - Matrix-matrix multiplication
   - Basic use case
   - Of different data types (float/double/T)
@@ -20,9 +19,6 @@
   - README
 - Benchmarking
   - Everything
-
 - Interpolation
-  - Bezier cubic
   - Rational Bezier
   - Hermite
-  - Splines
