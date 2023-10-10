@@ -1,6 +1,5 @@
 - Constructors for vecs and matrices with a simple scalar array
 
-- Roll out CONVERSIONS_ENABLED
 - Matrix-matrix multiplication
   - Basic use case
   - Of different data types (float/double/T)

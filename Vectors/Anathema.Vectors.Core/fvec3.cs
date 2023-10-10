@@ -339,7 +339,7 @@ namespace Anathema.Vectors.Core
         }
 
 
-
+#if CONVERSIONS_ENABLED
         public static fvec3 operator *(fvec2 a, fvec3 b)
         {
             return new fvec3(a.x * b.x, a.y * b.y, b.z);
@@ -375,7 +375,7 @@ namespace Anathema.Vectors.Core
         {
             return new fvec3(a.x - b.x, a.y - b.y, a.z);
         }
-
+#endif
 
         public static fvec3 operator *(fvec3 a, float b)
         {

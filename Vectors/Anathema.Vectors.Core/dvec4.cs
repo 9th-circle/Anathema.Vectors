@@ -886,7 +886,7 @@ namespace Anathema.Vectors.Core
 
 
 
-
+#if CONVERSIONS_ENABLED
 
         public static dvec4 operator *(fvec4 a, dvec4 b)
         {
@@ -1001,6 +1001,7 @@ namespace Anathema.Vectors.Core
         {
             return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w);
         }
+#endif
 
 
 

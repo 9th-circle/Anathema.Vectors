@@ -875,7 +875,7 @@ namespace Anathema.Vectors.Core
             return new fvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
         }
 
-
+#if CONVERSIONS_ENABLED
 
         public static fvec4 operator *(fvec2 a, fvec4 b)
         {
@@ -951,7 +951,7 @@ namespace Anathema.Vectors.Core
             return new fvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w);
         }
 
-
+#endif
 
 
 

@@ -240,7 +240,7 @@ namespace Anathema.Vectors.Core
         }
 
 
-
+#if CONVERSIONS_ENABLED
         public static dvec2 operator *(fvec2 a, dvec2 b)
         {
             return new dvec2(a.x * b.x, a.y * b.y);
@@ -260,7 +260,6 @@ namespace Anathema.Vectors.Core
 
 
 
-
         public static dvec2 operator *(dvec2 a, fvec2 b)
         {
             return new dvec2(a.x * b.x, a.y * b.y);
@@ -277,6 +276,7 @@ namespace Anathema.Vectors.Core
         {
             return new dvec2(a.x - b.x, a.y - b.y);
         }
+#endif
 
 
 

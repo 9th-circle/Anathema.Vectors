@@ -344,7 +344,7 @@ namespace Anathema.Vectors.Core
 
 
 
-
+#if CONVERSIONS_ENABLED
         public static dvec3 operator *(fvec3 a, dvec3 b)
         {
             return new dvec3(a.x * b.x, a.y * b.y, a.z * b.z);
@@ -361,7 +361,6 @@ namespace Anathema.Vectors.Core
         {
             return new dvec3(a.x - b.x, a.y - b.y, a.z - b.z);
         }
-
 
 
 
@@ -423,6 +422,7 @@ namespace Anathema.Vectors.Core
         {
             return new dvec3(a.x - b.x, a.y - b.y, a.z);
         }
+#endif
 
 
         public static dvec3 operator *(dvec3 a, double b)
