@@ -45,6 +45,10 @@ namespace Anathema.Vectors.Core
         {
             throw new NotImplementedException();
         }
+        public dvec3 toEulerAngles()
+        {
+            throw new NotImplementedException();
+        }
 
     }
 }
