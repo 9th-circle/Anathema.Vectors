@@ -1,13 +1,21 @@
-- Constructors for vecs and matrices with a simple scalar array
+## Outsourced
+
 - Matrix-matrix multiplication
   - Basic use case
-  - Of different data types (float/double/T)
+  - Of different data types (float/double/T) #if CONVERSIONS_ENABLED
   - Of different order (2/3/4)
   - Don't bother with mixed data type+order difference
 - Quaternions
   - There is no implementation yet
   - Do not use an existing imaginary arithmetic library - should be self contained
   - Slerp - spherical linear interpolation is the main reason we want this
+- Interpolation
+  - Rational Bezier
+  - Hermite
+
+## To Do
+
+- Constructors for vecs and matrices with a simple scalar array
 - Templates
   - Conversions to normal vectors - this has been started
   - Operations between template vectors of the same type
@@ -19,6 +27,4 @@
   - README
 - Benchmarking
   - Everything
-- Interpolation
-  - Rational Bezier
-  - Hermite
+- Demo

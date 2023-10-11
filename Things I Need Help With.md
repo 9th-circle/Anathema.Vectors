@@ -1,4 +1,5 @@
 - Rational Bezier curves
+- Hermite interpolation
 - Quaternions
 - Complex arithmetic
 - Matrix-Matrix multiplication
