@@ -34,7 +34,7 @@ namespace Anathema.Vectors.Core
         public float c { get; set; }
         public float d { get; set; }
 
-        public static fquat slerp(fquat a, fquat b, float position)
+        public static fquat slerp(fquat from, fquat to, float position)
         {
             throw new NotImplementedException();
         }
