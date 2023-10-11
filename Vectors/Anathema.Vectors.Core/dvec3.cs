@@ -485,7 +485,7 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 
-
+#if CONVERSIONS_ENABLED
         public static dvec3 operator *(dvec3 a, fmat4 b)
         {
             dvec4 result = new dvec4(a.x, a.y, a.z, 1.0f) * b;
@@ -496,7 +496,7 @@ namespace Anathema.Vectors.Core
         {
             return a * b.transposed;
         }
-
+#endif
 #if NESTING_ENABLED
         public static dvec3 operator *(dvec3 a, tvec3<tvec3<double>> b)
         {

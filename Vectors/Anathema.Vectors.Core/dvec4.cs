@@ -1069,6 +1069,7 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 
+#if CONVERSIONS_ENABLED
         public static dvec4 operator *(dvec4 a, fmat4 b)
         {
             return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
@@ -1081,7 +1082,7 @@ namespace Anathema.Vectors.Core
         {
             return a * b.transposed;
         }
-
+#endif
 
 #if NESTING_ENABLED
         public static dvec4 operator *(dvec4 a, tvec4<tvec4<double>> b)
