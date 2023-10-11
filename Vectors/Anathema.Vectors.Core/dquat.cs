@@ -30,6 +30,13 @@ namespace Anathema.Vectors.Core
             this.c = c;
             this.d = d;
         }
+        public dquat(double[] abcd)
+        {
+            this.a = abcd[0];
+            this.b = abcd[1];
+            this.c = abcd[2];
+            this.d = abcd[3];
+        }
 
         public double a { get; set; }
         public double b { get; set; }

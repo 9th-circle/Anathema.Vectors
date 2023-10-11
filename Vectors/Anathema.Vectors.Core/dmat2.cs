@@ -28,6 +28,11 @@ namespace Anathema.Vectors.Core
         {
             Array.Copy(template.data, data, data.Length);
         }
+        public dmat2(double[] data)
+        {
+            this.data = data;
+        }
+
 
         ///////////////////////////
         //      Generators       //

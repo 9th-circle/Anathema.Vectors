@@ -49,6 +49,13 @@ namespace Anathema.Vectors.Core
         }
 
 
+        public tvec3(T[] xyz)
+        {
+            this.x = xyz[0];
+            this.y = xyz[1];
+            this.z = xyz[2];
+        }
+
         ///////////////////////////
         //        Swizzles       //
         ///////////////////////////

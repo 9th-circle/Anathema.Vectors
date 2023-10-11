@@ -30,6 +30,10 @@ namespace Anathema.Vectors.Core
             data = new double[9];
             Array.Copy(template.data, data, data.Length);
         }
+        public dmat3(double[] data)
+        {
+            this.data = data;
+        }
 
         ///////////////////////////
         //      Generators       //

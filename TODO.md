@@ -15,7 +15,6 @@
 
 ## To Do
 
-- Constructors for vecs and matrices with a simple scalar array
 - Templates
   - Conversions to normal vectors - this has been started
   - Operations between template vectors of the same type

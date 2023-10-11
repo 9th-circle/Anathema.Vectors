@@ -21,6 +21,13 @@ namespace Anathema.Vectors.Core
         {
 
         }
+        public fquat(float[] abcd)
+        {
+            this.a = abcd[0];
+            this.b = abcd[1];
+            this.c = abcd[2];
+            this.d = abcd[3];
+        }
         public fquat(float a, float b, float c, float d)
         {
             this.a = a;

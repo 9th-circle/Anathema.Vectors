@@ -29,6 +29,12 @@ namespace Anathema.Vectors.Core
             this.x = x;
             this.y = y;
         }
+
+        public fvec2(float[] xy)
+        {
+            this.x = xy[0];
+            this.y = xy[1];
+        }
         public fvec2(fvec2 xy)
         {
             x = xy.x;

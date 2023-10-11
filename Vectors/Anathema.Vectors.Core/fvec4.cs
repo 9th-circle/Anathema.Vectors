@@ -88,6 +88,13 @@ namespace Anathema.Vectors.Core
             this.w = w;
         }
 
+        public fvec4(float[] xyzw)
+        {
+            this.x = xyzw[0];
+            this.y = xyzw[1];
+            this.z = xyzw[2];
+            this.w = xyzw[3];
+        }
         ///////////////////////////
         //      Derivations      //
         ///////////////////////////

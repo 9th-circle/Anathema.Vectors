@@ -21,6 +21,11 @@ namespace Anathema.Vectors.Core
             this.real = real;
             this.imaginary = imaginary;
         }
+        public dcom(double[] ri)
+        {
+            this.real = ri[0];
+            this.imaginary = ri[1];
+        }
 
 
         public static dcom operator +(dcom a, dcom b)

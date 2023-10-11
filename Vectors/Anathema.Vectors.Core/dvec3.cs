@@ -54,6 +54,12 @@ namespace Anathema.Vectors.Core
             z = xyz.z;
         }
 
+        public dvec3(double[] xyz)
+        {
+            this.x = xyz[0];
+            this.y = xyz[1];
+            this.z = xyz[2];
+        }
 
 
         ///////////////////////////

@@ -35,6 +35,12 @@ namespace Anathema.Vectors.Core
             y = xyz.y;
             z = xyz.z;
         }
+        public fvec3(float[] xyz)
+        {
+            this.x = xyz[0];
+            this.y = xyz[1];
+            this.z = xyz[2];
+        }
 #if CONVERSIONS_ENABLED
         public fvec3(fvec2 a, float z)
         {

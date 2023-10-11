@@ -31,6 +31,10 @@ namespace Anathema.Vectors.Core
             data = new float[9];
             Array.Copy(template.data, data, data.Length);
         }
+        public fmat3(float[] data)
+        {
+            this.data = data;
+        }
 
         ///////////////////////////
         //      Generators       //

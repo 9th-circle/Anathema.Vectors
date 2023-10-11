@@ -39,6 +39,11 @@ namespace Anathema.Vectors.Core
             x = xy.x;
             y = xy.y;
         }
+        public dvec2(double[] xy)
+        {
+            this.x = xy[0];
+            this.y = xy[1];
+        }
 
         ///////////////////////////
         //      Conversions      //

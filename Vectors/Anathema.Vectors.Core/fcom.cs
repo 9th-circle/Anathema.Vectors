@@ -21,6 +21,11 @@ namespace Anathema.Vectors.Core
             this.imaginary = imaginary;
         }
 
+        public fcom(float[] ri)
+        {
+            this.real = ri[0];
+            this.imaginary = ri[1];
+        }
 
         public static fcom operator +(fcom a, fcom b) {
             return new fcom(a.real + b.real, a.imaginary + b.imaginary);
