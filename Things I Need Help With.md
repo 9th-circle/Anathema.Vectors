@@ -1,3 +1,4 @@
 - Rational Bezier curves
 - Quaternions
 - Complex arithmetic
+- Matrix-Matrix multiplication
