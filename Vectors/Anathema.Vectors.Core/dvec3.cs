@@ -549,6 +549,14 @@ namespace Anathema.Vectors.Core
             return new double[] { x, y, z };
         }
 
+#if CONVERSIONS_ENABLED
+#if TEMPLATES_ENABLED
+        public tvec3<double> toTVec3()
+        {
+            return new tvec3<double>(x, y, z);
+        }
+#endif
+#endif
 
         ///////////////////////////
         //     Interpolation     //

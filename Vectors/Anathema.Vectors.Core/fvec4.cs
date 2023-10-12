@@ -1095,6 +1095,14 @@ namespace Anathema.Vectors.Core
             return new float[] { x, y, z, w};
         }
 
+#if CONVERSIONS_ENABLED
+#if TEMPLATES_ENABLED
+        public tvec4<float> toTVec4()
+        {
+            return new tvec4<float>(x, y, z, w);
+        }
+#endif
+#endif
         ///////////////////////////
         //     Interpolation     //
         ///////////////////////////

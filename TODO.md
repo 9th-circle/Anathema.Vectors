@@ -2,7 +2,6 @@
 
 - Templates
   - Operations between template vectors of the same type
-  - Convert fvec and dvec to tvec<float> and <double>
 - Tests + Correction
   - Literally everything except fvec2 and dvec2
   - Check a mat4 with a mat2 reference can access correct rows/cols

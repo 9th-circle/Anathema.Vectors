@@ -1141,6 +1141,14 @@ namespace Anathema.Vectors.Core
         }
 
 
+#if CONVERSIONS_ENABLED
+#if TEMPLATES_ENABLED
+        public tvec4<double> toTVec4()
+        {
+            return new tvec4<double>(x, y, z, w);
+        }
+#endif
+#endif
         ///////////////////////////
         //     Interpolation     //
         ///////////////////////////
