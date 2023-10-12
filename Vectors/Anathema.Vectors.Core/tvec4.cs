@@ -887,21 +887,34 @@ namespace Anathema.Vectors.Core
 
 
 #if CONVERSIONS_ENABLED
+#if FLOATS_ENABLED
         public fvec4 floatTVec4ToFVec4()
         {
             if (typeof(T) != typeof(float))
                 throw new ArgumentException();
 
-            throw new NotImplementedException();
-        }
+            float fx = (float)Convert.ChangeType(x, typeof(float));
+            float fy = (float)Convert.ChangeType(y, typeof(float));
+            float fz = (float)Convert.ChangeType(z, typeof(float));
+            float fw = (float)Convert.ChangeType(w, typeof(float));
 
+            return new fvec4(fx, fy, fz, fw);
+        }
+#endif
+#if DOUBLES_ENABLED
         public dvec4 doubleTVec4ToDVec4()
         {
             if (typeof(T) != typeof(double))
                 throw new ArgumentException();
 
-            throw new NotImplementedException();
+            double fx = (double)Convert.ChangeType(x, typeof(double));
+            double fy = (double)Convert.ChangeType(y, typeof(double));
+            double fz = (double)Convert.ChangeType(z, typeof(double));
+            double fw = (double)Convert.ChangeType(w, typeof(double));
+
+            return new dvec4(fx, fy, fz, fw);
         }
+#endif
 #endif
 
 
