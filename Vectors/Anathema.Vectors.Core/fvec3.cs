@@ -297,7 +297,7 @@ namespace Anathema.Vectors.Core
         ///////////////////////////
 
 
-        public fvec3 dot(fvec3 b)
+        public float dot(fvec3 b)
         {
             return dot(this, b);
         }
