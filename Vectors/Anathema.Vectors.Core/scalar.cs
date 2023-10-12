@@ -16,6 +16,12 @@ namespace Anathema.Vectors.Core
         {
             return (a * (1 - position)) + (b * position);
         }
+        public static float bezierInterpolate(float a, float b, float c, float position)
+        {
+            return linearInterpolate(   linearInterpolate(a, b, position),
+                                        linearInterpolate(b, c, position),
+                                        position);
+        }
 #endif
 #if DOUBLES_ENABLED
         public static bool isClose(double x, double y)
@@ -25,6 +31,12 @@ namespace Anathema.Vectors.Core
         public static double linearInterpolate(double a, double b, double position)
         {
             return (a * (1 - position)) + (b * position);
+        }
+        public static double bezierInterpolate(double a, double b, double c, double position)
+        {
+            return linearInterpolate(   linearInterpolate(a, b, position),
+                                        linearInterpolate(b, c, position),
+                                        position);
         }
 #endif
     }
