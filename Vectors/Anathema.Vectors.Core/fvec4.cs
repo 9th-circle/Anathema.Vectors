@@ -862,13 +862,13 @@ namespace Anathema.Vectors.Core
         ///////////////////////////
 
 
-        public fvec4 dot(fvec4 b)
+        public float dot(fvec4 b)
         {
             return dot(this, b);
         }
-        public static fvec4 dot(fvec4 a, fvec4 b)
+        public static float dot(fvec4 a, fvec4 b)
         {
-            return a * b;
+            return (a.x * b.x) + (a.y * b.y) + (a.z * b.z) + (a.w * b.w);
         }
 
         public static bool operator !=(fvec4 a, fvec4 b)

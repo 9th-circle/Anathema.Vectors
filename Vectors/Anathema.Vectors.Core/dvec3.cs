@@ -294,13 +294,13 @@ namespace Anathema.Vectors.Core
         ///////////////////////////
 
 
-        public dvec3 dot(dvec3 b)
+        public double dot(dvec3 b)
         {
             return dot(this, b);
         }
-        public static dvec3 dot(dvec3 a, dvec3 b)
+        public static double dot(dvec3 a, dvec3 b)
         {
-            return a * b;
+            return (a.x *b.x) + (a.y * b.y) + (a.z * b.z);
         }
 
 

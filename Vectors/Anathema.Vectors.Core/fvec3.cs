@@ -301,9 +301,9 @@ namespace Anathema.Vectors.Core
         {
             return dot(this, b);
         }
-        public static fvec3 dot(fvec3 a, fvec3 b)
+        public static float dot(fvec3 a, fvec3 b)
         {
-            return a * b;
+            return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
         }
 
 
