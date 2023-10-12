@@ -301,12 +301,12 @@ namespace Anathema.Vectors.Core
         {
             return a * b.transposed;
         }
+#if CONVERSIONS_ENABLED
         public static dvec2 operator *(fvec2 a, dmat2 b)
         {
             return new dvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)));
         }
-#if CONVERSIONS_ENABLED
         public static dvec2 operator *(dmat2 b, fvec2 a)
         {
             return a * b.transposed;

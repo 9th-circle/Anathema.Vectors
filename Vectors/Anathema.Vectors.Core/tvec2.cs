@@ -308,19 +308,243 @@ namespace Anathema.Vectors.Core
 
         public static tvec2<T> operator *(tvec2<T> a, tvec2<T> b)
         {
-            throw new NotImplementedException();
+            if (typeof(T) == typeof(float))
+            {
+                float ax = tToFloat(a.x);
+                float ay = tToFloat(a.y);
+                float bx = tToFloat(b.x);
+                float by = tToFloat(b.y);
+                return new tvec2<T>(floatToT(ax * bx), floatToT(ay * by));
+            }
+            if (typeof(T) == typeof(double))
+            {
+                double ax = tToDouble(a.x);
+                double ay = tToDouble(a.y);
+                double bx = tToDouble(b.x);
+                double by = tToDouble(b.y);
+                return new tvec2<T>(doubleToT(ax * bx), doubleToT(ay * by));
+            }
+            if (typeof(T) == typeof(decimal))
+            {
+                decimal ax = tToDecimal(a.x);
+                decimal ay = tToDecimal(a.y);
+                decimal bx = tToDecimal(b.x);
+                decimal by = tToDecimal(b.y);
+                return new tvec2<T>(decimalToT(ax * bx), decimalToT(ay * by));
+            }
+            if (typeof(T) == typeof(byte))
+            {
+                byte ax = tToByte(a.x);
+                byte ay = tToByte(a.y);
+                byte bx = tToByte(b.x);
+                byte by = tToByte(b.y);
+                return new tvec2<T>(byteToT((byte)(ax * bx)), byteToT((byte)(ay * by)));
+            }
+            if (typeof(T) == typeof(short))
+            {
+                short ax = tToShort(a.x);
+                short ay = tToShort(a.y);
+                short bx = tToShort(b.x);
+                short by = tToShort(b.y);
+                return new tvec2<T>(shortToT((short)(ax * bx)), shortToT((short)(ay * by)));
+            }
+            if (typeof(T) == typeof(int))
+            {
+                int ax = tToInt(a.x);
+                int ay = tToInt(a.y);
+                int bx = tToInt(b.x);
+                int by = tToInt(b.y);
+                return new tvec2<T>(intToT(ax * bx), intToT(ay * by));
+            }
+            if (typeof(T) == typeof(long))
+            {
+                long ax = tToLong(a.x);
+                long ay = tToLong(a.y);
+                long bx = tToLong(b.x);
+                long by = tToLong(b.y);
+                return new tvec2<T>(longToT(ax * bx), longToT(ay * by));
+            }
+            throw new TypeLoadException();
         }
         public static tvec2<T> operator /(tvec2<T> a, tvec2<T> b)
         {
-            throw new NotImplementedException();
+            if (typeof(T) == typeof(float))
+            {
+                float ax = tToFloat(a.x);
+                float ay = tToFloat(a.y);
+                float bx = tToFloat(b.x);
+                float by = tToFloat(b.y);
+                return new tvec2<T>(floatToT(ax / bx), floatToT(ay / by));
+            }
+            if (typeof(T) == typeof(double))
+            {
+                double ax = tToDouble(a.x);
+                double ay = tToDouble(a.y);
+                double bx = tToDouble(b.x);
+                double by = tToDouble(b.y);
+                return new tvec2<T>(doubleToT(ax / bx), doubleToT(ay / by));
+            }
+            if (typeof(T) == typeof(decimal))
+            {
+                decimal ax = tToDecimal(a.x);
+                decimal ay = tToDecimal(a.y);
+                decimal bx = tToDecimal(b.x);
+                decimal by = tToDecimal(b.y);
+                return new tvec2<T>(decimalToT(ax / bx), decimalToT(ay / by));
+            }
+            if (typeof(T) == typeof(byte))
+            {
+                byte ax = tToByte(a.x);
+                byte ay = tToByte(a.y);
+                byte bx = tToByte(b.x);
+                byte by = tToByte(b.y);
+                return new tvec2<T>(byteToT((byte)(ax / bx)), byteToT((byte)(ay / by)));
+            }
+            if (typeof(T) == typeof(short))
+            {
+                short ax = tToShort(a.x);
+                short ay = tToShort(a.y);
+                short bx = tToShort(b.x);
+                short by = tToShort(b.y);
+                return new tvec2<T>(shortToT((short)(ax / bx)), shortToT((short)(ay / by)));
+            }
+            if (typeof(T) == typeof(int))
+            {
+                int ax = tToInt(a.x);
+                int ay = tToInt(a.y);
+                int bx = tToInt(b.x);
+                int by = tToInt(b.y);
+                return new tvec2<T>(intToT(ax / bx), intToT(ay / by));
+            }
+            if (typeof(T) == typeof(long))
+            {
+                long ax = tToLong(a.x);
+                long ay = tToLong(a.y);
+                long bx = tToLong(b.x);
+                long by = tToLong(b.y);
+                return new tvec2<T>(longToT(ax / bx), longToT(ay / by));
+            }
+            throw new TypeLoadException();
         }
         public static tvec2<T> operator +(tvec2<T> a, tvec2<T> b)
         {
-            throw new NotImplementedException();
+            if (typeof(T) == typeof(float))
+            {
+                float ax = tToFloat(a.x);
+                float ay = tToFloat(a.y);
+                float bx = tToFloat(b.x);
+                float by = tToFloat(b.y);
+                return new tvec2<T>(floatToT(ax + bx), floatToT(ay + by));
+            }
+            if (typeof(T) == typeof(double))
+            {
+                double ax = tToDouble(a.x);
+                double ay = tToDouble(a.y);
+                double bx = tToDouble(b.x);
+                double by = tToDouble(b.y);
+                return new tvec2<T>(doubleToT(ax + bx), doubleToT(ay + by));
+            }
+            if (typeof(T) == typeof(decimal))
+            {
+                decimal ax = tToDecimal(a.x);
+                decimal ay = tToDecimal(a.y);
+                decimal bx = tToDecimal(b.x);
+                decimal by = tToDecimal(b.y);
+                return new tvec2<T>(decimalToT(ax + bx), decimalToT(ay + by));
+            }
+            if (typeof(T) == typeof(byte))
+            {
+                byte ax = tToByte(a.x);
+                byte ay = tToByte(a.y);
+                byte bx = tToByte(b.x);
+                byte by = tToByte(b.y);
+                return new tvec2<T>(byteToT((byte)(ax + bx)), byteToT((byte)(ay + by)));
+            }
+            if (typeof(T) == typeof(short))
+            {
+                short ax = tToShort(a.x);
+                short ay = tToShort(a.y);
+                short bx = tToShort(b.x);
+                short by = tToShort(b.y);
+                return new tvec2<T>(shortToT((short)(ax + bx)), shortToT((short)(ay + by)));
+            }
+            if (typeof(T) == typeof(int))
+            {
+                int ax = tToInt(a.x);
+                int ay = tToInt(a.y);
+                int bx = tToInt(b.x);
+                int by = tToInt(b.y);
+                return new tvec2<T>(intToT(ax + bx), intToT(ay + by));
+            }
+            if (typeof(T) == typeof(long))
+            {
+                long ax = tToLong(a.x);
+                long ay = tToLong(a.y);
+                long bx = tToLong(b.x);
+                long by = tToLong(b.y);
+                return new tvec2<T>(longToT(ax + bx), longToT(ay + by));
+            }
+            throw new TypeLoadException();
         }
         public static tvec2<T> operator -(tvec2<T> a, tvec2<T> b)
         {
-            throw new NotImplementedException();
+            if (typeof(T) == typeof(float))
+            {
+                float ax = tToFloat(a.x);
+                float ay = tToFloat(a.y);
+                float bx = tToFloat(b.x);
+                float by = tToFloat(b.y);
+                return new tvec2<T>(floatToT(ax - bx), floatToT(ay - by));
+            }
+            if (typeof(T) == typeof(double))
+            {
+                double ax = tToDouble(a.x);
+                double ay = tToDouble(a.y);
+                double bx = tToDouble(b.x);
+                double by = tToDouble(b.y);
+                return new tvec2<T>(doubleToT(ax - bx), doubleToT(ay - by));
+            }
+            if (typeof(T) == typeof(decimal))
+            {
+                decimal ax = tToDecimal(a.x);
+                decimal ay = tToDecimal(a.y);
+                decimal bx = tToDecimal(b.x);
+                decimal by = tToDecimal(b.y);
+                return new tvec2<T>(decimalToT(ax - bx), decimalToT(ay - by));
+            }
+            if (typeof(T) == typeof(byte))
+            {
+                byte ax = tToByte(a.x);
+                byte ay = tToByte(a.y);
+                byte bx = tToByte(b.x);
+                byte by = tToByte(b.y);
+                return new tvec2<T>(byteToT((byte)(ax - bx)), byteToT((byte)(ay - by)));
+            }
+            if (typeof(T) == typeof(short))
+            {
+                short ax = tToShort(a.x);
+                short ay = tToShort(a.y);
+                short bx = tToShort(b.x);
+                short by = tToShort(b.y);
+                return new tvec2<T>(shortToT((short)(ax - bx)), shortToT((short)(ay - by)));
+            }
+            if (typeof(T) == typeof(int))
+            {
+                int ax = tToInt(a.x);
+                int ay = tToInt(a.y);
+                int bx = tToInt(b.x);
+                int by = tToInt(b.y);
+                return new tvec2<T>(intToT(ax - bx), intToT(ay - by));
+            }
+            if (typeof(T) == typeof(long))
+            {
+                long ax = tToLong(a.x);
+                long ay = tToLong(a.y);
+                long bx = tToLong(b.x);
+                long by = tToLong(b.y);
+                return new tvec2<T>(longToT(ax - bx), longToT(ay - by));
+            }
+            throw new TypeLoadException();
         }
 #endif
         public T this[int i]
