@@ -173,81 +173,137 @@ namespace Anathema.Vectors.Core
 #endif
 #endif
 
-        ///////////////////////////
-        //       Operators       //
-        ///////////////////////////
+///////////////////////////
+//       Operators       //
+///////////////////////////
 
 
-        protected int tToByte(T a)
+#if TEMPLATE_OPERATIONS_ENABLED
+        protected static byte tToByte(T a)
         {
-            return (int)Convert.ChangeType(a, typeof(int));
+            return (byte)Convert.ChangeType(a, typeof(byte));
         }
-        protected int tToShort(T a)
+        protected static short tToShort(T a)
         {
-            return (int)Convert.ChangeType(a, typeof(int));
+            return (short)Convert.ChangeType(a, typeof(short));
         }
-        protected int tToInt(T a)
+        protected static int tToInt(T a)
         {
             return (int)Convert.ChangeType(a, typeof(int));
         }
 
-        protected int tToLong(T a)
+        protected static long tToLong(T a)
         {
-            return (int)Convert.ChangeType(a, typeof(int));
+            return (long)Convert.ChangeType(a, typeof(long));
         }
-        protected int tToDecimal(T a)
+        protected static int tToDecimal(T a)
         {
             return (int)Convert.ChangeType(a, typeof(decimal));
         }
-        protected int tToFloat(T a)
+        protected static int tToFloat(T a)
         {
             return (int)Convert.ChangeType(a, typeof(float));
         }
-        protected int tToDouble(T a)
+        protected static int tToDouble(T a)
         {
             return (int)Convert.ChangeType(a, typeof(double));
         }
 
 
 
-        protected T byteToT(byte a)
+        protected static T byteToT(byte a)
         {
             return (T)Convert.ChangeType(a, typeof(T));
         }
-        protected T shortToT(short a)
+        protected static T shortToT(short a)
         {
             return (T)Convert.ChangeType(a, typeof(T));
         }
-        protected T intToT(int a)
+        protected static T intToT(int a)
         {
             return (T)Convert.ChangeType(a, typeof(T));
         }
-        protected T longToT(long a)
+        protected static T longToT(long a)
         {
             return (T)Convert.ChangeType(a, typeof(T));
         }
-        protected T decimalToT(decimal a)
+        protected static T decimalToT(decimal a)
         {
             return (T)Convert.ChangeType(a, typeof(T));
         }
-        protected T floatToT(float a)
+        protected static T floatToT(float a)
         {
             return (T)Convert.ChangeType(a, typeof(T));
         }
-        protected T doubleToT(double a)
+        protected static T doubleToT(double a)
         {
             return (T)Convert.ChangeType(a, typeof(T));
         }
-
 
 
         public static bool operator !=(tvec2<T> a, tvec2<T> b)
         {
-            throw new NotImplementedException();
+            return !(a == b);
         }
         public static bool operator ==(tvec2<T> a, tvec2<T> b)
         {
-            throw new NotImplementedException();
+            if (typeof(T) == typeof(float))
+            {
+                float ax = tToFloat(a.x);
+                float ay = tToFloat(a.y);
+                float bx = tToFloat(b.x);
+                float by = tToFloat(b.y);
+                return scalar.isClose(ax, bx) && scalar.isClose(ay, by);
+            }
+            if (typeof(T) == typeof(double))
+            {
+                double ax = tToDouble(a.x);
+                double ay = tToDouble(a.y);
+                double bx = tToDouble(b.x);
+                double by = tToDouble(b.y);
+                return scalar.isClose(ax, bx) && scalar.isClose(ay, by);
+            }
+            if (typeof(T) == typeof(decimal))
+            {
+                decimal ax = tToDecimal(a.x);
+                decimal ay = tToDecimal(a.y);
+                decimal bx = tToDecimal(b.x);
+                decimal by = tToDecimal(b.y);
+                return ax == bx && ay == by;
+            }
+            if (typeof(T) == typeof(byte))
+            {
+                byte ax = tToByte(a.x);
+                byte ay = tToByte(a.y);
+                byte bx = tToByte(b.x);
+                byte by = tToByte(b.y);
+                return ax == bx && ay == by;
+            }
+            if (typeof(T) == typeof(short))
+            {
+                short ax = tToShort(a.x);
+                short ay = tToShort(a.y);
+                short bx = tToShort(b.x);
+                short by = tToShort(b.y);
+                return ax == bx && ay == by;
+            }
+            if (typeof(T) == typeof(int))
+            {
+                int ax = tToInt(a.x);
+                int ay = tToInt(a.y);
+                int bx = tToInt(b.x);
+                int by = tToInt(b.y);
+                return ax == bx && ay == by;
+            }
+            if (typeof(T) == typeof(long))
+            {
+                long ax = tToLong(a.x);
+                long ay = tToLong(a.y);
+                long bx = tToLong(b.x);
+                long by = tToLong(b.y);
+                return ax == bx && ay == by;
+            }
+            throw new TypeLoadException();
         }
 
         public static tvec2<T> operator *(tvec2<T> a, tvec2<T> b)
@@ -266,7 +322,7 @@ namespace Anathema.Vectors.Core
         {
             throw new NotImplementedException();
         }
-
+#endif
         public T this[int i]
         {
             get

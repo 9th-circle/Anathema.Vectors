@@ -109,3 +109,7 @@ Todo: fill out
 ##### THREED_ENABLED
 
 - Three dimensional vectors, and the matrices and quaternions used to support them.
+
+##### TEMPLATE_OPERATIONS_ENABLED
+
+- 
