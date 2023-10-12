@@ -884,6 +884,29 @@ namespace Anathema.Vectors.Core
         }
 
 #endif
+
+
+#if CONVERSIONS_ENABLED
+        public fvec4 floatTVec4ToFVec4()
+        {
+            if (typeof(T) != typeof(float))
+                throw new ArgumentException();
+
+            throw new NotImplementedException();
+        }
+
+        public dvec4 doubleTVec4ToDVec4()
+        {
+            if (typeof(T) != typeof(double))
+                throw new ArgumentException();
+
+            throw new NotImplementedException();
+        }
+#endif
+
+
+
+
         public new T this[int i]
         {
             get

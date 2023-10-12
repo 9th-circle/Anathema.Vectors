@@ -130,6 +130,7 @@ namespace Anathema.Vectors.Core
 
 
 #if NESTING_ENABLED
+#if DOUBLES_ENABLED
         public static tvec2<tvec2<double>> fromDMat2(dmat2 input)
         {
             var output = new tvec2<tvec2<double>>();
@@ -143,25 +144,34 @@ namespace Anathema.Vectors.Core
             return output;
         }
 #endif
+#endif
 
-
+#if CONVERSIONS_ENABLED
+#if FLOATS_ENABLED
         public fvec2 floatTVec2ToFVec2()
         {
             if (typeof(T) != typeof(float))
                 throw new ArgumentException();
             
-            throw new NotImplementedException();
-        }
+            float fx = (float)Convert.ChangeType(x, typeof(float));
+            float fy = (float)Convert.ChangeType(y, typeof(float));
 
+            return new fvec2(fx, fy);
+        }
+#endif
+#if DOUBLES_ENABLED
         public dvec2 doubleTVec2ToDVec2()
         {
             if (typeof(T) != typeof(double))
                 throw new ArgumentException();
 
-            throw new NotImplementedException();
+            double fx = (double)Convert.ChangeType(x, typeof(double));
+            double fy = (double)Convert.ChangeType(y, typeof(double));
+
+            return new dvec2(fx, fy);
         }
-
-
+#endif
+#endif
 
         ///////////////////////////
         //       Operators       //

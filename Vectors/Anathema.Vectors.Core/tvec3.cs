@@ -294,6 +294,29 @@ namespace Anathema.Vectors.Core
             return output;
         }
 #endif
+
+
+
+#if CONVERSIONS_ENABLED
+        public fvec3 floatTVec3ToFVec3()
+        {
+            if (typeof(T) != typeof(float))
+                throw new ArgumentException();
+
+            throw new NotImplementedException();
+        }
+
+        public dvec3 doubleTVec3ToDVec3()
+        {
+            if (typeof(T) != typeof(double))
+                throw new ArgumentException();
+
+            throw new NotImplementedException();
+        }
+#endif
+
+
+
         public new T this[int i]
         {
             get
