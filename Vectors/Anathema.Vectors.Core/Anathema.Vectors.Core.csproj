@@ -47,7 +47,11 @@
     <Compile Include="dvec2.interpolation.cs" />
     <Compile Include="dvec2.operators.cs" />
     <Compile Include="dvec2.swizzles.cs" />
+    <Compile Include="dvec3.conversions.cs" />
     <Compile Include="dvec3.cs" />
+    <Compile Include="dvec3.derivations.cs" />
+    <Compile Include="dvec3.interpolation.cs" />
+    <Compile Include="dvec3.operators.cs" />
     <Compile Include="dvec3.swizzles.cs" />
     <Compile Include="dvec4.conversions.cs" />
     <Compile Include="dvec4.cs" />
