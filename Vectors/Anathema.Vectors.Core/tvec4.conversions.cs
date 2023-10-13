@@ -9,6 +9,55 @@ namespace Anathema.Vectors.Core
 {
     public partial class tvec4<T> : tvec3<T>
     {
+        public tvec4(tvec3<T> xyz, T w)
+        {
+            x = xyz.x;
+            y = xyz.y;
+            z = xyz.z;
+            this.w = w;
+        }
+        public tvec4(T x, tvec3<T> yzw)
+        {
+            this.x = x;
+            y = yzw.x;
+            z = yzw.y;
+            w = yzw.z;
+        }
+        public tvec4(tvec2<T> xy, tvec2<T> zw)
+        {
+            x = xy.x;
+            y = xy.y;
+            z = zw.x;
+            w = zw.y;
+        }
+        public tvec4(T x, T y, tvec2<T> zw)
+        {
+            this.x = x;
+            this.y = y;
+            z = zw.x;
+            w = zw.y;
+        }
+        public tvec4(T x, tvec2<T> yz, T w)
+        {
+            this.x = x;
+            y = yz.x;
+            z = yz.y;
+            this.w = w;
+        }
+        public tvec4(tvec2<T> xy, T z, T w)
+        {
+            x = xy.x;
+            y = xy.y;
+            this.z = z;
+            this.w = w;
+        }
+        public tvec4(T x, T y, T z, T w)
+        {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+            this.w = w;
+        }
 
 #if NESTING_ENABLED
 #if DOUBLES_ENABLED
