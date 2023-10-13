@@ -9,7 +9,8 @@
   - README
 - Benchmarking
   - Everything
-- Demo
+- Demos
+- Double check permutations of removed preprocessor directives are sensible
 
 ## Outsourced
 
