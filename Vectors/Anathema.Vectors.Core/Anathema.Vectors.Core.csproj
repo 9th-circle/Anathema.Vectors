@@ -55,7 +55,11 @@
     <Compile Include="fmat3.cs" />
     <Compile Include="fmat4.cs" />
     <Compile Include="fquat.cs" />
+    <Compile Include="fvec2.conversions.cs" />
     <Compile Include="fvec2.cs" />
+    <Compile Include="fvec2.derivations.cs" />
+    <Compile Include="fvec2.interpolation.cs" />
+    <Compile Include="fvec2.operators.cs" />
     <Compile Include="fvec2.swizzles.cs" />
     <Compile Include="fvec3.cs" />
     <Compile Include="fvec3.swizzles.cs" />

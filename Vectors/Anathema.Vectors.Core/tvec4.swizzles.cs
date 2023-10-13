@@ -1,11 +1,5 @@
 ﻿#if TEMPLATES_ENABLED
-#if SWIZZLES_ENABLED
 #if THREED_ENABLED
-
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace Anathema.Vectors.Core
 {
     public partial class tvec4<T> : tvec3<T>
@@ -15,6 +9,7 @@ namespace Anathema.Vectors.Core
 
         //Starting with X (6)
 
+#if SWIZZLES_ENABLED
         public tvec4<T> xyzw
         {
             get
@@ -371,7 +366,6 @@ namespace Anathema.Vectors.Core
         }
 
 #endif
-
 #if COLOURS_ENABLED
         public T a
         {
@@ -742,9 +736,9 @@ namespace Anathema.Vectors.Core
             }
         }
 
+#endif
     }
 }
 
-#endif
 #endif
 #endif

@@ -1,6 +1,5 @@
 ﻿#if THREED_ENABLED
 #if TEMPLATES_ENABLED
-#if SWIZZLES_ENABLED
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +13,7 @@ namespace Anathema.Vectors.Core
 
         //Starting with X (2)
 
+#if SWIZZLES_ENABLED
         public tvec3<T> xyz
         {
             get
@@ -200,6 +200,5 @@ namespace Anathema.Vectors.Core
     }
 }
 
-#endif
 #endif
 #endif
