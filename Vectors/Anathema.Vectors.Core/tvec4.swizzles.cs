@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Anathema.Vectors.Core.Fx
+namespace Anathema.Vectors.Core
 {
     public partial class tvec4<T> : tvec3<T>
     {

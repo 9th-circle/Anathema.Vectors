@@ -4,18 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Anathema.Vectors.Core.Fx
+namespace Anathema.Vectors.Core
 {
     public partial class tvec4<T> : tvec3<T>
     {
-        public tvec4(T x, T y, T z, T w)
-        {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-            this.w = w;
-        }
-        public T w { get; set; }
         public static bool operator !=(tvec4<T> a, tvec4<T> b)
         {
             return !(a == b);
