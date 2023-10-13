@@ -14,6 +14,22 @@ namespace Anathema.Vectors.Core
         public tvec4()
         {
         }
+        public tvec4(tvec4<T> xyzw)
+        {
+            x = xyzw.x;
+            y = xyzw.y;
+            z = xyzw.z;
+            w = xyzw.w;
+        }
+        public tvec4(T[] xyzw)
+        {
+            this.x = xyzw[0];
+            this.y = xyzw[1];
+            this.z = xyzw[2];
+            this.w = xyzw[3];
+        }
+
+#if CONVERSIONS_ENABLED
         public tvec4(tvec3<T> xyz, T w)
         {
             x = xyz.x;
@@ -63,20 +79,7 @@ namespace Anathema.Vectors.Core
             this.z = z;
             this.w = w;
         }
-        public tvec4(tvec4<T> xyzw)
-        {
-            x = xyzw.x;
-            y = xyzw.y;
-            z = xyzw.z;
-            w = xyzw.w;
-        }
-        public tvec4(T[] xyzw)
-        {
-            this.x = xyzw[0];
-            this.y = xyzw[1];
-            this.z = xyzw[2];
-            this.w = xyzw[3];
-        }
+#endif
 
         public new T this[int i]
         {
