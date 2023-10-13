@@ -60,7 +60,10 @@
     <Compile Include="dvec4.operators.cs" />
     <Compile Include="dvec4.swizzles.cs" />
     <Compile Include="fcom.cs" />
+    <Compile Include="fmat2.conversions.cs" />
     <Compile Include="fmat2.cs" />
+    <Compile Include="fmat2.generators.cs" />
+    <Compile Include="fmat2.operators.cs" />
     <Compile Include="fmat3.cs" />
     <Compile Include="fmat4.cs" />
     <Compile Include="fquat.cs" />

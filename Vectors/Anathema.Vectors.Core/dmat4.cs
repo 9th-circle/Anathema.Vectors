@@ -188,12 +188,6 @@ namespace Anathema.Vectors.Core
         }
 
 
-        ///////////////////////////
-        //       Operators       //
-        ///////////////////////////
-
-
-
     }
 }
 #endif
