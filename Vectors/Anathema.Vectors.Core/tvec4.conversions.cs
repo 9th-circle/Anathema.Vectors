@@ -1,4 +1,5 @@
 ﻿#if CONVERSIONS_ENABLED
+#if TEMPLATES_ENABLED
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -99,4 +100,5 @@ namespace Anathema.Vectors.Core
     }
 }
 
+#endif
 #endif
