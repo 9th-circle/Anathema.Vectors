@@ -7,6 +7,7 @@ namespace Anathema.Vectors.Core
     {
 
         //todo: check if this causes a transpose
+#if NESTING_ENABLED
         public static fmat2 fromNestedVector(tvec2<tvec2<float>> input)
         {
             fmat4 output = new fmat4();
@@ -19,6 +20,7 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
+#endif
 
         //todo: check rows and columns aren't being swapped (transposed)
         public float getValue(int row, int column)

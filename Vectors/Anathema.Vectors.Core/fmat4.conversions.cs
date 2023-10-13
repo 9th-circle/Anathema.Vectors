@@ -6,7 +6,7 @@ namespace Anathema.Vectors.Core
 {
     public partial class fmat4
     {
-
+#if NESTING_ENABLED
         //todo: check if this causes a transpose
         public static fmat4 fromNestedVector(tvec4<tvec4<float>> input)
         {
@@ -33,5 +33,6 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
+#endif
     }
 }
