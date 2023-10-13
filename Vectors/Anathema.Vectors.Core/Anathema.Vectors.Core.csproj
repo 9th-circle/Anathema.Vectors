@@ -41,7 +41,10 @@
     <Compile Include="dmat2.cs" />
     <Compile Include="dmat2.generators.cs" />
     <Compile Include="dmat2.operators.cs" />
+    <Compile Include="dmat3.conversions.cs" />
     <Compile Include="dmat3.cs" />
+    <Compile Include="dmat3.generators.cs" />
+    <Compile Include="dmat3.operators.cs" />
     <Compile Include="dmat4.cs" />
     <Compile Include="dquat.cs" />
     <Compile Include="dvec2.conversions.cs" />
