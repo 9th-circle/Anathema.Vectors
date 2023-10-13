@@ -9,15 +9,7 @@ namespace Anathema.Vectors.Core
     /// </summary>
     public partial class tvec4<T> : tvec3<T>
     {
-        ///////////////////////////
-        //        Members        //
-        ///////////////////////////
-
         public T w { get; set; }
-
-        ///////////////////////////
-        //     Constructors      //
-        ///////////////////////////
 
         public tvec4()
         {
