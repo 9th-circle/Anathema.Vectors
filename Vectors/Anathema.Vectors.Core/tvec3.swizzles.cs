@@ -195,7 +195,7 @@ namespace Anathema.Vectors.Core
         }
 
 
-
+#endif
 
     }
 }

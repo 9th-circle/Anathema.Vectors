@@ -61,7 +61,11 @@
     <Compile Include="fvec2.interpolation.cs" />
     <Compile Include="fvec2.operators.cs" />
     <Compile Include="fvec2.swizzles.cs" />
+    <Compile Include="fvec3.conversions.cs" />
     <Compile Include="fvec3.cs" />
+    <Compile Include="fvec3.derivatives.cs" />
+    <Compile Include="fvec3.interpolation.cs" />
+    <Compile Include="fvec3.operators.cs" />
     <Compile Include="fvec3.swizzles.cs" />
     <Compile Include="fvec4.cs" />
     <Compile Include="fvec4.swizzles.cs" />

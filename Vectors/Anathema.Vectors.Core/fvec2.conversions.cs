@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Anathema.Vectors.Core
+﻿namespace Anathema.Vectors.Core
 {
     public partial class fvec2
     {
