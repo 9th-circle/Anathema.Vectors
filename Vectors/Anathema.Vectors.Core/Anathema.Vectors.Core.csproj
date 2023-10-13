@@ -68,7 +68,10 @@
     <Compile Include="fmat3.cs" />
     <Compile Include="fmat3.generators.cs" />
     <Compile Include="fmat3.operators.cs" />
+    <Compile Include="fmat4.conversions.cs" />
     <Compile Include="fmat4.cs" />
+    <Compile Include="fmat4.generators.cs" />
+    <Compile Include="fmat4.operators.cs" />
     <Compile Include="fquat.cs" />
     <Compile Include="fvec2.conversions.cs" />
     <Compile Include="fvec2.cs" />

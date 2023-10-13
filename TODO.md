@@ -1,7 +1,6 @@
 ## To Do
 
 - Move operators/conversions into separate files via partial classes
-  - fmat4
   - dmat2/3/4
 - Tests + Correction
   - Literally everything except fvec2 and dvec2
