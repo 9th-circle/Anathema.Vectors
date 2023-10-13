@@ -54,7 +54,10 @@
     <Compile Include="fvec4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scalar.cs" />
+    <Compile Include="tvec2.conversions.cs" />
     <Compile Include="tvec2.cs" />
+    <Compile Include="tvec2.operators.cs" />
+    <Compile Include="tvec2.swizzles.cs" />
     <Compile Include="tvec3.conversions.cs" />
     <Compile Include="tvec3.cs" />
     <Compile Include="tvec3.operators.cs" />
