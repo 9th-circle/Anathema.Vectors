@@ -56,6 +56,7 @@
     <Compile Include="scalar.cs" />
     <Compile Include="tvec2.cs" />
     <Compile Include="tvec3.cs" />
+    <Compile Include="tvec4.conversions.cs" />
     <Compile Include="tvec4.cs" />
     <Compile Include="tvec4.operators.cs" />
     <Compile Include="tvec4.swizzles.cs" />
