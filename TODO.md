@@ -1,6 +1,6 @@
 ## To Do
 
-- Move operators/swizzles/etc into separate files via partial classes
+- Move operators/conversions into separate files via partial classes
   - fvec2/3/4
   - fmat2/3/4
   - dvec2/3/4

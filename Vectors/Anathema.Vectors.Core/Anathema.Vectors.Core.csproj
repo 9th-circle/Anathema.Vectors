@@ -42,8 +42,11 @@
     <Compile Include="dmat4.cs" />
     <Compile Include="dquat.cs" />
     <Compile Include="dvec2.cs" />
+    <Compile Include="dvec2.swizzles.cs" />
     <Compile Include="dvec3.cs" />
+    <Compile Include="dvec3.swizzles.cs" />
     <Compile Include="dvec4.cs" />
+    <Compile Include="dvec4.swizzles.cs" />
     <Compile Include="fcom.cs" />
     <Compile Include="fmat2.cs" />
     <Compile Include="fmat3.cs" />
