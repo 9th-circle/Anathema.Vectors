@@ -7,7 +7,7 @@
     <ProjectGuid>{5CF397B9-BA4C-40D3-B295-5F7640A1FA7E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Anathema.Vectors.Core.Fx</RootNamespace>
+    <RootNamespace>Anathema.Vectors.Core</RootNamespace>
     <AssemblyName>Anathema.Vectors.Core.Fx</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
