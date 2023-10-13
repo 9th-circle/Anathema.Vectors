@@ -10,6 +10,7 @@ namespace Anathema.Vectors.Tests
         //todo: replace InlineData with MemberData
         const float REALLY_SMALL_VALUE = 0.00005f;
 
+
         [Theory]
         [InlineData(new object[] { 1, 2 })]
         [InlineData(new object[] { 300000000, 2 })]

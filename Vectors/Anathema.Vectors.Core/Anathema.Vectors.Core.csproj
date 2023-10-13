@@ -57,6 +57,8 @@
     <Compile Include="tvec2.cs" />
     <Compile Include="tvec3.cs" />
     <Compile Include="tvec4.cs" />
+    <Compile Include="tvec4.operators.cs" />
+    <Compile Include="tvec4.swizzles.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
