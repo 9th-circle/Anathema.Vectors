@@ -41,7 +41,11 @@
     <Compile Include="dmat3.cs" />
     <Compile Include="dmat4.cs" />
     <Compile Include="dquat.cs" />
+    <Compile Include="dvec2.conversions.cs" />
     <Compile Include="dvec2.cs" />
+    <Compile Include="dvec2.derivations.cs" />
+    <Compile Include="dvec2.interpolation.cs" />
+    <Compile Include="dvec2.operators.cs" />
     <Compile Include="dvec2.swizzles.cs" />
     <Compile Include="dvec3.cs" />
     <Compile Include="dvec3.swizzles.cs" />
