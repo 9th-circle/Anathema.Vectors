@@ -89,10 +89,10 @@ namespace Anathema.Vectors.Core
 
         public dvec4(double[] xyzw)
         {
-            this.x = xyzw[0];
-            this.y = xyzw[1];
-            this.z = xyzw[2];
-            this.w = xyzw[3];
+            this[0] = xyzw[0];
+            this[1] = xyzw[1];
+            this[2] = xyzw[2];
+            this[3] = xyzw[3];
         }
         ///////////////////////////
         //      Derivations      //

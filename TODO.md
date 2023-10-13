@@ -1,6 +1,10 @@
 ## To Do
 
 - Move operators/swizzles/etc into separate files via partial classes
+  - fvec2/3/4
+  - fmat2/3/4
+  - dvec2/3/4
+  - dmat2/3/4
 - Tests + Correction
   - Literally everything except fvec2 and dvec2
   - Check a mat4 with a mat2 reference can access correct rows/cols

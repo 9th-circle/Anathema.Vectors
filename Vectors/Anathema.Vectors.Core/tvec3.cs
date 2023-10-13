@@ -39,9 +39,9 @@ namespace Anathema.Vectors.Core
 
         public tvec3(T[] xyz)
         {
-            this.x = xyz[0];
-            this.y = xyz[1];
-            this.z = xyz[2];
+            this[0] = xyz[0];
+            this[1] = xyz[1];
+            this[2] = xyz[2];
         }
 
 

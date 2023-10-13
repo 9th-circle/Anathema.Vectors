@@ -6,7 +6,7 @@ namespace Anathema.Vectors.Core
     /// <summary>
     /// A single-precision floating point, 2-component vector.
     /// </summary>
-    public class fvec2
+    public partial class fvec2
     {
         ///////////////////////////
         //        Members        //
@@ -32,8 +32,8 @@ namespace Anathema.Vectors.Core
 
         public fvec2(float[] xy)
         {
-            this.x = xy[0];
-            this.y = xy[1];
+            this[0] = xy[0];
+            this[1] = xy[1];
         }
         public fvec2(fvec2 xy)
         {
@@ -118,85 +118,6 @@ namespace Anathema.Vectors.Core
             x /= f;
             y /= f;
         }
-
-        ///////////////////////////
-        //        Swizzles       //
-        ///////////////////////////
-#if SWIZZLES_ENABLED
-        public fvec2 xy
-        {
-            get
-            {
-                return new fvec2(x, y);
-            }
-            set
-            {
-                x = value.x;
-                y = value.y;
-            }
-        }
-        public fvec2 yx
-        {
-            get
-            {
-                return new fvec2(y, x);
-            }
-            set
-            {
-                y = value.x;
-                x = value.y;
-            }
-        }
-#endif
-
-#if COLOURS_ENABLED
-        public float r
-        {
-            get
-            {
-                return x;
-            }
-            set
-            {
-                x = value;
-            }
-        }
-        public float g
-        {
-            get
-            {
-                return y;
-            }
-            set
-            {
-                y = value;
-            }
-        }
-        public fvec2 rg
-        {
-            get
-            {
-                return new fvec2(x, y);
-            }
-            set
-            {
-                x = value.x;
-                y = value.y;
-            }
-        }
-        public fvec2 gr
-        {
-            get
-            {
-                return new fvec2(y, x);
-            }
-            set
-            {
-                y = value.x;
-                x = value.y;
-            }
-        }
-#endif
 
 
         ///////////////////////////

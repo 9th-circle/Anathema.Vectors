@@ -27,8 +27,8 @@ namespace Anathema.Vectors.Core
         }
         public tvec2(T[] xy)
         {
-            this.x = xy[0];
-            this.y = xy[1];
+            this[0] = xy[0];
+            this[1] = xy[1];
         }
 
 
