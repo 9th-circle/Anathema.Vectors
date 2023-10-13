@@ -45,7 +45,10 @@
     <Compile Include="dvec2.swizzles.cs" />
     <Compile Include="dvec3.cs" />
     <Compile Include="dvec3.swizzles.cs" />
+    <Compile Include="dvec4.conversions.cs" />
     <Compile Include="dvec4.cs" />
+    <Compile Include="dvec4.interpolation.cs" />
+    <Compile Include="dvec4.operators.cs" />
     <Compile Include="dvec4.swizzles.cs" />
     <Compile Include="fcom.cs" />
     <Compile Include="fmat2.cs" />
