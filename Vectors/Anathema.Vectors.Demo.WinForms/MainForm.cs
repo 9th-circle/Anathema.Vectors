@@ -9,11 +9,14 @@ using System.Windows.Forms;
 
 namespace Anathema.Vectors.Demo.WinForms
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
+            SimpleMomentum2DDemoPanel p = new SimpleMomentum2DDemoPanel();
+            p.Dock = DockStyle.Fill;
+            contentPanel.Controls.Add(p);
         }
     }
 }
