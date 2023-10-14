@@ -44,6 +44,24 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(reconstructed.y - original.y) < REALLY_SMALL_VALUE);
         }
 
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 12.345346356f })]
+        [InlineData(new object[] { -37, 0, 11 })]
+        [InlineData(new object[] { 3, 4, -4 })]
+        [InlineData(new object[] { 15.23f, 20.99999999999f, 100000000000.0f })]
+        [InlineData(new object[] { 2, -5, 0.1f })]
+        public void arbitaryNormalisationImperative(float x, float y, float z)
+        {
+            fvec3 working = new fvec3(x, y, z);
+            float length = working.length;
+            working.normalise();
+            Assert.True(Math.Abs(working.length - 1) < REALLY_SMALL_VALUE);
+            working *= length;
+            Assert.True(Math.Abs(working.length - length) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(x - working.x) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(y - working.y) < REALLY_SMALL_VALUE);
+        }
 
 
 
