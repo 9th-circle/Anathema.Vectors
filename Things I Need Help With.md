@@ -13,4 +13,5 @@
 - Interpolation
   - Rational Bezier
   - Hermite
-- SimpleMomentum3DDemo - correct angle for balls bouncing
+- SimpleMomentum2DDemo - correct angle for balls bouncing
+- Clipping planes
