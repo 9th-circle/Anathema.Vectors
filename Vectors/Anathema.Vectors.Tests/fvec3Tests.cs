@@ -65,8 +65,30 @@ namespace Anathema.Vectors.Tests
 
 
         [Theory]
-        [InlineData(new object[] { 0, 0, 0, 0, 0, 0, 0 })]
-        [InlineData(new object[] { 6, 0, 0, 0, 1, 0, 0 })]
+        [InlineData(new object[] {  0, 0, 0,
+                                    0, 0, 0,
+                                       0 })]
+        [InlineData(new object[] {  6, 0, 0,
+                                    0, 1, 0,
+                                       0 })]
+        [InlineData(new object[] {  1, 3, 0,
+                                    0, 0, 500,
+                                       0 })]
+        [InlineData(new object[] {  3, 0, 0,
+                                    3, 0, 0,
+                                       9 })]
+        [InlineData(new object[] {  0, 4, 0,
+                                    0, 4, 0,
+                                       16 })]
+        [InlineData(new object[] {  0, 0, 5,
+                                    0, 0, 5,
+                                       25 })]
+        [InlineData(new object[] {  1, 0, 5,
+                                    1, 0, 5,
+                                       26 })]
+        [InlineData(new object[] {  1, 2, 3,
+                                    1, 2, 3,
+                                       1 + 4 + 9 })]
         public void dotProduct(float x1, float y1, float z1, float x2, float y2, float z2, float expectedResult)
         {
             fvec3 a = new fvec3(x1, y1, z1);
