@@ -154,6 +154,17 @@ namespace Anathema.Vectors.Tests
         [InlineData(new object[] {  0, 0, -1,
                                     -1, 0, 0,
                                     0, 1, 0 })]
+
+
+        [InlineData(new object[] {  0, 0, 1,
+                                    0, 1, 0,
+                                    -1, 0, 0 })]
+        [InlineData(new object[] {  0, 1, 0,
+                                    1, 0, 0,
+                                    0, 0, -1 })]
+        [InlineData(new object[] {  1, 0, 0,
+                                    0, 0, 1,
+                                    0, -1, 0 })]
         public void crossProduct(float x1, float y1, float z1, float x2, float y2, float z2, float resultX, float resultY, float resultZ)
         {
             fvec3 a = new fvec3(x1, y1, z1);
