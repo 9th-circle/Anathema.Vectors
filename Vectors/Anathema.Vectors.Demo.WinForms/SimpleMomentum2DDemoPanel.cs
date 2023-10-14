@@ -66,21 +66,25 @@ namespace Anathema.Vectors.Demo.WinForms
                 {
                     b.brightness = 1.0f;
                     b.inertia.x *= -1;
+                    b.position.x = b.size;
                 }
                 if (b.position.x >= Width - b.size && b.inertia.x > 0)
                 {
                     b.brightness = 1.0f;
                     b.inertia.x *= -1;
+                    b.position.x = Width-b.size;
                 }
                 if (b.position.y <= b.size && b.inertia.y < 0)
                 {
                     b.brightness = 1.0f;
                     b.inertia.y *= -1;
+                    b.position.y = b.size;
                 }
                 if (b.position.y >= Height - b.size && b.inertia.y > 0)
                 {
                     b.brightness = 1.0f;
                     b.inertia.y *= -1;
+                    b.position.y = Height - b.size;
                 }
 
                 if (b.brightness > 0)
