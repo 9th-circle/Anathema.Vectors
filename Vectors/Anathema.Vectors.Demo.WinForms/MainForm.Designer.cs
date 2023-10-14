@@ -29,6 +29,7 @@ namespace Anathema.Vectors.Demo.WinForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.demoSelectComboBox = new System.Windows.Forms.ComboBox();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
@@ -63,6 +64,7 @@ namespace Anathema.Vectors.Demo.WinForms
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.demoSelectComboBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "MainForm";
             this.Text = "Vector Demo";

@@ -12,8 +12,8 @@
 - Demos
   - 2D Bezier curves
   - 3D Bezier curves (needs projection matrix)
-  - 3D boxes (needs projection matrix)
+  - 3D bouncing ball (needs projection matrix)
   - 3D particles (fireworks?) (needs projection matrix)
   - 3D spinning box (needs projection matrix + Quaternion rotation)
-  - Euler rotation
+  - 3D penny arcade demo (needs projection matrix + Euler rotation)
 - Double check permutations of removed preprocessor directives are sensible
