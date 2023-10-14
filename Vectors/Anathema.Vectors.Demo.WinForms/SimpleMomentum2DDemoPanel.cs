@@ -38,7 +38,7 @@ namespace Anathema.Vectors.Demo.WinForms
             {
 
                 Ball b = new Ball() { position = new fvec2(r.Next(Width), r.Next(Height)),
-                    inertia = new fvec2((float)r.NextDouble() - 0.5f, (float)r.NextDouble() - 0.5f) * 20.0f,
+                    inertia = new fvec2((float)r.NextDouble() - 0.5f, (float)r.NextDouble() - 0.5f) * 15.0f,
                     size = r.Next(30) + 10 };
 
                 balls.Add(b);
@@ -93,6 +93,7 @@ namespace Anathema.Vectors.Demo.WinForms
                         if ((b2.position - b.position).length < b.size + b2.size)
                         {
                             b.brightness = 1.0f;
+                            b2.brightness = 1.0f;
 
                             //todo: calculate the actual correct collision angle
                             b.inertia *= -1;
@@ -107,7 +108,7 @@ namespace Anathema.Vectors.Demo.WinForms
                 b.position += b.inertia;
 
                 byte c = (byte)(b.brightness * 255);
-                    renderGraphics.FillEllipse(new SolidBrush(Color.FromArgb(255,c,0,0)), b.position.x - b.size, b.position.y - b.size, b.size * 2, b.size * 2);
+                    renderGraphics.FillEllipse(new SolidBrush(Color.FromArgb(255,c/2,c/2,c)), b.position.x - b.size, b.position.y - b.size, b.size * 2, b.size * 2);
 
             }
 
@@ -116,7 +117,6 @@ namespace Anathema.Vectors.Demo.WinForms
 
         private void SimpleMomentum2DDemoPanel_SizeChanged(object sender, EventArgs e)
         {
-
             displayGraphics = Graphics.FromHwnd(this.Handle);
         }
     }
