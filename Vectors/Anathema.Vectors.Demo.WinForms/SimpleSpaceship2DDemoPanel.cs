@@ -125,5 +125,11 @@ namespace Anathema.Vectors.Demo.WinForms
             if (e.KeyCode == Keys.Up)
                 forwardKeyDown = false;
         }
+
+        private void SimpleSpaceship2DDemoPanel_ParentChanged(object sender, EventArgs e)
+        {
+            if(this.Parent == null)
+                renderTimer.Enabled = false;
+        }
     }
 }

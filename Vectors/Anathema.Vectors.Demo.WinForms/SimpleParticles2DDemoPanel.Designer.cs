@@ -46,6 +46,7 @@ namespace Anathema.Vectors.Demo.WinForms
             this.Name = "SimpleParticles2DDemoPanel";
             this.Size = new System.Drawing.Size(418, 317);
             this.Resize += new System.EventHandler(this.SimpleParticles2DDemoPanel_Resize);
+            this.ParentChanged += new System.EventHandler(this.SimpleParticles2DDemoPanel_ParentChanged);
             this.ResumeLayout(false);
 
         }

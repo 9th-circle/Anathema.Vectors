@@ -48,6 +48,7 @@ namespace Anathema.Vectors.Demo.WinForms
             this.SizeChanged += new System.EventHandler(this.SimpleSpaceship2DDemoPanel_SizeChanged);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SimpleSpaceship2DDemoPanel_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SimpleSpaceship2DDemoPanel_KeyUp);
+            this.ParentChanged += new System.EventHandler(this.SimpleSpaceship2DDemoPanel_ParentChanged);
             this.ResumeLayout(false);
 
         }

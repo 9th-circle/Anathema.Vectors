@@ -45,6 +45,7 @@
             this.Name = "SimpleMomentum2DDemoPanel";
             this.Size = new System.Drawing.Size(598, 392);
             this.SizeChanged += new System.EventHandler(this.SimpleMomentum2DDemoPanel_SizeChanged);
+            this.ParentChanged += new System.EventHandler(this.SimpleMomentum2DDemoPanel_ParentChanged);
             this.ResumeLayout(false);
 
         }

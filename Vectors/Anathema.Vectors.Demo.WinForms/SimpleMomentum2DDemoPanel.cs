@@ -125,5 +125,11 @@ namespace Anathema.Vectors.Demo.WinForms
         {
             displayGraphics = Graphics.FromHwnd(this.Handle);
         }
+
+        private void SimpleMomentum2DDemoPanel_ParentChanged(object sender, EventArgs e)
+        {
+            if (this.Parent == null)
+                renderTimer.Enabled = false;
+        }
     }
 }
