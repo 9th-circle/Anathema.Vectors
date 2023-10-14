@@ -63,6 +63,12 @@
     <Compile Include="SimpleParticles2DDemoPanel.Designer.cs">
       <DependentUpon>SimpleParticles2DDemoPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="SimpleSpaceship2DDemoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SimpleSpaceship2DDemoPanel.Designer.cs">
+      <DependentUpon>SimpleSpaceship2DDemoPanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SimpleParticles2DDemoPanel.resx">
       <DependentUpon>SimpleParticles2DDemoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleSpaceship2DDemoPanel.resx">
+      <DependentUpon>SimpleSpaceship2DDemoPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
