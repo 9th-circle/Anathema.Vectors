@@ -46,9 +46,12 @@ namespace Anathema.Vectors.Demo.WinForms
             }
             if (backBuffer.Width != Width || backBuffer.Height != Height)
             {
+                backBuffer.Dispose();
                 backBuffer = new Bitmap(Width, Height);
+                renderGraphics.Dispose();
                 renderGraphics = Graphics.FromImage(backBuffer);
             }
+
 
             renderGraphics.Clear(Color.Black);
 
@@ -112,7 +115,12 @@ namespace Anathema.Vectors.Demo.WinForms
         private void SimpleParticles2DDemoPanel_ParentChanged(object sender, EventArgs e)
         {
             if (this.Parent == null)
+            {
                 renderTimer.Enabled = false;
+                renderGraphics.Dispose();
+                backBuffer.Dispose();
+                displayGraphics.Dispose();
+            }
         }
     }
 }

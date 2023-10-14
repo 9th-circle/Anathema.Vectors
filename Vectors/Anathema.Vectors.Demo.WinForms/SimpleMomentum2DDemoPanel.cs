@@ -54,7 +54,9 @@ namespace Anathema.Vectors.Demo.WinForms
             }
             if(backBuffer.Width != Width || backBuffer.Height != Height)
             {
+                backBuffer.Dispose();
                 backBuffer = new Bitmap(Width, Height);
+                renderGraphics.Dispose();
                 renderGraphics = Graphics.FromImage(backBuffer);
             }
 
@@ -123,13 +125,19 @@ namespace Anathema.Vectors.Demo.WinForms
 
         private void SimpleMomentum2DDemoPanel_SizeChanged(object sender, EventArgs e)
         {
+            displayGraphics.Dispose();
             displayGraphics = Graphics.FromHwnd(this.Handle);
         }
 
         private void SimpleMomentum2DDemoPanel_ParentChanged(object sender, EventArgs e)
         {
             if (this.Parent == null)
+            {
                 renderTimer.Enabled = false;
+                renderGraphics.Dispose();
+                backBuffer.Dispose();
+                displayGraphics.Dispose();
+            }
         }
     }
 }
