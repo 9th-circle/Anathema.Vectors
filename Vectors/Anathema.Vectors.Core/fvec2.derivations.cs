@@ -20,6 +20,9 @@ namespace Anathema.Vectors.Core
             return fromAngleRadiansAndLength(angle * (float)(Math.PI / 180.0f), length);
         }
 
+        /// <summary>
+        /// Returns a vector facing the same direction as this one, but with a length of 1.0.
+        /// </summary>
         public virtual void normalise()
         {
             float f = length;
@@ -49,6 +52,10 @@ namespace Anathema.Vectors.Core
                 return (float)Math.Sqrt((x * x) + (y * y));
             }
         }
+
+        /// <summary>
+        /// Preserves this vector's direction, but sets its length to 1.0.
+        /// </summary>
         public fvec2 normalised
         {
             get
