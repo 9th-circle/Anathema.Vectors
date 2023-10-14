@@ -36,6 +36,7 @@ namespace Anathema.Vectors.Core
             float f = length;
             x /= f;
             y /= f;
+            z /= f;
         }
 
     }
