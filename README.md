@@ -1,3 +1,5 @@
+![](https://github.com/9th-circle/Anathema.Meta/blob/main/Anathema%20Icon%20Small.png?raw=true)
+
 # Anathema Vectors
 
 Basic linear algebra, mostly for computer graphics.
