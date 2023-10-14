@@ -100,7 +100,9 @@ namespace Anathema.Vectors.Demo.WinForms
                             b2.brightness = 1.0f;
 
                             //todo: calculate the actual correct collision angle
+                            //Right now we just reverse the ball's direction
                             b.inertia *= -1;
+                            b2.inertia *= -1;
 
                             float toPush = (b.size + b2.size) - (b2.position - b.position).length;
                             b.position -= (b2.position - b.position).normalised * toPush * 1.01f;
