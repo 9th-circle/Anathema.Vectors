@@ -18,9 +18,15 @@ namespace Anathema.Vectors.Demo.WinForms
 
         private void demoSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            contentPanel.Controls.Clear();
             if (demoSelectComboBox.SelectedIndex == 0) {
-                contentPanel.Controls.Clear();
                 SimpleMomentum2DDemoPanel p = new SimpleMomentum2DDemoPanel();
+                p.Dock = DockStyle.Fill;
+                contentPanel.Controls.Add(p);
+            }
+            if (demoSelectComboBox.SelectedIndex == 1)
+            {
+                SimpleParticles2DDemoPanel p = new SimpleParticles2DDemoPanel();
                 p.Dock = DockStyle.Fill;
                 contentPanel.Controls.Add(p);
             }

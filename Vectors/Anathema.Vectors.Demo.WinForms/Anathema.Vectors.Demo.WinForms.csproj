@@ -57,6 +57,12 @@
     <Compile Include="SimpleMomentum2DDemoPanel.Designer.cs">
       <DependentUpon>SimpleMomentum2DDemoPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="SimpleParticles2DDemoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SimpleParticles2DDemoPanel.Designer.cs">
+      <DependentUpon>SimpleParticles2DDemoPanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,6 +77,9 @@
     </Compile>
     <EmbeddedResource Include="SimpleMomentum2DDemoPanel.resx">
       <DependentUpon>SimpleMomentum2DDemoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimpleParticles2DDemoPanel.resx">
+      <DependentUpon>SimpleParticles2DDemoPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

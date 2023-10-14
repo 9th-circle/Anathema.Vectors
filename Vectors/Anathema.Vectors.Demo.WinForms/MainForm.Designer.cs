@@ -39,7 +39,8 @@ namespace Anathema.Vectors.Demo.WinForms
             this.demoSelectComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.demoSelectComboBox.FormattingEnabled = true;
             this.demoSelectComboBox.Items.AddRange(new object[] {
-            "Simple Momentum (2D)"});
+            "Simple Momentum (2D)",
+            "Simple Particles (2D)"});
             this.demoSelectComboBox.Location = new System.Drawing.Point(0, 0);
             this.demoSelectComboBox.Name = "demoSelectComboBox";
             this.demoSelectComboBox.Size = new System.Drawing.Size(800, 21);
