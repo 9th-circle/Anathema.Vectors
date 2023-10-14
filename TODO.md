@@ -11,7 +11,6 @@
   - Everything
 - Demos
   - 2D Bezier curves
-  - 2D particle FX (firehose)
   - 3D Bezier curves (needs projection matrix)
   - 3D boxes (needs projection matrix)
   - 3D particles (fireworks?) (needs projection matrix)
