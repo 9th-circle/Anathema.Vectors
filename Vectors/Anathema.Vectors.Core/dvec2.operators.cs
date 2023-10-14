@@ -34,6 +34,8 @@ namespace Anathema.Vectors.Core
         {
             if (!(a is null) && b is null)
                 return false;
+            if (a is null && !(b is null))
+                return false;
             if (a is null && b is null)
                 return true;
             return scalar.isClose(a.x, b.x) && scalar.isClose(a.y, b.y);
