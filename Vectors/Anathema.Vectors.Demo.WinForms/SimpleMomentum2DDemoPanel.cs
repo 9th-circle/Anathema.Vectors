@@ -38,7 +38,7 @@ namespace Anathema.Vectors.Demo.WinForms
             {
 
                 Ball b = new Ball() { position = new fvec2(r.Next(Width), r.Next(Height)),
-                    inertia = new fvec2((float)r.NextDouble() - 0.5f, (float)r.NextDouble() - 0.5f) * 10.0f,
+                    inertia = new fvec2((float)r.NextDouble() - 0.5f, (float)r.NextDouble() - 0.5f) * 20.0f,
                     size = r.Next(30) + 10 };
 
                 balls.Add(b);
@@ -63,13 +63,25 @@ namespace Anathema.Vectors.Demo.WinForms
             foreach (Ball b in balls)
             {
                 if (b.position.x <= b.size && b.inertia.x < 0)
+                {
+                    b.brightness = 1.0f;
                     b.inertia.x *= -1;
+                }
                 if (b.position.x >= Width - b.size && b.inertia.x > 0)
+                {
+                    b.brightness = 1.0f;
                     b.inertia.x *= -1;
+                }
                 if (b.position.y <= b.size && b.inertia.y < 0)
+                {
+                    b.brightness = 1.0f;
                     b.inertia.y *= -1;
+                }
                 if (b.position.y >= Height - b.size && b.inertia.y > 0)
+                {
+                    b.brightness = 1.0f;
                     b.inertia.y *= -1;
+                }
 
                 if (b.brightness > 0)
                     b.brightness *= 0.95f;
@@ -82,10 +94,12 @@ namespace Anathema.Vectors.Demo.WinForms
                         {
                             b.brightness = 1.0f;
 
+                            //todo: calculate the actual correct collision angle
                             b.inertia *= -1;
 
                             float toPush = (b.size + b2.size) - (b2.position - b.position).length;
                             b.position -= (b2.position - b.position).normalised * toPush * 1.01f;
+                            b2.position += (b2.position - b.position).normalised * toPush * 1.01f;
                         }
                     }
                 }
