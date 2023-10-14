@@ -9,6 +9,12 @@
 - Benchmarking
   - Everything
 - Demos
+  - Bezier curves
+  - 3D bezier curves
+  - 3D boxes
+  - 3D particles (fireworks?)
+  - Euler rotation
+  - Quaternion rotation
 - Double check permutations of removed preprocessor directives are sensible
 
 ## Outsourced
@@ -25,3 +31,4 @@
 - Interpolation
   - Rational Bezier
   - Hermite
+- Projection matrix

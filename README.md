@@ -12,7 +12,8 @@ Basic linear algebra, mostly for computer graphics.
 
 - The notation is terse and annotations are minimal. The assumption is that you either have a decent understanding of basic linear algebra, or that you are willing to learn it on your own.
   - I acknowledge that this is a major structural problem in maths. "It's not my job to teach you how to understand this" becomes quite toxic when the entire field takes that attitude for almost everything. However, this is not the problem I'm trying to solve right now.
-
+  - I intend on making the annotations more helpful -- give some explanation of what the members actually do. But the actual names of properties/methods will have to remain terse.
+  
 - You can compile it with as much or as little functionality as you like. You only need to build in the parts you're actually using, so it can be extremely lightweight if you need that.
 
 - Interactions between the various entities are extensive (you can usually mix and match types), but not exhaustive (there will still be times where you have to do intermediate steps to get it done).
