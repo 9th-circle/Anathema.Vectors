@@ -88,10 +88,13 @@ namespace Anathema.Vectors.Tests
                                        25 })]
         [InlineData(new object[] {  1, 0, 5,
                                     1, 0, 5,
-                                       26 })]
+                                       1 + 25 })]
         [InlineData(new object[] {  1, 2, 3,
                                     1, 2, 3,
                                        1 + 4 + 9 })]
+        [InlineData(new object[] {  1, 2, 3,
+                                    4, 5, 6,
+                                       (1*4) + (2*5) + (3*6) })]
         public void dotProduct(float x1, float y1, float z1, float x2, float y2, float z2, float expectedResult)
         {
             fvec3 a = new fvec3(x1, y1, z1);
@@ -102,6 +105,19 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(result - expectedResult) < REALLY_SMALL_VALUE);
         }
 
+        [Theory]
+        [InlineData(new object[] {  0, 0, 0,
+                                    0, 0, 0,
+                                    0, 0, 0 })]
+        public void crossProduct(float x1, float y1, float z1, float x2, float y2, float z2, float resultX, float resultY, float resultZ)
+        {
+            fvec3 a = new fvec3(x1, y1, z1);
+            fvec3 b = new fvec3(x2, y2, z2);
+
+            fvec3 result = a.cross(b);
+
+            Assert.True(result == new fvec3(resultX, resultY, resultZ));
+        }
 
     }
 }
