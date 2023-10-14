@@ -64,6 +64,18 @@ namespace Anathema.Vectors.Tests
         }
 
 
+        [Theory]
+        [InlineData(new object[] { 0, 0, 0, 0, 0, 0, 0 })]
+        [InlineData(new object[] { 6, 0, 0, 0, 1, 0, 0 })]
+        public void dotProduct(float x1, float y1, float z1, float x2, float y2, float z2, float expectedResult)
+        {
+            fvec3 a = new fvec3(x1, y1, z1);
+            fvec3 b = new fvec3(x2, y2, z2);
+
+            float result = a.dot(b);
+
+            Assert.True(Math.Abs(result - expectedResult) < REALLY_SMALL_VALUE);
+        }
 
 
     }

@@ -40,7 +40,6 @@ namespace Anathema.Vectors.Core
             double f = length;
             x /= f;
             y /= f;
-            z /= f;
         }
     }
 }
