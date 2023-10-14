@@ -21,6 +21,14 @@ namespace Anathema.Vectors.Core
             z = xyzw.z;
             w = xyzw.w;
         }
+
+        public tvec4(T x, T y, T z, T w)
+        {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+            this.w = w;
+        }
         public tvec4(T[] xyzw)
         {
             this[0] = xyzw[0];

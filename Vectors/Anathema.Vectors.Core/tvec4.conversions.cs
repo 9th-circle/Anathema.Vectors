@@ -51,13 +51,6 @@ namespace Anathema.Vectors.Core
             this.z = z;
             this.w = w;
         }
-        public tvec4(T x, T y, T z, T w)
-        {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-            this.w = w;
-        }
 
 #if NESTING_ENABLED
 #if DOUBLES_ENABLED
