@@ -44,6 +44,7 @@ namespace Anathema.Vectors.Demo.WinForms
             this.demoSelectComboBox.Name = "demoSelectComboBox";
             this.demoSelectComboBox.Size = new System.Drawing.Size(800, 21);
             this.demoSelectComboBox.TabIndex = 0;
+            this.demoSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.demoSelectComboBox_SelectedIndexChanged);
             // 
             // contentPanel
             // 
@@ -63,6 +64,7 @@ namespace Anathema.Vectors.Demo.WinForms
             this.MinimumSize = new System.Drawing.Size(640, 480);
             this.Name = "MainForm";
             this.Text = "Vector Demo";
+            this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.ResumeLayout(false);
 
         }
