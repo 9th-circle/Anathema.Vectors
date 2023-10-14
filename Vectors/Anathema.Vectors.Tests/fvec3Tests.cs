@@ -23,6 +23,9 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(a[0], x);
             Assert.Equal(a[1], y);
             Assert.Equal(a[1], y);
+            Assert.Equal(a.ToArray()[0], a[0]);
+            Assert.Equal(a.ToArray()[1], a[1]);
+            Assert.Equal(a.ToArray()[2], a[2]);
         }
 
 
