@@ -16,7 +16,6 @@
   - 3D particles (fireworks?) (needs projection matrix)
   - 3D spinning box (needs projection matrix + Quaternion rotation)
   - 3D penny arcade demo (needs projection matrix + Euler rotation)
-- Double check permutations of removed preprocessor directives are sensible
 
 Change:
 
