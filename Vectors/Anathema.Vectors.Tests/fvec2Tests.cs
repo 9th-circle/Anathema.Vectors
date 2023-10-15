@@ -269,6 +269,11 @@ namespace Anathema.Vectors.Tests
             fvec2 z = new fvec2(d, d);
             fvec2 w = new fvec2(1.1f, a);
 
+            Assert.False(x == null);
+            Assert.False(null == x);
+            Assert.True(x != null);
+            Assert.True(null != x);
+
             Assert.True(x == y);
             Assert.True(y == z);
             Assert.True(z == x);

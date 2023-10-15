@@ -270,6 +270,11 @@ namespace Anathema.Vectors.Tests
             dvec2 z = new dvec2(d, d);
             dvec2 w = new dvec2(1.1f, a);
 
+            Assert.False(x == null);
+            Assert.False(null == x);
+            Assert.True(x != null);
+            Assert.True(null != x);
+
             Assert.True(x == y);
             Assert.True(y == z);
             Assert.True(z == x);
