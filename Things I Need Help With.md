@@ -1,5 +1,8 @@
 - Complex arithmetic
-- Projection matrix generation
+- Matrix generation
+  - Ortho
+
+  - Perspective
 
 - Matrix-matrix multiplication
   - Basic use case
