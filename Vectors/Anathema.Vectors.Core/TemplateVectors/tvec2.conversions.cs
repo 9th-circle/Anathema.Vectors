@@ -1,4 +1,5 @@
 ﻿#if TEMPLATES_ENABLED
+#if CONVERSIONS_ENABLED
 using System;
 
 namespace Anathema.Vectors.Core
@@ -19,10 +20,21 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
+        public static tvec2<tvec2<float>> fromFMat2(fmat2 input)
+        {
+            var output = new tvec2<tvec2<float>>();
+
+            output.x.x = input.getValue(0, 0);
+            output.x.y = input.getValue(0, 1);
+
+            output.y.x = input.getValue(1, 0);
+            output.y.y = input.getValue(1, 1);
+
+            return output;
+        }
 #endif
 #endif
 
-#if CONVERSIONS_ENABLED
 #if FLOATS_ENABLED
         public fvec2 floatTVec2ToFVec2()
         {
@@ -47,8 +59,8 @@ namespace Anathema.Vectors.Core
             return new dvec2(fx, fy);
         }
 #endif
-#endif
 
     }
 }
+#endif
 #endif
