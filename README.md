@@ -20,6 +20,7 @@ Basic linear algebra, mostly for computer graphics.
 - Performance is pretty lousy, both from the extensive use of object oriented language features, and the lack of SIMD vector CPU extension usage.
 - Core codebase builds against .NET Framework 2.0 and up, so it can be compiled against any runtime you're likely to come across.
 - No external dependencies whatsoever (apart from test infrastructure etc) - maximise portability.
+- The folders inside Vector.Core do not reflect the namespaces the classes are in. **<u>This is deliberate.</u>** The proliferation of partial classes mean there is a large volume of files which need to be rationalised, but the namespace needs to be flat for usability reasons.
 
 ## Notation
 

@@ -15,8 +15,6 @@ namespace Anathema.Vectors.Demo.WinForms
         public SimpleParticles2DDemoPanel()
         {
             InitializeComponent();
-
-
         }
 
         class Particle
