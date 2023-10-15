@@ -6,8 +6,7 @@ namespace Anathema.Vectors.Core
     {
         public static float floatComparisonTolerance = 0.00005f;    //using float.epsilon is not better - floating point granularity is nonlinear
 
-        //Yes: this sucks. 
-#if FLOATS_ENABLED
+        //Yes: this sucks.
         public static bool isClose(float x, float y)
         {
             return Math.Abs(x - y) <= floatComparisonTolerance;
@@ -22,8 +21,6 @@ namespace Anathema.Vectors.Core
                                         linearInterpolate(b, c, position),
                                         position);
         }
-#endif
-#if DOUBLES_ENABLED
         public static bool isClose(double x, double y)
         {
             return Math.Abs(x - y) <= floatComparisonTolerance;
@@ -38,6 +35,5 @@ namespace Anathema.Vectors.Core
                                         linearInterpolate(b, c, position),
                                         position);
         }
-#endif
     }
 }

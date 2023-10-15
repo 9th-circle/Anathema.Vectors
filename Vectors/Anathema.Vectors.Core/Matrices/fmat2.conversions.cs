@@ -8,9 +8,10 @@ namespace Anathema.Vectors.Core
 
         //todo: check if this causes a transpose
 #if NESTING_ENABLED
+#if TEMPLATES_ENABLED
         public static fmat2 fromNestedVector(tvec2<tvec2<float>> input)
         {
-            fmat4 output = new fmat4();
+            fmat2 output = new fmat2();
 
             output.setValue(0, 0, input.x.x);
             output.setValue(0, 1, input.x.y);
@@ -20,6 +21,7 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
+#endif
 #endif
 
         //todo: check rows and columns aren't being swapped (transposed)

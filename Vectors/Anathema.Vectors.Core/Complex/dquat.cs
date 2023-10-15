@@ -19,7 +19,7 @@ namespace Anathema.Vectors.Core
         {
 
         }
-        public dquat(fmat3 orientation)
+        public dquat(dmat3 orientation)
         {
 
         }

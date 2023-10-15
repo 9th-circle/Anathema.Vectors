@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
+#if THREED_ENABLED
+#if FLOATS_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class fvec4
@@ -44,3 +44,5 @@ namespace Anathema.Vectors.Core
         }
     }
 }
+#endif
+#endif

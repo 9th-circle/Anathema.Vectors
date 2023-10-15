@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
+#if THREED_ENABLED
+#if DOUBLES_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class dvec4
@@ -36,7 +35,6 @@ namespace Anathema.Vectors.Core
 
 
 
-
         public static dvec4 operator *(dvec4 a, dvec4 b)
         {
             return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
@@ -57,7 +55,7 @@ namespace Anathema.Vectors.Core
 
 
 #if CONVERSIONS_ENABLED
-
+#if FLOATS_ENABLED
         public static dvec4 operator *(fvec4 a, dvec4 b)
         {
             return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
@@ -74,11 +72,13 @@ namespace Anathema.Vectors.Core
         {
             return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
         }
+#endif
+#endif
 
 
 
 
-
+#if FLOATS_ENABLED
         public static dvec4 operator *(dvec4 a, fvec4 b)
         {
             return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
@@ -95,7 +95,7 @@ namespace Anathema.Vectors.Core
         {
             return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
         }
-
+#endif
 
 
         public static dvec4 operator *(dvec2 a, dvec4 b)
@@ -171,13 +171,12 @@ namespace Anathema.Vectors.Core
         {
             return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w);
         }
-#endif
 
 
 
 
 
-        public static dvec4 operator *(dvec4 a, double b)
+public static dvec4 operator *(dvec4 a, double b)
         {
             return new dvec4(a.x * b, a.y * b, a.z * b, a.w * b);
         }
@@ -230,6 +229,7 @@ namespace Anathema.Vectors.Core
         }
 
 #if CONVERSIONS_ENABLED
+#if FLOATS_ENABLED
         public static dvec4 operator *(dvec4 a, fmat4 b)
         {
             return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
@@ -243,8 +243,10 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 #endif
+#endif
 
 #if NESTING_ENABLED
+#if TEMPLATES_ENABLED
         public static dvec4 operator *(dvec4 a, tvec4<tvec4<double>> b)
         {
             dmat4 matrix = dmat4.fromNestedVector(b);
@@ -257,7 +259,9 @@ namespace Anathema.Vectors.Core
 
             return a * matrix.transposed;
         }
-
+#endif
 #endif
     }
 }
+#endif
+#endif

@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+#if DOUBLES_ENABLED
+#if THREED_ENABLED
 
 namespace Anathema.Vectors.Core
 {
@@ -35,7 +35,7 @@ namespace Anathema.Vectors.Core
             return output;
         }
 
-        public static new dmat4 rotateRadians(fvec3 axis, double angle)
+        public static new dmat4 rotateRadians(dvec3 axis, double angle)
         {
             //todo: implement 3D rotations
             throw new NotImplementedException();
@@ -46,7 +46,7 @@ namespace Anathema.Vectors.Core
             //todo: implement 3D rotations
             throw new NotImplementedException();
         }
-        public static new dmat4 rotateDegrees(fvec3 axis, double angle)
+        public static new dmat4 rotateDegrees(dvec3 axis, double angle)
         {
             return rotateRadians(axis, angle * (Math.PI / 180.0));
         }
@@ -79,7 +79,7 @@ namespace Anathema.Vectors.Core
         }
 
 
-        public static new dmat4 translate(fvec3 basis)
+        public static new dmat4 translate(dvec3 basis)
         {
             //todo: implement 3D translations
             throw new NotImplementedException();
@@ -93,3 +93,5 @@ namespace Anathema.Vectors.Core
 
     }
 }
+#endif
+#endif

@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+#if FLOATS_ENABLED
+#if THREED_ENABLED
 
 namespace Anathema.Vectors.Core
 {
@@ -30,3 +30,5 @@ namespace Anathema.Vectors.Core
 
     }
 }
+#endif
+#endif

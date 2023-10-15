@@ -1,5 +1,5 @@
 ﻿using System;
-
+#if FLOATS_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class fvec2
@@ -108,6 +108,7 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 #if CONVERSIONS_ENABLED
+#if DOUBLES_ENABLED
         public static dvec2 operator *(fvec2 a, dmat2 b)
         {
             return new dvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
@@ -118,8 +119,10 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 #endif
+#endif
 
 #if NESTING_ENABLED
+#if TEMPLATES_ENABLED
         public static fvec2 operator *(fvec2 a, tvec2<tvec2<float>> b)
         {
             fmat2 matrix = fmat2.fromNestedVector(b);
@@ -132,7 +135,7 @@ namespace Anathema.Vectors.Core
 
             return a * matrix.transposed;
         }
-
+#endif
 #endif
         public float this[int i]
         {
@@ -155,3 +158,4 @@ namespace Anathema.Vectors.Core
         }
     }
 }
+#endif

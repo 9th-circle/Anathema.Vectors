@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿#if DOUBLES_ENABLED
 
+#if THREED_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class dvec3
@@ -49,3 +48,5 @@ namespace Anathema.Vectors.Core
 #endif
     }
 }
+#endif
+#endif

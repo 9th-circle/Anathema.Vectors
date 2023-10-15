@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿#if DOUBLES_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class dmat4
     {
         //todo: check if this causes a transpose
+#if TEMPLATES_ENABLED
+#if NESTING_ENABLED
+#if THREED_ENABLED
         public static dmat4 fromNestedVector(tvec4<tvec4<double>> input)
         {
             dmat4 output = new dmat4();
@@ -32,5 +32,9 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
+#endif
+#endif
+#endif
     }
 }
+#endif

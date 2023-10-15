@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
+#if DOUBLES_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class dvec2
@@ -61,6 +62,7 @@ namespace Anathema.Vectors.Core
 
 
 #if CONVERSIONS_ENABLED
+#if FLOATS_ENABLED
         public static dvec2 operator *(fvec2 a, dvec2 b)
         {
             return new dvec2(a.x * b.x, a.y * b.y);
@@ -97,7 +99,7 @@ namespace Anathema.Vectors.Core
             return new dvec2(a.x - b.x, a.y - b.y);
         }
 #endif
-
+#endif
 
 
         public static dvec2 operator *(dvec2 a, double b)
@@ -151,6 +153,7 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 #if CONVERSIONS_ENABLED
+#if FLOATS_ENABLED
         public static dvec2 operator *(dvec2 a, fmat2 b)
         {
             return new dvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
@@ -161,7 +164,9 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 #endif
+#endif
 #if NESTING_ENABLED
+#if TEMPLATES_ENABLED
         public static dvec2 operator *(dvec2 a, tvec2<tvec2<double>> b)
         {
             dmat2 matrix = dmat2.fromNestedVector(b);
@@ -174,7 +179,8 @@ namespace Anathema.Vectors.Core
 
             return a * matrix.transposed;
         }
-
+#endif
 #endif
     }
 }
+#endif

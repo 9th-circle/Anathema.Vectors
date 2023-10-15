@@ -1,4 +1,6 @@
-﻿namespace Anathema.Vectors.Core
+﻿
+#if FLOATS_ENABLED
+namespace Anathema.Vectors.Core
 {
     public partial class fvec2
     {
@@ -81,3 +83,4 @@
 
     }
 }
+#endif

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿#if FLOATS_ENABLED
+#if THREED_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class fvec4
@@ -183,6 +181,7 @@ namespace Anathema.Vectors.Core
 
 
 #if CONVERSIONS_ENABLED
+#if DOUBLES_ENABLED
         public static dvec4 operator *(fvec4 a, dmat4 b)
         {
             return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
@@ -196,7 +195,9 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 #endif
+#endif
 #if NESTING_ENABLED
+#if TEMPLATES_ENABLED
         public static fvec4 operator *(fvec4 a, tvec4<tvec4<float>> b)
         {
             fmat4 matrix = fmat4.fromNestedVector(b);
@@ -209,8 +210,10 @@ namespace Anathema.Vectors.Core
 
             return a * matrix.transposed;
         }
-
+#endif
 #endif
 
     }
 }
+#endif
+#endif

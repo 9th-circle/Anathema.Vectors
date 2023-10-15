@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
+#if DOUBLES_ENABLED
 
 namespace Anathema.Vectors.Core
 {
     public partial class dmat2
     {
         //todo: check if this causes a transpose
+#if NESTING_ENABLED
+#if TEMPLATES_ENABLED
         public static dmat2 fromNestedVector(tvec2<tvec2<double>> input)
         {
-            dmat4 output = new dmat4();
+            dmat2 output = new dmat2();
 
             output.setValue(0, 0, input.x.x);
             output.setValue(0, 1, input.x.y);
@@ -19,6 +21,8 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
+#endif
+#endif
         //todo: check rows and columns aren't being swapped (transposed)
         public double getValue(int row, int column)
         {
@@ -46,3 +50,4 @@ namespace Anathema.Vectors.Core
         }
     }
 }
+#endif

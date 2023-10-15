@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿#if FLOATS_ENABLED
+#if THREED_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class fvec3
@@ -19,12 +17,14 @@ namespace Anathema.Vectors.Core
             y = yz.x;
             z = yz.y;
         }
+#if DOUBLES_ENABLED
         public fvec3(dvec3 xyz)
         {
             x = (float)xyz.x;
             y = (float)xyz.y;
             z = (float)xyz.z;
         }
+#endif
 #if TEMPLATES_ENABLED
         public tvec3<float> toTVec3()
         {
@@ -34,3 +34,5 @@ namespace Anathema.Vectors.Core
 #endif
     }
 }
+#endif
+#endif

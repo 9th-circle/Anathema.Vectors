@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+#if THREED_ENABLED
+#if FLOATS_ENABLED
 
 namespace Anathema.Vectors.Core
 {
@@ -50,6 +50,7 @@ namespace Anathema.Vectors.Core
             this.z = z;
             this.w = w;
         }
+#if DOUBLES_ENABLED
         public fvec4(dvec4 xyzw)
         {
             x = (float)xyzw.x;
@@ -57,6 +58,7 @@ namespace Anathema.Vectors.Core
             z = (float)xyzw.z;
             w = (float)xyzw.w;
         }
+#endif
 
 
 #if TEMPLATES_ENABLED
@@ -68,3 +70,5 @@ namespace Anathema.Vectors.Core
 #endif
     }
 }
+#endif
+#endif

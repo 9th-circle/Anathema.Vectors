@@ -1,4 +1,7 @@
-﻿namespace Anathema.Vectors.Core
+﻿
+#if THREED_ENABLED
+#if FLOATS_ENABLED
+namespace Anathema.Vectors.Core
 {
     public partial class fvec3
     {
@@ -44,3 +47,5 @@
 #endif
     }
 }
+#endif
+#endif

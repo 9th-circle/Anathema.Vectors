@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿#if FLOATS_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class fmat4
     {
 #if NESTING_ENABLED
+#if TEMPLATES_ENABLED
+#if THREED_ENABLED
         //todo: check if this causes a transpose
         public static fmat4 fromNestedVector(tvec4<tvec4<float>> input)
         {
@@ -34,5 +33,8 @@ namespace Anathema.Vectors.Core
             return output;
         }
 #endif
+#endif
+#endif
     }
 }
+#endif
