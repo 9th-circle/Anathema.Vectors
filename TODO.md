@@ -7,6 +7,7 @@
 - Commenting
 - Documenting
   - README
+    - Provide some examples
 - Benchmarking
   - Everything
 - Demos
