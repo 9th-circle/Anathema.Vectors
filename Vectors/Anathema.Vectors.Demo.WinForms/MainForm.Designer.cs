@@ -42,7 +42,8 @@ namespace Anathema.Vectors.Demo.WinForms
             this.demoSelectComboBox.Items.AddRange(new object[] {
             "Momentum (2D)",
             "Particles (2D)",
-            "Spaceship (2D)"});
+            "Spaceship (2D)",
+            "Beziers (2D)"});
             this.demoSelectComboBox.Location = new System.Drawing.Point(0, 0);
             this.demoSelectComboBox.Name = "demoSelectComboBox";
             this.demoSelectComboBox.Size = new System.Drawing.Size(800, 21);

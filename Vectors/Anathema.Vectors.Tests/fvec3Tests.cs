@@ -175,5 +175,17 @@ namespace Anathema.Vectors.Tests
             Assert.True(result == new fvec3(resultX, resultY, resultZ));
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
