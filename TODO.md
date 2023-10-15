@@ -17,3 +17,15 @@
   - 3D spinning box (needs projection matrix + Quaternion rotation)
   - 3D penny arcade demo (needs projection matrix + Euler rotation)
 - Double check permutations of removed preprocessor directives are sensible
+
+Change:
+
+            if (!(a is null) && b is null)
+                return false;
+            if (a is null && !(b is null))
+                return false;
+
+into:
+
+            if (a is null != b is null)
+                return false;
