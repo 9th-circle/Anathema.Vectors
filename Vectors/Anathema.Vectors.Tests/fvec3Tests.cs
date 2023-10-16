@@ -175,6 +175,36 @@ namespace Anathema.Vectors.Tests
             Assert.True(result == new fvec3(resultX, resultY, resultZ));
         }
 
+        [Fact]
+        public void cardinalNormalisation()
+        {
+            fvec3 north = new fvec3(0, -100, 0);
+            Assert.Equal(0, north.normalised.x);
+            Assert.Equal(-1, north.normalised.y);
+
+            fvec3 south = new fvec3(0, 25, 0);
+            Assert.Equal(0, south.normalised.x);
+            Assert.Equal(1, south.normalised.y);
+
+            fvec3 east = new fvec3(5.23487927342f, 0, 0);
+            Assert.Equal(1, east.normalised.x);
+            Assert.Equal(0, east.normalised.y);
+
+            fvec3 west = new fvec3(-1, 0, 0);
+            Assert.Equal(-1, west.normalised.x);
+            Assert.Equal(0, west.normalised.y);
+
+            fvec3 forward = new fvec3(0, 0, 10);
+            Assert.Equal(0, forward.normalised.x);
+            Assert.Equal(0, forward.normalised.y);
+            Assert.Equal(1, forward.normalised.z);
+
+            fvec3 backward = new fvec3(0, 0, -0.0001f);
+            Assert.Equal(0, backward.normalised.x);
+            Assert.Equal(0, backward.normalised.y);
+            Assert.Equal(-1, backward.normalised.z);
+        }
+
 
 
 
