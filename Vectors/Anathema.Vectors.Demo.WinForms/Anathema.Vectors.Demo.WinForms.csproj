@@ -90,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SimpleBeziers2DDemoPanel.resx">
+      <DependentUpon>SimpleBeziers2DDemoPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SimpleMomentum2DDemoPanel.resx">
       <DependentUpon>SimpleMomentum2DDemoPanel.cs</DependentUpon>
     </EmbeddedResource>

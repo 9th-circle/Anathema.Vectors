@@ -28,8 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // SimpleBeziers2DDemoPanel
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "SimpleBeziers2DDemoPanel";
+            this.Size = new System.Drawing.Size(609, 557);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SimpleBeziers2DDemoPanel_MouseDown);
+            this.MouseLeave += new System.EventHandler(this.SimpleBeziers2DDemoPanel_MouseLeave);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SimpleBeziers2DDemoPanel_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.SimpleBeziers2DDemoPanel_MouseUp);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -11,7 +11,6 @@
 - Benchmarking
   - Everything
 - Demos
-  - 2D Bezier curves
   - 3D Bezier curves (needs projection matrix)
   - 3D bouncing ball (needs projection matrix)
   - 3D particles (fireworks?) (needs projection matrix)
