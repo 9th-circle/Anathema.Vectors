@@ -1,10 +1,27 @@
 ## To Do
 
 - Tests + Correction
-  - Finish fvec3 tests
-  - Literally everything except fvec2 and dvec2
-  - Check a mat4 with a mat2 reference can access correct rows/cols
+  - Rest of fvec3
+  - fvec4
+  - dvec3
+  - dvec4
+  - tvec2
+  - tvec3
+  - tvec4
+  - fmat2
+  - fmat3
+    - Check a mat3 with a mat2 reference can access correct rows/cols
+  - fmat4
+    - Check a mat4 with a mat2/3 reference can access correct rows/cols
+  - dmat2
+  - dmat3
+  - dmat4
 - Commenting
+  - ///<> for each class
+  - ///<> for each method
+  - ///<> for each property
+
+- Use && on #ifs rather than nesting
 - Documenting
   - README
     - Provide some examples

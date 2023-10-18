@@ -210,6 +210,35 @@ namespace Anathema.Vectors.Tests
 
 
 
+        [Fact]
+        public void construct()
+        {
+            fvec3 defaultConstructed = new fvec3();
+            Assert.Equal(0, defaultConstructed.x);
+            Assert.Equal(0, defaultConstructed.y);
+            Assert.Equal(0, defaultConstructed.z);
+
+            fvec3 specifiedComponents = new fvec3(1, 2, 3);
+            Assert.Equal(1, specifiedComponents.x);
+            Assert.Equal(2, specifiedComponents.y);
+            Assert.Equal(3, specifiedComponents.z);
+
+            fvec3 fromArray = new fvec3(new float[] { 1, 2 });
+            Assert.Equal(1, fromArray.x);
+            Assert.Equal(2, fromArray.y);
+            Assert.Equal(3, fromArray.z);
+
+            fvec3 fromFVec3 = new fvec3(specifiedComponents);
+            Assert.Equal(1, fromFVec3.x);
+            Assert.Equal(2, fromFVec3.y);
+            Assert.Equal(3, fromFVec3.z);
+
+            dvec3 source = new dvec3(8, 5, -1);
+            fvec3 fromDVec3 = new fvec3(source);
+            Assert.Equal(8, fromDVec3.x);
+            Assert.Equal(5, fromDVec3.y);
+            Assert.Equal(-1, fromDVec3.z);
+        }
 
 
 

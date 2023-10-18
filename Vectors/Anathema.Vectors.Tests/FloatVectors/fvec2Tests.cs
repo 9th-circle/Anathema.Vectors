@@ -3,7 +3,7 @@ using System;
 using Xunit;
 using Anathema.Vectors.Core;
 
-namespace Anathema.Vectors.Tests
+namespace Anathema.Vectors.Tests.FloatVectors
 {
     public class fvec2Tests
     {
@@ -140,14 +140,14 @@ namespace Anathema.Vectors.Tests
         {
             fvec2 north = fvec2.fromAngleDegrees(0);
             Assert.True(Math.Abs(north.x) < REALLY_SMALL_VALUE);
-            Assert.True(Math.Abs(north.y+1) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(north.y + 1) < REALLY_SMALL_VALUE);
 
             fvec2 south = fvec2.fromAngleDegrees(180);
             Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
-            Assert.True(Math.Abs(south.y-1) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(south.y - 1) < REALLY_SMALL_VALUE);
 
             fvec2 east = fvec2.fromAngleDegrees(90);
-            Assert.True(Math.Abs(east.x-1) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(east.x - 1) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
 
             fvec2 west = fvec2.fromAngleDegrees(270);
@@ -162,15 +162,15 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(north.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(north.y + 20) < REALLY_SMALL_VALUE);
 
-            fvec2 south = fvec2.fromAngleDegreesAndLength(180,123);
+            fvec2 south = fvec2.fromAngleDegreesAndLength(180, 123);
             Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(south.y - 123) < REALLY_SMALL_VALUE);
 
-            fvec2 east = fvec2.fromAngleDegreesAndLength(90,-10);
+            fvec2 east = fvec2.fromAngleDegreesAndLength(90, -10);
             Assert.True(Math.Abs(east.x + 10) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
 
-            fvec2 west = fvec2.fromAngleDegreesAndLength(270,0.1f);
+            fvec2 west = fvec2.fromAngleDegreesAndLength(270, 0.1f);
             Assert.True(Math.Abs(west.x + 0.1) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
         }
@@ -187,11 +187,11 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(south.y - 123) < REALLY_SMALL_VALUE);
 
-            fvec2 east = fvec2.fromAngleRadiansAndLength((float)Math.PI/2.0f, -10);
+            fvec2 east = fvec2.fromAngleRadiansAndLength((float)Math.PI / 2.0f, -10);
             Assert.True(Math.Abs(east.x + 10) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
 
-            fvec2 west = fvec2.fromAngleRadiansAndLength((float)(float)Math.PI * (3/2.0f), 0.1f);
+            fvec2 west = fvec2.fromAngleRadiansAndLength((float)(float)Math.PI * (3 / 2.0f), 0.1f);
             Assert.True(Math.Abs(west.x + 0.1) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
         }
@@ -206,10 +206,10 @@ namespace Anathema.Vectors.Tests
             Assert.True(south.angleRadians - Math.PI < REALLY_SMALL_VALUE);
 
             fvec2 east = new fvec2(1, 0);
-            Assert.True(east.angleRadians - (Math.PI/2) < REALLY_SMALL_VALUE);
+            Assert.True(east.angleRadians - Math.PI / 2 < REALLY_SMALL_VALUE);
 
             fvec2 west = new fvec2(-1, 0);
-            Assert.True(west.angleRadians - (Math.PI * (3/2.0)) < REALLY_SMALL_VALUE);
+            Assert.True(west.angleRadians - Math.PI * (3 / 2.0) < REALLY_SMALL_VALUE);
         }
 
 
@@ -224,11 +224,11 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(south.y - 1) < REALLY_SMALL_VALUE);
 
-            fvec2 east = fvec2.fromAngleRadians((float)(Math.PI/2.0));
+            fvec2 east = fvec2.fromAngleRadians((float)(Math.PI / 2.0));
             Assert.True(Math.Abs(east.x - 1) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
 
-            fvec2 west = fvec2.fromAngleRadians((float)(Math.PI * (3/2.0f)));
+            fvec2 west = fvec2.fromAngleRadians((float)(Math.PI * (3 / 2.0f)));
             Assert.True(Math.Abs(west.x + 1) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
         }
@@ -244,6 +244,10 @@ namespace Anathema.Vectors.Tests
             fvec2 specifiedComponents = new fvec2(1, 2);
             Assert.Equal(1, specifiedComponents.x);
             Assert.Equal(2, specifiedComponents.y);
+
+            fvec2 fromArray = new fvec2(new float[] { 1, 2 });
+            Assert.Equal(1, fromArray.x);
+            Assert.Equal(2, fromArray.y);
 
             fvec2 fromFVec2 = new fvec2(specifiedComponents);
             Assert.Equal(1, fromFVec2.x);

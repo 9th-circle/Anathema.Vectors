@@ -3,7 +3,7 @@ using System;
 using Xunit;
 using Anathema.Vectors.Core;
 
-namespace Anathema.Vectors.Tests
+namespace Anathema.Vectors.Tests.DoubleVectors
 {
     public class dvec2Tests
     {
@@ -184,15 +184,15 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(north.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(north.y + 20) < REALLY_SMALL_VALUE);
 
-            dvec2 south = dvec2.fromAngleRadiansAndLength((double)Math.PI, 123);
+            dvec2 south = dvec2.fromAngleRadiansAndLength(Math.PI, 123);
             Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(south.y - 123) < REALLY_SMALL_VALUE);
 
-            dvec2 east = dvec2.fromAngleRadiansAndLength((double)Math.PI / 2.0f, -10);
+            dvec2 east = dvec2.fromAngleRadiansAndLength(Math.PI / 2.0f, -10);
             Assert.True(Math.Abs(east.x + 10) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
 
-            dvec2 west = dvec2.fromAngleRadiansAndLength((double)(double)Math.PI * (3 / 2.0f), 0.1f);
+            dvec2 west = dvec2.fromAngleRadiansAndLength(Math.PI * (3 / 2.0f), 0.1f);
             Assert.True(Math.Abs(west.x + 0.1) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
         }
@@ -207,10 +207,10 @@ namespace Anathema.Vectors.Tests
             Assert.True(south.angleRadians - Math.PI < REALLY_SMALL_VALUE);
 
             dvec2 east = new dvec2(1, 0);
-            Assert.True(east.angleRadians - (Math.PI / 2) < REALLY_SMALL_VALUE);
+            Assert.True(east.angleRadians - Math.PI / 2 < REALLY_SMALL_VALUE);
 
             dvec2 west = new dvec2(-1, 0);
-            Assert.True(west.angleRadians - (Math.PI * (3 / 2.0)) < REALLY_SMALL_VALUE);
+            Assert.True(west.angleRadians - Math.PI * (3 / 2.0) < REALLY_SMALL_VALUE);
         }
 
 
@@ -221,7 +221,7 @@ namespace Anathema.Vectors.Tests
             Assert.True(Math.Abs(north.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(north.y + 1) < REALLY_SMALL_VALUE);
 
-            dvec2 south = dvec2.fromAngleRadians((double)Math.PI);
+            dvec2 south = dvec2.fromAngleRadians(Math.PI);
             Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(south.y - 1) < REALLY_SMALL_VALUE);
 
