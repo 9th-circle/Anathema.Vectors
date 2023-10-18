@@ -223,7 +223,7 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(2, specifiedComponents.y);
             Assert.Equal(3, specifiedComponents.z);
 
-            fvec3 fromArray = new fvec3(new float[] { 1, 2 });
+            fvec3 fromArray = new fvec3(new float[] { 1, 2, 3 });
             Assert.Equal(1, fromArray.x);
             Assert.Equal(2, fromArray.y);
             Assert.Equal(3, fromArray.z);
