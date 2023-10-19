@@ -243,6 +243,36 @@ namespace Anathema.Vectors.Tests
 
 
 
+        [Fact]
+        public void equality()
+        {
+            fvec3 a = new fvec3(1, 2, 3);
+            fvec3 b = new fvec3((1 / 3.0f) * 3.0f, 2, 3);
+            fvec3 c = new fvec3(5, 2, 3);
+
+            Assert.False(a != a);
+            Assert.False(b != b);
+            Assert.False(c != c);
+
+            Assert.True(a == a);
+            Assert.True(b == b);
+            Assert.True(c == c);
+
+            Assert.True(a == b);
+            Assert.True(b == a);
+
+            Assert.True(a != c);
+            Assert.True(c != a);
+
+            Assert.True(b != c);
+            Assert.True(c != b);
+
+            Assert.False(a == c);
+            Assert.False(c == a);
+
+            Assert.False(b == c);
+            Assert.False(c == b);
+        }
 
 
 
