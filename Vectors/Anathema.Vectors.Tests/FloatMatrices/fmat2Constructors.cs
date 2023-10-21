@@ -20,13 +20,11 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.Equal(0, def[3]);
         }
         [Fact]
-        public void identity()
+        public void outOfRangeException()
         {
-            fmat2 def = fmat2.identity();
-            Assert.Equal(1, def[0]);
-            Assert.Equal(0, def[1]);
-            Assert.Equal(0, def[2]);
-            Assert.Equal(1, def[3]);
+            fmat2 def = new fmat2();
+            Assert.Throws<IndexOutOfRangeException>(delegate () { def.setValue(1, 2, 0); });
+            Assert.Equal(0,def.getValue(2, 1));
         }
         [Fact]
         public void readColumnOrder()
