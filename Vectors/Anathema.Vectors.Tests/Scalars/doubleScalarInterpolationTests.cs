@@ -8,14 +8,14 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.Scalars
 {
-    public class scalarInterpolationTests
+    public class doubleScalarInterpolationTests
     {
         [Fact]
         public void simplestInterpolation()
         {
             for (int i = 0; i < 100; i++)
             {
-                float f = i / 100.0f;
+                double f = i / 100.0f;
                 Assert.Equal(f, scalar.linearInterpolate(0, 1, f));
             }
         }
@@ -24,7 +24,7 @@ namespace Anathema.Vectors.Tests.Scalars
         {
             for (int i = 0; i < 100; i++)
             {
-                float f = i / 100.0f;
+                double f = i / 100.0f;
                 Assert.Equal(f * -100, scalar.linearInterpolate(0, -100, f));
             }
         }
@@ -33,7 +33,7 @@ namespace Anathema.Vectors.Tests.Scalars
         {
             for (int i = 0; i < 100; i++)
             {
-                float f = i / 100.0f;
+                double f = i / 100.0f;
                 Assert.True((f*10)+20 - scalar.linearInterpolate(20, 30, f) < scalar.floatComparisonTolerance);
             }
         }
@@ -42,7 +42,7 @@ namespace Anathema.Vectors.Tests.Scalars
         {
             for (int i = 0; i < 100; i++)
             {
-                float f = i / 100.0f;
+                double f = i / 100.0f;
                 Assert.True(f - scalar.quadraticBezierInterpolate(0,0.5,1,f) < scalar.floatComparisonTolerance);
             }
         }
@@ -51,7 +51,7 @@ namespace Anathema.Vectors.Tests.Scalars
         {
             for (int i = 10; i < 90; i++)
             {
-                float f = i / 100.0f;
+                double f = i / 100.0f;
                 Assert.True(Math.Abs(f - scalar.quadraticBezierInterpolate(0, 1, 1, f)) > scalar.floatComparisonTolerance);
                 Assert.True(Math.Abs(f - scalar.quadraticBezierInterpolate(0, 0, 1, f)) > scalar.floatComparisonTolerance);
 
