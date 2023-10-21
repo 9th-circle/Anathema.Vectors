@@ -73,7 +73,6 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(7, a.y);
             Assert.Equal(3, a.z);
 
-
             a.xz = new fvec2(8, 9);
             Assert.Equal(8, a.x);
             Assert.Equal(7, a.y);
@@ -83,30 +82,37 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(10, a.x);
             Assert.Equal(7, a.y);
             Assert.Equal(11, a.z);
-            /*
-            Assert.Equal(a.xyz.x, a.x);
-            Assert.Equal(a.xyz.y, a.y);
-            Assert.Equal(a.xyz.z, a.z);
 
-            Assert.Equal(a.xzy.x, a.x);
-            Assert.Equal(a.xzy.y, a.z);
-            Assert.Equal(a.xzy.z, a.y);
+            a.xyz = new fvec3(1, 2, 3);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+            Assert.Equal(3, a.z);
 
-            Assert.Equal(a.yxz.x, a.y);
-            Assert.Equal(a.yxz.y, a.x);
-            Assert.Equal(a.yxz.z, a.z);
+            a.xzy = new fvec3(4, 6, 5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
 
-            Assert.Equal(a.yzx.x, a.y);
-            Assert.Equal(a.yzx.y, a.z);
-            Assert.Equal(a.yzx.z, a.x);
+            a.yxz = new fvec3(8, 7, 9);
+            Assert.Equal(7, a.x);
+            Assert.Equal(8, a.y);
+            Assert.Equal(9, a.z);
 
-            Assert.Equal(a.zyx.x, a.z);
-            Assert.Equal(a.zyx.y, a.y);
-            Assert.Equal(a.zyx.z, a.x);
+            a.yzx = new fvec3(2, 3, 1);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+            Assert.Equal(3, a.z);
 
-            Assert.Equal(a.zxy.x, a.z);
-            Assert.Equal(a.zxy.y, a.x);
-            Assert.Equal(a.zxy.z, a.y);*/
+            a.zyx = new fvec3(3, 2, 1);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+            Assert.Equal(3, a.z);
+
+
+            a.zxy = new fvec3(3, 1, 2);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+            Assert.Equal(3, a.z);
         }
 
 
