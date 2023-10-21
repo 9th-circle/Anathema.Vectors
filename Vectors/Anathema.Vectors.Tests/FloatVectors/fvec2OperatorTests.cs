@@ -11,6 +11,17 @@ namespace Anathema.Vectors.Tests.FloatVectors
     public class fvec2OperatorTests
     {
 
+        [Fact]
+        public void negation()
+        {
+
+            fvec2 a = new fvec2(1, 2);
+            fvec2 b = -a;
+
+            Assert.Equal(-1, b.x);
+            Assert.Equal(-2, b.y);
+
+        }
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]

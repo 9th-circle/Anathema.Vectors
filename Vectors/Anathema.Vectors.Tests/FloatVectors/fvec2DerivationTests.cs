@@ -1,30 +1,16 @@
-﻿#pragma warning disable CS1718 // Comparison made to same variable
+﻿using Anathema.Vectors.Core;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xunit;
-using Anathema.Vectors.Core;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec2Tests
+    public class fvec2DerivationTests
     {
-        //todo: split this file
-        //todo: replace InlineData with MemberData
         const float REALLY_SMALL_VALUE = 0.00005f;
-
-
-        [Theory]
-        [InlineData(new object[] { 1, 2 })]
-        [InlineData(new object[] { 300000000, 2 })]
-        [InlineData(new object[] { -1, 2.2342 })]
-        public void indices(float x, float y)
-        {
-            fvec2 a = new fvec2(x, y);
-            Assert.Equal(a[0], x);
-            Assert.Equal(a[1], y);
-            Assert.Equal(a.ToArray()[0], a[0]);
-            Assert.Equal(a.ToArray()[1], a[1]);
-        }
-
         [Theory]
         [InlineData(new object[] { 1, 2 })]
         [InlineData(new object[] { 5.2f, 10.00001f })]
@@ -173,7 +159,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Theory]
         [InlineData(new object[] { 0, 20, 0, -20 })]
         [InlineData(new object[] { (float)Math.PI, 123, 0, 123 })]
-        [InlineData(new object[] { (float)Math.PI/2, -10, -10, 0 })]
+        [InlineData(new object[] { (float)Math.PI / 2, -10, -10, 0 })]
         [InlineData(new object[] { (float)Math.PI / 2, 3, 3, 0 })]
         [InlineData(new object[] { (float)Math.PI * (3 / 2.0f), 0.1f, -0.1f, 0 })]
         public void fromCardinalAnglesAndLengthRadians(float direction, float length,
@@ -221,79 +207,6 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
         }
 
-
-        [Fact]
-        public void construct()
-        {
-            fvec2 defaultConstructed = new fvec2();
-            Assert.Equal(0, defaultConstructed.x);
-            Assert.Equal(0, defaultConstructed.y);
-
-            fvec2 specifiedComponents = new fvec2(1, 2);
-            Assert.Equal(1, specifiedComponents.x);
-            Assert.Equal(2, specifiedComponents.y);
-
-            fvec2 fromArray = new fvec2(new float[] { 1, 2 });
-            Assert.Equal(1, fromArray.x);
-            Assert.Equal(2, fromArray.y);
-
-            fvec2 fromFVec2 = new fvec2(specifiedComponents);
-            Assert.Equal(1, fromFVec2.x);
-            Assert.Equal(2, fromFVec2.y);
-
-            dvec2 source = new dvec2(8, 5);
-            fvec2 fromDVec2 = new fvec2(source);
-            Assert.Equal(8, fromDVec2.x);
-            Assert.Equal(5, fromDVec2.y);
-        }
-
-
-        [Fact]
-        public void equality()
-        {
-            float a = 1.0f;
-            float b = a / 3.0f;
-            float c = b * 3.0f;
-            float d = 0.999999999999f;
-
-            fvec2 x = new fvec2(a, c);
-            fvec2 y = new fvec2(c, a);
-            fvec2 z = new fvec2(d, d);
-            fvec2 w = new fvec2(1.1f, a);
-
-            Assert.False(x == null);
-            Assert.False(null == x);
-            Assert.True(x != null);
-            Assert.True(null != x);
-
-            Assert.True(x == y);
-            Assert.True(y == z);
-            Assert.True(z == x);
-            Assert.False(w == x);
-            Assert.False(w == y);
-            Assert.False(w == z);
-            Assert.True(w == w);
-
-            Assert.False(x != y);
-            Assert.False(y != z);
-            Assert.False(z != x);
-
-            Assert.True(w != x);
-            Assert.True(w != y);
-            Assert.True(w != z);
-            Assert.False(w != w);
-        }
-        [Fact]
-        public void negation()
-        {
-
-            fvec2 a = new fvec2(1, 2);
-            fvec2 b = -a;
-
-            Assert.Equal(-1, b.x);
-            Assert.Equal(-2, b.y);
-
-        }
 
     }
 }
