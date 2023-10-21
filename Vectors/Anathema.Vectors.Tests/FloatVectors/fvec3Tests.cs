@@ -516,18 +516,49 @@ namespace Anathema.Vectors.Tests
         }
 
         [Theory]
-        [InlineData(new object[] { 1, 2 })]
-        [InlineData(new object[] { 5.2f, 10.00001f })]
-        [InlineData(new object[] { -37, 0 })]
-        public void colourSwizzles(float x1, float y1)
+        [InlineData(new object[] { 1, 2, 3 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 17 })]
+        [InlineData(new object[] { -37, 0, 2 })]
+        public void colourSwizzles(float x1, float y1, float z1)
         {
-            fvec2 a = new fvec2(x1, y1);
+            fvec3 a = new fvec3(x1, y1, z1);
 
-            Assert.Equal(a.rg.r, a.x);
-            Assert.Equal(a.rg.g, a.y);
+            Assert.Equal(a.rg.r, a.r);
+            Assert.Equal(a.rg.g, a.g);
 
-            Assert.Equal(a.gr.r, a.y);
-            Assert.Equal(a.gr.g, a.x);
+            Assert.Equal(a.gr.r, a.g);
+            Assert.Equal(a.gr.g, a.r);
+
+            Assert.Equal(a.rb.r, a.r);
+            Assert.Equal(a.rb.g, a.b);
+
+            Assert.Equal(a.br.r, a.b);
+            Assert.Equal(a.br.g, a.r);
+
+
+            Assert.Equal(a.rgb.r, a.r);
+            Assert.Equal(a.rgb.g, a.g);
+            Assert.Equal(a.rgb.b, a.b);
+
+            Assert.Equal(a.rbg.r, a.r);
+            Assert.Equal(a.rbg.g, a.b);
+            Assert.Equal(a.rbg.b, a.g);
+
+            Assert.Equal(a.grb.r, a.g);
+            Assert.Equal(a.grb.g, a.r);
+            Assert.Equal(a.grb.b, a.b);
+
+            Assert.Equal(a.gbr.r, a.g);
+            Assert.Equal(a.gbr.g, a.b);
+            Assert.Equal(a.gbr.b, a.r);
+
+            Assert.Equal(a.bgr.r, a.b);
+            Assert.Equal(a.bgr.g, a.g);
+            Assert.Equal(a.bgr.b, a.r);
+
+            Assert.Equal(a.brg.r, a.b);
+            Assert.Equal(a.brg.g, a.r);
+            Assert.Equal(a.brg.b, a.g);
         }
     }
 }

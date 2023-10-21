@@ -139,6 +139,30 @@ namespace Anathema.Vectors.Core
                 z = value;
             }
         }
+        public fvec2 rb
+        {
+            get
+            {
+                return new fvec2(x, z);
+            }
+            set
+            {
+                x = value.x;
+                z = value.y;
+            }
+        }
+        public fvec2 br
+        {
+            get
+            {
+                return new fvec2(z, x);
+            }
+            set
+            {
+                z = value.x;
+                x = value.y;
+            }
+        }
         public fvec3 rgb
         {
             get
