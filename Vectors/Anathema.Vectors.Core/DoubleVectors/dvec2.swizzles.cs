@@ -5,6 +5,32 @@ namespace Anathema.Vectors.Core
     public partial class dvec2
     {
 
+
+#if CAPITALS_ENABLED
+        public double X
+        {
+            get
+            {
+                return x;
+            }
+            set
+            {
+                x = value;
+            }
+        }
+        public double Y
+        {
+            get
+            {
+                return y;
+            }
+            set
+            {
+                y = value;
+            }
+        }
+#endif
+
 #if SWIZZLES_ENABLED
         public dvec2 xy
         {

@@ -6,6 +6,19 @@ namespace Anathema.Vectors.Core
     public partial class fvec4 : fvec3
     {
 
+#if CAPITALS_ENABLED
+        public float W
+        {
+            get
+            {
+                return w;
+            }
+            set
+            {
+                w = value;
+            }
+        }
+#endif
         // 4! = 4 * 3 * 2 * 1 = 24
         // There are 24 swizzles, in 4 groups of 6
 

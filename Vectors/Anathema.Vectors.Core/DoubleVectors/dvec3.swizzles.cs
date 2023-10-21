@@ -5,6 +5,20 @@ namespace Anathema.Vectors.Core
     public partial class dvec3
     {
 
+
+#if CAPITALS_ENABLED
+        public double Z
+        {
+            get
+            {
+                return z;
+            }
+            set
+            {
+                z = value;
+            }
+        }
+#endif
         // 3! = 3 * 2 * 1 = 6
         // There are 6 swizzles, in 3 groups of 2
 

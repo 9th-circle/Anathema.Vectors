@@ -18,7 +18,6 @@
   - dmat2
   - dmat3
   - dmat4
-- Capital letter swizzles
 - Commenting
   - ///<> for each class
   - ///<> for each method
