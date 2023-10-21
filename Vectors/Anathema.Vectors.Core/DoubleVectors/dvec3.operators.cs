@@ -33,12 +33,10 @@ namespace Anathema.Vectors.Core
         }
         public static bool operator ==(dvec3 a, dvec3 b)
         {
-            if (!(a is null) && b is null)
-                return false;
-            if (a is null && !(b is null))
-                return false;
             if (a is null && b is null)
                 return true;
+            if ((a is null) != (b is null))
+                return false;
             return scalar.isClose(a.x, b.x) && scalar.isClose(a.y, b.y) && scalar.isClose(a.z, b.z);
         }
 

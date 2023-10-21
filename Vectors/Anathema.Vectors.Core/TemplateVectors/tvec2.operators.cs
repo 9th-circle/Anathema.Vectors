@@ -74,12 +74,10 @@ namespace Anathema.Vectors.Core
         }
         public static bool operator ==(tvec2<T> a, tvec2<T> b)
         {
-            if (!(a is null) && b is null)
-                return false;
-            if (a is null && !(b is null))
-                return false;
             if (a is null && b is null)
                 return true;
+            if ((a is null) != (b is null))
+                return false;
             if (typeof(T) == typeof(float))
             {
                 float ax = tToFloat(a.x);

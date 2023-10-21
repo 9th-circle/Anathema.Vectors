@@ -2,6 +2,7 @@
 
 - Tests + Correction
   - Rest of fvec3
+  - Split out fvec2, dvec2, dvec3 into separate files
   - fvec4
   - dvec3
   - dvec4
@@ -34,14 +35,3 @@
   - 3D spinning box (needs projection matrix + Quaternion rotation)
   - 3D penny arcade demo (needs projection matrix + Euler rotation)
 
-Change:
-
-            if (!(a is null) && b is null)
-                return false;
-            if (a is null && !(b is null))
-                return false;
-
-into:
-
-            if (a is null != b is null)
-                return false;
