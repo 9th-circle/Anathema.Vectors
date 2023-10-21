@@ -42,6 +42,12 @@ namespace Anathema.Vectors.Demo.WinForms
                 p.Dock = DockStyle.Fill;
                 contentPanel.Controls.Add(p);
             }
+            if (demoSelectComboBox.SelectedIndex == 4)
+            {
+                SimpleBeziers1DDemoPanel p = new SimpleBeziers1DDemoPanel();
+                p.Dock = DockStyle.Fill;
+                contentPanel.Controls.Add(p);
+            }
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
