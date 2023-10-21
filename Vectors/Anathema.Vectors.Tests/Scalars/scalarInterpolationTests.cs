@@ -37,5 +37,14 @@ namespace Anathema.Vectors.Tests.Scalars
                 Assert.True((f*10)+20 - scalar.linearInterpolate(20, 30, f) < scalar.floatComparisonTolerance);
             }
         }
+        [Fact]
+        public void degenerate1DBezier()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                float f = i / 100.0f;
+                Assert.True(f - scalar.bezierInterpolate(0,0.5,1,f) < scalar.floatComparisonTolerance);
+            }
+        }
     }
 }
