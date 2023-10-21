@@ -7,8 +7,7 @@ namespace Anathema.Vectors.Core
     public partial class dmat2
     {
         //todo: check if this causes a transpose
-#if NESTING_ENABLED
-#if TEMPLATES_ENABLED
+#if NESTING_ENABLED && TEMPLATES_ENABLED
         public static dmat2 fromNestedVector(tvec2<tvec2<double>> input)
         {
             dmat2 output = new dmat2();
@@ -21,7 +20,6 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
-#endif
 #endif
         //todo: check rows and columns aren't being swapped (transposed)
         public double getValue(int row, int column)
