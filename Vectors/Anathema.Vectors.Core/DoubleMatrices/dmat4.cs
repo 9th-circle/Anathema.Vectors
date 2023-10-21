@@ -9,8 +9,8 @@ namespace Anathema.Vectors.Core
     /// </summary>
     public partial class dmat4 : dmat3
     {
-        public override int rowCount { get { return 4; } }
-        public override int columnCount { get { return 4; } }
+        public override int xLength { get { return 4; } }
+        public override int yLength { get { return 4; } }
 
         public dmat4()
         {

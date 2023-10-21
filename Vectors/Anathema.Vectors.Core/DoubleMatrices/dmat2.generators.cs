@@ -7,7 +7,7 @@ namespace Anathema.Vectors.Core
         public static dmat2 identity()
         {
             dmat2 output = new dmat2();
-            for (int i = 0; i < output.rowCount && i < output.columnCount; i++)
+            for (int i = 0; i < output.xLength && i < output.yLength; i++)
                 output.setValue(i, i, 1);
             return output;
         }

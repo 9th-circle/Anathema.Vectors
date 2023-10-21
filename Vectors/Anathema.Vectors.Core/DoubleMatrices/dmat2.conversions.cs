@@ -21,19 +21,18 @@ namespace Anathema.Vectors.Core
             return output;
         }
 #endif
-        //todo: check rows and columns aren't being swapped (transposed)
-        public double getValue(int row, int column)
+
+        public double getValue(int x, int y)
         {
             //Design decision: we should be able to pass around a mat2 in a mat3
             // reference and simply use the columns that are present.
 
-            if (row >= rowCount || column >= columnCount || row < 0 || column < 0)
+            if (x >= xLength || y >= yLength || x < 0 || y < 0)
                 return 0;
-            return data[(row * columnCount) + column];
+            return data[(y * xLength) + x];
         }
 
-        //todo: check rows and columns aren't being swapped (transposed)
-        public void setValue(int row, int column, double value)
+        public void setValue(int x, int y, double value)
         {
             //Design decision: writing to a matrix out of its bounds
             // should fail. This is so that if you're passing around a
@@ -42,9 +41,9 @@ namespace Anathema.Vectors.Core
             // This is an asymmetry between get and set which might
             // not be obvious.
 
-            if (row >= rowCount || column >= columnCount || row < 0 || column < 0)
+            if (x >= xLength || y >= yLength || x < 0 || y < 0)
                 throw new IndexOutOfRangeException();
-            data[(row * columnCount) + column] = value;
+            data[(y * xLength) + x] = value;
         }
     }
 }

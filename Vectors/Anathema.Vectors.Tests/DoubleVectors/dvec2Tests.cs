@@ -94,7 +94,6 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             dvec2 a = new dvec2(x, y);
             dvec2 b = a.cross();
 
-
             Assert.True(Math.Abs(b.x - expectedX) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(b.y - expectedY) < REALLY_SMALL_VALUE);
         }

@@ -14,8 +14,8 @@ namespace Anathema.Vectors.Core
 
         public double[] data { get; protected set; } = new double[4];
 
-        public virtual int rowCount { get { return 2; } }
-        public virtual int columnCount { get { return 2; } }
+        public virtual int xLength { get { return 2; } }
+        public virtual int yLength { get { return 2; } }
 
         ///////////////////////////
         //     Constructors      //
