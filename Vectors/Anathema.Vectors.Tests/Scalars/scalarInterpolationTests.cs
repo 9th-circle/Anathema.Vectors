@@ -28,5 +28,14 @@ namespace Anathema.Vectors.Tests.Scalars
                 Assert.Equal(f * -100, scalar.linearInterpolate(0, -100, f));
             }
         }
+        [Fact]
+        public void nonZeroStart()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                float f = i / 100.0f;
+                Assert.True((f*10)+20 - scalar.linearInterpolate(20, 30, f) < scalar.floatComparisonTolerance);
+            }
+        }
     }
 }
