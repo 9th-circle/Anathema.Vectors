@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Xunit;
 using Anathema.Vectors.Core;
 
-namespace Anathema.Vectors.Tests
+namespace Anathema.Vectors.Tests.DoubleVectors
 {
-    public class dvec3Tests
+    public class dvec3Constructors
     {
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
