@@ -9,6 +9,13 @@ namespace Anathema.Vectors.Core
 {
     public partial class tvec4<T> : tvec3<T>
     {
+        public override bool Equals(object o)
+        {
+            if (o is tvec4<T>)
+                return ((tvec4<T>)o) == this;
+            else
+                return false;
+        }
         public static bool operator !=(tvec4<T> a, tvec4<T> b)
         {
             return !(a == b);
