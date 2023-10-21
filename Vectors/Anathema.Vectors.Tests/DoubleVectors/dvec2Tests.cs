@@ -345,6 +345,16 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(1, a.x);
             Assert.Equal(2, a.y);
 
+            a.R = 3;
+            a.G = 4;
+            Assert.Equal(3, a.r);
+            Assert.Equal(4, a.g);
+
+            a.r = 0;
+            a.g = -1;
+            Assert.Equal(0, a.R);
+            Assert.Equal(-1, a.G);
+
             a.rg = new dvec2(3, 4);
             Assert.Equal(3, a.x);
             Assert.Equal(4, a.y);

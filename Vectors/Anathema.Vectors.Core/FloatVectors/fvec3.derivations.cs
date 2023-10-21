@@ -10,24 +10,12 @@ namespace Anathema.Vectors.Core
         /// <summary>
         /// How far the vector is from (0,0,0).
         /// </summary>
-        public override float length
-        {
-            get
-            {
-                return (float)Math.Sqrt((x * x) + (y * y) + (z * z));
-            }
-        }
+        public override float length => (float)Math.Sqrt((x * x) + (y * y) + (z * z));
 
         /// <summary>
         /// Returns a vector facing the same direction as this one, but with a length of 1.0.
         /// </summary>
-        public new fvec3 normalised
-        {
-            get
-            {
-                return this / length;
-            }
-        }
+        public new fvec3 normalised => this / length;
 
         /// <summary>
         /// Preserves this vector's direction, but sets its length to 1.0.

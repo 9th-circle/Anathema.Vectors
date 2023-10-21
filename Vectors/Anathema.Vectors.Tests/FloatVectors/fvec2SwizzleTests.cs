@@ -61,9 +61,19 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void colourSwizzleAssign()
         {
-            fvec2 a = new fvec2(1, 2);
+            fvec2 a = new fvec2(-1, -2);
+
+            a.r = 1;
+            a.g = 2;
             Assert.Equal(1, a.x);
             Assert.Equal(2, a.y);
+
+            a.R = 10;
+            a.G = 20;
+            Assert.Equal(10, a.x);
+            Assert.Equal(20, a.y);
+            Assert.Equal(10, a.R);
+            Assert.Equal(20, a.G);
 
             a.rg = new fvec2(3, 4);
             Assert.Equal(3, a.x);

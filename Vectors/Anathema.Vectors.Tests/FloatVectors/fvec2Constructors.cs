@@ -10,9 +10,9 @@ namespace Anathema.Vectors.Tests.FloatVectors
         //todo: replace InlineData with MemberData
 
         [Theory]
-        [InlineData(new object[] { 1, 2 })]
-        [InlineData(new object[] { 300000000, 2 })]
-        [InlineData(new object[] { -1, 2.2342 })]
+        [InlineData(1, 2)]
+        [InlineData(300000000, 2)]
+        [InlineData(-1, 2.2342)]
         public void indices(float x, float y)
         {
             fvec2 a = new fvec2(x, y);
@@ -21,6 +21,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(a.ToArray()[0], a[0]);
             Assert.Equal(a.ToArray()[1], a[1]);
             Assert.Throws<IndexOutOfRangeException>(delegate { a[4] = 1; });
+            Assert.Throws<IndexOutOfRangeException>(delegate { float z = a[4]; });
         }
 
         [Fact]
