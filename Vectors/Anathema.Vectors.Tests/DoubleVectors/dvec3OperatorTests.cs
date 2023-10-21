@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+#pragma warning disable CS1718 // Comparison made to same variable
 
 namespace Anathema.Vectors.Tests.DoubleVectors
 {
