@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DoubleMatrices\" />
     <Folder Include="DoubleVectorMatrixOperations\" />
     <Folder Include="TemplateVectors\" />
   </ItemGroup>
