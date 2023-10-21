@@ -383,6 +383,19 @@ namespace Anathema.Vectors.Core
 
 #endif
 #if COLOURS_ENABLED
+#if CAPITALS_ENABLED
+        public float A
+        {
+            get
+            {
+                return z;
+            }
+            set
+            {
+                z = value;
+            }
+        }
+#endif
         public float a
         {
             get

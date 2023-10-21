@@ -115,7 +115,9 @@ namespace Anathema.Vectors.Tests.DoubleVectors
         [Fact]
         public void swizzleWrite()
         {
-            dvec3 a = new dvec3(1, 2, 3);
+            dvec3 a = new dvec3(1, 2, 5);
+
+            a.Z = 3;
 
             a.xy = new dvec2(4, 5);
             Assert.Equal(4, a.x);
@@ -223,6 +225,9 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(1, a.r);
             Assert.Equal(2, a.g);
             Assert.Equal(3, a.b);
+
+            a.b = 0;
+            Assert.Equal(0, a.b);
         }
 
 

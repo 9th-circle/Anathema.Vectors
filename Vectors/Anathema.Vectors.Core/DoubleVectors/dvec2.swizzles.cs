@@ -59,6 +59,31 @@ namespace Anathema.Vectors.Core
 #endif
 
 #if COLOURS_ENABLED
+
+#if CAPITALS_ENABLED
+        public double R
+        {
+            get
+            {
+                return x;
+            }
+            set
+            {
+                x = value;
+            }
+        }
+        public double G
+        {
+            get
+            {
+                return y;
+            }
+            set
+            {
+                y = value;
+            }
+        }
+#endif
         public double r
         {
             get

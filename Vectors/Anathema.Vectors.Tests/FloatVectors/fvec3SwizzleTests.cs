@@ -60,7 +60,9 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void swizzleWrite()
         {
-            fvec3 a = new fvec3(1,2,3);
+            fvec3 a = new fvec3(1,2,5);
+
+            a.Z = 3;
 
             a.xy = new fvec2(4,5);
             Assert.Equal(4, a.x);
@@ -214,6 +216,9 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(a.brg.r, a.b);
             Assert.Equal(a.brg.g, a.r);
             Assert.Equal(a.brg.b, a.g);
+
+            a.b = 0;
+            Assert.Equal(0, a.b);
         }
     }
 }
