@@ -475,7 +475,6 @@ namespace Anathema.Vectors.Tests
 
 
 
-        //todo: write to swizzles
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
@@ -525,7 +524,6 @@ namespace Anathema.Vectors.Tests
         }
 
 
-        //todo: write to colour swizzles
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
@@ -572,5 +570,122 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(a.brg.g, a.r);
             Assert.Equal(a.brg.b, a.g);
         }
+
+
+        [Fact]
+        public void swizzleWrite()
+        {
+            dvec3 a = new dvec3(1, 2, 3);
+
+            a.xy = new dvec2(4, 5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(3, a.z);
+
+            a.yx = new dvec2(7, 6);
+            Assert.Equal(6, a.x);
+            Assert.Equal(7, a.y);
+            Assert.Equal(3, a.z);
+
+            a.xz = new dvec2(8, 9);
+            Assert.Equal(8, a.x);
+            Assert.Equal(7, a.y);
+            Assert.Equal(9, a.z);
+
+            a.zx = new dvec2(11, 10);
+            Assert.Equal(10, a.x);
+            Assert.Equal(7, a.y);
+            Assert.Equal(11, a.z);
+
+            a.xyz = new dvec3(1, 2, 3);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+            Assert.Equal(3, a.z);
+
+            a.xzy = new dvec3(4, 6, 5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+
+            a.yxz = new dvec3(8, 7, 9);
+            Assert.Equal(7, a.x);
+            Assert.Equal(8, a.y);
+            Assert.Equal(9, a.z);
+
+            a.yzx = new dvec3(2, 3, 1);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+            Assert.Equal(3, a.z);
+
+            a.zyx = new dvec3(3, 2, 1);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+            Assert.Equal(3, a.z);
+
+            a.zxy = new dvec3(3, 1, 2);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+            Assert.Equal(3, a.z);
+        }
+
+
+        [Fact]
+        public void colourSwizzleWrite()
+        {
+            dvec3 a = new dvec3(1, 2, 3);
+
+            a.rg = new dvec2(4, 5);
+            Assert.Equal(4, a.r);
+            Assert.Equal(5, a.g);
+            Assert.Equal(3, a.b);
+
+            a.gr = new dvec2(7, 6);
+            Assert.Equal(6, a.r);
+            Assert.Equal(7, a.g);
+            Assert.Equal(3, a.b);
+
+            a.rb = new dvec2(8, 9);
+            Assert.Equal(8, a.r);
+            Assert.Equal(7, a.g);
+            Assert.Equal(9, a.b);
+
+            a.br = new dvec2(11, 10);
+            Assert.Equal(10, a.r);
+            Assert.Equal(7, a.g);
+            Assert.Equal(11, a.b);
+
+            a.rgb = new dvec3(1, 2, 3);
+            Assert.Equal(1, a.r);
+            Assert.Equal(2, a.g);
+            Assert.Equal(3, a.b);
+
+            a.rbg = new dvec3(4, 6, 5);
+            Assert.Equal(4, a.r);
+            Assert.Equal(5, a.g);
+            Assert.Equal(6, a.b);
+
+            a.grb = new dvec3(8, 7, 9);
+            Assert.Equal(7, a.r);
+            Assert.Equal(8, a.g);
+            Assert.Equal(9, a.b);
+
+            a.gbr = new dvec3(2, 3, 1);
+            Assert.Equal(1, a.r);
+            Assert.Equal(2, a.g);
+            Assert.Equal(3, a.b);
+
+            a.bgr = new dvec3(3, 2, 1);
+            Assert.Equal(1, a.r);
+            Assert.Equal(2, a.g);
+            Assert.Equal(3, a.b);
+
+            a.brg = new dvec3(3, 1, 2);
+            Assert.Equal(1, a.r);
+            Assert.Equal(2, a.g);
+            Assert.Equal(3, a.b);
+        }
+
+
+
     }
 }
