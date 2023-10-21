@@ -56,8 +56,8 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             fmat2 original = new fmat2(new float[] { 1, 2, 3, 4 });
             fmat2 copy = new fmat2(original);
             Assert.Equal(1, copy[0]);
-            Assert.Equal(3, copy[1]);
-            Assert.Equal(2, copy[2]);
+            Assert.Equal(2, copy[1]);
+            Assert.Equal(3, copy[2]);
             Assert.Equal(4, copy[3]);
         }
         [Fact]
@@ -80,10 +80,10 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         }
 
         [Theory]
-        [InlineDataAttribute(0, 1, 0, 0, 1)]
-        [InlineDataAttribute(90, 0, 1, -1, 0)]
-        [InlineDataAttribute(180, -1, 0, 0, -1)]
-        [InlineDataAttribute(270, 0, -1, 1, 0)]
+        [InlineData(0, 1, 0, 0, 1)]
+        [InlineData(90, 0, 1, -1, 0)]
+        [InlineData(180, -1, 0, 0, -1)]
+        [InlineData(270, 0, -1, 1, 0)]
         public void rotationDegrees(float angle, float expected0, float expected1, float expected2, float expected3)
         {
             fmat2 matrix = fmat2.rotateDegrees(angle);
@@ -93,10 +93,10 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.True(Math.Abs(expected3 - matrix[3]) < scalar.floatComparisonTolerance);
         }
         [Theory]
-        [InlineDataAttribute(0, 1, 0, 0, 1)]
-        [InlineDataAttribute(Math.PI/2, 0, 1, -1, 0)]
-        [InlineDataAttribute(Math.PI, -1, 0, 0, -1)]
-        [InlineDataAttribute(Math.PI * 3.0f / 2, 0, -1, 1, 0)]
+        [InlineData(0, 1, 0, 0, 1)]
+        [InlineData(Math.PI/2, 0, 1, -1, 0)]
+        [InlineData(Math.PI, -1, 0, 0, -1)]
+        [InlineData(Math.PI * 3.0f / 2, 0, -1, 1, 0)]
         public void rotationRadians(float angle, float expected0, float expected1, float expected2, float expected3)
         {
             fmat2 matrix = fmat2.rotateRadians(angle);
