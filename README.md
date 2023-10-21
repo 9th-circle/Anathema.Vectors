@@ -117,3 +117,7 @@ Todo: fill out
 ##### TEMPLATE_OPERATIONS_ENABLED
 
 - 
+
+##### CAPITALS_ENABLED
+
+- 

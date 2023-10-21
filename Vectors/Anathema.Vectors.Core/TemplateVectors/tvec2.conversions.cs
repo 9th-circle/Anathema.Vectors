@@ -23,6 +23,8 @@ namespace Anathema.Vectors.Core
         public static tvec2<tvec2<float>> fromFMat2(fmat2 input)
         {
             var output = new tvec2<tvec2<float>>();
+            output.x = new tvec2<float>();
+            output.y = new tvec2<float>();
 
             output.x.x = input.getValue(0, 0);
             output.x.y = input.getValue(0, 1);
