@@ -53,6 +53,16 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(8, fromDVec3.x);
             Assert.Equal(5, fromDVec3.y);
             Assert.Equal(-1, fromDVec3.z);
+
+            fvec3 vec2AndScalar = new fvec3(new fvec2(1,2), 3);
+            Assert.Equal(1, vec2AndScalar.x);
+            Assert.Equal(2, vec2AndScalar.y);
+            Assert.Equal(3, vec2AndScalar.z);
+
+            fvec3 scalarAndVec2 = new fvec3(1, new fvec2(2, 3));
+            Assert.Equal(1, scalarAndVec2.x);
+            Assert.Equal(2, scalarAndVec2.y);
+            Assert.Equal(3, scalarAndVec2.z);
         }
 
         [Fact]
