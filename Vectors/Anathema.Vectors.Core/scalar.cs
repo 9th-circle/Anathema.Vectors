@@ -15,7 +15,7 @@ namespace Anathema.Vectors.Core
         {
             return (a * (1 - position)) + (b * position);
         }
-        public static float bezierInterpolate(float a, float b, float c, float position)
+        public static float quadraticBezierInterpolate(float a, float b, float c, float position)
         {
             return linearInterpolate(   linearInterpolate(a, b, position),
                                         linearInterpolate(b, c, position),
@@ -29,7 +29,7 @@ namespace Anathema.Vectors.Core
         {
             return (a * (1 - position)) + (b * position);
         }
-        public static double bezierInterpolate(double a, double b, double c, double position)
+        public static double quadraticBezierInterpolate(double a, double b, double c, double position)
         {
             return linearInterpolate(   linearInterpolate(a, b, position),
                                         linearInterpolate(b, c, position),

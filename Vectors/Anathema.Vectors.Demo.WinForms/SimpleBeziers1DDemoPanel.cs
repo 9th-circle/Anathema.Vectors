@@ -33,8 +33,8 @@ namespace Anathema.Vectors.Demo.WinForms
                     {
                         float f = x / (float)Width;
                         float f2 = (x + 1) / (float)Width;
-                        fvec2 ap = new fvec2(x, scalar.bezierInterpolate(0, m, Height,f));
-                        fvec2 bp = new fvec2(x+1, scalar.bezierInterpolate(0, m, Height, f2));
+                        fvec2 ap = new fvec2(x, scalar.quadraticBezierInterpolate(0, m, Height,f));
+                        fvec2 bp = new fvec2(x+1, scalar.quadraticBezierInterpolate(0, m, Height, f2));
 
                         g.DrawLine(Pens.Azure, ap.x, ap.y, bp.x, bp.y);
                     }

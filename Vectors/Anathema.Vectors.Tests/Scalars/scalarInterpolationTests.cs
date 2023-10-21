@@ -43,7 +43,7 @@ namespace Anathema.Vectors.Tests.Scalars
             for (int i = 0; i < 100; i++)
             {
                 float f = i / 100.0f;
-                Assert.True(f - scalar.bezierInterpolate(0,0.5,1,f) < scalar.floatComparisonTolerance);
+                Assert.True(f - scalar.quadraticBezierInterpolate(0,0.5,1,f) < scalar.floatComparisonTolerance);
             }
         }
     }
