@@ -326,7 +326,6 @@ namespace Anathema.Vectors.Tests.FloatVectors
         }
 
 
-        //todo: write to swizzles
 
         [Theory]
         [InlineData(new object[] { 1, 2 })]
@@ -343,8 +342,52 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(a.yx.y, a.x);
         }
 
+        [Fact]
+        public void swizzleAssign()
+        {
+            fvec2 a = new fvec2(1, 2);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
 
-        //todo: write to colour swizzles
+            a.xy = new fvec2(3, 4);
+            Assert.Equal(3, a.x);
+            Assert.Equal(4, a.y);
+
+            a.yx = new fvec2(6, 5);
+            Assert.Equal(5, a.x);
+            Assert.Equal(6, a.y);
+
+            fvec2 b = new fvec2(8, 7);
+            a.yx = b;
+            Assert.Equal(7, a.x);
+            Assert.Equal(8, a.y);
+
+        }
+
+
+        [Fact]
+        public void colourSwizzleAssign()
+        {
+            fvec2 a = new fvec2(1, 2);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+
+            a.rg = new fvec2(3, 4);
+            Assert.Equal(3, a.x);
+            Assert.Equal(4, a.y);
+
+            a.gr = new fvec2(6, 5);
+            Assert.Equal(5, a.x);
+            Assert.Equal(6, a.y);
+
+            fvec2 b = new fvec2(8, 7);
+            a.gr = b;
+            Assert.Equal(7, a.x);
+            Assert.Equal(8, a.y);
+        }
+
+
+
 
         [Theory]
         [InlineData(new object[] { 1, 2 })]
