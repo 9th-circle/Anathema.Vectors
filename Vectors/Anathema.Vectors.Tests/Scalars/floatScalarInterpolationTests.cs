@@ -11,6 +11,20 @@ namespace Anathema.Vectors.Tests.Scalars
     public class floatScalarInterpolationTests
     {
         [Fact]
+        public void isClose()
+        {
+            float negativeHalf = -scalar.floatComparisonTolerance / 2;
+            float negativeTwice = -scalar.floatComparisonTolerance * 2;
+            float zero = 0;
+            float half = scalar.floatComparisonTolerance / 2;
+            float twice = scalar.floatComparisonTolerance * 2;
+
+            Assert.True(scalar.isClose(zero, half));
+            Assert.True(scalar.isClose(zero, negativeHalf));
+            Assert.False(scalar.isClose(zero, twice));
+            Assert.False(scalar.isClose(zero, negativeTwice));
+        }
+        [Fact]
         public void simplestInterpolation()
         {
             for (int i = 0; i < 100; i++)

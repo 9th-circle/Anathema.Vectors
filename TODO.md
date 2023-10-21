@@ -1,9 +1,7 @@
 ## To Do
 
 - Tests + Correction
-  - Scalars
-  - Rest of fvec3
-  - Split out fvec2, dvec2, dvec3 into separate files
+  - Split out dvec2 into separate files
   - fvec4
   - dvec3
   - dvec4
