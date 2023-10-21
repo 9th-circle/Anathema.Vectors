@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec3ConversionTests
+    public class fvec3dvec3ConversionTests
     {
 
 

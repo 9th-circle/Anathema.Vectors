@@ -27,7 +27,6 @@
     <Folder Include="DoubleMatrices\" />
     <Folder Include="FloatVectorMatrixOperations\" />
     <Folder Include="DoubleVectorMatrixOperations\" />
-    <Folder Include="Scalars\" />
     <Folder Include="TemplateVectors\" />
   </ItemGroup>
 
