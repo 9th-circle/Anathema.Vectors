@@ -23,4 +23,12 @@
     <ProjectReference Include="..\Anathema.Vectors.Core\Anathema.Vectors.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="FloatMatrices\" />
+    <Folder Include="DoubleMatrices\" />
+    <Folder Include="FloatVectorMatrixOperations\" />
+    <Folder Include="DoubleVectorMatrixOperations\" />
+    <Folder Include="TemplateVectors\" />
+  </ItemGroup>
+
 </Project>
