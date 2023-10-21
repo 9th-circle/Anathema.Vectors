@@ -34,7 +34,7 @@ namespace Anathema.Vectors.Core
             return data[(row * columnCount) + column];
         }
 
-        public void setValue(int column, int row, float value)
+        public void setValue(int row, int column, float value)
         {
             //Design decision: writing to a matrix out of its bounds
             // should fail. This is so that if you're passing around a
