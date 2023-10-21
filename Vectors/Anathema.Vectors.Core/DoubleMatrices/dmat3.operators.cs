@@ -21,6 +21,8 @@ namespace Anathema.Vectors.Core
             assign(transposed);
         }
 
+        //todo: ==/!= operators
+
         public void assign(dmat3 other)
         {
             for (int i = 0; i < other.data.Length && i < data.Length; i++)

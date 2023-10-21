@@ -7,6 +7,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
 {
     public class fvec2Tests
     {
+        //todo: split this file
         //todo: replace InlineData with MemberData
         const float REALLY_SMALL_VALUE = 0.00005f;
 

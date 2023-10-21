@@ -15,6 +15,8 @@ namespace Anathema.Vectors.Core
                 data[i] = other.data[i];
         }
 
+        //todo: ==/!= operators
+
 
         public new fmat3 transposed
         {

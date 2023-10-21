@@ -28,6 +28,8 @@ namespace Anathema.Vectors.Core
             for (int i = 0; i < other.data.Length && i < data.Length; i++)
                 data[i] = other.data[i];
         }
+        //todo: ==/!= operators
+
 
         public float this[int i] { get { return data[i]; } set { data[i] = value; } }
         public float this[int x, int y] { get { return getValue(x, y); } set { setValue(x, y, value); } }

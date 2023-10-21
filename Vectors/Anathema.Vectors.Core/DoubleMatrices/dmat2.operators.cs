@@ -26,6 +26,8 @@ namespace Anathema.Vectors.Core
                 data[i] = other.data[i];
         }
 
+        //todo: ==/!= operators
+
         public double this[int i] { get { return data[i]; } set { data[i] = value; } }
         public double this[int x, int y] { get { return getValue(x, y); } set { setValue(x, y, value); } }
 

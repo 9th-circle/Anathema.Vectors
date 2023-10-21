@@ -21,6 +21,8 @@ namespace Anathema.Vectors.Core
         {
             assign(transposed);
         }
+        //todo: ==/!= operators
+
 
         public void assign(fmat4 other)
         {

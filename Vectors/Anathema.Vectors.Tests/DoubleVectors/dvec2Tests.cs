@@ -7,6 +7,7 @@ namespace Anathema.Vectors.Tests.DoubleVectors
 {
     public class dvec2Tests
     {
+        //todo: split this file
         //todo: include some cross tests for fvec2 conversions
         //todo: replace InlineData with MemberData
 
