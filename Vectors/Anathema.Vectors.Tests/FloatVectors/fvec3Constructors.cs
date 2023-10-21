@@ -76,6 +76,16 @@ namespace Anathema.Vectors.Tests.FloatVectors
             fvec3 a = new fvec3(1, 2, 3);
             fvec3 b = new fvec3((1 / 3.0f) * 3.0f, 2, 3);
             fvec3 c = new fvec3(5, 2, 3);
+            fvec3 nullvec = null;
+
+            Assert.True(nullvec == null);
+            Assert.True(null == nullvec);
+            Assert.False(nullvec == a);
+            Assert.False(a == nullvec);
+            Assert.False(nullvec != null);
+            Assert.False(null != nullvec);
+            Assert.True(nullvec != a);
+            Assert.True(a != nullvec);
 
             Assert.False(a.Equals("text"));
 

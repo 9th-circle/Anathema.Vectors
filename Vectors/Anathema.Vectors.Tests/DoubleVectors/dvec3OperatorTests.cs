@@ -32,6 +32,16 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             dvec3 a = new dvec3(1, 2, 3);
             dvec3 b = new dvec3((1 / 3.0f) * 3.0f, 2, 3);
             dvec3 c = new dvec3(5, 2, 3);
+            dvec3 nullvec = null;
+
+            Assert.True(nullvec == null);
+            Assert.True(null == nullvec);
+            Assert.False(nullvec == a);
+            Assert.False(a == nullvec);
+            Assert.False(nullvec != null);
+            Assert.False(null != nullvec);
+            Assert.True(nullvec != a);
+            Assert.True(a != nullvec);
 
             Assert.False(a.Equals("text"));
             Assert.False(a.Equals(c));

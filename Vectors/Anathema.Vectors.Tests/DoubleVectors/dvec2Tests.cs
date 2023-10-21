@@ -258,6 +258,16 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             dvec2 y = new dvec2(c, a);
             dvec2 z = new dvec2(d, d);
             dvec2 w = new dvec2(1.1f, a);
+            dvec2 nullvec = null;
+
+            Assert.True(nullvec == null);
+            Assert.True(null == nullvec);
+            Assert.False(nullvec == x);
+            Assert.False(x == nullvec);
+            Assert.False(nullvec != null);
+            Assert.False(null != nullvec);
+            Assert.True(nullvec != x);
+            Assert.True(x != nullvec);
 
             Assert.False(x == null);
             Assert.False(null == x);
