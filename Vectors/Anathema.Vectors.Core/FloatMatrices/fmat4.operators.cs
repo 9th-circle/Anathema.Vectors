@@ -11,8 +11,8 @@ namespace Anathema.Vectors.Core
             get
             {
                 fmat4 output = new fmat4();
-                for (int x = 0; x < rowCount; x++)
-                    for (int y = 0; y < columnCount; y++)
+                for (int x = 0; x < xLength; x++)
+                    for (int y = 0; y < yLength; y++)
                         output.setValue(x, y, getValue(y, x));
                 return output;
             }

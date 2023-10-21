@@ -27,9 +27,9 @@ namespace Anathema.Vectors.Core
             //Design decision: we should be able to pass around a mat2 in a mat3
             // reference and simply use the columns that are present.
 
-            if (x >= rowCount || y >= columnCount || x < 0 || y < 0)
+            if (x >= xLength || y >= yLength || x < 0 || y < 0)
                 return 0;
-            return data[(y * rowCount) + x];
+            return data[(y * xLength) + x];
         }
 
         public void setValue(int x, int y, float value)
@@ -41,9 +41,9 @@ namespace Anathema.Vectors.Core
             // This is an asymmetry between get and set which might
             // not be obvious.
 
-            if (x >= rowCount || y >= columnCount || x < 0 || y < 0)
+            if (x >= xLength || y >= yLength || x < 0 || y < 0)
                 throw new IndexOutOfRangeException();
-            data[(y * rowCount) + x] = value;
+            data[(y * xLength) + x] = value;
         }
     }
 }

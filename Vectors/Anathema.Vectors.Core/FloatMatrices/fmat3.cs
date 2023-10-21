@@ -10,8 +10,8 @@ namespace Anathema.Vectors.Core
     /// </summary>
     public partial class fmat3 : fmat2
     {
-        public override int rowCount { get { return 3; } }
-        public override int columnCount { get { return 3; } }
+        public override int xLength { get { return 3; } }
+        public override int yLength { get { return 3; } }
 
         public fmat3()
         {

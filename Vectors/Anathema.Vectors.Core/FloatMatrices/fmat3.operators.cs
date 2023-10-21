@@ -23,8 +23,8 @@ namespace Anathema.Vectors.Core
             get
             {
                 fmat3 output = new fmat3();
-                for (int x = 0; x < rowCount; x++)
-                    for (int y = 0; y < columnCount; y++)
+                for (int x = 0; x < xLength; x++)
+                    for (int y = 0; y < yLength; y++)
                         output.setValue(x, y, getValue(y, x));
                 return output;
             }

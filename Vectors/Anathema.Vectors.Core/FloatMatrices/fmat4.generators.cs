@@ -9,7 +9,7 @@ namespace Anathema.Vectors.Core
         public new static fmat4 identity()
         {
             fmat4 output = new fmat4();
-            for (int i = 0; i < output.rowCount && i < output.columnCount; i++)
+            for (int i = 0; i < output.xLength && i < output.yLength; i++)
                 output.setValue(i, i, 1);
             return output;
         }

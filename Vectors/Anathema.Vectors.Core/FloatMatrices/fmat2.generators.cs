@@ -8,7 +8,7 @@ namespace Anathema.Vectors.Core
         public static fmat2 identity()
         {
             fmat2 output = new fmat2();
-            for (int i = 0; i < output.rowCount && i < output.columnCount; i++)
+            for (int i = 0; i < output.xLength && i < output.yLength; i++)
                 output.setValue(i, i, 1);
             return output;
         }

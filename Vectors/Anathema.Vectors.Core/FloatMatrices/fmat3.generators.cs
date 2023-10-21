@@ -27,7 +27,7 @@ namespace Anathema.Vectors.Core
         public new static fmat3 identity()
         {
             fmat3 output = new fmat3();
-            for (int i = 0; i < output.rowCount && i < output.columnCount; i++)
+            for (int i = 0; i < output.xLength && i < output.yLength; i++)
                 output.setValue(i, i, 1);
             return output;
         }
