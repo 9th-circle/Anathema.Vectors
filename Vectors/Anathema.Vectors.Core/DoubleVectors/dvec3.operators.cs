@@ -1,5 +1,4 @@
-﻿#if THREED_ENABLED
-#if DOUBLES_ENABLED
+﻿#if THREED_ENABLED && DOUBLES_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class dvec3
@@ -209,8 +208,7 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 
-#if CONVERSIONS_ENABLED
-#if FLOATS_ENABLED
+#if CONVERSIONS_ENABLED && FLOATS_ENABLED
         public static dvec3 operator *(dvec3 a, fmat4 b)
         {
             dvec4 result = new dvec4(a.x, a.y, a.z, 1.0f) * b;
@@ -222,9 +220,7 @@ namespace Anathema.Vectors.Core
             return a * b.transposed;
         }
 #endif
-#endif
-#if NESTING_ENABLED
-#if TEMPLATES_ENABLED
+#if NESTING_ENABLED && TEMPLATES_ENABLED
         public static dvec3 operator *(dvec3 a, tvec3<tvec3<double>> b)
         {
             dmat3 matrix = dmat3.fromNestedVector(b);
@@ -238,10 +234,8 @@ namespace Anathema.Vectors.Core
             return a * matrix.transposed;
         }
 #endif
-#endif
 
 
     }
 }
-#endif
 #endif
