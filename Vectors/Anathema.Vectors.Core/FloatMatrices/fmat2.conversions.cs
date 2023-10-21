@@ -24,7 +24,6 @@ namespace Anathema.Vectors.Core
 #endif
 #endif
 
-        //todo: check rows and columns aren't being swapped (transposed)
         public float getValue(int row, int column)
         {
             //Design decision: we should be able to pass around a mat2 in a mat3
@@ -35,8 +34,7 @@ namespace Anathema.Vectors.Core
             return data[(row * columnCount) + column];
         }
 
-        //todo: check rows and columns aren't being swapped (transposed)
-        public void setValue(int row, int column, float value)
+        public void setValue(int column, int row, float value)
         {
             //Design decision: writing to a matrix out of its bounds
             // should fail. This is so that if you're passing around a
