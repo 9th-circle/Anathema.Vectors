@@ -62,19 +62,19 @@ namespace Anathema.Vectors.Tests.FloatVectors
                                        0 })]
         [InlineData(new object[] {  3, 0, 0,
                                     3, 0, 0,
-                                       9 })]
+                                       3*3 })]
         [InlineData(new object[] {  0, 4, 0,
                                     0, 4, 0,
-                                       16 })]
+                                       4*4 })]
         [InlineData(new object[] {  0, 0, 5,
                                     0, 0, 5,
-                                       25 })]
+                                       5*5 })]
         [InlineData(new object[] {  1, 0, 5,
                                     1, 0, 5,
-                                       1 + 25 })]
+                                       1 + (5*5) })]
         [InlineData(new object[] {  1, 2, 3,
                                     1, 2, 3,
-                                       1 + 4 + 9 })]
+                                       1 + (2*2) + (3*3) })]
         [InlineData(new object[] {  1, 2, 3,
                                     4, 5, 6,
                                        (1*4) + (2*5) + (3*6) })]
