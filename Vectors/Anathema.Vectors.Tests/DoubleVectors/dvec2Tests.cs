@@ -313,7 +313,50 @@ namespace Anathema.Vectors.Tests.DoubleVectors
         //todo: negation
 
 
-        //todo: write to swizzles
+        [Fact]
+        public void swizzleAssign()
+        {
+            dvec2 a = new dvec2(1, 2);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+
+            a.xy = new dvec2(3, 4);
+            Assert.Equal(3, a.x);
+            Assert.Equal(4, a.y);
+
+            a.yx = new dvec2(6, 5);
+            Assert.Equal(5, a.x);
+            Assert.Equal(6, a.y);
+
+            dvec2 b = new dvec2(8, 7);
+            a.yx = b;
+            Assert.Equal(7, a.x);
+            Assert.Equal(8, a.y);
+
+        }
+
+
+        [Fact]
+        public void colourSwizzleAssign()
+        {
+            dvec2 a = new dvec2(1, 2);
+            Assert.Equal(1, a.x);
+            Assert.Equal(2, a.y);
+
+            a.rg = new dvec2(3, 4);
+            Assert.Equal(3, a.x);
+            Assert.Equal(4, a.y);
+
+            a.gr = new dvec2(6, 5);
+            Assert.Equal(5, a.x);
+            Assert.Equal(6, a.y);
+
+            dvec2 b = new dvec2(8, 7);
+            a.gr = b;
+            Assert.Equal(7, a.x);
+            Assert.Equal(8, a.y);
+        }
+
 
         [Theory]
         [InlineData(new object[] { 1, 2 })]
@@ -332,7 +375,6 @@ namespace Anathema.Vectors.Tests.DoubleVectors
 
 
 
-        //todo: write to colour swizzles
 
 
         [Theory]
