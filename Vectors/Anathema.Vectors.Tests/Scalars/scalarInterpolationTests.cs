@@ -46,5 +46,16 @@ namespace Anathema.Vectors.Tests.Scalars
                 Assert.True(f - scalar.quadraticBezierInterpolate(0,0.5,1,f) < scalar.floatComparisonTolerance);
             }
         }
+        [Fact]
+        public void nonDegenerate1DBezier()
+        {
+            for (int i = 10; i < 90; i++)
+            {
+                float f = i / 100.0f;
+                Assert.True(Math.Abs(f - scalar.quadraticBezierInterpolate(0, 1, 1, f)) > scalar.floatComparisonTolerance);
+                Assert.True(Math.Abs(f - scalar.quadraticBezierInterpolate(0, 0, 1, f)) > scalar.floatComparisonTolerance);
+
+            }
+        }
     }
 }

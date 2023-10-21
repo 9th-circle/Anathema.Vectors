@@ -1,6 +1,7 @@
 ## To Do
 
 - Tests + Correction
+  - Scalars
   - Rest of fvec3
   - Split out fvec2, dvec2, dvec3 into separate files
   - fvec4
@@ -17,6 +18,7 @@
   - dmat2
   - dmat3
   - dmat4
+- Capital letter swizzles
 - Commenting
   - ///<> for each class
   - ///<> for each method
