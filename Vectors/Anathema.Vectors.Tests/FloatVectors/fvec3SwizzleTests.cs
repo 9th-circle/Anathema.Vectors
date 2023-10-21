@@ -57,7 +57,56 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(a.zxy.x, a.z);
             Assert.Equal(a.zxy.y, a.x);
             Assert.Equal(a.zxy.z, a.y);
+        }
+        [Fact]
+        public void swizzleWrite()
+        {
+            fvec3 a = new fvec3(1,2,3);
 
+            a.xy = new fvec2(4,5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(3, a.z);
+
+            a.yx = new fvec2(7, 6);
+            Assert.Equal(6, a.x);
+            Assert.Equal(7, a.y);
+            Assert.Equal(3, a.z);
+
+
+            a.xz = new fvec2(8, 9);
+            Assert.Equal(8, a.x);
+            Assert.Equal(7, a.y);
+            Assert.Equal(9, a.z);
+
+            a.zx = new fvec2(11, 10);
+            Assert.Equal(10, a.x);
+            Assert.Equal(7, a.y);
+            Assert.Equal(11, a.z);
+            /*
+            Assert.Equal(a.xyz.x, a.x);
+            Assert.Equal(a.xyz.y, a.y);
+            Assert.Equal(a.xyz.z, a.z);
+
+            Assert.Equal(a.xzy.x, a.x);
+            Assert.Equal(a.xzy.y, a.z);
+            Assert.Equal(a.xzy.z, a.y);
+
+            Assert.Equal(a.yxz.x, a.y);
+            Assert.Equal(a.yxz.y, a.x);
+            Assert.Equal(a.yxz.z, a.z);
+
+            Assert.Equal(a.yzx.x, a.y);
+            Assert.Equal(a.yzx.y, a.z);
+            Assert.Equal(a.yzx.z, a.x);
+
+            Assert.Equal(a.zyx.x, a.z);
+            Assert.Equal(a.zyx.y, a.y);
+            Assert.Equal(a.zyx.z, a.x);
+
+            Assert.Equal(a.zxy.x, a.z);
+            Assert.Equal(a.zxy.y, a.x);
+            Assert.Equal(a.zxy.z, a.y);*/
         }
 
 
