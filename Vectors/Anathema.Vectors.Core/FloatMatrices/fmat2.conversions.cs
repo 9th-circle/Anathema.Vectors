@@ -7,8 +7,7 @@ namespace Anathema.Vectors.Core
     {
 
         //todo: check if this causes a transpose
-#if NESTING_ENABLED
-#if TEMPLATES_ENABLED
+#if NESTING_ENABLED && TEMPLATES_ENABLED
         public static fmat2 fromNestedVector(tvec2<tvec2<float>> input)
         {
             fmat2 output = new fmat2();
@@ -22,19 +21,18 @@ namespace Anathema.Vectors.Core
             return output;
         }
 #endif
-#endif
 
-        public float getValue(int row, int column)
+        public float getValue(int x, int y)
         {
             //Design decision: we should be able to pass around a mat2 in a mat3
             // reference and simply use the columns that are present.
 
-            if (row >= rowCount || column >= columnCount || row < 0 || column < 0)
+            if (x >= rowCount || y >= columnCount || x < 0 || y < 0)
                 return 0;
-            return data[(row * columnCount) + column];
+            return data[(y * rowCount) + x];
         }
 
-        public void setValue(int row, int column, float value)
+        public void setValue(int x, int y, float value)
         {
             //Design decision: writing to a matrix out of its bounds
             // should fail. This is so that if you're passing around a
@@ -43,9 +41,9 @@ namespace Anathema.Vectors.Core
             // This is an asymmetry between get and set which might
             // not be obvious.
 
-            if (row >= rowCount || column >= columnCount || row < 0 || column < 0)
+            if (x >= rowCount || y >= columnCount || x < 0 || y < 0)
                 throw new IndexOutOfRangeException();
-            data[(row * columnCount) + column] = value;
+            data[(y * rowCount) + x] = value;
         }
     }
 }

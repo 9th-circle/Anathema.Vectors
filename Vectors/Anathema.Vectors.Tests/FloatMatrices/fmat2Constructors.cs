@@ -34,13 +34,13 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             fmat2 def = new fmat2(new float[] { 1, 2, 3, 4 });
 
             Assert.Equal(1, def.getValue(0, 0));
-            Assert.Equal(2, def.getValue(0, 1));
-            Assert.Equal(3, def.getValue(1, 0));
+            Assert.Equal(2, def.getValue(1, 0));
+            Assert.Equal(3, def.getValue(0, 1));
             Assert.Equal(4, def.getValue(1, 1));
 
             Assert.Equal(1, def[0, 0]);
-            Assert.Equal(2, def[0, 1]);
-            Assert.Equal(3, def[1, 0]);
+            Assert.Equal(2, def[1, 0]);
+            Assert.Equal(3, def[0, 1]);
             Assert.Equal(4, def[1, 1]);
 
             Assert.Equal(1, def[0]);
@@ -54,13 +54,13 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             fmat2 def = new fmat2();
 
             def.setValue(0, 0, 1);
-            def.setValue(0, 1, 2);
-            def.setValue(1, 0, 3);
+            def.setValue(1, 0, 2);
+            def.setValue(0, 1, 3);
             def.setValue(1, 1, 4);
 
             Assert.Equal(1, def.getValue(0, 0));
-            Assert.Equal(2, def.getValue(0, 1));
-            Assert.Equal(3, def.getValue(1, 0));
+            Assert.Equal(2, def.getValue(1, 0));
+            Assert.Equal(3, def.getValue(0, 1));
             Assert.Equal(4, def.getValue(1, 1));
 
             def[0] = 10;
@@ -69,13 +69,13 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             def[3] = 13;
 
             Assert.Equal(10, def[0, 0]);
-            Assert.Equal(11, def[0, 1]);
-            Assert.Equal(12, def[1, 0]);
+            Assert.Equal(11, def[1, 0]);
+            Assert.Equal(12, def[0, 1]);
             Assert.Equal(13, def[1, 1]);
 
             def[0, 0] = 9;
-            def[0, 1] = 8;
-            def[1, 0] = 7;
+            def[1, 0] = 8;
+            def[0, 1] = 7;
             def[1, 1] = 6;
 
             Assert.Equal(9, def[0]);
