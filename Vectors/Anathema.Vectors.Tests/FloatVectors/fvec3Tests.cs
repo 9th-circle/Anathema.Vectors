@@ -560,7 +560,7 @@ namespace Anathema.Vectors.Tests
 
 
 
-
+        //todo: write to swizzles
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
@@ -608,6 +608,9 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(a.zxy.z, a.y);
 
         }
+
+
+        //todo: write to colour swizzles
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]

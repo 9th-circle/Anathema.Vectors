@@ -310,6 +310,11 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(y1 + y2, d.y);
         }
 
+        //todo: negation
+
+
+        //todo: write to swizzles
+
         [Theory]
         [InlineData(new object[] { 1, 2 })]
         [InlineData(new object[] { 5.2f, 10.00001f })]
@@ -324,6 +329,11 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(a.yx.x, a.y);
             Assert.Equal(a.yx.y, a.x);
         }
+
+
+
+        //todo: write to colour swizzles
+
 
         [Theory]
         [InlineData(new object[] { 1, 2 })]
