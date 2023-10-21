@@ -20,6 +20,10 @@ namespace Anathema.Vectors.Tests.DoubleVectors
         {
             dvec3 a = new dvec3(x1, y1, z1);
 
+            Assert.Equal(x1, a.X);
+            Assert.Equal(y1, a.Y);
+            Assert.Equal(z1, a.Z);
+
             Assert.Equal(a.xy.x, a.x);
             Assert.Equal(a.xy.y, a.y);
 

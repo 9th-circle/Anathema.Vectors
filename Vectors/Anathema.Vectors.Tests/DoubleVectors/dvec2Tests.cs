@@ -317,6 +317,11 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(1, a.x);
             Assert.Equal(2, a.y);
 
+            a.X = 3;
+            a.Y = 4;
+            Assert.Equal(3, a.x);
+            Assert.Equal(4, a.y);
+
             a.xy = new dvec2(3, 4);
             Assert.Equal(3, a.x);
             Assert.Equal(4, a.y);
@@ -362,6 +367,9 @@ namespace Anathema.Vectors.Tests.DoubleVectors
         public void swizzles(double x1, double y1)
         {
             dvec2 a = new dvec2(x1, y1);
+
+            Assert.Equal(x1, a.X);
+            Assert.Equal(y1, a.Y);
 
             Assert.Equal(a.xy.x, a.x);
             Assert.Equal(a.xy.y, a.y);

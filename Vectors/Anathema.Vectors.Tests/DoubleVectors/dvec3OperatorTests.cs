@@ -33,6 +33,8 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             dvec3 b = new dvec3((1 / 3.0f) * 3.0f, 2, 3);
             dvec3 c = new dvec3(5, 2, 3);
 
+            Assert.False(a.Equals("text"));
+            Assert.False(a.Equals(c));
             Assert.False(a != a);
             Assert.False(b != b);
             Assert.False(c != c);

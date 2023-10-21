@@ -23,6 +23,9 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(a.ToArray()[0], a[0]);
             Assert.Equal(a.ToArray()[1], a[1]);
             Assert.Equal(a.ToArray()[2], a[2]);
+
+            Assert.Throws<IndexOutOfRangeException>(delegate { a[5] = 1; });
+            Assert.Throws<IndexOutOfRangeException>(delegate { double d = a[4]; });
         }
         [Fact]
         public void capitals()
