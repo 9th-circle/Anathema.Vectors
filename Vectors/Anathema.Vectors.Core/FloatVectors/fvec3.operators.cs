@@ -120,7 +120,7 @@ namespace Anathema.Vectors.Core
         }
         public static fvec3 operator /(float b, fvec3 a)
         {
-            return new fvec3(a.x / b, a.y / b, a.z / b);
+            return new fvec3(b / a.x, b / a.y, b / a.z);
         }
         public static fvec3 operator +(float b, fvec3 a)
         {
@@ -128,7 +128,7 @@ namespace Anathema.Vectors.Core
         }
         public static fvec3 operator -(float b, fvec3 a)
         {
-            return new fvec3(a.x - b, a.y - b, a.z - b);
+            return new fvec3(b - a.x, b - a.y, b - a.z);
         }
         public static fvec3 operator -(fvec3 a)
         {

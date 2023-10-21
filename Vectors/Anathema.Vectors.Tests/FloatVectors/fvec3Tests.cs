@@ -242,8 +242,20 @@ namespace Anathema.Vectors.Tests
 
 
 
-
         [Fact]
+        public void negation()
+        {
+
+            fvec3 a = new fvec3(1, 2, 3);
+            fvec3 b = -a;
+
+            Assert.Equal(-1, b.x);
+            Assert.Equal(-2, b.y);
+            Assert.Equal(-3, b.z);
+
+        }
+
+            [Fact]
         public void equality()
         {
             fvec3 a = new fvec3(1, 2, 3);
@@ -287,11 +299,11 @@ namespace Anathema.Vectors.Tests
             fvec3 d = b + a;
 
             Assert.Equal(x1 + x2, c.x);
-            Assert.Equal(x1 + x2, d.x);
+            Assert.Equal(x2 + x1, d.x);
             Assert.Equal(y1 + y2, c.y);
-            Assert.Equal(y1 + y2, d.y);
+            Assert.Equal(y2 + y1, d.y);
             Assert.Equal(z1 + z2, c.z);
-            Assert.Equal(z1 + z2, d.z);
+            Assert.Equal(z2 + z1, d.z);
         }
 
 
@@ -330,11 +342,11 @@ namespace Anathema.Vectors.Tests
             fvec3 d = b * a;
 
             Assert.Equal(x1 * x2, c.x);
-            Assert.Equal(x1 * x2, d.x);
+            Assert.Equal(x2 * x1, d.x);
             Assert.Equal(y1 * y2, c.y);
-            Assert.Equal(y1 * y2, d.y);
+            Assert.Equal(y2 * y1, d.y);
             Assert.Equal(z1 * z2, c.z);
-            Assert.Equal(z1 * z2, d.z);
+            Assert.Equal(z2 * z1, d.z);
         }
 
 
@@ -357,6 +369,96 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(y2 / y1, d.y);
             Assert.Equal(z1 / z2, c.z);
             Assert.Equal(z2 / z1, d.z);
+        }
+
+
+
+
+
+
+
+
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4})]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void scalarAddition(float x1, float y1, float z1, float b)
+        {
+            fvec3 a = new fvec3(x1, y1, z1);
+
+            fvec3 c = a + b;
+            fvec3 d = b + a;
+
+            Assert.Equal(x1 + b, c.x);
+            Assert.Equal(b + x1, d.x);
+            Assert.Equal(y1 + b, c.y);
+            Assert.Equal(b + y1, d.y);
+            Assert.Equal(z1 + b, c.z);
+            Assert.Equal(b + z1, d.z);
+        }
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void scalarSubtraction(float x1, float y1, float z1, float b)
+        {
+            fvec3 a = new fvec3(x1, y1, z1);
+
+            fvec3 c = a - b;
+            fvec3 d = b - a;
+
+            Assert.Equal(x1 - b, c.x);
+            Assert.Equal(b - x1, d.x);
+            Assert.Equal(y1 - b, c.y);
+            Assert.Equal(b - y1, d.y);
+            Assert.Equal(z1 - b, c.z);
+            Assert.Equal(b - z1, d.z);
+        }
+
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void scalarMultiplication(float x1, float y1, float z1, float b)
+        {
+            fvec3 a = new fvec3(x1, y1, z1);
+
+            fvec3 c = a * b;
+            fvec3 d = b * a;
+
+            Assert.Equal(x1 * b, c.x);
+            Assert.Equal(b * x1, d.x);
+            Assert.Equal(y1 * b, c.y);
+            Assert.Equal(b * y1, d.y);
+            Assert.Equal(z1 * b, c.z);
+            Assert.Equal(b * z1, d.z);
+        }
+
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4})]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
+        [InlineData(new object[] { -37, 0, 2, -5 })]
+        public void scalarDivision(float x1, float y1, float z1, float b)
+        {
+            fvec3 a = new fvec3(x1, y1, z1);
+
+            fvec3 c = a / b;
+            fvec3 d = b / a;
+
+            Assert.Equal(x1 / b, c.x);
+            Assert.Equal(b / x1, d.x);
+            Assert.Equal(y1 / b, c.y);
+            Assert.Equal(b / y1, d.y);
+            Assert.Equal(z1 / b, c.z);
+            Assert.Equal(b / z1, d.z);
         }
     }
 }

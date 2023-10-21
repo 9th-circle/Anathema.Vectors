@@ -295,6 +295,17 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.True(w != z);
             Assert.False(w != w);
         }
+        [Fact]
+        public void negation()
+        {
+
+            fvec2 a = new fvec2(1, 2);
+            fvec2 b = -a;
+
+            Assert.Equal(-1, b.x);
+            Assert.Equal(-2, b.y);
+
+        }
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
