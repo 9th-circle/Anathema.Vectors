@@ -12,6 +12,30 @@ namespace Anathema.Vectors.Core
 
 #if SWIZZLES_ENABLED
 
+        public dvec2 xz
+        {
+            get
+            {
+                return new dvec2(x, z);
+            }
+            set
+            {
+                x = value.x;
+                z = value.y;
+            }
+        }
+        public dvec2 zx
+        {
+            get
+            {
+                return new dvec2(z, x);
+            }
+            set
+            {
+                z = value.x;
+                x = value.y;
+            }
+        }
         public dvec3 xyz
         {
             get
@@ -112,6 +136,30 @@ namespace Anathema.Vectors.Core
             set
             {
                 z = value;
+            }
+        }
+        public dvec2 rb
+        {
+            get
+            {
+                return new dvec2(x, z);
+            }
+            set
+            {
+                x = value.x;
+                z = value.y;
+            }
+        }
+        public dvec2 br
+        {
+            get
+            {
+                return new dvec2(z, x);
+            }
+            set
+            {
+                z = value.x;
+                x = value.y;
             }
         }
         public dvec3 rgb
