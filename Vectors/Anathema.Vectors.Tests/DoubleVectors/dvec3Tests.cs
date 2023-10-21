@@ -181,18 +181,22 @@ namespace Anathema.Vectors.Tests
             dvec3 north = new dvec3(0, -100, 0);
             Assert.Equal(0, north.normalised.x);
             Assert.Equal(-1, north.normalised.y);
+            Assert.Equal(0, north.normalised.z);
 
             dvec3 south = new dvec3(0, 25, 0);
             Assert.Equal(0, south.normalised.x);
             Assert.Equal(1, south.normalised.y);
+            Assert.Equal(0, south.normalised.z);
 
             dvec3 east = new dvec3(5.23487927342f, 0, 0);
             Assert.Equal(1, east.normalised.x);
             Assert.Equal(0, east.normalised.y);
+            Assert.Equal(0, east.normalised.z);
 
             dvec3 west = new dvec3(-1, 0, 0);
             Assert.Equal(-1, west.normalised.x);
             Assert.Equal(0, west.normalised.y);
+            Assert.Equal(0, west.normalised.z);
 
             dvec3 forward = new dvec3(0, 0, 10);
             Assert.Equal(0, forward.normalised.x);

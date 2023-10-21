@@ -164,18 +164,22 @@ namespace Anathema.Vectors.Tests.FloatVectors
             fvec3 north = new fvec3(0, -100, 0);
             Assert.Equal(0, north.normalised.x);
             Assert.Equal(-1, north.normalised.y);
+            Assert.Equal(0, north.normalised.z);
 
             fvec3 south = new fvec3(0, 25, 0);
             Assert.Equal(0, south.normalised.x);
             Assert.Equal(1, south.normalised.y);
+            Assert.Equal(0, south.normalised.z);
 
             fvec3 east = new fvec3(5.23487927342f, 0, 0);
             Assert.Equal(1, east.normalised.x);
             Assert.Equal(0, east.normalised.y);
+            Assert.Equal(0, east.normalised.z);
 
             fvec3 west = new fvec3(-1, 0, 0);
             Assert.Equal(-1, west.normalised.x);
             Assert.Equal(0, west.normalised.y);
+            Assert.Equal(0, west.normalised.z);
 
             fvec3 forward = new fvec3(0, 0, 10);
             Assert.Equal(0, forward.normalised.x);
