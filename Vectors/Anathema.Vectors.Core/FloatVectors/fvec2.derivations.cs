@@ -56,7 +56,7 @@ namespace Anathema.Vectors.Core
         }
 
         /// <summary>
-        /// Preserves this vector's direction, but sets its length to 1.0.
+        /// Returns another vector facing the same direction with length = 1
         /// </summary>
         public fvec2 normalised
         {
