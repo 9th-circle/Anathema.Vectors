@@ -24,6 +24,15 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(a.ToArray()[1], a[1]);
             Assert.Equal(a.ToArray()[2], a[2]);
         }
+        [Fact]
+        public void capitals()
+        {
+            dvec3 a = new dvec3(1, 2, 3);
+
+            Assert.Equal(a.x, a.X);
+            Assert.Equal(a.y, a.Y);
+            Assert.Equal(a.z, a.Z);
+        }
 
         [Fact]
         public void construct()

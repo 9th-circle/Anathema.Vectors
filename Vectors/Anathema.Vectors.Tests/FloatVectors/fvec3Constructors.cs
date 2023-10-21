@@ -61,6 +61,16 @@ namespace Anathema.Vectors.Tests.FloatVectors
         }
 
         [Fact]
+        public void capitals()
+        {
+            fvec3 a = new fvec3(1, 2, 3);
+
+            Assert.Equal(a.x, a.X);
+            Assert.Equal(a.y, a.Y);
+            Assert.Equal(a.z, a.Z);
+        }
+
+        [Fact]
         public void equality()
         {
             fvec3 a = new fvec3(1, 2, 3);
