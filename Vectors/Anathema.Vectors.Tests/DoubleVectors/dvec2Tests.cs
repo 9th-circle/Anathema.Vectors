@@ -298,7 +298,15 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(y1 + y2, d.y);
         }
 
-        //todo: negation
+        [Fact]
+        public void negation()
+        {
+            dvec2 a = new dvec2(1, 2);
+            dvec2 b = -a;
+
+            Assert.Equal(-1, b.x);
+            Assert.Equal(-2, b.y);
+        }
 
 
         [Fact]

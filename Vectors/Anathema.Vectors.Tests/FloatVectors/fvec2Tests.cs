@@ -154,6 +154,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.True(Math.Abs(west.x + 1) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
         }
+
+
         [Theory]
         [InlineData(new object[] { 0, 20, 0, -20 })]
         [InlineData(new object[] { 90, 500, 500, 0 })]
