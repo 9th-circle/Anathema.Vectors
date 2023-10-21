@@ -12,9 +12,9 @@ namespace Anathema.Vectors.Tests.FloatVectors
     {
 
         [Theory]
-        [InlineData(new object[] { 1, 2, 3, 4 })]
-        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
-        [InlineData(new object[] { -37, 0, 2, -5 })]
+        [InlineData(1, 2, 3, 4)]
+        [InlineData(5.2f, 10.00001f, 15.23f, 20.99999999999f)]
+        [InlineData(-37, 0, 2, -5)]
         public void dvec2Addition(float x1, float y1, double x2, double y2)
         {
             fvec2 a = new fvec2(x1, y1);
