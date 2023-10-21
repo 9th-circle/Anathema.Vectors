@@ -6,13 +6,37 @@ namespace Anathema.Vectors.Core
 {
     public partial class fvec3 : fvec2
     {
-        
+
         // 3! = 3 * 2 * 1 = 6
         // There are 6 swizzles, in 3 groups of 2
 
         //Starting with X (2)
 
 #if SWIZZLES_ENABLED
+        public fvec2 xz
+        {
+            get
+            {
+                return new fvec2(x, z);
+            }
+            set
+            {
+                x = value.x;
+                z = value.y;
+            }
+        }
+        public fvec2 zx
+        {
+            get
+            {
+                return new fvec2(z, x);
+            }
+            set
+            {
+                z = value.x;
+                x = value.y;
+            }
+        }
         public fvec3 xyz
         {
             get

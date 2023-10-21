@@ -460,5 +460,74 @@ namespace Anathema.Vectors.Tests
             Assert.Equal(z1 / b, c.z);
             Assert.Equal(b / z1, d.z);
         }
+
+
+
+
+
+
+
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 17 })]
+        [InlineData(new object[] { -37, 0, 2})]
+        public void swizzles(float x1, float y1, float z1)
+        {
+            fvec3 a = new fvec3(x1, y1, z1);
+
+            Assert.Equal(a.xy.x, a.x);
+            Assert.Equal(a.xy.y, a.y);
+
+            Assert.Equal(a.yx.x, a.y);
+            Assert.Equal(a.yx.y, a.x);
+
+            Assert.Equal(a.xz.x, a.x);
+            Assert.Equal(a.xz.y, a.z);
+
+            Assert.Equal(a.zx.x, a.z);
+            Assert.Equal(a.zx.y, a.x);
+
+
+            Assert.Equal(a.xyz.x, a.x);
+            Assert.Equal(a.xyz.y, a.y);
+            Assert.Equal(a.xyz.z, a.z);
+
+            Assert.Equal(a.xzy.x, a.x);
+            Assert.Equal(a.xzy.y, a.z);
+            Assert.Equal(a.xzy.z, a.y);
+
+            Assert.Equal(a.yxz.x, a.y);
+            Assert.Equal(a.yxz.y, a.x);
+            Assert.Equal(a.yxz.z, a.z);
+
+            Assert.Equal(a.yzx.x, a.y);
+            Assert.Equal(a.yzx.y, a.z);
+            Assert.Equal(a.yzx.z, a.x);
+
+            Assert.Equal(a.zyx.x, a.z);
+            Assert.Equal(a.zyx.y, a.y);
+            Assert.Equal(a.zyx.z, a.x);
+
+            Assert.Equal(a.zxy.x, a.z);
+            Assert.Equal(a.zxy.y, a.x);
+            Assert.Equal(a.zxy.z, a.y);
+
+        }
+
+        [Theory]
+        [InlineData(new object[] { 1, 2 })]
+        [InlineData(new object[] { 5.2f, 10.00001f })]
+        [InlineData(new object[] { -37, 0 })]
+        public void colourSwizzles(float x1, float y1)
+        {
+            fvec2 a = new fvec2(x1, y1);
+
+            Assert.Equal(a.rg.r, a.x);
+            Assert.Equal(a.rg.g, a.y);
+
+            Assert.Equal(a.gr.r, a.y);
+            Assert.Equal(a.gr.g, a.x);
+        }
     }
 }
