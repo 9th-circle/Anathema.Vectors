@@ -9,6 +9,13 @@ namespace Anathema.Vectors.Core
     /// </summary>
     public class fcom
     {
+        public override bool Equals(object o)
+        {
+            if (o is fcom)
+                return ((fcom)o) == this;
+            else
+                return false;
+        }
         public float real { get; set; }
         public float imaginary { get; set; }
 

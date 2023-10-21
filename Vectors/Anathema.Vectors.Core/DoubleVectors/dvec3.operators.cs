@@ -4,6 +4,13 @@ namespace Anathema.Vectors.Core
     public partial class dvec3
     {
 
+        public override bool Equals(object o)
+        {
+            if (o is dvec3)
+                return ((dvec3)o) == this;
+            else
+                return false;
+        }
         public double dot(dvec3 b)
         {
             return dot(this, b);

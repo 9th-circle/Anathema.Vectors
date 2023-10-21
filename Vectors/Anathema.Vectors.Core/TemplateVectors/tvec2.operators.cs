@@ -6,6 +6,13 @@ namespace Anathema.Vectors.Core
 {
     public partial class tvec2<T>
     {
+        public override bool Equals(object o)
+        {
+            if (o is tvec2<T>)
+                return ((tvec2<T>)o) == this;
+            else
+                return false;
+        }
         protected static byte tToByte(T a)
         {
             return (byte)Convert.ChangeType(a, typeof(byte));

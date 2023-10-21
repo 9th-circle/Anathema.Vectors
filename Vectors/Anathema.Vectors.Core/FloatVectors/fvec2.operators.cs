@@ -4,6 +4,13 @@ namespace Anathema.Vectors.Core
 {
     public partial class fvec2
     {
+        public override bool Equals(object o)
+        {
+            if (o is fvec2)
+                return ((fvec2)o) == this;
+            else
+                return false;
+        }
         public float dot(fvec2 b)
         {
             return dot(this, b);

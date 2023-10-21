@@ -8,6 +8,13 @@ namespace Anathema.Vectors.Core
     public partial class dvec2
     {
 
+        public override bool Equals(object o)
+        {
+            if (o is dvec2)
+                return ((dvec2)o) == this;
+            else
+                return false;
+        }
         public double dot(dvec2 b)
         {
             return dot(this, b);

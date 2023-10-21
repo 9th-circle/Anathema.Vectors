@@ -7,6 +7,13 @@ namespace Anathema.Vectors.Core
     {
 
 
+        public override bool Equals(object o)
+        {
+            if (o is dvec4)
+                return ((dvec4)o) == this;
+            else
+                return false;
+        }
         public double dot(dvec4 b)
         {
             return dot(this, b);
