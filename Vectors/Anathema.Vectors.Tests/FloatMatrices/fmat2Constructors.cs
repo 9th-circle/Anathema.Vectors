@@ -20,6 +20,15 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.Equal(0, def[3]);
         }
         [Fact]
+        public void identity()
+        {
+            fmat2 def = fmat2.identity();
+            Assert.Equal(1, def[0]);
+            Assert.Equal(0, def[1]);
+            Assert.Equal(0, def[2]);
+            Assert.Equal(1, def[3]);
+        }
+        [Fact]
         public void readColumnOrder()
         {
             fmat2 def = new fmat2(new float[] { 1, 2, 3, 4 });
