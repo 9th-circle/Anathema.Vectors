@@ -176,25 +176,18 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
         }
 
-        [Fact]
-        public void fromCardinalAnglesAndLengthRadians()
+        [Theory]
+        [InlineData(new object[] { 0, 20, 0, -20 })]
+        [InlineData(new object[] { Math.PI, 123, 0, 123 })]
+        [InlineData(new object[] { Math.PI / 2, -10, -10, 0 })]
+        [InlineData(new object[] { Math.PI / 2, 3, 3, 0 })]
+        [InlineData(new object[] { Math.PI * (3 / 2.0f), 0.1f, -0.1f, 0 })]
+        public void fromCardinalAnglesAndLengthRadians(double direction, double length,
+            double expectedX, double expectedY)
         {
-            //todo: convert to theory
-            dvec2 north = dvec2.fromAngleRadiansAndLength(0, 20);
-            Assert.True(Math.Abs(north.x) < REALLY_SMALL_VALUE);
-            Assert.True(Math.Abs(north.y + 20) < REALLY_SMALL_VALUE);
-
-            dvec2 south = dvec2.fromAngleRadiansAndLength(Math.PI, 123);
-            Assert.True(Math.Abs(south.x) < REALLY_SMALL_VALUE);
-            Assert.True(Math.Abs(south.y - 123) < REALLY_SMALL_VALUE);
-
-            dvec2 east = dvec2.fromAngleRadiansAndLength(Math.PI / 2.0f, -10);
-            Assert.True(Math.Abs(east.x + 10) < REALLY_SMALL_VALUE);
-            Assert.True(Math.Abs(east.y) < REALLY_SMALL_VALUE);
-
-            dvec2 west = dvec2.fromAngleRadiansAndLength(Math.PI * (3 / 2.0f), 0.1f);
-            Assert.True(Math.Abs(west.x + 0.1) < REALLY_SMALL_VALUE);
-            Assert.True(Math.Abs(west.y) < REALLY_SMALL_VALUE);
+            dvec2 vector = dvec2.fromAngleRadiansAndLength(direction, length);
+            Assert.True(Math.Abs(vector.x - expectedX) < REALLY_SMALL_VALUE);
+            Assert.True(Math.Abs(vector.y - expectedY) < REALLY_SMALL_VALUE);
         }
 
         [Fact]
