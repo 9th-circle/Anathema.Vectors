@@ -30,17 +30,17 @@ namespace Anathema.Vectors.Core
         {
             return (long)Convert.ChangeType(a, typeof(long));
         }
-        protected static int tToDecimal(T a)
+        protected static decimal tToDecimal(T a)
         {
-            return (int)Convert.ChangeType(a, typeof(decimal));
+            return (decimal)Convert.ChangeType(a, typeof(decimal));
         }
-        protected static int tToFloat(T a)
+        protected static float tToFloat(T a)
         {
-            return (int)Convert.ChangeType(a, typeof(float));
+            return (float)Convert.ChangeType(a, typeof(float));
         }
-        protected static int tToDouble(T a)
+        protected static double tToDouble(T a)
         {
-            return (int)Convert.ChangeType(a, typeof(double));
+            return (double)Convert.ChangeType(a, typeof(double));
         }
 
 
