@@ -66,14 +66,15 @@ Or, `tvec3<int>`  = 32-bit integer 3-component vector.
 - This idea is implemented almost exactly like GLSL. If you have a vec3 with components x, y and z, you can mix and match different components in different orders as needed - for example, fvec3.zxy.
 - Similar to GLSL, there are swizzle aliases for rgba -> xyzw. 
 - A nice property of this is that if you ask for a 2-vector out of a larger one, you can trivially convert the output to polar notation to turn it into an angle. This means that you can go fvec3.xz.angle and get a useful number.
-- Unlike GLSL, you cannot use a swizzle value more than once (ie vec3.xyy). This is out of simple pragmatism, as there would be a large number of permutations.
 
-## Gotchas
+## Gotchas/Limitations
 
 - Matrices and vectors (except 2) are subclasses of the rank lower than it (ie a vec4 is a subclass of vec3 which is a subclass of vec2). This cuts out a lot of redundant code, and makes porting data between them easier, but it also means that if a method asks for a vec2 you can pass it a vec4 instead. Which will work in a sense, but could cause problems later.
 - Performance is pretty lousy, both from the extensive use of object oriented language features, and the lack of SIMD vector CPU extension usage.
 - Interactions between the various entities are extensive (you can usually mix and match types), but not exhaustive (there will still be times where you have to do intermediate steps to get it done).
 - The folders inside Vector.Core do not reflect the namespaces the classes are in. **<u>This is deliberate.</u>** The proliferation of partial classes mean there is a large volume of files which need to be rationalised, but the namespace needs to be flat for usability reasons.
+- Unlike GLSL, you cannot use a swizzle value more than once (ie vec3.xyy). This is out of simple pragmatism, as there would be a large number of permutations.
+- No native support for non-square matrices (ie mat4x2), though you can construct those out of nested template vectors if you really need them.
 
 ## Complex Numbers and Quaternions
 
