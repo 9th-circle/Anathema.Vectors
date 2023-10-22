@@ -1,22 +1,19 @@
 ## To Do
 
 - Tests + Correction
-  - fvec4
+  - vec4
   - dvec4
   - tvec2
   - tvec3
   - tvec4
-  - fmat3
+  - mat3
     - Check a mat3 with a mat2 reference can access correct rows/cols
-  - fmat4
+  - mat4
     - Check a mat4 with a mat2/3 reference can access correct rows/cols
   - dmat3
   - dmat4
 - Capitals (XYZW and RGBA) for tvecs
 - Line up names with GLSL better
-  - fvec->vec
-  - fmat->mat
-
 - Commenting
   - ///<> for each class
   - ///<> for each method
