@@ -27,6 +27,11 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Throws<TypeLoadException>(delegate () { var v = a - "z"; });
             Assert.Throws<TypeLoadException>(delegate () { var v = a / "z"; });
             Assert.Throws<TypeLoadException>(delegate () { var v = a * "z"; });
+
+            Assert.Throws<TypeLoadException>(delegate () { var v = "z" + a; });
+            Assert.Throws<TypeLoadException>(delegate () { var v = "z" - a; });
+            Assert.Throws<TypeLoadException>(delegate () { var v = "z" / a; });
+            Assert.Throws<TypeLoadException>(delegate () { var v = "z" * a; });
         }
 
     }
