@@ -489,9 +489,6 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(scalar - y, d.y);
         }
 
-
-
-
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
@@ -509,7 +506,6 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(y1 * y2, c.y);
             Assert.Equal(y1 * y2, d.y);
         }
-
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
@@ -560,9 +556,6 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(y * scalar, d.y);
         }
 
-
-
-
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
@@ -598,8 +591,6 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.True(x2 / x1 == d.x);
             Assert.True(y2 / y1 == d.y);
         }
-
-
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]

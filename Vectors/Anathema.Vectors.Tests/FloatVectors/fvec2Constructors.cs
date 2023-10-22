@@ -64,6 +64,9 @@ namespace Anathema.Vectors.Tests.FloatVectors
             fvec2 w = new fvec2(1.1f, a);
             fvec2 nullvec = null;
 
+            Assert.True(x.Equals(y));
+            Assert.False(x.Equals(nullvec));
+            Assert.False(x.Equals("String"));
             Assert.True(nullvec == null);
             Assert.True(null == nullvec);
             Assert.False(nullvec == x);

@@ -27,6 +27,7 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Throws<IndexOutOfRangeException>(delegate { a[5] = 1; });
             Assert.Throws<IndexOutOfRangeException>(delegate { double d = a[4]; });
         }
+
         [Fact]
         public void capitals()
         {
