@@ -20,6 +20,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(y1, a.Y);
             Assert.Equal(z1, a.Z);
 
+            Assert.Equal(z1, a.B);
+
             Assert.Equal(a.xy.x, a.x);
             Assert.Equal(a.xy.y, a.y);
 
@@ -69,10 +71,12 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(5, a.y);
             Assert.Equal(3, a.z);
 
+            a.B = 2;
+
             a.yx = new fvec2(7, 6);
             Assert.Equal(6, a.x);
             Assert.Equal(7, a.y);
-            Assert.Equal(3, a.z);
+            Assert.Equal(2, a.z);
 
             a.xz = new fvec2(8, 9);
             Assert.Equal(8, a.x);
