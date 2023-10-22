@@ -24,6 +24,9 @@ namespace Anathema.Vectors.Tests.FloatVectors
             vec2 normalised = original.normalised;
             vec2 reconstructed = normalised * original.length;
 
+            Assert.Equal(original.length, original.Length);
+            Assert.Equal(original.length * original.length, original.LengthSquared);
+
             Assert.True(Math.Abs(reconstructed.x - original.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(reconstructed.y - original.y) < REALLY_SMALL_VALUE);
         }
