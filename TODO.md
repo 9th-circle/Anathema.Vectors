@@ -12,6 +12,7 @@
     - Check a mat4 with a mat2/3 reference can access correct rows/cols
   - dmat3
   - dmat4
+  - Rename fvec/fmat tests
 - Capitals (XYZW and RGBA) for tvecs
 - Line up names with GLSL better
 - Commenting

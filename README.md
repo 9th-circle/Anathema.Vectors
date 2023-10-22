@@ -76,6 +76,7 @@ Or, `tvec3<int>`  = 32-bit integer 3-component vector.
 - The folders inside Vector.Core do not reflect the namespaces the classes are in. **<u>This is deliberate.</u>** The proliferation of partial classes mean there is a large volume of files which need to be rationalised, but the namespace needs to be flat for usability reasons.
 - Unlike GLSL, you cannot use a swizzle value more than once (ie vec3.xyy). This is out of simple pragmatism, as there would be a large number of permutations.
 - No native support for non-square matrices (ie mat4x2), though you can construct those out of nested template vectors if you really need them.
+- No template matrices. Narrow use case and a giant can of worms implementation-wise.
 
 ## Complex Numbers and Quaternions
 
