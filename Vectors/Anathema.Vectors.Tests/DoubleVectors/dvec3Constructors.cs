@@ -24,6 +24,7 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(a.ToArray()[1], a[1]);
             Assert.Equal(a.ToArray()[2], a[2]);
 
+            a[0] = 2;
             Assert.Throws<IndexOutOfRangeException>(delegate { a[5] = 1; });
             Assert.Throws<IndexOutOfRangeException>(delegate { double d = a[4]; });
         }

@@ -25,6 +25,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(1, fromArray.x);
             Assert.Equal(2, fromArray.y);
         }
+
         [Fact]
         public void intConstruct()
         {
@@ -36,7 +37,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(1, specifiedComponents.x);
             Assert.Equal(2, specifiedComponents.y);
 
-            tvec2<int> fromArray = new tvec2<int>(new int[] { 1, 2 });
+            tvec2<int> fromArray = new tvec2<int>(new[] { 1, 2 });
             Assert.Equal(1, fromArray.x);
             Assert.Equal(2, fromArray.y);
         }

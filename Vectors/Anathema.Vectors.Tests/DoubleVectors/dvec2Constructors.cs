@@ -5,7 +5,7 @@ using Anathema.Vectors.Core;
 
 namespace Anathema.Vectors.Tests.DoubleVectors
 {
-    public class dvec2Tests
+    public class dvec2Constructors
     {
         //todo: include some cross tests for fvec2 conversions
         //todo: replace InlineData with MemberData
@@ -22,7 +22,11 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(a[1], y);
             Assert.Equal(a.ToArray()[0], a[0]);
             Assert.Equal(a.ToArray()[1], a[1]);
-            Assert.Throws<IndexOutOfRangeException>(delegate { a[4] = 1; });
+
+            a[0] = 2;
+            a[1] = 2;
+            Assert.Throws<IndexOutOfRangeException>(delegate { a[5] = 1; });
+            Assert.Throws<IndexOutOfRangeException>(delegate { double d = a[4]; });
         }
 
 
