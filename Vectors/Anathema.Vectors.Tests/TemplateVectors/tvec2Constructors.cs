@@ -24,6 +24,18 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             tvec2<float> fromArray = new tvec2<float>(new float[] { 1, 2 });
             Assert.Equal(1, fromArray.x);
             Assert.Equal(2, fromArray.y);
+
+            Assert.Equal(1, fromArray[0]);
+            Assert.Equal(2, fromArray[1]);
+
+            fromArray[0] = 10;
+            fromArray[1] = 20;
+
+            Assert.Equal(10, fromArray.x);
+            Assert.Equal(20, fromArray.y);
+
+            Assert.Throws<IndexOutOfRangeException>(delegate { fromArray[10] = 5; });
+            Assert.Throws<IndexOutOfRangeException>(delegate { var x = fromArray[5]; });
         }
 
         [Fact]
@@ -31,9 +43,12 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         {
             tvec2<float> defaultConstructed = new tvec2<float>();
             tvec2<float> nullValue = null;
+            tvec2<float> same = new tvec2<float>();
 
             Assert.False(defaultConstructed.Equals(nullValue));
+            Assert.False(defaultConstructed.Equals("not even the right type"));
             Assert.False(nullValue == defaultConstructed);
+            Assert.True(defaultConstructed.Equals(same));
         }
 
         [Fact]
