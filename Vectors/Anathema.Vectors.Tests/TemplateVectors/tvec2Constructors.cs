@@ -17,7 +17,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(1, vec[0]);
             Assert.Equal(2, vec[1]);
             vec[0] = 3;
-            Assert.Equal(1, vec[3]);
+            Assert.Equal(3, vec[0]);
             Assert.Throws<IndexOutOfRangeException>(delegate { var x = vec[-1]; });
             Assert.Throws<IndexOutOfRangeException>(delegate { vec[10] = 10; });
         }
