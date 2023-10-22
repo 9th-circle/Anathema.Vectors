@@ -27,6 +27,16 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         }
 
         [Fact]
+        public void equalsNull()
+        {
+            tvec2<float> defaultConstructed = new tvec2<float>();
+            tvec2<float> nullValue = null;
+
+            Assert.False(defaultConstructed.Equals(nullValue));
+            Assert.False(nullValue == defaultConstructed);
+        }
+
+        [Fact]
         public void intConstruct()
         {
             tvec2<int> defaultConstructed = new tvec2<int>();

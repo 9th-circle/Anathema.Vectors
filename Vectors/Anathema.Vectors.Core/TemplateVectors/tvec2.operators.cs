@@ -8,6 +8,8 @@ namespace Anathema.Vectors.Core
     {
         public override bool Equals(object o)
         {
+            if (o is null)
+                return false;
             if (o is tvec2<T>)
                 return ((tvec2<T>)o) == this;
             else
