@@ -11,6 +11,8 @@ namespace Anathema.Vectors.Core
         public static tvec2<tvec2<double>> fromDMat2(dmat2 input)
         {
             var output = new tvec2<tvec2<double>>();
+            output.x = new tvec2<double>();
+            output.y = new tvec2<double>();
 
             output.x.x = input.getValue(0, 0);
             output.x.y = input.getValue(0, 1);
