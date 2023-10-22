@@ -17,6 +17,10 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(0, defaultConstructed.x);
             Assert.Equal(0, defaultConstructed.y);
 
+            tvec2<float> copied = new tvec2<float>(defaultConstructed);
+            Assert.Equal(0, copied.x);
+            Assert.Equal(0, copied.y);
+
             tvec2<float> specifiedComponents = new tvec2<float>(1, 2);
             Assert.Equal(1, specifiedComponents.x);
             Assert.Equal(2, specifiedComponents.y);
