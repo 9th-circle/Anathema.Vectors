@@ -26,6 +26,10 @@
 - Documenting
   - README
     - Provide some examples
+- System.Numerics.Vector compatibility
+  - Length
+  - LengthSquared
+
 - Benchmarking
   - Everything
 - Demos

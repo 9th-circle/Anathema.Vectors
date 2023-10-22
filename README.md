@@ -76,10 +76,6 @@ Or, `tvec3<int>`  = 32-bit integer 3-component vector.
 
 Todo: fill out
 
-## Interpolation
-
-Todo: fill out
-
 ## Compile-Time Flags
 
 ##### FLOATS_ENABLED
@@ -101,10 +97,12 @@ Todo: fill out
 ##### SWIZZLES_ENABLED
 
 - Combining different subsets of a vector's components, possibly out of order, ie vec3.xy
+- When combined with THREED_ENABLED, significantly increases binary size.
 
 ##### COLOURS_ENABLED
 
-- Scalar and swizzle aliases for RGBA in the place of XYZW
+- Scalar and swizzle aliases for RGBA in the place of XYZW.
+- When combined with THREED_ENABLED, significantly increases binary size.
 
 ##### COMPLEX_ENABLED
 
@@ -124,11 +122,16 @@ Todo: fill out
 
 ##### TEMPLATE_OPERATIONS_ENABLED
 
-- 
+- Arithmetic operators (+-/*) of template vectors.
+- Because of the lack of INumeric support, this significantly increases binary size.
+
+##### INTEGER_DIVISION_ENABLED
+
+- Division of template vectors, which might have integer components. This is to preclude the possibility of zero divides. 
 
 ##### CAPITALS_ENABLED
 
-- 
+- Capital letter versions of the components (XYZW and RGBA) as well as Length and LengthSquared for compatibility with System.Numerics.Vectors.
 
 # Special Thanks
 
