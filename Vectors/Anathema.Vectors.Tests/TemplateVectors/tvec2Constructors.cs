@@ -11,6 +11,25 @@ namespace Anathema.Vectors.Tests.TemplateVectors
     public class tvec2Constructors
     {
         [Fact]
+        public void indices()
+        {
+            tvec2<float> vec = new tvec2<float>(1,2);
+            Assert.Equal(1, vec[0]);
+            Assert.Equal(2, vec[1]);
+            vec[0] = 3;
+            Assert.Equal(1, vec[3]);
+            Assert.Throws<IndexOutOfRangeException>(delegate { var x = vec[-1]; });
+            Assert.Throws<IndexOutOfRangeException>(delegate { vec[10] = 10; });
+        }
+        [Fact]
+        public void array()
+        {
+            tvec2<float> vec = new tvec2<float>(1, 2);
+            float[] a= vec.ToArray();
+            Assert.Equal(1, a[0]);
+            Assert.Equal(2, a[1]);
+        }
+        [Fact]
         public void floatConstruct()
         {
             tvec2<float> defaultConstructed = new tvec2<float>();

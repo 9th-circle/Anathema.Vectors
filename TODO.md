@@ -15,6 +15,7 @@
   - Rename fvec/fmat tests
 - Capitals (XYZW and RGBA) for tvecs
 - Line up names with GLSL better
+- Simplify InlineData(values) rather than InlineData(new object[] { values })
 - Commenting
   - ///<> for each class
   - ///<> for each method
