@@ -49,6 +49,19 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             dvec2 fromDVec2 = new dvec2(source);
             Assert.Equal(8, fromDVec2.x);
             Assert.Equal(5, fromDVec2.y);
+
+            tvec2<double> toTvec2 = source.toTVec2();
+            Assert.Equal(8, toTvec2.x);
+            Assert.Equal(5, toTvec2.y);
+
+            fvec2 someFvec2 = new fvec2(1, 2);
+            dvec2 fromFVec2 = new dvec2(someFvec2);
+            Assert.Equal(1, fromFVec2.x);
+            Assert.Equal(2, fromFVec2.y);
+
+            dvec2 fromArray = new dvec2(new double[] { 7,8});
+            Assert.Equal(7, fromArray[0]);
+            Assert.Equal(8, fromArray[1]);
         }
 
     }
