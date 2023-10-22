@@ -22,6 +22,25 @@ namespace Anathema.Vectors.Core
             return fromAngleRadiansAndLength(angle * (float)(Math.PI / 180.0f), length);
         }
 
+#if CAPITALS_ENABLED
+
+        public float Length
+        {
+            get
+            {
+                return length;
+            }
+        }
+        public float LengthSquared
+        {
+            get
+            {
+                return length * length;
+            }
+        }
+
+#endif
+
         /// <summary>
         /// Returns a vector facing the same direction as this one, but with a length of 1.0.
         /// </summary>

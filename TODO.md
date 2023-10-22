@@ -27,9 +27,7 @@
   - README
     - Provide some examples
 - System.Numerics.Vector compatibility
-  - Length
-  - LengthSquared
-  - Others - compare feature set
+  - Compare feature set
 
 - Benchmarking
   - Everything

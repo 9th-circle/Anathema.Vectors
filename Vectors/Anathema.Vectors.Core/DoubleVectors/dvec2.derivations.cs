@@ -20,6 +20,23 @@ namespace Anathema.Vectors.Core
             }
         }
 
+#if CAPITALS_ENABLED
+        public double Length
+        {
+            get
+            {
+                return length;
+            }
+        }
+        public double LengthSquared
+        {
+            get
+            {
+                return length * length;
+            }
+        }
+#endif
+
         public virtual double length
         {
             get
