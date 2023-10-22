@@ -6,7 +6,9 @@ Basic linear algebra, mostly for computer graphics.
 
 ## Status
 
-- The output of this project has not been tested or validated yet - the code has been written but undeniably makes mistakes in calculations. This is a work in progress right now.
+- The 2D math has been validated with unit tests and demos.
+- Most of the 3D math has been written but validation is ongoing.
+- Complex numbers and quaternions have not been written.
 
 ## Why?
 
