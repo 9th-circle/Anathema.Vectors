@@ -1,15 +1,9 @@
 ﻿
-#if THREED_ENABLED
-#if FLOATS_ENABLED
+#if THREED_ENABLED && FLOATS_ENABLED && INTERPOLATION_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class vec3
     {
-
-        ///////////////////////////
-        //     Interpolation     //
-        ///////////////////////////
-#if INTERPOLATION_ENABLED
         public static vec3 linearInterpolate(vec3 a, vec3 b, float position)
         {
             return (a * (1 - position)) + (b * position);
@@ -43,9 +37,6 @@ namespace Anathema.Vectors.Core
             return cubicBezierInterpolate(this, b, c, d, position);
         }
         //todo: rational bezier interpolation (ie with weights)
-
-#endif
     }
 }
-#endif
 #endif
