@@ -2,7 +2,6 @@
 
 - Tests + Correction
   - fvec4
-  - dvec3
   - dvec4
   - tvec2
   - tvec3

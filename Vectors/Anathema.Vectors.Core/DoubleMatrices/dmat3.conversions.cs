@@ -9,7 +9,7 @@ namespace Anathema.Vectors.Core
 #if TEMPLATES_ENABLED
         public static dmat3 fromNestedVector(tvec3<tvec3<double>> input)
         {
-            dmat4 output = new dmat4();
+            dmat3 output = new dmat3();
             output.setValue(0, 0, input.x.x);
             output.setValue(0, 1, input.x.y);
             output.setValue(0, 2, input.x.z);
