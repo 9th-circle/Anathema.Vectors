@@ -8,6 +8,18 @@ Basic linear algebra, mostly for computer graphics.
 
 - The output of this project has not been tested or validated yet - the code has been written but undeniably makes mistakes in calculations. This is a work in progress right now.
 
+## Why?
+
+System.Numerics contains a native SIMD-enabled Vector class. It's extremely fast and is what most developers would expect. Why not just use that?
+
+Anathema Vectors has a few benefits:
+
+- Rich feature set: Wider range of linear algebra tools than System.Numerics. Support for integer vectors and complex numbers.
+- Dependency-free: Builds with nothing more than .NET Fx 2.0 - compatible with any platform newer than that (including transpilers).
+- Convenience: Swizzles and easy interoperation between types.
+- Modularity: Compile time preprocessor directives allow you to chop the library down to the features you're using, and nothing more. 
+- Familiarity: Syntax is as close to that of GLSL as possible.
+
 ## Approach
 
 - The notation is terse and annotations are minimal. The assumption is that you either have a decent understanding of basic linear algebra, or that you are willing to learn it on your own.
@@ -121,3 +133,9 @@ Todo: fill out
 ##### CAPITALS_ENABLED
 
 - 
+
+# Special Thanks
+
+- Arran Ubels for reviewing the code (and suggesting partial classes)
+- Peter Berlin for reviewing the code (and suggesting joining #ifs with Boolean operators)
+- Matthew Mack for reviewing some of the maths

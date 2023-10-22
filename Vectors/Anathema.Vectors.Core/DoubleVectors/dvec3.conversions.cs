@@ -1,5 +1,4 @@
-﻿#if DOUBLES_ENABLED
-#if THREED_ENABLED
+﻿#if DOUBLES_ENABLED && THREED_ENABLED
 
 namespace Anathema.Vectors.Core
 {
@@ -24,15 +23,12 @@ namespace Anathema.Vectors.Core
             z = xyz.z;
         }
 
-#if CONVERSIONS_ENABLED
-#if TEMPLATES_ENABLED
+#if CONVERSIONS_ENABLED && TEMPLATES_ENABLED
         public tvec3<double> toTVec3()
         {
             return new tvec3<double>(x, y, z);
         }
 #endif
-#endif
     }
 }
-#endif
 #endif
