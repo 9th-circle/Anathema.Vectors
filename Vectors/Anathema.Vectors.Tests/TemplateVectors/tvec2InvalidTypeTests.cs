@@ -16,22 +16,22 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             tvec2<string> a = new tvec2<string>("a", "b");
             tvec2<string> b = new tvec2<string>("c", "d");
 
-            //Assert.Throws<TypeLoadException>(delegate () { var v = -a; });
+            //Assert.Throws<TypeLoadException>(delegate { var v = -a; });
 
-            Assert.Throws<TypeLoadException>(delegate () { var v = a + b; });
-            Assert.Throws<TypeLoadException>(delegate () { var v = a - b; });
-            Assert.Throws<TypeLoadException>(delegate () { var v = a / b; });
-            Assert.Throws<TypeLoadException>(delegate () { var v = a * b; });
+            Assert.Throws<TypeLoadException>(delegate { var v = a + b; });
+            Assert.Throws<TypeLoadException>(delegate { var v = a - b; });
+            Assert.Throws<TypeLoadException>(delegate { var v = a / b; });
+            Assert.Throws<TypeLoadException>(delegate { var v = a * b; });
 
-            Assert.Throws<TypeLoadException>(delegate () { var v = a + "z"; });
-            Assert.Throws<TypeLoadException>(delegate () { var v = a - "z"; });
-            Assert.Throws<TypeLoadException>(delegate () { var v = a / "z"; });
-            Assert.Throws<TypeLoadException>(delegate () { var v = a * "z"; });
+            Assert.Throws<TypeLoadException>(delegate { var v = a + "z"; });
+            Assert.Throws<TypeLoadException>(delegate { var v = a - "z"; });
+            Assert.Throws<TypeLoadException>(delegate { var v = a / "z"; });
+            Assert.Throws<TypeLoadException>(delegate { var v = a * "z"; });
 
-            Assert.Throws<TypeLoadException>(delegate () { var v = "z" + a; });
-            Assert.Throws<TypeLoadException>(delegate () { var v = "z" - a; });
-            Assert.Throws<TypeLoadException>(delegate () { var v = "z" / a; });
-            Assert.Throws<TypeLoadException>(delegate () { var v = "z" * a; });
+            Assert.Throws<TypeLoadException>(delegate { var v = "z" + a; });
+            Assert.Throws<TypeLoadException>(delegate { var v = "z" - a; });
+            Assert.Throws<TypeLoadException>(delegate { var v = "z" / a; });
+            Assert.Throws<TypeLoadException>(delegate { var v = "z" * a; });
         }
 
     }

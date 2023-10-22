@@ -62,6 +62,13 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(2, fromdvec3.y);
             Assert.Equal(3, fromdvec3.z);
 
+
+            fvec3 fv3 = new fvec3(specifiedComponents);
+            dvec3 fromfvec3 = new dvec3(fv3);
+            Assert.Equal(1, fromfvec3.x);
+            Assert.Equal(2, fromfvec3.y);
+            Assert.Equal(3, fromfvec3.z);
+
             dvec3 source = new dvec3(8, 5, -1);
             dvec3 fromDVec3 = new dvec3(source);
             Assert.Equal(8, fromDVec3.x);
