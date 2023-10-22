@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System;
+using Xunit;
 using Anathema.Vectors.Core;
 #pragma warning disable CS1718 // Comparison made to same variable
 namespace Anathema.Vectors.Tests.FloatVectors
@@ -18,6 +19,15 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(a.ToArray()[0], a[0]);
             Assert.Equal(a.ToArray()[1], a[1]);
             Assert.Equal(a.ToArray()[2], a[2]);
+            a[0] = 1;
+            a[1] = 2;
+            a[2] = 3;
+            Assert.Equal(1, a[0]);
+            Assert.Equal(2, a[1]);
+            Assert.Equal(3, a[2]);
+
+            Assert.Throws<IndexOutOfRangeException>(delegate () { a[59] = 4; });
+            Assert.Throws<IndexOutOfRangeException>(delegate () { float f = a[-1]; });
         }
 
         [Fact]
@@ -87,6 +97,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.True(nullvec != a);
             Assert.True(a != nullvec);
 
+            Assert.True(a.Equals(b));
+            Assert.False(a.Equals(c));
             Assert.False(a.Equals("text"));
 
             Assert.False(a != a);
