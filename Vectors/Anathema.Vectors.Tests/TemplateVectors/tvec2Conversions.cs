@@ -14,7 +14,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         public void toFVec2()
         {
             tvec2<float> vec = new tvec2<float>(1, 2);
-            vec2 fvec = vec.floatTVec2ToFVec2();
+            vec2 fvec = vec.floatTVec2ToVec2();
             Assert.Equal(1, fvec.x);
             Assert.Equal(2, fvec.y);
         }
@@ -30,13 +30,13 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         public void toFVec2InvalidType()
         {
             tvec2<string> vec = new tvec2<string>("a", "b");
-            Assert.Throws<TypeLoadException>(delegate { vec2 fvec = vec.floatTVec2ToFVec2(); });
+            Assert.Throws<ArgumentException>(delegate { vec2 fvec = vec.floatTVec2ToVec2(); });
         }
         [Fact]
         public void toDVec2InvalidType()
         {
             tvec2<float> vec = new tvec2<float>(1, 2);
-            Assert.Throws<TypeLoadException>(delegate { dvec2 dvec = vec.doubleTVec2ToDVec2(); });
+            Assert.Throws<ArgumentException>(delegate { dvec2 dvec = vec.doubleTVec2ToDVec2(); });
         }
     }
 }

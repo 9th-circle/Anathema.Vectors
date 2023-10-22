@@ -40,7 +40,7 @@ namespace Anathema.Vectors.Core
 #endif
 
 #if FLOATS_ENABLED
-        public vec2 floatTVec2ToFVec2()
+        public vec2 floatTVec2ToVec2()
         {
             if (typeof(T) != typeof(float))
                 throw new ArgumentException();
