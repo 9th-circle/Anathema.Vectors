@@ -19,33 +19,33 @@ namespace Anathema.Vectors.Demo.WinForms
         bool leftDown = false;
         bool rightDown = false;
 
-        fvec2 controlA = null;
-        fvec2 controlB = null;
+        vec2 controlA = null;
+        vec2 controlB = null;
         private void SimpleBeziers2DDemoPanel_MouseMove(object sender, MouseEventArgs e)
         {
             if(controlA == null)
-                controlA = new fvec2(Width / 2, 0);
+                controlA = new vec2(Width / 2, 0);
             if (controlB == null)
-                controlB = new fvec2(Width / 2, Height);
+                controlB = new vec2(Width / 2, Height);
             if(leftDown)
-                controlA = new fvec2(e.X, e.Y);
+                controlA = new vec2(e.X, e.Y);
             if (rightDown)
-                controlB = new fvec2(e.X, e.Y);
+                controlB = new vec2(e.X, e.Y);
             using (Bitmap b = new Bitmap(Width, Height))
             {
                 using (Graphics g = Graphics.FromImage(b))
                 {
                     g.Clear(Color.DarkGray);
 
-                    fvec2 start = new fvec2(0, 0);
-                    fvec2 end = new fvec2(Width, Height);
+                    vec2 start = new vec2(0, 0);
+                    vec2 end = new vec2(Width, Height);
 
                     for (int x = 0; x < Width-1; x++)
                     {
                         float f = x / (float)Width;
                         float f2 = (x+1) / (float)Width;
-                        fvec2 ap = start.cubicBezierInterpolateTo(controlA, controlB, end, f);
-                        fvec2 bp = start.cubicBezierInterpolateTo(controlA, controlB, end, f2);
+                        vec2 ap = start.cubicBezierInterpolateTo(controlA, controlB, end, f);
+                        vec2 bp = start.cubicBezierInterpolateTo(controlA, controlB, end, f2);
 
                         g.DrawLine(Pens.Azure, ap.x, ap.y, bp.x, bp.y);
                     }

@@ -12,7 +12,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -1, 2.2342, 0.00001f })]
         public void indices(float x, float y, float z)
         {
-            fvec3 a = new fvec3(x, y, z);
+            vec3 a = new vec3(x, y, z);
             Assert.Equal(a[0], x);
             Assert.Equal(a[1], y);
             Assert.Equal(a[2], z);
@@ -33,38 +33,38 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void construct()
         {
-            fvec3 defaultConstructed = new fvec3();
+            vec3 defaultConstructed = new vec3();
             Assert.Equal(0, defaultConstructed.x);
             Assert.Equal(0, defaultConstructed.y);
             Assert.Equal(0, defaultConstructed.z);
 
-            fvec3 specifiedComponents = new fvec3(1, 2, 3);
+            vec3 specifiedComponents = new vec3(1, 2, 3);
             Assert.Equal(1, specifiedComponents.x);
             Assert.Equal(2, specifiedComponents.y);
             Assert.Equal(3, specifiedComponents.z);
 
-            fvec3 fromArray = new fvec3(new float[] { 1, 2, 3 });
+            vec3 fromArray = new vec3(new float[] { 1, 2, 3 });
             Assert.Equal(1, fromArray.x);
             Assert.Equal(2, fromArray.y);
             Assert.Equal(3, fromArray.z);
 
-            fvec3 fromFVec3 = new fvec3(specifiedComponents);
+            vec3 fromFVec3 = new vec3(specifiedComponents);
             Assert.Equal(1, fromFVec3.x);
             Assert.Equal(2, fromFVec3.y);
             Assert.Equal(3, fromFVec3.z);
 
             dvec3 source = new dvec3(8, 5, -1);
-            fvec3 fromDVec3 = new fvec3(source);
+            vec3 fromDVec3 = new vec3(source);
             Assert.Equal(8, fromDVec3.x);
             Assert.Equal(5, fromDVec3.y);
             Assert.Equal(-1, fromDVec3.z);
 
-            fvec3 vec2AndScalar = new fvec3(new fvec2(1,2), 3);
+            vec3 vec2AndScalar = new vec3(new vec2(1,2), 3);
             Assert.Equal(1, vec2AndScalar.x);
             Assert.Equal(2, vec2AndScalar.y);
             Assert.Equal(3, vec2AndScalar.z);
 
-            fvec3 scalarAndVec2 = new fvec3(1, new fvec2(2, 3));
+            vec3 scalarAndVec2 = new vec3(1, new vec2(2, 3));
             Assert.Equal(1, scalarAndVec2.x);
             Assert.Equal(2, scalarAndVec2.y);
             Assert.Equal(3, scalarAndVec2.z);
@@ -73,7 +73,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void capitals()
         {
-            fvec3 a = new fvec3(1, 2, 3);
+            vec3 a = new vec3(1, 2, 3);
 
             Assert.Equal(a.x, a.X);
             Assert.Equal(a.y, a.Y);
@@ -83,10 +83,10 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void equality()
         {
-            fvec3 a = new fvec3(1, 2, 3);
-            fvec3 b = new fvec3((1 / 3.0f) * 3.0f, 2, 3);
-            fvec3 c = new fvec3(5, 2, 3);
-            fvec3 nullvec = null;
+            vec3 a = new vec3(1, 2, 3);
+            vec3 b = new vec3((1 / 3.0f) * 3.0f, 2, 3);
+            vec3 c = new vec3(5, 2, 3);
+            vec3 nullvec = null;
 
             Assert.True(nullvec == null);
             Assert.True(null == nullvec);

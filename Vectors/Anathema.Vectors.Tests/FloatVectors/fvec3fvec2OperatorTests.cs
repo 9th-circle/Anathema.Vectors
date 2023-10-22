@@ -16,11 +16,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0 })]
         public void fvec32Addition(float x1, float y1, float z1, float x2, float y2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec2 b = new fvec2(x2, y2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec2 b = new vec2(x2, y2);
 
-            fvec3 c = a + b;
-            fvec3 d = b + a;
+            vec3 c = a + b;
+            vec3 d = b + a;
 
             Assert.Equal(x1 + x2, c.x);
             Assert.Equal(x2 + x1, d.x);
@@ -37,11 +37,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0 })]
         public void fvec32Subtraction(float x1, float y1, float z1, float x2, float y2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec2 b = new fvec2(x2, y2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec2 b = new vec2(x2, y2);
 
-            fvec3 c = a - b;
-            fvec3 d = b - a;
+            vec3 c = a - b;
+            vec3 d = b - a;
 
             Assert.Equal(x1 - x2, c.x);
             Assert.Equal(x2 - x1, d.x);
@@ -59,11 +59,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0 })]
         public void fvec32Multiplication(float x1, float y1, float z1, float x2, float y2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec2 b = new fvec2(x2, y2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec2 b = new vec2(x2, y2);
 
-            fvec3 c = a * b;
-            fvec3 d = b * a;
+            vec3 c = a * b;
+            vec3 d = b * a;
 
             Assert.Equal(x1 * x2, c.x);
             Assert.Equal(x2 * x1, d.x);
@@ -81,11 +81,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0 })]
         public void fvec32Division(float x1, float y1, float z1, float x2, float y2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec2 b = new fvec2(x2, y2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec2 b = new vec2(x2, y2);
 
-            fvec3 c = a / b;
-            fvec3 d = b / a;
+            vec3 c = a / b;
+            vec3 d = b / a;
 
             Assert.Equal(x1 / x2, c.x);
             Assert.Equal(x2 / x1, d.x);

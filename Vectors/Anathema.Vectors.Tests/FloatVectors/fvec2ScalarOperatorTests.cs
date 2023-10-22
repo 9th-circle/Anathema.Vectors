@@ -19,10 +19,10 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2 })]
         public void scalarMultiplication(float x, float y, float scalar)
         {
-            fvec2 a = new fvec2(x, y);
+            vec2 a = new vec2(x, y);
 
-            fvec2 c = a * scalar;
-            fvec2 d = scalar * a;
+            vec2 c = a * scalar;
+            vec2 d = scalar * a;
 
             Assert.Equal(x * scalar, c.x);
             Assert.Equal(x * scalar, d.x);
@@ -37,10 +37,10 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2 })]
         public void scalarDivision(float x, float y, float scalar)
         {
-            fvec2 a = new fvec2(x, y);
+            vec2 a = new vec2(x, y);
 
-            fvec2 c = a / scalar;
-            fvec2 d = scalar / a;
+            vec2 c = a / scalar;
+            vec2 d = scalar / a;
 
             Assert.Equal(x / scalar, c.x);
             Assert.Equal(y / scalar, c.y);
@@ -53,10 +53,10 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2 })]
         public void scalarAddition(float x, float y, float scalar)
         {
-            fvec2 a = new fvec2(x, y);
+            vec2 a = new vec2(x, y);
 
-            fvec2 c = a + scalar;
-            fvec2 d = scalar + a;
+            vec2 c = a + scalar;
+            vec2 d = scalar + a;
 
             Assert.Equal(x + scalar, c.x);
             Assert.Equal(x + scalar, d.x);
@@ -70,10 +70,10 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2 })]
         public void scalarSubtraction(float x, float y, float scalar)
         {
-            fvec2 a = new fvec2(x, y);
+            vec2 a = new vec2(x, y);
 
-            fvec2 c = a - scalar;
-            fvec2 d = scalar - a;
+            vec2 c = a - scalar;
+            vec2 d = scalar - a;
 
             Assert.Equal(x - scalar, c.x);
             Assert.Equal(y - scalar, c.y);

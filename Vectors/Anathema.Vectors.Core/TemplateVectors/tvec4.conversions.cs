@@ -82,7 +82,7 @@ namespace Anathema.Vectors.Core
         }
 #endif
 #if FLOATS_ENABLED
-        public static tvec4<tvec4<float>> fromFMat4(fmat4 input)
+        public static tvec4<tvec4<float>> fromFMat4(mat4 input)
         {
             var output = new tvec4<tvec4<float>>();
 
@@ -113,7 +113,7 @@ namespace Anathema.Vectors.Core
 
 
 #if FLOATS_ENABLED
-        public fvec4 floatTVec4ToFVec4()
+        public vec4 floatTVec4ToFVec4()
         {
             if (typeof(T) != typeof(float))
                 throw new ArgumentException();
@@ -123,7 +123,7 @@ namespace Anathema.Vectors.Core
             float fz = (float)Convert.ChangeType(z, typeof(float));
             float fw = (float)Convert.ChangeType(w, typeof(float));
 
-            return new fvec4(fx, fy, fz, fw);
+            return new vec4(fx, fy, fz, fw);
         }
 #endif
 #if DOUBLES_ENABLED

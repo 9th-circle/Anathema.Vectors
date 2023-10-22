@@ -46,7 +46,7 @@ namespace Anathema.Vectors.Core
         }
 #endif
 #if FLOATS_ENABLED
-        public static tvec3<tvec3<float>> fromFMat3(fmat3 input)
+        public static tvec3<tvec3<float>> fromFMat3(mat3 input)
         {
             var output = new tvec3<tvec3<float>>();
 
@@ -74,7 +74,7 @@ namespace Anathema.Vectors.Core
 
 
 #if FLOATS_ENABLED
-        public fvec3 floatTVec3ToFVec3()
+        public vec3 floatTVec3ToFVec3()
         {
             if (typeof(T) != typeof(float))
                 throw new ArgumentException();
@@ -83,7 +83,7 @@ namespace Anathema.Vectors.Core
             float fy = (float)Convert.ChangeType(y, typeof(float));
             float fz = (float)Convert.ChangeType(z, typeof(float));
 
-            return new fvec3(fx, fy, fz);
+            return new vec3(fx, fy, fz);
         }
 #endif
 #if DOUBLES_ENABLED

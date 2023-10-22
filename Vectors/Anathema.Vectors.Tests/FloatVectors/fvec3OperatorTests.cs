@@ -8,8 +8,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void negation()
         {
-            fvec3 a = new fvec3(1, 2, 3);
-            fvec3 b = -a;
+            vec3 a = new vec3(1, 2, 3);
+            vec3 b = -a;
 
             Assert.Equal(-1, b.x);
             Assert.Equal(-2, b.y);
@@ -22,11 +22,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0, 10 })]
         public void fvec3Addition(float x1, float y1, float z1, float x2, float y2, float z2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec3 b = new fvec3(x2, y2, z2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec3 b = new vec3(x2, y2, z2);
 
-            fvec3 c = a + b;
-            fvec3 d = b + a;
+            vec3 c = a + b;
+            vec3 d = b + a;
 
             Assert.Equal(x1 + x2, c.x);
             Assert.Equal(x2 + x1, d.x);
@@ -43,11 +43,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0, 10 })]
         public void fvec3Subtraction(float x1, float y1, float z1, float x2, float y2, float z2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec3 b = new fvec3(x2, y2, z2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec3 b = new vec3(x2, y2, z2);
 
-            fvec3 c = a - b;
-            fvec3 d = b - a;
+            vec3 c = a - b;
+            vec3 d = b - a;
 
             Assert.Equal(x1 - x2, c.x);
             Assert.Equal(x2 - x1, d.x);
@@ -65,11 +65,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0, 10 })]
         public void fvec3Multiplication(float x1, float y1, float z1, float x2, float y2, float z2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec3 b = new fvec3(x2, y2, z2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec3 b = new vec3(x2, y2, z2);
 
-            fvec3 c = a * b;
-            fvec3 d = b * a;
+            vec3 c = a * b;
+            vec3 d = b * a;
 
             Assert.Equal(x1 * x2, c.x);
             Assert.Equal(x2 * x1, d.x);
@@ -87,11 +87,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0, 10 })]
         public void fvec3Division(float x1, float y1, float z1, float x2, float y2, float z2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec3 b = new fvec3(x2, y2, z2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec3 b = new vec3(x2, y2, z2);
 
-            fvec3 c = a / b;
-            fvec3 d = b / a;
+            vec3 c = a / b;
+            vec3 d = b / a;
 
             Assert.Equal(x1 / x2, c.x);
             Assert.Equal(x2 / x1, d.x);

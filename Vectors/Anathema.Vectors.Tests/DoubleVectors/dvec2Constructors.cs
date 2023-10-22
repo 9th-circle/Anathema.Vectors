@@ -54,7 +54,7 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(8, toTvec2.x);
             Assert.Equal(5, toTvec2.y);
 
-            fvec2 someFvec2 = new fvec2(1, 2);
+            vec2 someFvec2 = new vec2(1, 2);
             dvec2 fromFVec2 = new dvec2(someFvec2);
             Assert.Equal(1, fromFVec2.x);
             Assert.Equal(2, fromFVec2.y);

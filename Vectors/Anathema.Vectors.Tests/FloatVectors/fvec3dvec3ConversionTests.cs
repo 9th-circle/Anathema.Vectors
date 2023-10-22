@@ -14,7 +14,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0, 10 })]
         public void dvec3Addition(float x1, float y1, float z1, double x2, double y2, double z2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
+            vec3 a = new vec3(x1, y1, z1);
             dvec3 b = new dvec3(x2, y2, z2);
 
             dvec3 c = a + b;
@@ -35,7 +35,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0, 10 })]
         public void dvec3Subtraction(float x1, float y1, float z1, double x2, double y2, double z2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
+            vec3 a = new vec3(x1, y1, z1);
             dvec3 b = new dvec3(x2, y2, z2);
 
             dvec3 c = a - b;
@@ -57,7 +57,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0, 10 })]
         public void dvec3Multiplication(float x1, float y1, float z1, double x2, double y2, double z2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
+            vec3 a = new vec3(x1, y1, z1);
             dvec3 b = new dvec3(x2, y2, z2);
 
             dvec3 c = a * b;
@@ -79,7 +79,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5, 0, 10 })]
         public void dvec3Division(float x1, float y1, float z1, double x2, double y2, double z2)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
+            vec3 a = new vec3(x1, y1, z1);
             dvec3 b = new dvec3(x2, y2, z2);
 
             dvec3 c = a / b;

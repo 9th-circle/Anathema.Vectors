@@ -18,8 +18,8 @@ namespace Anathema.Vectors.Demo.WinForms
 
         class Ball
         {
-            public fvec2 position = new fvec2();
-            public fvec2 inertia = new fvec2();
+            public vec2 position = new vec2();
+            public vec2 inertia = new vec2();
             public float size = 20.0f;
             public float brightness = 0.0f;
         }
@@ -37,8 +37,8 @@ namespace Anathema.Vectors.Demo.WinForms
             for (int i = 0; i < 7; i++)
             {
 
-                Ball b = new Ball() { position = new fvec2(r.Next(Width), r.Next(Height)),
-                    inertia = new fvec2((float)r.NextDouble() - 0.5f, (float)r.NextDouble() - 0.5f) * 15.0f,
+                Ball b = new Ball() { position = new vec2(r.Next(Width), r.Next(Height)),
+                    inertia = new vec2((float)r.NextDouble() - 0.5f, (float)r.NextDouble() - 0.5f) * 15.0f,
                     size = r.Next(30) + 10 };
 
                 balls.Add(b);

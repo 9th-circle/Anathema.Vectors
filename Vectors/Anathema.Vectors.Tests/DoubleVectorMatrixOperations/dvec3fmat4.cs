@@ -14,7 +14,7 @@ namespace Anathema.Vectors.Tests.DoubleVectorMatrixOperations
         public void identityMultiply()
         {
             dvec3 a = new dvec3(1, 2, 3);
-            fmat4 m = fmat4.identity();
+            mat4 m = mat4.identity();
             dvec3 b = m * a;
             dvec3 c = a * m;
 

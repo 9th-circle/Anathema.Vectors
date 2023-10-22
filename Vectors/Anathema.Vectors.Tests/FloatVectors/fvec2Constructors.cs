@@ -15,7 +15,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(-1, 2.2342)]
         public void indices(float x, float y)
         {
-            fvec2 a = new fvec2(x, y);
+            vec2 a = new vec2(x, y);
             Assert.Equal(a[0], x);
             Assert.Equal(a[1], y);
             Assert.Equal(a.ToArray()[0], a[0]);
@@ -27,24 +27,24 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void construct()
         {
-            fvec2 defaultConstructed = new fvec2();
+            vec2 defaultConstructed = new vec2();
             Assert.Equal(0, defaultConstructed.x);
             Assert.Equal(0, defaultConstructed.y);
 
-            fvec2 specifiedComponents = new fvec2(1, 2);
+            vec2 specifiedComponents = new vec2(1, 2);
             Assert.Equal(1, specifiedComponents.x);
             Assert.Equal(2, specifiedComponents.y);
 
-            fvec2 fromArray = new fvec2(new float[] { 1, 2 });
+            vec2 fromArray = new vec2(new float[] { 1, 2 });
             Assert.Equal(1, fromArray.x);
             Assert.Equal(2, fromArray.y);
 
-            fvec2 fromFVec2 = new fvec2(specifiedComponents);
+            vec2 fromFVec2 = new vec2(specifiedComponents);
             Assert.Equal(1, fromFVec2.x);
             Assert.Equal(2, fromFVec2.y);
 
             dvec2 source = new dvec2(8, 5);
-            fvec2 fromDVec2 = new fvec2(source);
+            vec2 fromDVec2 = new vec2(source);
             Assert.Equal(8, fromDVec2.x);
             Assert.Equal(5, fromDVec2.y);
         }
@@ -58,11 +58,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
             float c = b * 3.0f;
             float d = 0.999999999999f;
 
-            fvec2 x = new fvec2(a, c);
-            fvec2 y = new fvec2(c, a);
-            fvec2 z = new fvec2(d, d);
-            fvec2 w = new fvec2(1.1f, a);
-            fvec2 nullvec = null;
+            vec2 x = new vec2(a, c);
+            vec2 y = new vec2(c, a);
+            vec2 z = new vec2(d, d);
+            vec2 w = new vec2(1.1f, a);
+            vec2 nullvec = null;
 
             Assert.True(x.Equals(y));
             Assert.False(x.Equals(nullvec));

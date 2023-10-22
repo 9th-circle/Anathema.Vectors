@@ -13,7 +13,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void defaultConstructor()
         {
-            fmat3 def = new fmat3();
+            mat3 def = new mat3();
             Assert.Equal(0, def[0]);
             Assert.Equal(0, def[1]);
             Assert.Equal(0, def[2]);
@@ -27,14 +27,14 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void outOfRangeException()
         {
-            fmat3 def = new fmat3();
+            mat3 def = new mat3();
             Assert.Throws<IndexOutOfRangeException>(delegate () { def.setValue(1, 5, 0); });
             Assert.Equal(0, def.getValue(4, 1));
         }
         [Fact]
         public void readColumnOrder()
         {
-            fmat3 def = new fmat3(new float[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+            mat3 def = new mat3(new float[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
 
             Assert.Equal(1, def.getValue(0, 0));
             Assert.Equal(2, def.getValue(1, 0));
@@ -69,7 +69,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void writeColumnOrder()
         {
-            fmat3 def = new fmat3();
+            mat3 def = new mat3();
 
             def.setValue(0, 0, 1);
             def.setValue(1, 0, 2);

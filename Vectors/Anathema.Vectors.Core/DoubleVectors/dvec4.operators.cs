@@ -61,19 +61,19 @@ namespace Anathema.Vectors.Core
 
 #if CONVERSIONS_ENABLED
 #if FLOATS_ENABLED
-        public static dvec4 operator *(fvec4 a, dvec4 b)
+        public static dvec4 operator *(vec4 a, dvec4 b)
         {
             return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
         }
-        public static dvec4 operator /(fvec4 a, dvec4 b)
+        public static dvec4 operator /(vec4 a, dvec4 b)
         {
             return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w);
         }
-        public static dvec4 operator +(fvec4 a, dvec4 b)
+        public static dvec4 operator +(vec4 a, dvec4 b)
         {
             return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
         }
-        public static dvec4 operator -(fvec4 a, dvec4 b)
+        public static dvec4 operator -(vec4 a, dvec4 b)
         {
             return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
         }
@@ -84,19 +84,19 @@ namespace Anathema.Vectors.Core
 
 
 #if FLOATS_ENABLED
-        public static dvec4 operator *(dvec4 a, fvec4 b)
+        public static dvec4 operator *(dvec4 a, vec4 b)
         {
             return new dvec4(a.x * b.x, a.y * b.y, a.z * b.z, a.w * b.w);
         }
-        public static dvec4 operator /(dvec4 a, fvec4 b)
+        public static dvec4 operator /(dvec4 a, vec4 b)
         {
             return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, a.w / b.w);
         }
-        public static dvec4 operator +(dvec4 a, fvec4 b)
+        public static dvec4 operator +(dvec4 a, vec4 b)
         {
             return new dvec4(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
         }
-        public static dvec4 operator -(dvec4 a, fvec4 b)
+        public static dvec4 operator -(dvec4 a, vec4 b)
         {
             return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
         }
@@ -235,7 +235,7 @@ public static dvec4 operator *(dvec4 a, double b)
 
 #if CONVERSIONS_ENABLED
 #if FLOATS_ENABLED
-        public static dvec4 operator *(dvec4 a, fmat4 b)
+        public static dvec4 operator *(dvec4 a, mat4 b)
         {
             return new dvec4((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)) + (a.z * b.getValue(0, 2)) + (a.w * b.getValue(0, 3)),
                                  (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)) + (a.z * b.getValue(1, 2)) + (a.w * b.getValue(1, 3)),
@@ -243,7 +243,7 @@ public static dvec4 operator *(dvec4 a, double b)
                                  (a.x * b.getValue(3, 0)) + (a.y * b.getValue(3, 1)) + (a.z * b.getValue(3, 2)) + (a.w * b.getValue(3, 3))
                                  );
         }
-        public static dvec4 operator *(fmat4 b, dvec4 a)
+        public static dvec4 operator *(mat4 b, dvec4 a)
         {
             return a * b.transposed;
         }

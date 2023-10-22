@@ -22,7 +22,7 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
-        public static tvec2<tvec2<float>> fromFMat2(fmat2 input)
+        public static tvec2<tvec2<float>> fromFMat2(mat2 input)
         {
             var output = new tvec2<tvec2<float>>();
             output.x = new tvec2<float>();
@@ -40,7 +40,7 @@ namespace Anathema.Vectors.Core
 #endif
 
 #if FLOATS_ENABLED
-        public fvec2 floatTVec2ToFVec2()
+        public vec2 floatTVec2ToFVec2()
         {
             if (typeof(T) != typeof(float))
                 throw new ArgumentException();
@@ -48,7 +48,7 @@ namespace Anathema.Vectors.Core
             float fx = (float)Convert.ChangeType(x, typeof(float));
             float fy = (float)Convert.ChangeType(y, typeof(float));
 
-            return new fvec2(fx, fy);
+            return new vec2(fx, fy);
         }
 #endif
 #if DOUBLES_ENABLED

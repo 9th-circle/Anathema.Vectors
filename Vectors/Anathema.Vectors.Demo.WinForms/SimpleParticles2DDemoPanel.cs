@@ -19,11 +19,11 @@ namespace Anathema.Vectors.Demo.WinForms
 
         class Particle
         {
-            public fvec2 pos = new fvec2();
-            public fvec2 momentum = new fvec2();
+            public vec2 pos = new vec2();
+            public vec2 momentum = new vec2();
 
-            public List<fvec2> trail = new List<fvec2>();
-            public fvec3 colour = new fvec3();
+            public List<vec2> trail = new List<vec2>();
+            public vec3 colour = new vec3();
 
             public int life = 100;
         }
@@ -61,9 +61,9 @@ namespace Anathema.Vectors.Demo.WinForms
 
                 var point = this.PointToClient(Cursor.Position);
 
-                p.pos = new fvec2(point.X, point.Y);
-                p.momentum = new fvec2(r.Next(10)-5, r.Next(10) - 5);
-                p.colour = new fvec3((float)r.NextDouble(), (float)r.NextDouble(), (float)r.NextDouble());
+                p.pos = new vec2(point.X, point.Y);
+                p.momentum = new vec2(r.Next(10)-5, r.Next(10) - 5);
+                p.colour = new vec3((float)r.NextDouble(), (float)r.NextDouble(), (float)r.NextDouble());
 
                 particles.Add(p);
                 newParticleTimer = 2;
@@ -92,7 +92,7 @@ namespace Anathema.Vectors.Demo.WinForms
 
                 for (int i = 0; i < p.trail.Count-1; i++)
                 {
-                    fvec3 c = p.colour * (i / 20.0f) * (p.life / 100.0f);
+                    vec3 c = p.colour * (i / 20.0f) * (p.life / 100.0f);
 
                     renderGraphics.DrawLine(new Pen(new SolidBrush(Color.FromArgb((byte)(c.r * 255), (byte)(c.g * 255), (byte)(c.b * 255))),3),
                         p.trail[i].x, p.trail[i].y, p.trail[i + 1].x, p.trail[i + 1].y);

@@ -13,7 +13,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void basicTemplateConversion()
         {
-            fvec2 a = new fvec2(10, 20);
+            vec2 a = new vec2(10, 20);
             tvec2<float> t = a.toTVec2();
 
             Assert.Equal(10, t.x);

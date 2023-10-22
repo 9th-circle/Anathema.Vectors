@@ -68,38 +68,38 @@ namespace Anathema.Vectors.Core
 
 #if CONVERSIONS_ENABLED
 #if FLOATS_ENABLED
-        public static dvec2 operator *(fvec2 a, dvec2 b)
+        public static dvec2 operator *(vec2 a, dvec2 b)
         {
             return new dvec2(a.x * b.x, a.y * b.y);
         }
-        public static dvec2 operator /(fvec2 a, dvec2 b)
+        public static dvec2 operator /(vec2 a, dvec2 b)
         {
             return new dvec2(a.x / b.x, a.y / b.y);
         }
-        public static dvec2 operator +(fvec2 a, dvec2 b)
+        public static dvec2 operator +(vec2 a, dvec2 b)
         {
             return new dvec2(a.x + b.x, a.y + b.y);
         }
-        public static dvec2 operator -(fvec2 a, dvec2 b)
+        public static dvec2 operator -(vec2 a, dvec2 b)
         {
             return new dvec2(a.x - b.x, a.y - b.y);
         }
 
 
 
-        public static dvec2 operator *(dvec2 a, fvec2 b)
+        public static dvec2 operator *(dvec2 a, vec2 b)
         {
             return new dvec2(a.x * b.x, a.y * b.y);
         }
-        public static dvec2 operator /(dvec2 a, fvec2 b)
+        public static dvec2 operator /(dvec2 a, vec2 b)
         {
             return new dvec2(a.x / b.x, a.y / b.y);
         }
-        public static dvec2 operator +(dvec2 a, fvec2 b)
+        public static dvec2 operator +(dvec2 a, vec2 b)
         {
             return new dvec2(a.x + b.x, a.y + b.y);
         }
-        public static dvec2 operator -(dvec2 a, fvec2 b)
+        public static dvec2 operator -(dvec2 a, vec2 b)
         {
             return new dvec2(a.x - b.x, a.y - b.y);
         }
@@ -159,12 +159,12 @@ namespace Anathema.Vectors.Core
         }
 #if CONVERSIONS_ENABLED
 #if FLOATS_ENABLED
-        public static dvec2 operator *(dvec2 a, fmat2 b)
+        public static dvec2 operator *(dvec2 a, mat2 b)
         {
             return new dvec2((a.x * b.getValue(0, 0)) + (a.y * b.getValue(0, 1)),
                                 (a.x * b.getValue(1, 0)) + (a.y * b.getValue(1, 1)));
         }
-        public static dvec2 operator *(fmat2 b, dvec2 a)
+        public static dvec2 operator *(mat2 b, dvec2 a)
         {
             return a * b.transposed;
         }

@@ -26,15 +26,15 @@ namespace Anathema.Vectors.Demo.WinForms
                 {
                     g.Clear(Color.DarkGray);
 
-                    fvec2 start = new fvec2(0, 0);
-                    fvec2 end = new fvec2(Width, Height);
+                    vec2 start = new vec2(0, 0);
+                    vec2 end = new vec2(Width, Height);
 
                     for (int x = 0; x < Width - 1; x++)
                     {
                         float f = x / (float)Width;
                         float f2 = (x + 1) / (float)Width;
-                        fvec2 ap = new fvec2(x, scalar.quadraticBezierInterpolate(0, m, Height,f));
-                        fvec2 bp = new fvec2(x+1, scalar.quadraticBezierInterpolate(0, m, Height, f2));
+                        vec2 ap = new vec2(x, scalar.quadraticBezierInterpolate(0, m, Height,f));
+                        vec2 bp = new vec2(x+1, scalar.quadraticBezierInterpolate(0, m, Height, f2));
 
                         g.DrawLine(Pens.Azure, ap.x, ap.y, bp.x, bp.y);
                     }

@@ -14,8 +14,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void negation()
         {
-            fvec2 a = new fvec2(1, 2);
-            fvec2 b = -a;
+            vec2 a = new vec2(1, 2);
+            vec2 b = -a;
 
             Assert.Equal(-1, b.x);
             Assert.Equal(-2, b.y);
@@ -27,11 +27,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5 })]
         public void fvec2Addition(float x1, float y1, float x2, float y2)
         {
-            fvec2 a = new fvec2(x1, y1);
-            fvec2 b = new fvec2(x2, y2);
+            vec2 a = new vec2(x1, y1);
+            vec2 b = new vec2(x2, y2);
 
-            fvec2 c = a + b;
-            fvec2 d = b + a;
+            vec2 c = a + b;
+            vec2 d = b + a;
 
             Assert.Equal(x1 + x2, c.x);
             Assert.Equal(x1 + x2, d.x);
@@ -45,11 +45,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5 })]
         public void vec2Subtraction(float x1, float y1, float x2, float y2)
         {
-            fvec2 a = new fvec2(x1, y1);
-            fvec2 b = new fvec2(x2, y2);
+            vec2 a = new vec2(x1, y1);
+            vec2 b = new vec2(x2, y2);
 
-            fvec2 c = a - b;
-            fvec2 d = b - a;
+            vec2 c = a - b;
+            vec2 d = b - a;
 
             Assert.Equal(x1 - x2, c.x);
             Assert.Equal(x2 - x1, d.x);
@@ -63,11 +63,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5 })]
         public void vec2Multiplication(float x1, float y1, float x2, float y2)
         {
-            fvec2 a = new fvec2(x1, y1);
-            fvec2 b = new fvec2(x2, y2);
+            vec2 a = new vec2(x1, y1);
+            vec2 b = new vec2(x2, y2);
 
-            fvec2 c = a * b;
-            fvec2 d = b * a;
+            vec2 c = a * b;
+            vec2 d = b * a;
 
             Assert.Equal(x1 * x2, c.x);
             Assert.Equal(x1 * x2, d.x);
@@ -81,8 +81,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5 })]
         public void fvec2MutatorMultiplication(float x1, float y1, float x2, float y2)
         {
-            fvec2 a = new fvec2(x1, y1);
-            fvec2 b = new fvec2(x2, y2);
+            vec2 a = new vec2(x1, y1);
+            vec2 b = new vec2(x2, y2);
 
             a *= b;
 
@@ -96,11 +96,11 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5 })]
         public void vec2Division(float x1, float y1, float x2, float y2)
         {
-            fvec2 a = new fvec2(x1, y1);
-            fvec2 b = new fvec2(x2, y2);
+            vec2 a = new vec2(x1, y1);
+            vec2 b = new vec2(x2, y2);
 
-            fvec2 c = a / b;
-            fvec2 d = b / a;
+            vec2 c = a / b;
+            vec2 d = b / a;
 
             Assert.Equal(x1 / x2, c.x);
             Assert.Equal(y1 / y2, c.y);

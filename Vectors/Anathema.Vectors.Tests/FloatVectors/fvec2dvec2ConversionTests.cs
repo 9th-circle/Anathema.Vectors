@@ -17,7 +17,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(-37, 0, 2, -5)]
         public void dvec2Addition(float x1, float y1, double x2, double y2)
         {
-            fvec2 a = new fvec2(x1, y1);
+            vec2 a = new vec2(x1, y1);
             dvec2 b = new dvec2(x2, y2);
 
             dvec2 c = a + b;
@@ -37,7 +37,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5 })]
         public void dvec2Subtraction(float x1, float y1, double x2, double y2)
         {
-            fvec2 a = new fvec2(x1, y1);
+            vec2 a = new vec2(x1, y1);
             dvec2 b = new dvec2(x2, y2);
 
             dvec2 c = a - b;
@@ -59,7 +59,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5 })]
         public void dvec2Multiplication(float x1, float y1, double x2, double y2)
         {
-            fvec2 a = new fvec2(x1, y1);
+            vec2 a = new vec2(x1, y1);
             dvec2 b = new dvec2(x2, y2);
 
             dvec2 c = a * b;
@@ -79,7 +79,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2, -5 })]
         public void dvec2Division(float x1, float y1, double x2, double y2)
         {
-            fvec2 a = new fvec2(x1, y1);
+            vec2 a = new vec2(x1, y1);
             dvec2 b = new dvec2(x2, y2);
 
             dvec2 c = a / b;

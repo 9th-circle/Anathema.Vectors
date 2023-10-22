@@ -13,7 +13,7 @@ namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
         [Fact]
         public void identityMultiply()
         {
-            fvec3 a = new fvec3(1, 2, 3);
+            vec3 a = new vec3(1, 2, 3);
             dmat4 m = dmat4.identity();
 
             dvec3 b = m * a;

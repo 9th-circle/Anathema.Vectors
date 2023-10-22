@@ -13,12 +13,12 @@ namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
         [Fact]
         public void identityMultiplyTVec()
         {
-            fvec3 a = new fvec3(1, 2, 3);
-            fmat3 m = fmat3.identity();
+            vec3 a = new vec3(1, 2, 3);
+            mat3 m = mat3.identity();
             tvec3<tvec3<float>> n = tvec3<tvec3<float>>.fromFMat3(m);
 
-            fvec3 b = n * a;
-            fvec3 c = a * n;
+            vec3 b = n * a;
+            vec3 c = a * n;
 
             Assert.Equal(1, b.x);
             Assert.Equal(2, b.y);

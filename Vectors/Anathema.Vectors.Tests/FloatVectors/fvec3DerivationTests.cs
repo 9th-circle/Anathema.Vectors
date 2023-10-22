@@ -18,9 +18,9 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 2, -5, 0.1f })]
         public void arbitaryNormalisation(float x, float y, float z)
         {
-            fvec3 original = new fvec3(x, y, z);
-            fvec3 normalised = original.normalised;
-            fvec3 reconstructed = normalised * original.length;
+            vec3 original = new vec3(x, y, z);
+            vec3 normalised = original.normalised;
+            vec3 reconstructed = normalised * original.length;
 
             Assert.True(Math.Abs(reconstructed.x - original.x) < REALLY_SMALL_VALUE);
             Assert.True(Math.Abs(reconstructed.y - original.y) < REALLY_SMALL_VALUE);
@@ -35,7 +35,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 2, -5, 0.1f })]
         public void arbitaryNormalisationImperative(float x, float y, float z)
         {
-            fvec3 working = new fvec3(x, y, z);
+            vec3 working = new vec3(x, y, z);
             float length = working.length;
             working.normalise();
             Assert.True(Math.Abs(working.length - 1) < REALLY_SMALL_VALUE);
@@ -76,8 +76,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
                                        (1*4) + (2*5) + (3*6) })]
         public void dotProduct(float x1, float y1, float z1, float x2, float y2, float z2, float expectedResult)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec3 b = new fvec3(x2, y2, z2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec3 b = new vec3(x2, y2, z2);
 
             float result = a.dot(b);
 
@@ -146,43 +146,43 @@ namespace Anathema.Vectors.Tests.FloatVectors
                                     0, -1, 0 })]
         public void crossProduct(float x1, float y1, float z1, float x2, float y2, float z2, float resultX, float resultY, float resultZ)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
-            fvec3 b = new fvec3(x2, y2, z2);
+            vec3 a = new vec3(x1, y1, z1);
+            vec3 b = new vec3(x2, y2, z2);
 
-            fvec3 result = a.cross(b);
+            vec3 result = a.cross(b);
 
-            Assert.True(result == new fvec3(resultX, resultY, resultZ));
+            Assert.True(result == new vec3(resultX, resultY, resultZ));
         }
 
         [Fact]
         public void cardinalNormalisation()
         {
-            fvec3 north = new fvec3(0, -100, 0);
+            vec3 north = new vec3(0, -100, 0);
             Assert.Equal(0, north.normalised.x);
             Assert.Equal(-1, north.normalised.y);
             Assert.Equal(0, north.normalised.z);
 
-            fvec3 south = new fvec3(0, 25, 0);
+            vec3 south = new vec3(0, 25, 0);
             Assert.Equal(0, south.normalised.x);
             Assert.Equal(1, south.normalised.y);
             Assert.Equal(0, south.normalised.z);
 
-            fvec3 east = new fvec3(5.23487927342f, 0, 0);
+            vec3 east = new vec3(5.23487927342f, 0, 0);
             Assert.Equal(1, east.normalised.x);
             Assert.Equal(0, east.normalised.y);
             Assert.Equal(0, east.normalised.z);
 
-            fvec3 west = new fvec3(-1, 0, 0);
+            vec3 west = new vec3(-1, 0, 0);
             Assert.Equal(-1, west.normalised.x);
             Assert.Equal(0, west.normalised.y);
             Assert.Equal(0, west.normalised.z);
 
-            fvec3 forward = new fvec3(0, 0, 10);
+            vec3 forward = new vec3(0, 0, 10);
             Assert.Equal(0, forward.normalised.x);
             Assert.Equal(0, forward.normalised.y);
             Assert.Equal(1, forward.normalised.z);
 
-            fvec3 backward = new fvec3(0, 0, -0.0001f);
+            vec3 backward = new vec3(0, 0, -0.0001f);
             Assert.Equal(0, backward.normalised.x);
             Assert.Equal(0, backward.normalised.y);
             Assert.Equal(-1, backward.normalised.z);

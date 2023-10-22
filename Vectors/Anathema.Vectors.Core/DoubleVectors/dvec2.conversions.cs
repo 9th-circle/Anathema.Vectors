@@ -6,7 +6,7 @@ namespace Anathema.Vectors.Core
     public partial class dvec2
     {
 
-        public dvec2(fvec2 xy)
+        public dvec2(vec2 xy)
         {
             x = xy.x;
             y = xy.y;

@@ -22,14 +22,14 @@ namespace Anathema.Vectors.Demo.WinForms
 
         }
 
-        fvec2 position = null;
-        fvec2 momentum = new fvec2();
+        vec2 position = null;
+        vec2 momentum = new vec2();
         bool leftKeyDown = false;
         bool rightKeyDown = false;
         bool forwardKeyDown = false;
         float direction = 0;
 
-        List<fvec3> stars = new List<fvec3>();
+        List<vec3> stars = new List<vec3>();
 
         float modulo(float input, float divisor)
         {
@@ -63,17 +63,17 @@ namespace Anathema.Vectors.Demo.WinForms
             position += momentum;
             if (leftKeyDown)    direction -= 3;
             if (rightKeyDown)   direction += 3;
-            if (forwardKeyDown) momentum += fvec2.fromAngleDegreesAndLength(direction, 1);
+            if (forwardKeyDown) momentum += vec2.fromAngleDegreesAndLength(direction, 1);
 
             renderGraphics.Clear(Color.Black);
 
-            foreach (fvec3 star in stars)
+            foreach (vec3 star in stars)
                 renderGraphics.FillEllipse(Brushes.Gray, modulo((star.x - position.x) / star.z, Width), modulo((star.y - position.y) / star.z, Height), 2, 2);
             
-            fvec2 centerOfShip = new fvec2(Width/2, Height/2);
-            fvec2 forward = centerOfShip + fvec2.fromAngleDegreesAndLength(direction, 20);
-            fvec2 left = centerOfShip + fvec2.fromAngleDegreesAndLength(direction - 120, 10);
-            fvec2 right = centerOfShip + fvec2.fromAngleDegreesAndLength(direction + 120, 10);
+            vec2 centerOfShip = new vec2(Width/2, Height/2);
+            vec2 forward = centerOfShip + vec2.fromAngleDegreesAndLength(direction, 20);
+            vec2 left = centerOfShip + vec2.fromAngleDegreesAndLength(direction - 120, 10);
+            vec2 right = centerOfShip + vec2.fromAngleDegreesAndLength(direction + 120, 10);
             renderGraphics.DrawLine(Pens.Blue, forward.x, forward.y, right.x, right.y);
             renderGraphics.DrawLine(Pens.Blue, right.x, right.y, left.x, left.y);
             renderGraphics.DrawLine(Pens.Blue, left.x, left.y, forward.x, forward.y);
@@ -85,14 +85,14 @@ namespace Anathema.Vectors.Demo.WinForms
         private void SimpleSpaceship2DDemoPanel_SizeChanged(object sender, EventArgs e)
         {
             if (position == null)
-                position = new fvec2(Width / 2, Height / 2);
+                position = new vec2(Width / 2, Height / 2);
             displayGraphics = Graphics.FromHwnd(this.Handle);
 
             Random r = new Random();
 
             for (int i = 0; i < 100; i++)
             {
-                stars.Add(new fvec3((float)r.NextDouble() * Width * 2.0f, (float)r.NextDouble() * Height * 2.0f, ((float)r.NextDouble() * 0.5f) + 1.0f));
+                stars.Add(new vec3((float)r.NextDouble() * Width * 2.0f, (float)r.NextDouble() * Height * 2.0f, ((float)r.NextDouble() * 0.5f) + 1.0f));
             }
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)

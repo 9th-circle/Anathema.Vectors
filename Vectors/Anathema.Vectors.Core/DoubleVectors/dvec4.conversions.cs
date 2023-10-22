@@ -48,7 +48,7 @@ namespace Anathema.Vectors.Core
             this.w = w;
         }
 #if FLOATS_ENABLED
-        public dvec4(fvec4 xyzw)
+        public dvec4(vec4 xyzw)
         {
             x = xyzw.x;
             y = xyzw.y;

@@ -14,7 +14,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2 })]
         public void swizzles(float x1, float y1, float z1)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
+            vec3 a = new vec3(x1, y1, z1);
 
             Assert.Equal(x1, a.X);
             Assert.Equal(y1, a.Y);
@@ -62,58 +62,58 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void swizzleWrite()
         {
-            fvec3 a = new fvec3(1,2,5);
+            vec3 a = new vec3(1,2,5);
 
             a.Z = 3;
 
-            a.xy = new fvec2(4,5);
+            a.xy = new vec2(4,5);
             Assert.Equal(4, a.x);
             Assert.Equal(5, a.y);
             Assert.Equal(3, a.z);
 
             a.B = 2;
 
-            a.yx = new fvec2(7, 6);
+            a.yx = new vec2(7, 6);
             Assert.Equal(6, a.x);
             Assert.Equal(7, a.y);
             Assert.Equal(2, a.z);
 
-            a.xz = new fvec2(8, 9);
+            a.xz = new vec2(8, 9);
             Assert.Equal(8, a.x);
             Assert.Equal(7, a.y);
             Assert.Equal(9, a.z);
 
-            a.zx = new fvec2(11, 10);
+            a.zx = new vec2(11, 10);
             Assert.Equal(10, a.x);
             Assert.Equal(7, a.y);
             Assert.Equal(11, a.z);
 
-            a.xyz = new fvec3(1, 2, 3);
+            a.xyz = new vec3(1, 2, 3);
             Assert.Equal(1, a.x);
             Assert.Equal(2, a.y);
             Assert.Equal(3, a.z);
 
-            a.xzy = new fvec3(4, 6, 5);
+            a.xzy = new vec3(4, 6, 5);
             Assert.Equal(4, a.x);
             Assert.Equal(5, a.y);
             Assert.Equal(6, a.z);
 
-            a.yxz = new fvec3(8, 7, 9);
+            a.yxz = new vec3(8, 7, 9);
             Assert.Equal(7, a.x);
             Assert.Equal(8, a.y);
             Assert.Equal(9, a.z);
 
-            a.yzx = new fvec3(2, 3, 1);
+            a.yzx = new vec3(2, 3, 1);
             Assert.Equal(1, a.x);
             Assert.Equal(2, a.y);
             Assert.Equal(3, a.z);
 
-            a.zyx = new fvec3(3, 2, 1);
+            a.zyx = new vec3(3, 2, 1);
             Assert.Equal(1, a.x);
             Assert.Equal(2, a.y);
             Assert.Equal(3, a.z);
 
-            a.zxy = new fvec3(3, 1, 2);
+            a.zxy = new vec3(3, 1, 2);
             Assert.Equal(1, a.x);
             Assert.Equal(2, a.y);
             Assert.Equal(3, a.z);
@@ -123,54 +123,54 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void colourSwizzleWrite()
         {
-            fvec3 a = new fvec3(1, 2, 3);
+            vec3 a = new vec3(1, 2, 3);
 
-            a.rg = new fvec2(4, 5);
+            a.rg = new vec2(4, 5);
             Assert.Equal(4, a.r);
             Assert.Equal(5, a.g);
             Assert.Equal(3, a.b);
 
-            a.gr = new fvec2(7, 6);
+            a.gr = new vec2(7, 6);
             Assert.Equal(6, a.r);
             Assert.Equal(7, a.g);
             Assert.Equal(3, a.b);
 
-            a.rb = new fvec2(8, 9);
+            a.rb = new vec2(8, 9);
             Assert.Equal(8, a.r);
             Assert.Equal(7, a.g);
             Assert.Equal(9, a.b);
 
-            a.br = new fvec2(11, 10);
+            a.br = new vec2(11, 10);
             Assert.Equal(10, a.r);
             Assert.Equal(7, a.g);
             Assert.Equal(11, a.b);
 
-            a.rgb = new fvec3(1, 2, 3);
+            a.rgb = new vec3(1, 2, 3);
             Assert.Equal(1, a.r);
             Assert.Equal(2, a.g);
             Assert.Equal(3, a.b);
 
-            a.rbg = new fvec3(4, 6, 5);
+            a.rbg = new vec3(4, 6, 5);
             Assert.Equal(4, a.r);
             Assert.Equal(5, a.g);
             Assert.Equal(6, a.b);
 
-            a.grb = new fvec3(8, 7, 9);
+            a.grb = new vec3(8, 7, 9);
             Assert.Equal(7, a.r);
             Assert.Equal(8, a.g);
             Assert.Equal(9, a.b);
 
-            a.gbr = new fvec3(2, 3, 1);
+            a.gbr = new vec3(2, 3, 1);
             Assert.Equal(1, a.r);
             Assert.Equal(2, a.g);
             Assert.Equal(3, a.b);
 
-            a.bgr = new fvec3(3, 2, 1);
+            a.bgr = new vec3(3, 2, 1);
             Assert.Equal(1, a.r);
             Assert.Equal(2, a.g);
             Assert.Equal(3, a.b);
 
-            a.brg = new fvec3(3, 1, 2);
+            a.brg = new vec3(3, 1, 2);
             Assert.Equal(1, a.r);
             Assert.Equal(2, a.g);
             Assert.Equal(3, a.b);
@@ -182,7 +182,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { -37, 0, 2 })]
         public void colourSwizzles(float x1, float y1, float z1)
         {
-            fvec3 a = new fvec3(x1, y1, z1);
+            vec3 a = new vec3(x1, y1, z1);
 
             Assert.Equal(a.rg.r, a.r);
             Assert.Equal(a.rg.g, a.g);

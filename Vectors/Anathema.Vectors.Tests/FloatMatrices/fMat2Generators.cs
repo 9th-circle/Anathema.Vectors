@@ -9,7 +9,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void identity()
         {
-            fmat2 def = fmat2.identity();
+            mat2 def = mat2.identity();
             Assert.Equal(1, def[0]);
             Assert.Equal(0, def[1]);
             Assert.Equal(0, def[2]);
@@ -25,7 +25,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             nested.x.y = 2;
             nested.y.x = 3;
             nested.y.y = 4;
-            fmat2 output = fmat2.fromNestedVector(nested);
+            mat2 output = mat2.fromNestedVector(nested);
             Assert.Equal(1, output[0]);
             Assert.Equal(3, output[1]);
             Assert.Equal(2, output[2]);
@@ -34,7 +34,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void array()
         {
-            float[] array = fmat2.identity().ToArray();
+            float[] array = mat2.identity().ToArray();
             Assert.Equal(1, array[0]);
             Assert.Equal(0, array[1]);
             Assert.Equal(0, array[2]);
@@ -43,7 +43,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void transposeImperative()
         {
-            fmat2 def = new fmat2(new float[] { 1, 2, 3, 4 });
+            mat2 def = new mat2(new float[] { 1, 2, 3, 4 });
             def.transpose();
             Assert.Equal(1, def[0]);
             Assert.Equal(3, def[1]);
@@ -53,8 +53,8 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void copy()
         {
-            fmat2 original = new fmat2(new float[] { 1, 2, 3, 4 });
-            fmat2 copy = new fmat2(original);
+            mat2 original = new mat2(new float[] { 1, 2, 3, 4 });
+            mat2 copy = new mat2(original);
             Assert.Equal(1, copy[0]);
             Assert.Equal(2, copy[1]);
             Assert.Equal(3, copy[2]);
@@ -63,7 +63,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void scaleUniform()
         {
-            fmat2 def = fmat2.scale(5.0f);
+            mat2 def = mat2.scale(5.0f);
             Assert.Equal(5, def[0]);
             Assert.Equal(0, def[1]);
             Assert.Equal(0, def[2]);
@@ -72,7 +72,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void scaleBasis()
         {
-            fmat2 def = fmat2.scale(new fvec2(2,3));
+            mat2 def = mat2.scale(new vec2(2,3));
             Assert.Equal(2, def[0]);
             Assert.Equal(0, def[1]);
             Assert.Equal(0, def[2]);
@@ -86,7 +86,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [InlineData(270, 0, -1, 1, 0)]
         public void rotationDegrees(float angle, float expected0, float expected1, float expected2, float expected3)
         {
-            fmat2 matrix = fmat2.rotateDegrees(angle);
+            mat2 matrix = mat2.rotateDegrees(angle);
             Assert.True(Math.Abs(expected0-matrix[0]) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(expected1 - matrix[1]) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(expected2 - matrix[2]) < scalar.floatComparisonTolerance);
@@ -99,7 +99,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [InlineData(Math.PI * 3.0f / 2, 0, -1, 1, 0)]
         public void rotationRadians(float angle, float expected0, float expected1, float expected2, float expected3)
         {
-            fmat2 matrix = fmat2.rotateRadians(angle);
+            mat2 matrix = mat2.rotateRadians(angle);
             Assert.True(Math.Abs(expected0 - matrix[0]) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(expected1 - matrix[1]) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(expected2 - matrix[2]) < scalar.floatComparisonTolerance);

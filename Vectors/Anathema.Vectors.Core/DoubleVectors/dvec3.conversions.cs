@@ -16,7 +16,7 @@ namespace Anathema.Vectors.Core
             y = yz.x;
             z = yz.y;
         }
-        public dvec3(fvec3 xyz)
+        public dvec3(vec3 xyz)
         {
             x = xyz.x;
             y = xyz.y;

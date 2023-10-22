@@ -17,7 +17,7 @@ namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
         public void rotateDegrees(double angle, double startX, double startY, double endX, double endY)
         {
             dvec2 start = new dvec2(startX, startY);
-            fmat2 rotation = fmat2.rotateDegrees((float)angle);
+            mat2 rotation = mat2.rotateDegrees((float)angle);
             dvec2 end = rotation * start;
             dvec2 reverse = end * rotation;
 
@@ -33,7 +33,7 @@ namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
         public void rotateDegreesfmat(double angle, double startX, double startY, double endX, double endY)
         {
             dvec2 start = new dvec2(startX, startY);
-            fmat2 rotation = fmat2.rotateDegrees((float)angle);
+            mat2 rotation = mat2.rotateDegrees((float)angle);
             dvec2 end = rotation * start;
             dvec2 reverse = end * rotation;
 

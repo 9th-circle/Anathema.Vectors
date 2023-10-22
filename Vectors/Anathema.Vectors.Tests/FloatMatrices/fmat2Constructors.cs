@@ -13,7 +13,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void defaultConstructor()
         {
-            fmat2 def = new fmat2();
+            mat2 def = new mat2();
             Assert.Equal(0, def[0]);
             Assert.Equal(0, def[1]);
             Assert.Equal(0, def[2]);
@@ -22,14 +22,14 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void outOfRangeException()
         {
-            fmat2 def = new fmat2();
+            mat2 def = new mat2();
             Assert.Throws<IndexOutOfRangeException>(delegate () { def.setValue(1, 2, 0); });
             Assert.Equal(0,def.getValue(2, 1));
         }
         [Fact]
         public void readColumnOrder()
         {
-            fmat2 def = new fmat2(new float[] { 1, 2, 3, 4 });
+            mat2 def = new mat2(new float[] { 1, 2, 3, 4 });
 
             Assert.Equal(1, def.getValue(0, 0));
             Assert.Equal(2, def.getValue(1, 0));
@@ -49,7 +49,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         [Fact]
         public void writeColumnOrder()
         {
-            fmat2 def = new fmat2();
+            mat2 def = new mat2();
 
             def.setValue(0, 0, 1);
             def.setValue(1, 0, 2);

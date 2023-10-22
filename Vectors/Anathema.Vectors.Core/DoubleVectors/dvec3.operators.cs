@@ -71,38 +71,38 @@ namespace Anathema.Vectors.Core
 
 #if CONVERSIONS_ENABLED
 #if FLOATS_ENABLED
-        public static dvec3 operator *(fvec3 a, dvec3 b)
+        public static dvec3 operator *(vec3 a, dvec3 b)
         {
             return new dvec3(a.x * b.x, a.y * b.y, a.z * b.z);
         }
-        public static dvec3 operator /(fvec3 a, dvec3 b)
+        public static dvec3 operator /(vec3 a, dvec3 b)
         {
             return new dvec3(a.x / b.x, a.y / b.y, a.z / b.z);
         }
-        public static dvec3 operator +(fvec3 a, dvec3 b)
+        public static dvec3 operator +(vec3 a, dvec3 b)
         {
             return new dvec3(a.x + b.x, a.y + b.y, a.z + b.z);
         }
-        public static dvec3 operator -(fvec3 a, dvec3 b)
+        public static dvec3 operator -(vec3 a, dvec3 b)
         {
             return new dvec3(a.x - b.x, a.y - b.y, a.z - b.z);
         }
 
 
 
-        public static dvec3 operator *(dvec3 a, fvec3 b)
+        public static dvec3 operator *(dvec3 a, vec3 b)
         {
             return new dvec3(a.x * b.x, a.y * b.y, a.z * b.z);
         }
-        public static dvec3 operator /(dvec3 a, fvec3 b)
+        public static dvec3 operator /(dvec3 a, vec3 b)
         {
             return new dvec3(a.x / b.x, a.y / b.y, a.z / b.z);
         }
-        public static dvec3 operator +(dvec3 a, fvec3 b)
+        public static dvec3 operator +(dvec3 a, vec3 b)
         {
             return new dvec3(a.x + b.x, a.y + b.y, a.z + b.z);
         }
-        public static dvec3 operator -(dvec3 a, fvec3 b)
+        public static dvec3 operator -(dvec3 a, vec3 b)
         {
             return new dvec3(a.x - b.x, a.y - b.y, a.z - b.z);
         }
@@ -214,13 +214,13 @@ namespace Anathema.Vectors.Core
         }
 
 #if CONVERSIONS_ENABLED && FLOATS_ENABLED
-        public static dvec3 operator *(dvec3 a, fmat4 b)
+        public static dvec3 operator *(dvec3 a, mat4 b)
         {
             dvec4 result = new dvec4(a.x, a.y, a.z, 1.0f) * b;
 
             return result.scaledToDVec3();
         }
-        public static dvec3 operator *(fmat4 b, dvec3 a)
+        public static dvec3 operator *(mat4 b, dvec3 a)
         {
             return a * b.transposed;
         }
