@@ -20,6 +20,10 @@ namespace Anathema.Vectors.Core
         {
             return !(a == b);
         }
+        public static tvec3<T> operator -(tvec3<T> a)
+        {
+            throw new NotImplementedException();
+        }
         public static bool operator ==(tvec3<T> a, tvec3<T> b)
         {
             if (a is null && b is null)
