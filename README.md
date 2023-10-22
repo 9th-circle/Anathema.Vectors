@@ -19,6 +19,7 @@ Anathema Vectors has a few benefits:
 - Convenience: Swizzles and easy interoperation between types.
 - Modularity: Compile time preprocessor directives allow you to chop the library down to the features you're using, and nothing more. 
 - Familiarity: Syntax is as close to that of GLSL as possible.
+- Full test suite: Aiming for 100% coverage soon.
 
 ## Approach
 

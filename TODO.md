@@ -13,6 +13,10 @@
   - dmat3
   - dmat4
 - Capitals (XYZW and RGBA) for tvecs
+- Line up names with GLSL better
+  - fvec->vec
+  - fmat->mat
+
 - Commenting
   - ///<> for each class
   - ///<> for each method
