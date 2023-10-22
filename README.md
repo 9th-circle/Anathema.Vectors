@@ -66,6 +66,7 @@ Or, `tvec3<int>`  = 32-bit integer 3-component vector.
 - This idea is implemented almost exactly like GLSL. If you have a vec3 with components x, y and z, you can mix and match different components in different orders as needed - for example, fvec3.zxy.
 - Similar to GLSL, there are swizzle aliases for rgba -> xyzw. 
 - A nice property of this is that if you ask for a 2-vector out of a larger one, you can trivially convert the output to polar notation to turn it into an angle. This means that you can go fvec3.xz.angle and get a useful number.
+- Unlike GLSL, you cannot use a swizzle value more than once (ie vec3.xyy). This is out of simple pragmatism, as there would be a large number of permutations.
 
 ## Gotchas
 
