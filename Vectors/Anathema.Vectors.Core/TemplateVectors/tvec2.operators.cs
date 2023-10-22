@@ -210,6 +210,8 @@ namespace Anathema.Vectors.Core
             }
             throw new TypeLoadException();
         }
+
+#if INTEGER_DIVISION_ENABLED
         public static tvec2<T> operator /(tvec2<T> a, tvec2<T> b)
         {
             if (typeof(T) == typeof(float))
@@ -270,6 +272,7 @@ namespace Anathema.Vectors.Core
             }
             throw new TypeLoadException();
         }
+#endif
         public static tvec2<T> operator +(tvec2<T> a, tvec2<T> b)
         {
             if (typeof(T) == typeof(float))
@@ -453,6 +456,7 @@ namespace Anathema.Vectors.Core
             }
             throw new TypeLoadException();
         }
+#if INTEGER_DIVISION_ENABLED
         public static tvec2<T> operator /(tvec2<T> a, T b)
         {
             if (typeof(T) == typeof(float))
@@ -513,6 +517,7 @@ namespace Anathema.Vectors.Core
             }
             throw new TypeLoadException();
         }
+#endif
         public static tvec2<T> operator +(tvec2<T> a, T b)
         {
             if (typeof(T) == typeof(float))
@@ -700,6 +705,7 @@ namespace Anathema.Vectors.Core
             }
             throw new TypeLoadException();
         }
+#if INTEGER_DIVISION_ENABLED
         public static tvec2<T> operator /(T a, tvec2<T> b)
         {
             if (typeof(T) == typeof(float))
@@ -760,6 +766,7 @@ namespace Anathema.Vectors.Core
             }
             throw new TypeLoadException();
         }
+#endif
         public static tvec2<T> operator +(T a, tvec2<T> b)
         {
             if (typeof(T) == typeof(float))
