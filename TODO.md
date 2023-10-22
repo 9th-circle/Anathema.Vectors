@@ -16,6 +16,7 @@
   - dmat2
   - dmat3
   - dmat4
+- add ability to turn off INTEGER_DIVISION to ensure safety from zero divides
 - Commenting
   - ///<> for each class
   - ///<> for each method
