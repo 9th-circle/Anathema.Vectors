@@ -39,6 +39,51 @@ namespace Anathema.Vectors.Tests.FloatVectors
             }
         }
         [Fact]
+        public void degenerateCubicBezier()
+        {
+            fvec2 a = new fvec2(10, 10);
+            fvec2 b = new fvec2(15, 15);
+            fvec2 c = new fvec2(20, 20);
+            fvec2 d = new fvec2(25, 25);
+
+            for (int i = 0; i < 100; i++)
+            {
+                float f = i / 100.0f;
+                Assert.True(Math.Abs(fvec2.cubicBezierInterpolate(a, b, c, d, f).x -
+                                     fvec2.cubicBezierInterpolate(a, b, c, d, f).y) < scalar.floatComparisonTolerance);
+            }
+        }
+        [Fact]
+        public void nonDegenerateCubicBezier()
+        {
+            fvec2 a = new fvec2(10, 10);
+            fvec2 b = new fvec2(20, 10);
+            fvec2 c = new fvec2(20, 10);
+            fvec2 d = new fvec2(25, 25);
+
+            for (int i = 10; i < 90; i++)
+            {
+                float f = i / 100.0f;
+                Assert.True(Math.Abs(fvec2.cubicBezierInterpolate(a, b, c, d, f).x -
+                                     fvec2.cubicBezierInterpolate(a, b, c, d, f).y) > scalar.floatComparisonTolerance);
+            }
+        }
+        [Fact]
+        public void degenerateCubicBezierTo()
+        {
+            fvec2 a = new fvec2(10, 10);
+            fvec2 b = new fvec2(15, 15);
+            fvec2 c = new fvec2(20, 20);
+            fvec2 d = new fvec2(25, 25);
+
+            for (int i = 0; i < 100; i++)
+            {
+                float f = i / 100.0f;
+                Assert.True(Math.Abs(a.cubicBezierInterpolateTo(b, c, d, f).x -
+                                     a.cubicBezierInterpolateTo(b, c, d, f).y) < scalar.floatComparisonTolerance);
+            }
+        }
+        [Fact]
         public void degenerateQuadraticBezier()
         {
             fvec2 a = new fvec2(10, 20);
