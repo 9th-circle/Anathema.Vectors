@@ -26,6 +26,10 @@ namespace Anathema.Vectors.Core
         {
             var output = new tvec3<tvec3<double>>();
 
+            output.x = new tvec3<double>();
+            output.y = new tvec3<double>();
+            output.z = new tvec3<double>();
+
             output.x.x = input.getValue(0, 0);
             output.x.y = input.getValue(0, 1);
             output.x.z = input.getValue(0, 2);
@@ -45,6 +49,10 @@ namespace Anathema.Vectors.Core
         public static tvec3<tvec3<float>> fromFMat3(fmat3 input)
         {
             var output = new tvec3<tvec3<float>>();
+
+            output.x = new tvec3<float>();
+            output.y = new tvec3<float>();
+            output.z = new tvec3<float>();
 
             output.x.x = input.getValue(0, 0);
             output.x.y = input.getValue(0, 1);

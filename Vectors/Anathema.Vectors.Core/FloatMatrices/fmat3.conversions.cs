@@ -9,7 +9,7 @@ namespace Anathema.Vectors.Core
         //todo: check if this causes a transpose
         public static fmat3 fromNestedVector(tvec3<tvec3<float>> input)
         {
-            fmat4 output = new fmat4();
+            fmat3 output = new fmat3();
             output.setValue(0, 0, input.x.x);
             output.setValue(0, 1, input.x.y);
             output.setValue(0, 2, input.x.z);
