@@ -20,7 +20,8 @@ Anathema Vectors has a few benefits:
 - **Dependency-free**: Builds with nothing more than .NET Fx 2.0 - compatible with any platform newer than that (including transpilers).
 - **Convenience**: Swizzles and easy interoperation between types.
 - **Modularity**: Compile time preprocessor directives allow you to chop the library down to the features you're using, and nothing more. 
-- **Familiarity**: Syntax is as close to that of GLSL as possible.
+- **Interoperable**: Aliases for many System.Numerics members, so code can be swapped over with minimal changes.
+- **Familiarity**: Syntax is as close to that of GLSL as practical.
 - **Full test suite**: Aiming for 100% coverage soon.
 
 ## Approach
