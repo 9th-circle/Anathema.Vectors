@@ -73,6 +73,7 @@ namespace Anathema.Vectors.Tests.DoubleVectors
         {
             dvec3 a = new dvec3(x1, y1, z1);
 
+            Assert.Equal(z1, a.B);
             Assert.Equal(a.rg.r, a.r);
             Assert.Equal(a.rg.g, a.g);
 
@@ -124,10 +125,12 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(5, a.y);
             Assert.Equal(3, a.z);
 
+            a.B = 4;
+
             a.yx = new dvec2(7, 6);
             Assert.Equal(6, a.x);
             Assert.Equal(7, a.y);
-            Assert.Equal(3, a.z);
+            Assert.Equal(4, a.z);
 
             a.xz = new dvec2(8, 9);
             Assert.Equal(8, a.x);
