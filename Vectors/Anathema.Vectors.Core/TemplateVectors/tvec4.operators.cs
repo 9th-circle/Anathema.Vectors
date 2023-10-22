@@ -206,7 +206,7 @@ namespace Anathema.Vectors.Core
             throw new TypeLoadException();
         }
 
-#if TEMPLATE_DIVISON_ENABLED
+#if TEMPLATE_DIVISION_ENABLED
         public static tvec4<T> operator /(tvec4<T> a, tvec4<T> b)
         {
             if (typeof(T) == typeof(float))
@@ -573,7 +573,7 @@ namespace Anathema.Vectors.Core
             throw new TypeLoadException();
         }
 
-#if TEMPLATE_DIVISON_ENABLED
+#if TEMPLATE_DIVISION_ENABLED
         public static tvec4<T> operator /(tvec4<T> a, T b)
         {
             if (typeof(T) == typeof(float))
@@ -942,7 +942,7 @@ namespace Anathema.Vectors.Core
             throw new TypeLoadException();
         }
 
-#if TEMPLATE_DIVISON_ENABLED
+#if TEMPLATE_DIVISION_ENABLED
         public static tvec4<T> operator /(T a, tvec4<T> b)
         {
             if (typeof(T) == typeof(float))

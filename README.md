@@ -16,7 +16,7 @@ System.Numerics contains a native SIMD-enabled Vector class. It's extremely fast
 
 Anathema Vectors has a few benefits:
 
-- **Rich feature set**: Wider range of linear algebra tools than System.Numerics. Support for integer vectors and complex numbers.
+- **Rich feature set**: Broad support for a wide range of features.
 - **Dependency-free**: Builds with nothing more than .NET Fx 2.0 - compatible with any platform newer than that (including transpilers).
 - **Convenience**: Swizzles and easy interoperation between types.
 - **Modularity**: Compile time preprocessor directives allow you to chop the library down to the features you're using, and nothing more. 
