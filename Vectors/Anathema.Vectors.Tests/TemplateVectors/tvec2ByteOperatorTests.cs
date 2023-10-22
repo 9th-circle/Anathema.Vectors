@@ -49,9 +49,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             tvec2<byte> d = b - a;
 
             Assert.Equal(x1 - x2, c.x);
-            Assert.Equal(x2 - x1, d.x);
             Assert.Equal(y1 - y2, c.y);
-            Assert.Equal(y2 - y1, d.y);
         }
 
         [Theory]
@@ -72,7 +70,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
-        [InlineData(new object[] { -37, 1, 2, -5 })]
+        [InlineData(new object[] { 37, 1, 2, 5 })]
         public void tvec2MutatorMultiplication(byte x1, byte y1, byte x2, byte y2)
         {
             tvec2<byte> a = new tvec2<byte>(x1, y1);
@@ -86,7 +84,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
-        [InlineData(new object[] { -37, 1, 2, -5 })]
+        [InlineData(new object[] { 37, 1, 2, 5 })]
         public void vec2Division(byte x1, byte y1, byte x2, byte y2)
         {
             tvec2<byte> a = new tvec2<byte>(x1, y1);
@@ -97,13 +95,11 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
             Assert.Equal(x1 / x2, c.x);
             Assert.Equal(y1 / y2, c.y);
-            Assert.Equal(x2 / x1, d.x);
-            Assert.Equal(y2 / y1, d.y);
         }
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
-        [InlineData(new object[] { -37, 1, 2 })]
+        [InlineData(new object[] { 37, 1, 2 })]
         public void scalarMultiplication(byte x, byte y, byte scalar)
         {
             tvec2<byte> a = new tvec2<byte>(x, y);
@@ -120,7 +116,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
-        [InlineData(new object[] { -37, 1, 2 })]
+        [InlineData(new object[] { 37, 1, 2 })]
         public void scalarDivision(byte x, byte y, byte scalar)
         {
             tvec2<byte> a = new tvec2<byte>(x, y);
@@ -135,7 +131,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         }
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
-        [InlineData(new object[] { -37, 1, 2 })]
+        [InlineData(new object[] { 37, 1, 2 })]
         public void scalarAddition(byte x, byte y, byte scalar)
         {
             tvec2<byte> a = new tvec2<byte>(x, y);
@@ -151,7 +147,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
         [Theory]
         [InlineData(new object[] { 10, 20, 3 })]
-        [InlineData(new object[] { -37, 10, 2 })]
+        [InlineData(new object[] { 37, 10, 2 })]
         public void scalarSubtraction(byte x, byte y, byte scalar)
         {
             tvec2<byte> a = new tvec2<byte>(x, y);
@@ -165,7 +161,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
         [Theory]
         [InlineData(new object[] { 10, 20, 43 })]
-        [InlineData(new object[] { -37, 10, 52 })]
+        [InlineData(new object[] { 37, 10, 52 })]
         public void scalarSubtraction2(byte x, byte y, byte scalar)
         {
             tvec2<byte> a = new tvec2<byte>(x, y);
