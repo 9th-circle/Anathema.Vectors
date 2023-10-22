@@ -125,9 +125,11 @@ Todo: fill out
 - Arithmetic operators (+-/*) of template vectors.
 - Because of the lack of INumeric support, this significantly increases binary size.
 
-##### INTEGER_DIVISION_ENABLED
+##### TEMPLATE_DIVISION_ENABLED
 
-- Division of template vectors, which might have integer components. This is to preclude the possibility of zero divides. 
+- Division of template vectors, which might have integer components. This is to preclude the possibility of zero divides.
+- Note: this does disable division for `tvec<float>` and `tvec<double>`, but of course you can just convert them to fvecs and dvecs.
+  - The logic is that it's better to simply remove the option to divide tvecs than it is to throw a *different* exception if you try to do so for an integral type.
 
 ##### CAPITALS_ENABLED
 
