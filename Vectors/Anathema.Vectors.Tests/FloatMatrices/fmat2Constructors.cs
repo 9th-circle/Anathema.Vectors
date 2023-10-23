@@ -30,6 +30,13 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         public void readColumnOrder()
         {
             mat2 def = new mat2(new float[] { 1, 2, 3, 4 });
+            mat2 def2 = new mat2(new float[] { 1, 2, 3, 4 });
+            mat2 def3 = null;
+
+            Assert.True(def == def2);
+            Assert.False(def != def2);
+            Assert.False(def == null);
+            Assert.False(def3 == def);
 
             Assert.Equal(1, def.getValue(0, 0));
             Assert.Equal(2, def.getValue(1, 0));

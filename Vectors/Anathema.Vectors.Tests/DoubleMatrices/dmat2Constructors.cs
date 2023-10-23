@@ -26,6 +26,13 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
         public void readColumnOrder()
         {
             dmat2 def = new dmat2(new double[] { 1, 2, 3, 4 });
+            dmat2 def2 = new dmat2(new double[] { 1, 2, 3, 4 });
+            dmat2 def3 = null;
+
+            Assert.True(def == def2);
+            Assert.False(def != def2);
+            Assert.False(def == null);
+            Assert.False(def3 == def);
 
             Assert.Equal(1, def.getValue(0, 0));
             Assert.Equal(2, def.getValue(1, 0));

@@ -31,6 +31,10 @@ namespace Anathema.Vectors.Core
 
         public static bool operator ==(mat2 a, mat2 b)
         {
+            if (a is null && b is null)
+                return true;
+            if (a is null != b is null)
+                return false;
             for (int i = 0; i < a.data.Length; i++)
                 if (a[i] != b[i]) return false;
             return true;

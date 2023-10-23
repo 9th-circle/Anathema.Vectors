@@ -37,7 +37,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.True(a != b);
 
             mat3 c = new mat3(a);
-            Assert.Equal(a, c);
+            Assert.True(a == c);
 
             a.assign(b);
             Assert.Equal(9, a[0]);
