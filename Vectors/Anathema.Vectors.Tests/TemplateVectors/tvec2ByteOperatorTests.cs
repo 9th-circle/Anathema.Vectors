@@ -16,8 +16,8 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             tvec2<byte> a = new tvec2<byte>(1, 2);
             tvec2<byte> b = -a;
 
-            Assert.Equal(-1, b.x);
-            Assert.Equal(-2, b.y);
+            Assert.Equal(255, b.x);
+            Assert.Equal(254, b.y);
         }
         [Fact]
         public void equality()
