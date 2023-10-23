@@ -1,14 +1,13 @@
 ## To Do
 
 - Examine Arran's suggestions
-- Tests + Correction
-  - tvec3
+- Corrections
+  - mat3 rotate axis-angle
+  - mat3 members with a mat2 reference
+- Tests
   - vec4
   - dvec4
   - tvec4
-  - mat3
-    - Check a mat3 with a mat2 reference can access correct rows/cols
-  - dmat3
   - mat4
     - Check a mat4 with a mat2/3 reference can access correct rows/cols
   - dmat4

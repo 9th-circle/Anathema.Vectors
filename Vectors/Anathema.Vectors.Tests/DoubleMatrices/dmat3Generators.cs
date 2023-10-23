@@ -7,6 +7,17 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
     public class dmat3Generators
     {
         [Fact]
+        public void toDMat2()
+        {
+            dmat3 m = new dmat3(new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+            dmat2 t = m;
+
+            Assert.Equal(1, t[0, 0]);
+            Assert.Equal(2, t[1, 0]);
+            Assert.Equal(3, t[0, 1]);
+            Assert.Equal(4, t[1, 1]);
+        }
+        [Fact]
         public void transpose()
         {
             dmat3 m = new dmat3(new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });

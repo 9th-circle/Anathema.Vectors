@@ -30,6 +30,17 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.False(m != t);
         }
         [Fact]
+        public void toMat2()
+        {
+            mat3 m = new mat3(new float[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+            mat2 t = m;
+
+            Assert.Equal(1, t[0, 0]);
+            Assert.Equal(2, t[1, 0]);
+            Assert.Equal(3, t[0, 1]);
+            Assert.Equal(4, t[1, 1]);
+        }
+        [Fact]
         public void toMat4()
         {
             mat3 m = new mat3(new float[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
