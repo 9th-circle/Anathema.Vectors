@@ -28,6 +28,27 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(3, a[2]);
         }
         [Fact]
+        public void convert()
+        {
+            tvec3<float> vec = new tvec3<float>(1, 2, 3);
+            vec3 fvec = vec.floatTVec3ToVec3();
+
+            Assert.Equal(1, fvec[0]);
+            Assert.Equal(2, fvec[1]);
+            Assert.Equal(3, fvec[2]);
+
+            tvec3<double> dvec = new tvec3<double>(1, 2, 3);
+            dvec3 ddvec = dvec.doubleTVec3ToDVec3();
+
+            Assert.Equal(1, ddvec[0]);
+            Assert.Equal(2, ddvec[1]);
+            Assert.Equal(3, ddvec[2]);
+
+            Assert.Throws<ArgumentException>(delegate { var x = new tvec3<string>().doubleTVec3ToDVec3(); });
+            Assert.Throws<ArgumentException>(delegate { var x = new tvec3<string>().floatTVec3ToVec3(); });
+        }
+
+        [Fact]
         public void floatConstruct()
         {
             tvec3<float> defaultConstructed = new tvec3<float>();
@@ -61,6 +82,18 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(10, fromArray.x);
             Assert.Equal(20, fromArray.y);
             Assert.Equal(30, fromArray.z);
+
+            tvec2<float> j = new tvec2<float>(1, 2);
+            tvec3<float> jaggedFirst = new tvec3<float>(j, 3);
+            tvec3<float> jaggedLast = new tvec3<float>(0, j);
+
+            Assert.Equal(1, jaggedFirst.x);
+            Assert.Equal(2, jaggedFirst.y);
+            Assert.Equal(3, jaggedFirst.z);
+
+            Assert.Equal(0, jaggedLast.x);
+            Assert.Equal(1, jaggedLast.y);
+            Assert.Equal(2, jaggedLast.z);
 
             Assert.Throws<IndexOutOfRangeException>(delegate { fromArray[10] = 5; });
             Assert.Throws<IndexOutOfRangeException>(delegate { var x = fromArray[5]; });
