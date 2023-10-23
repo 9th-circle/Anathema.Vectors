@@ -52,5 +52,23 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.True(Math.Abs(1 - clockwise.y) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(0 - clockwise.z) < scalar.floatComparisonTolerance);
         }
+        [Fact]
+        public void axisAngleZRotate()
+        {
+            dvec3 v = new dvec3(1, 0, 0);
+            dmat3 m = dmat3.rotateDegrees(new dvec3(0,0,1), 90);
+
+            dvec3 counterClockwise = v * m;
+
+            Assert.True(Math.Abs(0 - counterClockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(-1 - counterClockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - counterClockwise.z) < scalar.floatComparisonTolerance);
+
+            dvec3 clockwise = m * v;
+
+            Assert.True(Math.Abs(0 - clockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(1 - clockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - clockwise.z) < scalar.floatComparisonTolerance);
+        }
     }
 }

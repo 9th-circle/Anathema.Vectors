@@ -14,9 +14,11 @@ namespace Anathema.Vectors.Core
             return output;
         }
         //Derivation from https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle
-        //todo: verify; check for transposition
         public static dmat3 rotateRadians(dvec3 axis, double angle)
         {
+            //Make clockwise
+            angle = -angle;
+
             dmat3 output = new dmat3();
 
             output[0, 0] = (Math.Cos(angle) + (axis.x * (1 - Math.Cos(angle))));
