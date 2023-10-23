@@ -10,8 +10,6 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 {
     public class tvec2FloatOperatorTests
     {
-        //todo: implement tvec2.negation
-        /*
         [Fact]
         public void negation()
         {
@@ -20,7 +18,11 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
             Assert.Equal(-1, b.x);
             Assert.Equal(-2, b.y);
-        }*/
+
+
+            tvec2<string> sa = new tvec2<string>("a", "b");
+            Assert.Throws<TypeLoadException>(delegate { tvec2<string> sb = -sa; });
+        }
        [Fact]
        public void equality()
        {

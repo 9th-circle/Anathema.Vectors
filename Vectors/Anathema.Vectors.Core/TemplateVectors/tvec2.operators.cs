@@ -83,7 +83,49 @@ namespace Anathema.Vectors.Core
         }
         public static tvec2<T> operator -(tvec2<T> a)
         {
-            throw new NotImplementedException();
+            if (typeof(T) == typeof(float))
+            {
+                float ax = tToFloat(a.x);
+                float ay = tToFloat(a.y);
+                return new tvec2<T>(floatToT(-ax), floatToT(-ay));
+            }
+            if (typeof(T) == typeof(double))
+            {
+                double ax = tToDouble(a.x);
+                double ay = tToDouble(a.y);
+                return new tvec2<T>(doubleToT(-ax), doubleToT(-ay));
+            }
+            if (typeof(T) == typeof(decimal))
+            {
+                decimal ax = tToDecimal(a.x);
+                decimal ay = tToDecimal(a.y);
+                return new tvec2<T>(decimalToT(-ax), decimalToT(-ay));
+            }
+            if (typeof(T) == typeof(byte))
+            {
+                byte ax = tToByte(a.x);
+                byte ay = tToByte(a.y);
+                return new tvec2<T>(byteToT((byte)(-ax)), byteToT((byte)(-ay)));
+            }
+            if (typeof(T) == typeof(short))
+            {
+                short ax = tToShort(a.x);
+                short ay = tToShort(a.y);
+                return new tvec2<T>(shortToT((short)(-ax)), shortToT((short)(-ay)));
+            }
+            if (typeof(T) == typeof(int))
+            {
+                int ax = tToInt(a.x);
+                int ay = tToInt(a.y);
+                return new tvec2<T>(intToT(-ax), intToT(-ay));
+            }
+            if (typeof(T) == typeof(long))
+            {
+                long ax = tToLong(a.x);
+                long ay = tToLong(a.y);
+                return new tvec2<T>(longToT(-ax), longToT(-ay));
+            }
+            throw new TypeLoadException();
         }
         public static bool operator ==(tvec2<T> a, tvec2<T> b)
         {
