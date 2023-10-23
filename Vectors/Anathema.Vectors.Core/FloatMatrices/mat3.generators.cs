@@ -33,9 +33,12 @@ namespace Anathema.Vectors.Core
         }
 
         //Derivation from https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle
-        //todo: verify; check for transposition
         public static mat3 rotateRadians(vec3 axis, float angle)
         {
+            //Make clockwise
+            angle = -angle;
+
+            //TODO: fix - there is g bug in this
             mat3 output = new mat3();
 
             output[0, 0] = (float)(Math.Cos(angle) + (axis.x * (1 - Math.Cos(angle))));
@@ -54,20 +57,25 @@ namespace Anathema.Vectors.Core
         }
 
         //Derivation from https://en.wikipedia.org/wiki/Rotation_matrix#General_3D_rotations
-        //a=pitch, b=yaw, g=roll
+        //g=pitch, b=yaw, z=roll
         //todo: verify; check for transposition
         //todo: when this is verified to work, swap those names
-        public static mat3 rotateRadians(float a, float b, float g)
+        public static mat3 rotateRadians(float g, float b, float z)
         {
+            //Make clockwise
+            g = -g;
+            b = -b;
+            z = -z;
+
             mat3 output = new mat3();
 
-            output[0, 0] = (float)(Math.Cos(a) * Math.Cos(b));
-            output[0, 1] = (float)((Math.Cos(a) * Math.Sin(b) * Math.Sin(g)) - (Math.Sin(a) * Math.Cos(g)));
-            output[0, 2] = (float)((Math.Cos(a) * Math.Sin(b) * Math.Cos(g)) + (Math.Sin(a) * Math.Sin(g)));
+            output[0, 0] = (float)(Math.Cos(z) * Math.Cos(b));
+            output[0, 1] = (float)((Math.Cos(z) * Math.Sin(b) * Math.Sin(g)) - (Math.Sin(z) * Math.Cos(g)));
+            output[0, 2] = (float)((Math.Cos(z) * Math.Sin(b) * Math.Cos(g)) + (Math.Sin(z) * Math.Sin(g)));
 
-            output[1, 0] = (float)(Math.Sin(a) * Math.Cos(b));
-            output[1, 1] = (float)((Math.Sin(a) * Math.Sin(b) * Math.Sin(g)) + (Math.Cos(a) * Math.Cos(g)));
-            output[1, 2] = (float)((Math.Sin(a) * Math.Sin(b) * Math.Cos(g)) - (Math.Cos(a) * Math.Sin(g)));
+            output[1, 0] = (float)(Math.Sin(z) * Math.Cos(b));
+            output[1, 1] = (float)((Math.Sin(z) * Math.Sin(b) * Math.Sin(g)) + (Math.Cos(z) * Math.Cos(g)));
+            output[1, 2] = (float)((Math.Sin(z) * Math.Sin(b) * Math.Cos(g)) - (Math.Cos(z) * Math.Sin(g)));
 
             output[2, 0] = (float)-Math.Sin(b);
             output[2, 1] = (float)(Math.Cos(b) * Math.Sin(g));

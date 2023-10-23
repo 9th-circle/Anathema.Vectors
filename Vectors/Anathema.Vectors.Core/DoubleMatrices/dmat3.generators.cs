@@ -36,6 +36,7 @@ namespace Anathema.Vectors.Core
             //Make clockwise
             angle = -angle;
 
+            //TODO: fix - there is a bug in this
             dmat3 output = new dmat3();
 
             output[0, 0] = (Math.Cos(angle) + (axis.x * (1 - Math.Cos(angle))));

@@ -36,6 +36,10 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         {
             mat3 a = new mat3(new float[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
             mat3 b = new mat3(new float[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 });
+
+            Assert.False(a == b);
+            Assert.True(a != b);
+
             a.assign(b);
             Assert.Equal(9, a[0]);
             Assert.Equal(8, a[1]);
