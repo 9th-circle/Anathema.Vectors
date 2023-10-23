@@ -64,21 +64,16 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         }
 
         [Theory]
-        [InlineData(new object[] { 1, 2, 3, 4, 5, 6, 7, 8 })]
-        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 0.01f, 10, 12, 1.3 })]
-        [InlineData(new object[] { -37, 0, 2, -5, -3, -2, 222, 10 })]
+        [InlineData(new object[] { 10,20,30,40,1,2,3,4 })]
         public void tvec4Subtraction(byte x1, byte y1, byte z1, byte w1, byte x2, byte y2, byte z2, byte w2)
         {
             tvec4<byte> a = new tvec4<byte>(x1, y1, z1, w1);
             tvec4<byte> b = new tvec4<byte>(x2, y2, z2, w2);
 
             tvec4<byte> c = a - b;
-            tvec4<byte> d = b - a;
 
             Assert.Equal(x1 - x2, c.x);
-            Assert.Equal(x2 - x1, d.x);
             Assert.Equal(y1 - y2, c.y);
-            Assert.Equal(y2 - y1, d.y);
         }
 
         [Theory]
@@ -178,20 +173,36 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
 
         [Theory]
-        [InlineData(new object[] { 1, 2, 3, 4, 5 })]
-        [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f, 2, 123 })]
-        [InlineData(new object[] { -37, 0, 2, 1, -33 })]
+        [InlineData(new object[] { 4, 5, 6, 7, 3 })]
+        [InlineData(new object[] { 37, 1, 2, 1, 1 })]
         public void scalarSubtraction(byte x, byte y, byte z, byte w, byte scalar)
         {
             tvec4<byte> a = new tvec4<byte>(x, y, z, w);
 
+
             tvec4<byte> c = a - scalar;
-            tvec4<byte> d = scalar - a;
 
             Assert.Equal(x - scalar, c.x);
             Assert.Equal(y - scalar, c.y);
+            Assert.Equal(z - scalar, c.z);
+            Assert.Equal(w - scalar, c.w);
+        }
+
+        [Theory]
+        [InlineData(new object[] { 1, 2, 3, 4, 4 })]
+        [InlineData(new object[] { 0, 1, 2, 3, 37 })]
+        public void scalarSubtraction2(byte x, byte y, byte z, byte w, byte scalar)
+        {
+            tvec4<byte> a = new tvec4<byte>(x, y, z, w);
+
+
+            tvec4<byte> c = a - scalar;
+            tvec4<byte> d = scalar - a;
+
             Assert.Equal(scalar - x, d.x);
             Assert.Equal(scalar - y, d.y);
+            Assert.Equal(scalar - z, d.z);
+            Assert.Equal(scalar - w, d.w);
         }
     }
 }

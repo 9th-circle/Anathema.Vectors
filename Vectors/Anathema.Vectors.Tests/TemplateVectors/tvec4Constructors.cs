@@ -16,15 +16,19 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(a[0], x);
             Assert.Equal(a[1], y);
             Assert.Equal(a[2], z);
+            Assert.Equal(a[3], w);
             Assert.Equal(a.ToArray()[0], a[0]);
             Assert.Equal(a.ToArray()[1], a[1]);
             Assert.Equal(a.ToArray()[2], a[2]);
+            Assert.Equal(a.ToArray()[3], a[3]);
             a[0] = 1;
             a[1] = 2;
             a[2] = 3;
+            a[3] = 4;
             Assert.Equal(1, a[0]);
             Assert.Equal(2, a[1]);
             Assert.Equal(3, a[2]);
+            Assert.Equal(4, a[3]);
 
             Assert.Throws<IndexOutOfRangeException>(delegate () { a[59] = 4; });
             Assert.Throws<IndexOutOfRangeException>(delegate () { float f = a[-1]; });
