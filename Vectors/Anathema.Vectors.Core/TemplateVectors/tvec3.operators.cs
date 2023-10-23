@@ -20,10 +20,6 @@ namespace Anathema.Vectors.Core
         {
             return !(a == b);
         }
-        public static tvec3<T> operator -(tvec3<T> a)
-        {
-            throw new NotImplementedException();
-        }
         public static bool operator ==(tvec3<T> a, tvec3<T> b)
         {
             if (a is null && b is null)
@@ -99,6 +95,59 @@ namespace Anathema.Vectors.Core
                 long by = tToLong(b.y);
                 long bz = tToLong(b.z);
                 return ax == bx && ay == by && az == bz;
+            }
+            throw new TypeLoadException();
+        }
+        public static tvec3<T> operator -(tvec3<T> a)
+        {
+            if (typeof(T) == typeof(float))
+            {
+                float ax = tToFloat(a.x);
+                float ay = tToFloat(a.y);
+                float az = tToFloat(a.z);
+                return new tvec3<T>(floatToT(-ax), floatToT(-ay), floatToT(-az));
+            }
+            if (typeof(T) == typeof(double))
+            {
+                double ax = tToDouble(a.x);
+                double ay = tToDouble(a.y);
+                double az = tToDouble(a.z);
+                return new tvec3<T>(doubleToT(-ax), doubleToT(-ay), doubleToT(-az));
+            }
+            if (typeof(T) == typeof(decimal))
+            {
+                decimal ax = tToDecimal(a.x);
+                decimal ay = tToDecimal(a.y);
+                decimal az = tToDecimal(a.z);
+                return new tvec3<T>(decimalToT(-ax), decimalToT(-ay), decimalToT(-az));
+            }
+            if (typeof(T) == typeof(byte))
+            {
+                byte ax = tToByte(a.x);
+                byte ay = tToByte(a.y);
+                byte az = tToByte(a.z);
+                return new tvec3<T>(byteToT((byte)(-ax)), byteToT((byte)(-ay)), byteToT((byte)(-az)));
+            }
+            if (typeof(T) == typeof(short))
+            {
+                short ax = tToShort(a.x);
+                short ay = tToShort(a.y);
+                short az = tToShort(a.z);
+                return new tvec3<T>(shortToT((short)(-ax)), shortToT((short)(-ay)), shortToT((short)(-az)));
+            }
+            if (typeof(T) == typeof(int))
+            {
+                int ax = tToInt(a.x);
+                int ay = tToInt(a.y);
+                int az = tToInt(a.z);
+                return new tvec3<T>(intToT(-ax), intToT(-ay), intToT(-az));
+            }
+            if (typeof(T) == typeof(long))
+            {
+                long ax = tToLong(a.x);
+                long ay = tToLong(a.y);
+                long az = tToLong(a.z);
+                return new tvec3<T>(longToT(-ax), longToT(-ay), longToT(-az));
             }
             throw new TypeLoadException();
         }
