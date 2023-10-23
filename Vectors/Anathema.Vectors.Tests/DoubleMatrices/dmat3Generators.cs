@@ -29,8 +29,8 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
 
             Assert.Equal(2, t[3]);
             Assert.Equal(5, t[4]);
-
             Assert.Equal(8, t[5]);
+
             Assert.Equal(3, t[6]);
             Assert.Equal(6, t[7]);
             Assert.Equal(9, t[8]);
