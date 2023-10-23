@@ -183,7 +183,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
         public void axisAngleXRotate()
         {
             vec3 v = new vec3(0, 1, 0);
-            mat3 m = mat3.rotateDegrees(new vec3(1, 0, 0), 90); // <- problem
+            mat3 m = mat3.rotateDegrees(new vec3(1, 0, 0), 90);
 
             vec3 counterClockwise = v * m;
 

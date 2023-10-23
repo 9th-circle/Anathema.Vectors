@@ -185,7 +185,7 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
         public void axisAngleXRotate()
         {
             dvec3 v = new dvec3(0, 1, 0);
-            dmat3 m = dmat3.rotateDegrees(new dvec3(1, 0, 0), 90); // <- problem
+            dmat3 m = dmat3.rotateDegrees(new dvec3(1, 0, 0), 90);
 
             dvec3 counterClockwise = v * m;
 

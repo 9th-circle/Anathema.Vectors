@@ -17,3 +17,4 @@
 
 - Full aliases for System.Numerics equivalents (under their own preprocessor directive, say #NUMERICS_ENABLED)
   - Probably an acceptable amount of work for non-trivial benefit
+- Fixed-point implementation using integers for extremely resource constrained applications (eg JavaCards)
