@@ -1,5 +1,4 @@
-﻿
-#if FLOATS_ENABLED
+﻿#if FLOATS_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class vec2

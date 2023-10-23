@@ -1,5 +1,7 @@
 ﻿#if DOUBLES_ENABLED
 #if THREED_ENABLED
+using System;
+
 namespace Anathema.Vectors.Core
 {
     public partial class dmat3
@@ -23,8 +25,12 @@ namespace Anathema.Vectors.Core
 
         public static bool operator ==(dmat3 a, dmat3 b)
         {
+            if (a is null && b is null)
+                return true;
+            if (a is null != b is null)
+                return false;
             for (int i = 0; i < a.data.Length; i++)
-                if (a[i] != b[i]) return false;
+                if (Math.Abs(a[i] - b[i]) > scalar.floatComparisonTolerance) return false;
             return true;
         }
         public static bool operator !=(dmat3 a, dmat3 b)
