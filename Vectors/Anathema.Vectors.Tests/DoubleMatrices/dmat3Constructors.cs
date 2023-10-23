@@ -19,6 +19,12 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.False(a == b);
             Assert.True(a != b);
 
+            dmat3 c = new dmat3(a);
+            Assert.True(a == c);
+            Assert.False(a == null);
+            dmat3 d = null;
+            Assert.True(d == null);
+
             a.assign(b);
             Assert.Equal(9, a[0]);
             Assert.Equal(8, a[1]);

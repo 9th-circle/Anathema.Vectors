@@ -38,6 +38,9 @@ namespace Anathema.Vectors.Tests.FloatMatrices
 
             mat3 c = new mat3(a);
             Assert.True(a == c);
+            Assert.False(a == null);
+            mat3 d = null;
+            Assert.True(d==null);
 
             a.assign(b);
             Assert.Equal(9, a[0]);

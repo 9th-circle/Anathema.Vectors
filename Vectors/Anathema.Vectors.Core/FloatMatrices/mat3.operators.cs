@@ -23,7 +23,8 @@ namespace Anathema.Vectors.Core
             if (a is null != b is null)
                 return false;
             for (int i = 0; i < a.data.Length; i++)
-                if (Math.Abs(a[i] - b[i]) > scalar.floatComparisonTolerance) return false;
+                if (Math.Abs(a[i] - b[i]) > scalar.floatComparisonTolerance)
+                    return false;
             return true;
         }
         public static bool operator !=(mat3 a, mat3 b)
