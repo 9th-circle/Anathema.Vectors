@@ -43,7 +43,7 @@ namespace Anathema.Vectors.Core
             mat3 output = new mat3();
 
             output[0, 0] = (float)(Math.Cos(angle) + (axis.x * (1 - Math.Cos(angle))));
-            output[0, 1] = (float)(axis.x * (1 - Math.Cos(angle)) - (axis.z * Math.Sin(angle)));
+            output[0, 1] = (float)(axis.x * axis.y * (1 - Math.Cos(angle)) - (axis.z * Math.Sin(angle)));
             output[0, 2] = (float)(axis.x * axis.z * (1 - Math.Cos(angle)) + (axis.y * Math.Sin(angle)));
 
             output[1, 0] = (float)(axis.y * axis.x * (1 - Math.Cos(angle)) + (axis.z * Math.Sin(angle)));

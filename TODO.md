@@ -1,8 +1,6 @@
 ## To Do
 
 - Examine Arran's suggestions
-- Corrections
-  - mat3 rotate axis-angle
 - Tests
   - vec4
   - dvec4

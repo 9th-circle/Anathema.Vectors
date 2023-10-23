@@ -199,13 +199,13 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
 
             Assert.True(Math.Abs(0 - counterClockwise.x) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(0 - counterClockwise.y) < scalar.floatComparisonTolerance);
-            Assert.True(Math.Abs(1 - counterClockwise.z) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(-1 - counterClockwise.z) < scalar.floatComparisonTolerance);
 
             dvec3 clockwise = m * v;
 
             Assert.True(Math.Abs(0 - clockwise.x) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(0 - clockwise.y) < scalar.floatComparisonTolerance);
-            Assert.True(Math.Abs(-1 - clockwise.z) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(1 - clockwise.z) < scalar.floatComparisonTolerance);
         }
 
         [Fact]

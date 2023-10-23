@@ -41,7 +41,7 @@ namespace Anathema.Vectors.Core
             dmat3 output = new dmat3();
 
             output[0, 0] = (Math.Cos(angle) + (axis.x * (1 - Math.Cos(angle))));
-            output[0, 1] = (axis.x * (1 - Math.Cos(angle)) - (axis.z * Math.Sin(angle)));
+            output[0, 1] = (axis.x * axis.y * (1 - Math.Cos(angle)) - (axis.z * Math.Sin(angle)));
             output[0, 2] = (axis.x * axis.z * (1 - Math.Cos(angle)) + (axis.y * Math.Sin(angle)));
 
             output[1, 0] = (axis.y * axis.x * (1 - Math.Cos(angle)) + (axis.z * Math.Sin(angle)));
@@ -51,7 +51,6 @@ namespace Anathema.Vectors.Core
             output[2, 0] = (axis.z * axis.x * (1 - Math.Cos(angle)) - (axis.y * Math.Sin(angle)));
             output[2, 1] = (axis.z * axis.y * (1 - Math.Cos(angle)) + (axis.x * Math.Sin(angle)));
             output[2, 2] = (Math.Cos(angle) + (axis.z * (1 - Math.Cos(angle))));
-
             return output;
         }
 
