@@ -34,6 +34,7 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.Equal(4, up.y);
             Assert.Equal(12, up.z);
         }
+
         [Fact]
         public void eulerZRotate()
         {
@@ -52,6 +53,100 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.True(Math.Abs(1 - clockwise.y) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(0 - clockwise.z) < scalar.floatComparisonTolerance);
         }
+
+        [Fact]
+        public void eulerXIdentity()
+        {
+            dvec3 v = new dvec3(1, 0, 0);
+            dmat3 m = dmat3.rotateDegrees(90, 0, 0);
+
+            dvec3 counterClockwise = v * m;
+
+            Assert.True(Math.Abs(1 - counterClockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - counterClockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - counterClockwise.z) < scalar.floatComparisonTolerance);
+
+            dvec3 clockwise = m * v;
+
+            Assert.True(Math.Abs(1 - clockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - clockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - clockwise.z) < scalar.floatComparisonTolerance);
+        }
+        [Fact]
+        public void eulerXRotate()
+        {
+            dvec3 v = new dvec3(0, 1, 0);
+            dmat3 m = dmat3.rotateDegrees(90, 0, 0);
+
+            dvec3 counterClockwise = v * m;
+
+            Assert.True(Math.Abs(0 - counterClockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - counterClockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(-1 - counterClockwise.z) < scalar.floatComparisonTolerance);
+
+            dvec3 clockwise = m * v;
+
+            Assert.True(Math.Abs(0 - clockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - clockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(1 - clockwise.z) < scalar.floatComparisonTolerance);
+        }
+        [Fact]
+        public void eulerYRotate()
+        {
+            dvec3 v = new dvec3(1, 0, 0);
+            dmat3 m = dmat3.rotateDegrees(0, 90, 0);
+
+            dvec3 counterClockwise = v * m;
+
+            Assert.True(Math.Abs(0 - counterClockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - counterClockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(1 - counterClockwise.z) < scalar.floatComparisonTolerance);
+
+            dvec3 clockwise = m * v;
+
+            Assert.True(Math.Abs(0 - clockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - clockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(-1 - clockwise.z) < scalar.floatComparisonTolerance);
+        }
+        [Fact]
+        public void axisAngleYRotate()
+        {
+            dvec3 v = new dvec3(1, 0, 0);
+            dmat3 m = dmat3.rotateDegrees(new dvec3(0, 1, 0), 90);
+
+            dvec3 counterClockwise = v * m;
+
+            Assert.True(Math.Abs(0 - counterClockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - counterClockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(1 - counterClockwise.z) < scalar.floatComparisonTolerance);
+
+            dvec3 clockwise = m * v;
+
+            Assert.True(Math.Abs(0 - clockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - clockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(-1 - clockwise.z) < scalar.floatComparisonTolerance);
+        }
+
+
+        [Fact]
+        public void axisAngleXRotate()
+        {
+            dvec3 v = new dvec3(0, 1, 0);
+            dmat3 m = dmat3.rotateDegrees(new dvec3(1, 0, 0), 90); // <- problem
+
+            dvec3 counterClockwise = v * m;
+
+            Assert.True(Math.Abs(0 - counterClockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - counterClockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(1 - counterClockwise.z) < scalar.floatComparisonTolerance);
+
+            dvec3 clockwise = m * v;
+
+            Assert.True(Math.Abs(0 - clockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - clockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(-1 - clockwise.z) < scalar.floatComparisonTolerance);
+        }
+
         [Fact]
         public void axisAngleZRotate()
         {

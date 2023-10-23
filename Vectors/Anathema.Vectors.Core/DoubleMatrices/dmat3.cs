@@ -1,5 +1,4 @@
-﻿#if DOUBLES_ENABLED
-#if THREED_ENABLED
+﻿#if DOUBLES_ENABLED && THREED_ENABLED
 using System;
 
 namespace Anathema.Vectors.Core
@@ -28,5 +27,4 @@ namespace Anathema.Vectors.Core
 
     }
 }
-#endif
 #endif
