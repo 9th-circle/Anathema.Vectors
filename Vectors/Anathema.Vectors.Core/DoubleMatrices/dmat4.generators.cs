@@ -57,11 +57,11 @@ namespace Anathema.Vectors.Core
 
         public static new dmat4 translate(dvec3 basis)
         {
-            dmat4 output = dmat4.identity();
+            dmat4 output = identity();
 
             output[3, 0] = basis.x;
             output[3, 1] = basis.y;
-            output[3, 1] = basis.z;
+            output[3, 2] = basis.z;
 
             return output;
         }

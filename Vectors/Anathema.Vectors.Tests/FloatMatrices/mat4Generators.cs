@@ -251,5 +251,17 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.True(Math.Abs(v3a.x - v3.x) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(v3a.y - (v3.y - 10.0f)) < scalar.floatComparisonTolerance);
         }
+        [Fact]
+        public void translate()
+        {
+            vec3 v = new vec3(1, 2, 3);
+            mat4 m = mat4.translate(new vec3(1,2,3));
+
+            vec3 v2 = m * v;
+
+            Assert.Equal(2, v2.x);
+            Assert.Equal(4, v2.y);
+            Assert.Equal(6, v2.z);
+        }
     }
 }

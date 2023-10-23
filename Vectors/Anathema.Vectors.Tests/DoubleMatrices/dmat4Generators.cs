@@ -252,5 +252,17 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.True(Math.Abs(v3a.x - v3.x) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(v3a.y - (v3.y - 10.0f)) < scalar.floatComparisonTolerance);
         }
+        [Fact]
+        public void translate()
+        {
+            dvec3 v = new dvec3(1, 2, 3);
+            dmat4 m = dmat4.translate(new dvec3(1, 2, 3));
+
+            dvec3 v2 = m * v;
+
+            Assert.Equal(2, v2.x);
+            Assert.Equal(4, v2.y);
+            Assert.Equal(6, v2.z);
+        }
     }
 }
