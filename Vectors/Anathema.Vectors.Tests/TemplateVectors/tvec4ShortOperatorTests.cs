@@ -116,8 +116,8 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5, 6, 7, 8 })]
-        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 0.01f, 10, 12, 1.3 })]
-        [InlineData(new object[] { -37, 0, 2, -5, -3, -2, 222, 10 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 1, 10, 12, 1.3 })]
+        [InlineData(new object[] { -37, 1, 2, -5, -3, -2, 222, 10 })]
         public void tvec4Division(short x1, short y1, short z1, short w1, short x2, short y2, short z2, short w2)
         {
             tvec4<short> a = new tvec4<short>(x1, y1, z1, w1);
@@ -153,7 +153,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f, 2, 123 })]
-        [InlineData(new object[] { -37, 0, 2, 1, -33 })]
+        [InlineData(new object[] { -37, 1, 2, 1, -33 })]
         public void scalarDivision(short x, short y, short z, short w, short scalar)
         {
             tvec4<short> a = new tvec4<short>(x, y, z, w);
