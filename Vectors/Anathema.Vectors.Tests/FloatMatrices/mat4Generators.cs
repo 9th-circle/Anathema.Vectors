@@ -226,5 +226,30 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.True(Math.Abs(0 - clockwise.z) < scalar.floatComparisonTolerance);
         }
 
+
+        [Fact]
+        public void ortho()
+        {
+            mat4 m = mat4.ortho();
+
+            vec3 v1 = new vec3(5, 7, 0);
+            vec3 v1a = m * v1;
+
+            Assert.True(Math.Abs(v1a.x - v1.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(v1a.y - v1.y) < scalar.floatComparisonTolerance);
+
+
+            vec3 v2 = new vec3(3, 5, 1);
+            vec3 v2a = m * v2;
+
+            Assert.True(Math.Abs(v2a.x - v2.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(v2a.y - (v2.y - 1.0f)) < scalar.floatComparisonTolerance);
+
+            vec3 v3 = new vec3(0, 0, 10);
+            vec3 v3a = m * v3;
+
+            Assert.True(Math.Abs(v3a.x - v3.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(v3a.y - (v3.y - 10.0f)) < scalar.floatComparisonTolerance);
+        }
     }
 }

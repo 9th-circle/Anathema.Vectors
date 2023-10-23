@@ -13,22 +13,22 @@ namespace Anathema.Vectors.Core
             return output;
         }
 
-        public static new mat4 rotateRadians(vec3 axis, float angle)
+        public new static mat4 rotateRadians(vec3 axis, float angle)
         {
             return mat3.rotateRadians(axis, angle).toMat4();
         }
 
-        public static new mat4 rotateRadians(float eulerX, float eulerY, float eulerZ)
+        public new static mat4 rotateRadians(float eulerX, float eulerY, float eulerZ)
         {
             return mat3.rotateRadians(eulerX, eulerY, eulerZ).toMat4();
         }
 
-        public static new mat4 rotateDegrees(vec3 axis, float angle)
+        public new static mat4 rotateDegrees(vec3 axis, float angle)
         {
             return rotateRadians(axis, angle * (float)(Math.PI / 180.0));
         }
 
-        public static new mat4 rotateDegrees(float eulerX, float eulerY, float eulerZ)
+        public new static mat4 rotateDegrees(float eulerX, float eulerY, float eulerZ)
         {
             return rotateRadians(eulerX * (float)(Math.PI / 180.0),
                                     eulerY * (float)(Math.PI / 180.0),
@@ -54,11 +54,10 @@ namespace Anathema.Vectors.Core
             return output;
         }
 
-        public static new mat4 translate(vec3 basis)
+        public static mat4 translate(vec3 basis)
         {
-            mat4 output = mat4.identity();
+            mat4 output = identity();
 
-            //todo: check transposition
             output[3, 0] = basis.x;
             output[3, 1] = basis.y;
             output[3, 2] = basis.z;
@@ -66,6 +65,14 @@ namespace Anathema.Vectors.Core
             return output;
         }
 
+        public static mat4 ortho()
+        {
+            mat4 output = identity();
+
+            output[2, 1] = -1.0f;    //one z unit should be turned into minus one y unit
+
+            return output;
+        }
         public static mat4 projection()
         {
             //todo: implement projection matrices

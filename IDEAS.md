@@ -15,3 +15,5 @@
   - Implementation straightforward, but is it really needed?
 - Tensors
 
+- Full aliases for System.Numerics equivalents (under their own preprocessor directive, say #NUMERICS_ENABLED)
+  - Probably an acceptable amount of work for non-trivial benefit

@@ -1,6 +1,5 @@
 ﻿using System;
-#if DOUBLES_ENABLED
-#if THREED_ENABLED
+#if DOUBLES_ENABLED && THREED_ENABLED
 
 namespace Anathema.Vectors.Core
 {
@@ -56,11 +55,23 @@ namespace Anathema.Vectors.Core
             return output;
         }
 
-
         public static new dmat4 translate(dvec3 basis)
         {
-            //todo: implement 3D translations
-            throw new NotImplementedException();
+            dmat4 output = dmat4.identity();
+
+            output[3, 0] = basis.x;
+            output[3, 1] = basis.y;
+            output[3, 1] = basis.z;
+
+            return output;
+        }
+        public static dmat4 ortho()
+        {
+            dmat4 output = identity();
+
+            output[2, 1] = -1.0f;    //one z unit should be turned into minus one y unit
+
+            return output;
         }
 
         public static dmat4 projection()
@@ -71,5 +82,4 @@ namespace Anathema.Vectors.Core
 
     }
 }
-#endif
 #endif

@@ -226,5 +226,31 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.True(Math.Abs(1 - clockwise.y) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(0 - clockwise.z) < scalar.floatComparisonTolerance);
         }
+
+
+        [Fact]
+        public void ortho()
+        {
+            dmat4 m = dmat4.ortho();
+
+            dvec3 v1 = new dvec3(5, 7, 0);
+            dvec3 v1a = m * v1;
+
+            Assert.True(Math.Abs(v1a.x - v1.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(v1a.y - v1.y) < scalar.floatComparisonTolerance);
+
+
+            dvec3 v2 = new dvec3(3, 5, 1);
+            dvec3 v2a = m * v2;
+
+            Assert.True(Math.Abs(v2a.x - v2.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(v2a.y - (v2.y - 1.0f)) < scalar.floatComparisonTolerance);
+
+            dvec3 v3 = new dvec3(0, 0, 10);
+            dvec3 v3a = m * v3;
+
+            Assert.True(Math.Abs(v3a.x - v3.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(v3a.y - (v3.y - 10.0f)) < scalar.floatComparisonTolerance);
+        }
     }
 }

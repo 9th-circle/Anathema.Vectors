@@ -1,8 +1,7 @@
 - Complex arithmetic
 - Matrix generation
-  - Ortho
-
   - Perspective
+
 - Matrix-matrix multiplication
   - Basic use case
   - Of different data types (float/double/T) #if CONVERSIONS_ENABLED
@@ -17,3 +16,4 @@
   - Hermite
 - SimpleMomentum2DDemo - correct angle for balls bouncing
 - Clipping planes
+
