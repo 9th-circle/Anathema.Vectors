@@ -1,7 +1,4 @@
 - Complex arithmetic
-- Matrix generation
-  - Perspective
-
 - Matrix-matrix multiplication
   - Basic use case
   - Of different data types (float/double/T) #if CONVERSIONS_ENABLED

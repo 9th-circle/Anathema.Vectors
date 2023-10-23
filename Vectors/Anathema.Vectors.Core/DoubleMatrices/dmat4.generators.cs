@@ -74,10 +74,13 @@ namespace Anathema.Vectors.Core
             return output;
         }
 
-        public static dmat4 projection()
+        public static dmat4 perspective()
         {
-            //todo: implement projection matrices
-            throw new NotImplementedException();
+            dmat4 output = identity();
+
+            output[2, 3] = 1.0f;    //everything should be scaled by 1 divided by z
+
+            return output;
         }
 
     }

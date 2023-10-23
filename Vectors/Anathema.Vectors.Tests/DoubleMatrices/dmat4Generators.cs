@@ -252,12 +252,31 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.True(Math.Abs(v3a.x - v3.x) < scalar.floatComparisonTolerance);
             Assert.True(Math.Abs(v3a.y - (v3.y - 10.0f)) < scalar.floatComparisonTolerance);
         }
+
+        [Fact]
+        public void perspective()
+        {
+            dmat4 m = dmat4.perspective();
+
+            dvec3 v1 = new dvec3(2, 1, 2);
+            dvec3 v1a = m * v1;
+
+            Assert.True(Math.Abs(v1a.x - (2 / 3.0f)) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(v1a.y - (1 / 3.0f)) < scalar.floatComparisonTolerance);
+
+
+            dvec3 v2 = new dvec3(2, 1, 3);
+            dvec3 v2a = m * v2;
+
+            Assert.True(Math.Abs(v2a.x - (2 / 4.0f)) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(v2a.y - (1 / 4.0f)) < scalar.floatComparisonTolerance);
+        }
         [Fact]
         public void translate()
         {
-            dvec3 v = new dvec3(1, 2, 3);
             dmat4 m = dmat4.translate(new dvec3(1, 2, 3));
-
+            
+            dvec3 v = new dvec3(1, 2, 3);
             dvec3 v2 = m * v;
 
             Assert.Equal(2, v2.x);

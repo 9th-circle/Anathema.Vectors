@@ -73,10 +73,13 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
-        public static mat4 projection()
+        public static mat4 perspective()
         {
-            //todo: implement projection matrices
-            throw new NotImplementedException();
+            mat4 output = identity();
+
+            output[2, 3] = 1.0f;    //everything should be scaled by 1 divided by z
+
+            return output;
         }
 
     }
