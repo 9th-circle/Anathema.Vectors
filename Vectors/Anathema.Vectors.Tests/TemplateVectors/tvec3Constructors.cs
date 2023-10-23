@@ -49,6 +49,16 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         }
 
         [Fact]
+        public void capitals()
+        {
+            //todo: implement capitals
+            tvec3<float> a = new tvec3<float>(1, 2, 3);
+            /*
+            Assert.Equal(a.x, a.X);
+            Assert.Equal(a.y, a.Y);
+            Assert.Equal(a.z, a.Z);*/
+        }
+        [Fact]
         public void floatConstruct()
         {
             tvec3<float> defaultConstructed = new tvec3<float>();

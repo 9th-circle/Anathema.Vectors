@@ -91,6 +91,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [Fact]
         public void capitals()
         {
+            //todo: implement capitals
             tvec4<float> a = new tvec4<float>(1, 2, 3, 4);
             /*
             Assert.Equal(a.x, a.X);
