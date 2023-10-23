@@ -5,8 +5,7 @@
   - vec4
   - dvec4
   - tvec4
-  - mat4
-  - dmat4
+  - tvec3
 - Capitals (XYZW and RGBA) for tvecs
 - Line up names with GLSL better
 - Simplify InlineData(values) rather than InlineData(new object[] { values })
