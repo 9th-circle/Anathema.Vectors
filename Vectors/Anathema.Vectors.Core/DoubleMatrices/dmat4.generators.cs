@@ -37,15 +37,14 @@ namespace Anathema.Vectors.Core
 
         public static new dmat4 rotateRadians(dvec3 axis, double angle)
         {
-            //todo: implement 3D rotations
-            throw new NotImplementedException();
+            return dmat3.rotateRadians(axis, angle).toDMat4();
         }
 
         public static new dmat4 rotateRadians(double eulerX, double eulerY, double eulerZ)
         {
-            //todo: implement 3D rotations
-            throw new NotImplementedException();
+            return dmat3.rotateRadians(eulerX, eulerY, eulerZ).toDMat4();
         }
+
         public static new dmat4 rotateDegrees(dvec3 axis, double angle)
         {
             return rotateRadians(axis, angle * (Math.PI / 180.0));
