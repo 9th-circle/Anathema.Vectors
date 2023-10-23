@@ -21,7 +21,20 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(-1, b.x);
             Assert.Equal(-2, b.y);
         }*/
-
+        [Fact]
+        public void equality()
+        {
+            tvec2<long> a = new tvec2<long>(1, 2);
+            tvec2<long> b = new tvec2<long>(1, 2);
+            tvec2<long> c = new tvec2<long>(3, 4);
+            tvec2<long> n = null;
+            Assert.True(a == b);
+            Assert.False(a == c);
+            Assert.False(a != b);
+            Assert.True(a != c);
+            Assert.False(a == n);
+            Assert.False(n == a);
+        }
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
         public void tvec2Addition(long x1, long y1, long x2, long y2)
