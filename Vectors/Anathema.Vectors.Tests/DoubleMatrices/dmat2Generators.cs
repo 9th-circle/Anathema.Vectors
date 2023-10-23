@@ -41,6 +41,19 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.Equal(1, array[3]);
         }
         [Fact]
+        public void equal()
+        {
+            dmat2 a = new dmat2(new double[] { 1, 2, 3, 4 });
+            dmat2 b = new dmat2(new double[] { 1, 2, 3, 4 });
+            dmat2 c = new dmat2(new double[] { 2, 2, 3, 4 });
+            dmat2 d = null;
+            Assert.True(a == b);
+            Assert.True(a != c);
+            Assert.False(a != b);
+            Assert.False(a == c);
+            Assert.True(d == null);
+        }
+        [Fact]
         public void transposeImperative()
         {
             dmat2 def = new dmat2(new double[] { 1, 2, 3, 4 });

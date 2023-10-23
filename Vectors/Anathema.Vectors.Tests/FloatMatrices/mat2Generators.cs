@@ -41,6 +41,19 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.Equal(1, array[3]);
         }
         [Fact]
+        public void equal()
+        {
+            mat2 a = new mat2(new float[] { 1, 2, 3, 4 });
+            mat2 b = new mat2(new float[] { 1, 2, 3, 4 });
+            mat2 c = new mat2(new float[] { 2, 2, 3, 4 });
+            mat2 d = null;
+            Assert.True(a == b);
+            Assert.True(a != c);
+            Assert.False(a != b);
+            Assert.False(a == c);
+            Assert.True(d == null);
+        }
+        [Fact]
         public void transposeImperative()
         {
             mat2 def = new mat2(new float[] { 1, 2, 3, 4 });
