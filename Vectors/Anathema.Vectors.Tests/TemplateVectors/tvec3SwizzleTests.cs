@@ -47,6 +47,9 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         {
             tvec3<int> a = new tvec3<int>(1, 2, 3);
 
+            a.b = 5;
+            Assert.Equal(5, a.b);
+
             a.rgb = new tvec3<int>(4, 5, 6);
             Assert.Equal(4, a.r);
             Assert.Equal(5, a.g);
