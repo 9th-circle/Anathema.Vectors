@@ -31,6 +31,7 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             m.transpose();
 
             Assert.True(m == t);
+            Assert.False(m != t);
         }
         [Fact]
         public void toDMat4()
