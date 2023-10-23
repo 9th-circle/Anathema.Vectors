@@ -6,7 +6,7 @@ namespace Anathema.Vectors.Core
 {
     public partial class vec4
     {
-        public vec3 scaledToFVec3()
+        public vec3 scaledToVec3()
         {
             return new vec3(x / w, y / w, z / w);
         }

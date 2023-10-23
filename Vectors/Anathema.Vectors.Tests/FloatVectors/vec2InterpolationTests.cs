@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec2InterpolationTests
+    public class vec2InterpolationTests
     {
 
         [Fact]

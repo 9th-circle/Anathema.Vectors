@@ -4,7 +4,7 @@ using Anathema.Vectors.Core;
 #pragma warning disable CS1718 // Comparison made to same variable
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec3Constructors
+    public class vec3Constructors
     {
         [Theory]
         [InlineData(new object[] { 1, 2, 3 })]
@@ -48,10 +48,10 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(2, fromArray.y);
             Assert.Equal(3, fromArray.z);
 
-            vec3 fromFVec3 = new vec3(specifiedComponents);
-            Assert.Equal(1, fromFVec3.x);
-            Assert.Equal(2, fromFVec3.y);
-            Assert.Equal(3, fromFVec3.z);
+            vec3 fromVec3 = new vec3(specifiedComponents);
+            Assert.Equal(1, fromVec3.x);
+            Assert.Equal(2, fromVec3.y);
+            Assert.Equal(3, fromVec3.z);
 
             dvec3 source = new dvec3(8, 5, -1);
             vec3 fromDVec3 = new vec3(source);

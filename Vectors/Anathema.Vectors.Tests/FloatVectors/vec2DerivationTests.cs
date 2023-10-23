@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec2DerivationTests
+    public class vec2DerivationTests
     {
         const float REALLY_SMALL_VALUE = 0.00005f;
         [Theory]

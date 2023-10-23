@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.DoubleVectorMatrixOperations
 {
-    public class dvec3fmat4
+    public class dvec3mat4
     {
         [Fact]
         public void identityMultiply()

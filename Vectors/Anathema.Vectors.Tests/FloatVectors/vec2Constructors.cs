@@ -5,7 +5,7 @@ using Anathema.Vectors.Core;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec2Constructors
+    public class vec2Constructors
     {
         //todo: replace InlineData with MemberData
 
@@ -39,9 +39,9 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(1, fromArray.x);
             Assert.Equal(2, fromArray.y);
 
-            vec2 fromFVec2 = new vec2(specifiedComponents);
-            Assert.Equal(1, fromFVec2.x);
-            Assert.Equal(2, fromFVec2.y);
+            vec2 fromVec2 = new vec2(specifiedComponents);
+            Assert.Equal(1, fromVec2.x);
+            Assert.Equal(2, fromVec2.y);
 
             dvec2 source = new dvec2(8, 5);
             vec2 fromDVec2 = new vec2(source);

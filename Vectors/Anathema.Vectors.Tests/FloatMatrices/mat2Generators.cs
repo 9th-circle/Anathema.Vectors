@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatMatrices
 {
-    public class fMat2Generators
+    public class mat2Generators
     {
         [Fact]
         public void identity()

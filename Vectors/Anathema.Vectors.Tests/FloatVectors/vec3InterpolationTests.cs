@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec3InterpolationTests
+    public class vec3InterpolationTests
     {
         [Fact]
         public void linearInterpolateTo()

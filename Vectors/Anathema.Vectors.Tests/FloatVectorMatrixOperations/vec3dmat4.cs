@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
 {
-    public class fvec3dmat4
+    public class vec3dmat4
     {
         [Fact]
         public void identityMultiply()

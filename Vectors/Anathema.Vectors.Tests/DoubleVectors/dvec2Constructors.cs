@@ -7,7 +7,7 @@ namespace Anathema.Vectors.Tests.DoubleVectors
 {
     public class dvec2Constructors
     {
-        //todo: include some cross tests for fvec2 conversions
+        //todo: include some cross tests for vec2 conversions
         //todo: replace InlineData with MemberData
 
 
@@ -55,9 +55,9 @@ namespace Anathema.Vectors.Tests.DoubleVectors
             Assert.Equal(5, toTvec2.y);
 
             vec2 someFvec2 = new vec2(1, 2);
-            dvec2 fromFVec2 = new dvec2(someFvec2);
-            Assert.Equal(1, fromFVec2.x);
-            Assert.Equal(2, fromFVec2.y);
+            dvec2 fromVec2 = new dvec2(someFvec2);
+            Assert.Equal(1, fromVec2.x);
+            Assert.Equal(2, fromVec2.y);
 
             dvec2 fromArray = new dvec2(new double[] { 7,8});
             Assert.Equal(7, fromArray[0]);

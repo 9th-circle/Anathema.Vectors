@@ -22,7 +22,7 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
-        public static tvec2<tvec2<float>> fromFMat2(mat2 input)
+        public static tvec2<tvec2<float>> fromMat2(mat2 input)
         {
             var output = new tvec2<tvec2<float>>();
             output.x = new tvec2<float>();

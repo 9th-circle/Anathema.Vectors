@@ -8,13 +8,13 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec3fvec2OperatorTests
+    public class vec3vec2OperatorTests
     {
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, -10000.0f})]
         [InlineData(new object[] { -37, 0, 2, -5, 0 })]
-        public void fvec32Addition(float x1, float y1, float z1, float x2, float y2)
+        public void vec32Addition(float x1, float y1, float z1, float x2, float y2)
         {
             vec3 a = new vec3(x1, y1, z1);
             vec2 b = new vec2(x2, y2);
@@ -35,7 +35,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, -10000.0f })]
         [InlineData(new object[] { -37, 0, 2, -5, 0 })]
-        public void fvec32Subtraction(float x1, float y1, float z1, float x2, float y2)
+        public void vec32Subtraction(float x1, float y1, float z1, float x2, float y2)
         {
             vec3 a = new vec3(x1, y1, z1);
             vec2 b = new vec2(x2, y2);
@@ -57,7 +57,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, -10000.0f })]
         [InlineData(new object[] { -37, 0, 2, -5, 0 })]
-        public void fvec32Multiplication(float x1, float y1, float z1, float x2, float y2)
+        public void vec32Multiplication(float x1, float y1, float z1, float x2, float y2)
         {
             vec3 a = new vec3(x1, y1, z1);
             vec2 b = new vec2(x2, y2);
@@ -79,7 +79,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, -10000.0f })]
         [InlineData(new object[] { -37, 0, 2, -5, 0 })]
-        public void fvec32Division(float x1, float y1, float z1, float x2, float y2)
+        public void vec32Division(float x1, float y1, float z1, float x2, float y2)
         {
             vec3 a = new vec3(x1, y1, z1);
             vec2 b = new vec2(x2, y2);

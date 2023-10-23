@@ -46,7 +46,7 @@ namespace Anathema.Vectors.Core
         }
 #endif
 #if FLOATS_ENABLED
-        public static tvec3<tvec3<float>> fromFMat3(mat3 input)
+        public static tvec3<tvec3<float>> fromMat3(mat3 input)
         {
             var output = new tvec3<tvec3<float>>();
 
@@ -74,7 +74,7 @@ namespace Anathema.Vectors.Core
 
 
 #if FLOATS_ENABLED
-        public vec3 floatTVec3ToFVec3()
+        public vec3 floatTVec3ToVec3()
         {
             if (typeof(T) != typeof(float))
                 throw new ArgumentException();

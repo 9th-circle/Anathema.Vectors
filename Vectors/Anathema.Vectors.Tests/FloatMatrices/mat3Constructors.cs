@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatMatrices
 {
-    public class fmat3Constructors
+    public class mat3Constructors
     {
         [Fact]
         public void defaultConstructor()

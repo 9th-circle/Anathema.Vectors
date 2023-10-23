@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec2SwizzleTests
+    public class vec2SwizzleTests
     {
 
 

@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec3SwizzleTests
+    public class vec3SwizzleTests
     {
 
         //todo: write to swizzles

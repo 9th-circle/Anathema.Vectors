@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec2OperatorTests
+    public class vec2OperatorTests
     {
 
         [Fact]
@@ -25,7 +25,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 1, 2, 3, 4 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
         [InlineData(new object[] { -37, 0, 2, -5 })]
-        public void fvec2Addition(float x1, float y1, float x2, float y2)
+        public void vec2Addition(float x1, float y1, float x2, float y2)
         {
             vec2 a = new vec2(x1, y1);
             vec2 b = new vec2(x2, y2);
@@ -79,7 +79,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 1, 2, 3, 4 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
         [InlineData(new object[] { -37, 0, 2, -5 })]
-        public void fvec2MutatorMultiplication(float x1, float y1, float x2, float y2)
+        public void vec2MutatorMultiplication(float x1, float y1, float x2, float y2)
         {
             vec2 a = new vec2(x1, y1);
             vec2 b = new vec2(x2, y2);

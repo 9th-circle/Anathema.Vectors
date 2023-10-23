@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
 {
-    public class dvec2fmat2
+    public class dvec2mat2
     {
         [Theory]
         [InlineData(0, 5, 0, 5, 0)]
@@ -30,7 +30,7 @@ namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
         [InlineData(0, 5, 0, 5, 0)]
         [InlineData(90, 1, 0, 0, -1)]
         [InlineData(180, 10, 0, -10, 0)]
-        public void rotateDegreesfmat(double angle, double startX, double startY, double endX, double endY)
+        public void rotateDegreesmat(double angle, double startX, double startY, double endX, double endY)
         {
             dvec2 start = new dvec2(startX, startY);
             mat2 rotation = mat2.rotateDegrees((float)angle);

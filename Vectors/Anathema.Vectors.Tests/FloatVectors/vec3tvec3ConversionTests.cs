@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class fvec3tvec3ConversionTests
+    public class vec3tvec3ConversionTests
     {
         [Fact]
         public void basicTemplateConversion()

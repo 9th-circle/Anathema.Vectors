@@ -156,7 +156,7 @@ namespace Anathema.Vectors.Core
         {
             vec4 result = new vec4(a.x, a.y, a.z, 1.0f) * b;
 
-            return result.scaledToFVec3();
+            return result.scaledToVec3();
         }
         public static vec3 operator *(mat4 b, vec3 a)
         {

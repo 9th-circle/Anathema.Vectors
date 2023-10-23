@@ -8,14 +8,14 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
 {
-    public class fvec3tmattmatf
+    public class vec3tmattmatf
     {
         [Fact]
         public void identityMultiplyTVec()
         {
             vec3 a = new vec3(1, 2, 3);
             mat3 m = mat3.identity();
-            tvec3<tvec3<float>> n = tvec3<tvec3<float>>.fromFMat3(m);
+            tvec3<tvec3<float>> n = tvec3<tvec3<float>>.fromMat3(m);
 
             vec3 b = n * a;
             vec3 c = a * n;

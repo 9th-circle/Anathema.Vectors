@@ -16,12 +16,12 @@ namespace Anathema.Vectors.Core
 
         public static new mat4 rotateRadians(vec3 axis, float angle)
         {
-            return mat3.rotateRadians(axis, angle).toFMat4();
+            return mat3.rotateRadians(axis, angle).toMat4();
         }
 
         public static new mat4 rotateRadians(float eulerX, float eulerY, float eulerZ)
         {
-            return mat3.rotateRadians(eulerX, eulerY, eulerZ).toFMat4();
+            return mat3.rotateRadians(eulerX, eulerY, eulerZ).toMat4();
         }
 
         public static new mat4 rotateDegrees(vec3 axis, float angle)

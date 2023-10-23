@@ -48,7 +48,7 @@ namespace Anathema.Vectors.Core
             throw new NotImplementedException();
         }
 
-        public dmat3 toFMat3()
+        public dmat3 toMat3()
         {
             throw new NotImplementedException();
         }

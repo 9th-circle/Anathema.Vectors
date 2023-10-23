@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectors
 {
-    public class FVec3ScalarOperatorTests
+    public class Vec3ScalarOperatorTests
     {
 
         [Theory]

@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
 {
-    public class fvec2fmat2
+    public class vec2mat2
     {
         [Theory]
         [InlineData(0,5,0,5,0)]
@@ -49,7 +49,7 @@ namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
         public void rotateDegreesNested(float angle, float startX, float startY, float endX, float endY)
         {
             vec2 start = new vec2(startX, startY);
-            tvec2<tvec2<float>> rotation = tvec2<tvec2<float>>.fromFMat2(mat2.rotateDegrees(angle));
+            tvec2<tvec2<float>> rotation = tvec2<tvec2<float>>.fromMat2(mat2.rotateDegrees(angle));
             vec2 end = rotation * start;
             vec2 reverse = end * rotation;
 

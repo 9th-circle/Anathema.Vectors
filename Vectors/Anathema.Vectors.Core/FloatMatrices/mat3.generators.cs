@@ -6,7 +6,7 @@ namespace Anathema.Vectors.Core
     public partial class mat3
     {
 
-        public mat4 toFMat4()
+        public mat4 toMat4()
         {
             mat4 output = new mat4();
             output.setValue(0, 0, getValue(0, 0));

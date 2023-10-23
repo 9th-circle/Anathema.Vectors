@@ -46,7 +46,7 @@ namespace Anathema.Vectors.Core
             throw new NotImplementedException();
         }
 
-        public mat3 toFMat3()
+        public mat3 toMat3()
         {
             throw new NotImplementedException();
         }
