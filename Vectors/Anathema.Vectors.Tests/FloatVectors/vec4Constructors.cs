@@ -105,13 +105,13 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(a.z, a.Z);
             Assert.Equal(a.w, a.W);
         }
-        /*
+        
         [Fact]
         public void equality()
         {
-            vec4 a = new vec4(1, 2, 3);
-            vec4 b = new vec4((1 / 3.0f) * 3.0f, 2, 3);
-            vec4 c = new vec4(5, 2, 3);
+            vec4 a = new vec4(1, 2, 3, 4);
+            vec4 b = new vec4((1 / 3.0f) * 3.0f, 2, 3, 4);
+            vec4 c = new vec4(5, 2, 3, 1);
             vec4 nullvec = null;
 
             Assert.True(nullvec == null);
@@ -150,6 +150,6 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.False(b == c);
             Assert.False(c == b);
         }
-        */
+        
     }
 }
