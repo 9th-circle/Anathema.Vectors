@@ -20,6 +20,8 @@ namespace Anathema.Vectors.Core
             output.setValue(2, 1, getValue(2, 1));
             output.setValue(2, 2, getValue(2, 2));
 
+            output.setValue(3,3,1);
+
             return output;
         }
         public new static dmat3 identity()

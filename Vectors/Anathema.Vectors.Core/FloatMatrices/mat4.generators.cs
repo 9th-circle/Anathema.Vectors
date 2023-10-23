@@ -50,7 +50,7 @@ namespace Anathema.Vectors.Core
             output.setValue(0, 0, size);
             output.setValue(1, 1, size);
             output.setValue(2, 2, size);
-            output.setValue(3, 3, size);
+            output.setValue(3, 3, 1.0f);
             return output;
         }
 
