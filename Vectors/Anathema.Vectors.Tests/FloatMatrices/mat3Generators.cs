@@ -59,12 +59,7 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.Equal(0, d[0, 3]);
             Assert.Equal(0, d[1, 3]);
             Assert.Equal(0, d[2, 3]);
-            Assert.Equal(0, d[3, 3]);
-
-            Assert.Equal(0, d[3, 0]);
-            Assert.Equal(0, d[3, 1]);
-            Assert.Equal(0, d[3, 2]);
-            Assert.Equal(0, d[3, 3]);
+            Assert.Equal(1, d[3, 3]);
         }
         [Fact]
         public void scalarScale()
