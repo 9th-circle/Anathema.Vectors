@@ -72,6 +72,25 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.Equal(1, a[15]);
         }
         [Fact]
+        public void fromNested()
+        {
+            tvec4<tvec4<double>> nested = new tvec4<tvec4<double>>();
+
+            nested.x = new tvec4<double>();
+            nested.y = new tvec4<double>();
+            nested.z = new tvec4<double>();
+            nested.w = new tvec4<double>();
+
+            nested.x.x = 1.0;
+            nested.y.y = 1.0;
+            nested.z.z = 1.0;
+            nested.w.w = 1.0;
+
+            dmat4 converted = dmat4.fromNestedVector(nested);
+
+            Assert.True(converted == dmat4.identity());
+        }
+        [Fact]
         public void readColumnOrder()
         {
             dmat4 def = new dmat4(new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 });

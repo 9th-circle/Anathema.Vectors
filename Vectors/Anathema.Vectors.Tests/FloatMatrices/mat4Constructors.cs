@@ -32,6 +32,25 @@ namespace Anathema.Vectors.Tests.FloatMatrices
             Assert.Equal(0, def[15]);
         }
         [Fact]
+        public void fromNested()
+        {
+            tvec4<tvec4<float>> nested = new tvec4<tvec4<float>>();
+
+            nested.x = new tvec4<float>();
+            nested.y = new tvec4<float>();
+            nested.z = new tvec4<float>();
+            nested.w = new tvec4<float>();
+
+            nested.x.x = 1.0f;
+            nested.y.y = 1.0f;
+            nested.z.z = 1.0f;
+            nested.w.w = 1.0f;
+
+            mat4 converted = mat4.fromNestedVector(nested);
+
+            Assert.True(converted == mat4.identity());
+        }
+        [Fact]
         public void outOfRangeException()
         {
             mat4 def = new mat4();
