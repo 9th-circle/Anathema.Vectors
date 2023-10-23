@@ -11,6 +11,32 @@ namespace Anathema.Vectors.Tests.FloatMatrices
     public class mat3Generators
     {
         [Fact]
+        public void toMat4()
+        {
+            mat3 m = new mat3(new float[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+            mat4 d = m.toMat4();
+
+            Assert.Equal(1, d[0, 0]);
+            Assert.Equal(2, d[1, 0]);
+            Assert.Equal(3, d[2, 0]);
+            Assert.Equal(4, d[0, 1]);
+            Assert.Equal(5, d[1, 1]);
+            Assert.Equal(6, d[2, 1]);
+            Assert.Equal(7, d[0, 2]);
+            Assert.Equal(8, d[1, 2]);
+            Assert.Equal(9, d[2, 2]);
+
+            Assert.Equal(0, d[0, 3]);
+            Assert.Equal(0, d[1, 3]);
+            Assert.Equal(0, d[2, 3]);
+            Assert.Equal(0, d[3, 3]);
+
+            Assert.Equal(0, d[3, 0]);
+            Assert.Equal(0, d[3, 1]);
+            Assert.Equal(0, d[3, 2]);
+            Assert.Equal(0, d[3, 3]);
+        }
+        [Fact]
         public void scalarScale()
         {
             vec3 v = new vec3(1, 2, 3);
