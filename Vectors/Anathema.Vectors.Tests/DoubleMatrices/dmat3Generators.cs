@@ -14,8 +14,8 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
 
             Assert.Equal(1, t[0, 0]);
             Assert.Equal(2, t[1, 0]);
-            Assert.Equal(3, t[0, 1]);
-            Assert.Equal(4, t[1, 1]);
+            Assert.Equal(4, t[0, 1]);
+            Assert.Equal(5, t[1, 1]);
         }
         [Fact]
         public void transpose()
@@ -29,8 +29,8 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
 
             Assert.Equal(2, t[3]);
             Assert.Equal(5, t[4]);
-            Assert.Equal(8, t[5]);
 
+            Assert.Equal(8, t[5]);
             Assert.Equal(3, t[6]);
             Assert.Equal(6, t[7]);
             Assert.Equal(9, t[8]);

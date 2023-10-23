@@ -37,8 +37,8 @@ namespace Anathema.Vectors.Tests.FloatMatrices
 
             Assert.Equal(1, t[0, 0]);
             Assert.Equal(2, t[1, 0]);
-            Assert.Equal(3, t[0, 1]);
-            Assert.Equal(4, t[1, 1]);
+            Assert.Equal(4, t[0, 1]);
+            Assert.Equal(5, t[1, 1]);
         }
         [Fact]
         public void toMat4()
