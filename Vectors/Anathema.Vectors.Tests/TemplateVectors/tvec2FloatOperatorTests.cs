@@ -28,15 +28,23 @@ namespace Anathema.Vectors.Tests.TemplateVectors
            tvec2<float> b = new tvec2<float>(1, 2);
            tvec2<float> c = new tvec2<float>(3, 4);
            tvec2<float> n = null;
-           Assert.True(a == b);
+           tvec2<float> n2 = null;
+            Assert.True(a == b);
            Assert.False(a == c);
            Assert.False(a != b);
            Assert.True(a != c);
            Assert.False(a == n);
            Assert.False(n == a);
-       }
-
-        [Theory]
+           Assert.True(n == n2);
+        }
+        [Fact]
+        public void equalityInvalid()
+        {
+            tvec2<string> a = new tvec2<string>("a", "b");
+            tvec2<string> b = new tvec2<string>("a", "b");
+            Assert.Throws<TypeLoadException>(delegate { var x = a == b; });
+        }
+            [Theory]
         [InlineData(new object[] { 1, 2, 3, 4 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f })]
         [InlineData(new object[] { -37, 0, 2, -5 })]
