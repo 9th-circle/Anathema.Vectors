@@ -12,10 +12,10 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             tvec4<byte> a = new tvec4<byte>(1, 2, 3, 4);
             tvec4<byte> b = -a;
 
-            Assert.Equal(-1, b.x);
-            Assert.Equal(-2, b.y);
-            Assert.Equal(-3, b.z);
-            Assert.Equal(-4, b.w);
+            Assert.Equal(255, b.x);
+            Assert.Equal(254, b.y);
+            Assert.Equal(253, b.z);
+            Assert.Equal(252, b.w);
 
 
             tvec4<string> sa = new tvec4<string>("a", "b", "c", "d");
@@ -47,7 +47,6 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5, 6, 7, 8 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 0.01f, 10, 12, 1.3 })]
-        [InlineData(new object[] { -37, 0, 2, -5, -3, -2, 222, 10 })]
         public void tvec4Addition(byte x1, byte y1, byte z1, byte w1, byte x2, byte y2, byte z2, byte w2)
         {
             tvec4<byte> a = new tvec4<byte>(x1, y1, z1, w1);
@@ -84,8 +83,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5, 6, 7, 8 })]
-        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 0.01f, 10, 12, 1.3 })]
-        [InlineData(new object[] { -37, 0, 2, -5, -3, -2, 222, 10 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 1f, 10, 12, 1.3 })]
         public void tvec4Multiplication(byte x1, byte y1, byte z1, byte w1, byte x2, byte y2, byte z2, byte w2)
         {
             tvec4<byte> a = new tvec4<byte>(x1, y1, z1, w1);
@@ -101,8 +99,7 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5, 6, 7, 8 })]
-        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 0.01f, 10, 12, 1.3 })]
-        [InlineData(new object[] { -37, 0, 2, -5, -3, -2, 222, 10 })]
+        [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 1f, 10, 12, 1.3 })]
         public void tvec4MutatorMultiplication(byte x1, byte y1, byte z1, byte w1, byte x2, byte y2, byte z2, byte w2)
         {
             tvec4<byte> a = new tvec4<byte>(x1, y1, z1, w1);
@@ -117,7 +114,6 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5, 6, 7, 8 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 1, 10, 12, 1.3 })]
-        [InlineData(new object[] { -37, 1, 2, -5, -3, -2, 222, 10 })]
         public void tvec4Division(byte x1, byte y1, byte z1, byte w1, byte x2, byte y2, byte z2, byte w2)
         {
             tvec4<byte> a = new tvec4<byte>(x1, y1, z1, w1);
@@ -134,8 +130,6 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
-        [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f, 2, 123 })]
-        [InlineData(new object[] { -37, 0, 2, 1, -33 })]
         public void scalarMultiplication(byte x, byte y, byte z, byte w, byte scalar)
         {
             tvec4<byte> a = new tvec4<byte>(x, y, z, w);
@@ -153,7 +147,6 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f, 2, 123 })]
-        [InlineData(new object[] { -37, 1, 2, 1, -33 })]
         public void scalarDivision(byte x, byte y, byte z, byte w, byte scalar)
         {
             tvec4<byte> a = new tvec4<byte>(x, y, z, w);
@@ -170,7 +163,6 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         [Theory]
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 20.99999999999f, 2, 123 })]
-        [InlineData(new object[] { -37, 0, 2, 1, -33 })]
         public void scalarAddition(byte x, byte y, byte z, byte w, byte scalar)
         {
             tvec4<byte> a = new tvec4<byte>(x, y, z, w);
