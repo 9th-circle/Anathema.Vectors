@@ -1,20 +1,20 @@
-﻿using System;
+﻿using Anathema.Vectors.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Anathema.Vectors.Core;
 using Xunit;
 
 namespace Anathema.Vectors.Tests.TemplateVectors
 {
-    public class tvec2InvalidTypeTests
+    public class tvec3InvalidTypeTests
     {
         [Fact]
         public void invalidOperators()
         {
-            tvec2<string> a = new tvec2<string>("a", "b");
-            tvec2<string> b = new tvec2<string>("c", "d");
+            tvec3<string> a = new tvec3<string>("a", "b", "c");
+            tvec3<string> b = new tvec3<string>("c", "d", "e");
 
             Assert.Throws<TypeLoadException>(delegate { var v = -a; });
 
@@ -36,4 +36,3 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
     }
 }
-
