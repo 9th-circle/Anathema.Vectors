@@ -11,12 +11,163 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         {
             tvec4<int> a = new tvec4<int>(1, 2, 3, 4);
 
+            a.w = 5;
+            Assert.Equal(5, a.w);
+
             a.xyzw = new tvec4<int>(4, 5, 6, 7);
             Assert.Equal(4, a.x);
             Assert.Equal(5, a.y);
             Assert.Equal(6, a.z);
             Assert.Equal(7, a.w);
 
+            a.xywz = new tvec4<int>(4, 5, 7, 6);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.xzyw = new tvec4<int>(4, 6, 5, 7);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.xzwy = new tvec4<int>(4, 6, 7, 5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.xwzy = new tvec4<int>(4, 7, 6, 5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.xwyz = new tvec4<int>(4, 7, 5, 6);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+
+
+            a.wxyz = new tvec4<int>(7, 4, 5, 6);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.wxzy = new tvec4<int>(7, 4, 6, 5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.wyxz = new tvec4<int>(7, 5, 4, 6);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.wyzx = new tvec4<int>(7, 5, 6, 4);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.wzyx = new tvec4<int>(7, 6, 5, 4);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.wzxy = new tvec4<int>(7, 6, 4, 5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+
+
+            a.zxyw = new tvec4<int>(6, 4, 5, 7);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.zxwy = new tvec4<int>(6, 4, 7, 5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.zwxy = new tvec4<int>(6, 7, 4, 5);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.zwyx = new tvec4<int>(6, 7, 5, 4);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.zywx = new tvec4<int>(6, 5, 7, 4);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.zyxw = new tvec4<int>(6, 5, 4, 7);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+
+            a.yzxw = new tvec4<int>(5, 6, 4, 7);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.yxwz = new tvec4<int>(5, 4, 7, 6);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.yzxw = new tvec4<int>(5, 6, 4, 7);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.yzwx = new tvec4<int>(5, 6, 7, 4);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.ywzx = new tvec4<int>(5, 7, 6, 4);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.ywxz = new tvec4<int>(5, 7, 4, 6);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
+
+            a.yxzw = new tvec4<int>(5, 4, 6, 7);
+            Assert.Equal(4, a.x);
+            Assert.Equal(5, a.y);
+            Assert.Equal(6, a.z);
+            Assert.Equal(7, a.w);
         }
 
         [Fact]
@@ -24,8 +175,8 @@ namespace Anathema.Vectors.Tests.TemplateVectors
         {
             tvec4<int> a = new tvec4<int>(1, 2, 3, 4);
 
-            a.w = 5;
-            Assert.Equal(5, a.w);
+            a.a = 5;
+            Assert.Equal(5, a.a);
 
             a.rgba = new tvec4<int>(4, 5, 6, 7);
             Assert.Equal(4, a.r);
