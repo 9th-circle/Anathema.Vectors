@@ -11,6 +11,24 @@ namespace Anathema.Vectors.Tests.FloatMatrices
     public class mat3Generators
     {
         [Fact]
+        public void transpose()
+        {
+            mat3 m = new mat3(new float[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
+            mat3 t = m.transposed;
+
+            Assert.Equal(1, t[0]);
+            Assert.Equal(4, t[1]);
+            Assert.Equal(7, t[2]);
+
+            Assert.Equal(2, t[3]);
+            Assert.Equal(5, t[4]);
+            Assert.Equal(8, t[5]);
+
+            Assert.Equal(3, t[6]);
+            Assert.Equal(6, t[7]);
+            Assert.Equal(9, t[8]);
+        }
+        [Fact]
         public void toMat4()
         {
             mat3 m = new mat3(new float[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
