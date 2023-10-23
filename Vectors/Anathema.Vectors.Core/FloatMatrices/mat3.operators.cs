@@ -15,8 +15,16 @@ namespace Anathema.Vectors.Core
                 data[i] = other.data[i];
         }
 
-        //todo: ==/!= operators
-
+        public static bool operator ==(mat3 a, mat3 b)
+        {
+            for(int i=0; i < a.data.Length; i++)
+                if(a[i] != b[i]) return false;
+            return true;
+        }
+        public static bool operator !=(mat3 a, mat3 b)
+        {
+            return !(a == b);
+        }
 
         public new mat3 transposed
         {

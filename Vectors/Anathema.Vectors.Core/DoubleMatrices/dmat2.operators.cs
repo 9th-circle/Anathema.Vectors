@@ -26,7 +26,16 @@ namespace Anathema.Vectors.Core
                 data[i] = other.data[i];
         }
 
-        //todo: ==/!= operators
+        public static bool operator ==(dmat2 a, dmat2 b)
+        {
+            for (int i = 0; i < a.data.Length; i++)
+                if (a[i] != b[i]) return false;
+            return true;
+        }
+        public static bool operator !=(dmat2 a, dmat2 b)
+        {
+            return !(a == b);
+        }
 
         public double this[int i] { get { return data[i]; } set { data[i] = value; } }
         public double this[int x, int y] { get { return getValue(x, y); } set { setValue(x, y, value); } }

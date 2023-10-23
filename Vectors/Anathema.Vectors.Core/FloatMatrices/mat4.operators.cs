@@ -21,8 +21,17 @@ namespace Anathema.Vectors.Core
         {
             assign(transposed);
         }
-        //todo: ==/!= operators
 
+        public static bool operator ==(mat4 a, mat4 b)
+        {
+            for (int i = 0; i < a.data.Length; i++)
+                if (a[i] != b[i]) return false;
+            return true;
+        }
+        public static bool operator !=(mat4 a, mat4 b)
+        {
+            return !(a == b);
+        }
 
         public void assign(mat4 other)
         {
