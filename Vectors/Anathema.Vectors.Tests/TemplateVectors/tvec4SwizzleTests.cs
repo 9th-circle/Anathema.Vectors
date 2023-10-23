@@ -33,6 +33,37 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(6, a.b);
             Assert.Equal(7, a.a);
 
+
+            a.rgab = new tvec4<int>(4, 5, 7, 6);
+            Assert.Equal(4, a.r);
+            Assert.Equal(5, a.g);
+            Assert.Equal(6, a.b);
+            Assert.Equal(7, a.a);
+
+            a.rbga = new tvec4<int>(4, 6, 5, 7);
+            Assert.Equal(4, a.r);
+            Assert.Equal(5, a.g);
+            Assert.Equal(6, a.b);
+            Assert.Equal(7, a.a);
+
+            a.rbag = new tvec4<int>(4, 6, 7, 5);
+            Assert.Equal(4, a.r);
+            Assert.Equal(5, a.g);
+            Assert.Equal(6, a.b);
+            Assert.Equal(7, a.a);
+
+            a.rabg = new tvec4<int>(4, 7, 6, 5);
+            Assert.Equal(4, a.r);
+            Assert.Equal(5, a.g);
+            Assert.Equal(6, a.b);
+            Assert.Equal(7, a.a);
+
+            a.ragb = new tvec4<int>(4, 7, 5, 6);
+            Assert.Equal(4, a.r);
+            Assert.Equal(5, a.g);
+            Assert.Equal(6, a.b);
+            Assert.Equal(7, a.a);
+
         }
 
         [Fact]
