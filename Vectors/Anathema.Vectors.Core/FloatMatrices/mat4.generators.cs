@@ -1,6 +1,5 @@
 ﻿using System;
-#if FLOATS_ENABLED
-#if THREED_ENABLED
+#if FLOATS_ENABLED && THREED_ENABLED
 
 namespace Anathema.Vectors.Core
 {
@@ -75,5 +74,4 @@ namespace Anathema.Vectors.Core
 
     }
 }
-#endif
 #endif

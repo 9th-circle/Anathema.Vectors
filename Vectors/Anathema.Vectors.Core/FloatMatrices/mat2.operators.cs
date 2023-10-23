@@ -44,9 +44,17 @@ namespace Anathema.Vectors.Core
             return !(a == b);
         }
 
+        public float this[int i]
+        { 
+            get => data[i];
+            set => data[i] = value;
+        }
 
-        public float this[int i] { get { return data[i]; } set { data[i] = value; } }
-        public float this[int x, int y] { get { return getValue(x, y); } set { setValue(x, y, value); } }
+        public float this[int x, int y] 
+        {
+            get => getValue(x, y);
+            set => setValue(x, y, value);
+        }
 
         public float[] ToArray()
         {

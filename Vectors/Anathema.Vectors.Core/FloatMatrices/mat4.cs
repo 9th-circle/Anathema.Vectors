@@ -1,5 +1,4 @@
-﻿#if FLOATS_ENABLED
-#if THREED_ENABLED
+﻿#if FLOATS_ENABLED && THREED_ENABLED
 
 using System;
 
@@ -30,5 +29,4 @@ namespace Anathema.Vectors.Core
 
     }
 }
-#endif
 #endif

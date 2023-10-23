@@ -1,5 +1,5 @@
-﻿using System;
-#if FLOATS_ENABLED && THREED_ENABLED
+﻿#if FLOATS_ENABLED && THREED_ENABLED
+using System;
 namespace Anathema.Vectors.Core
 {
     public partial class mat3
