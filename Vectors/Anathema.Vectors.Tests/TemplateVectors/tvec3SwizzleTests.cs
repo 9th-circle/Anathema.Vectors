@@ -34,6 +34,32 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(2, a.yzx.x);
             Assert.Equal(3, a.yzx.y);
             Assert.Equal(1, a.yzx.z);
+
+
+            Assert.Equal(1, a.rgb.r);
+            Assert.Equal(2, a.rgb.g);
+            Assert.Equal(3, a.rgb.b);
+
+            Assert.Equal(1, a.rbg.r);
+            Assert.Equal(3, a.rbg.g);
+            Assert.Equal(2, a.rbg.b);
+
+            Assert.Equal(3, a.bgr.r);
+            Assert.Equal(2, a.bgr.g);
+            Assert.Equal(1, a.bgr.b);
+
+            Assert.Equal(3, a.brg.r);
+            Assert.Equal(1, a.brg.g);
+            Assert.Equal(2, a.brg.b);
+
+            Assert.Equal(2, a.grb.r);
+            Assert.Equal(1, a.grb.g);
+            Assert.Equal(3, a.grb.b);
+
+            Assert.Equal(2, a.gbr.r);
+            Assert.Equal(3, a.gbr.g);
+            Assert.Equal(1, a.gbr.b);
+
         }
     }
 }
