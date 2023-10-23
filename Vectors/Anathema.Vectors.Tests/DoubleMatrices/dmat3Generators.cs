@@ -34,5 +34,23 @@ namespace Anathema.Vectors.Tests.DoubleMatrices
             Assert.Equal(4, up.y);
             Assert.Equal(12, up.z);
         }
+        [Fact]
+        public void eulerZRotate()
+        {
+            dvec3 v = new dvec3(1, 0, 0);
+            dmat3 m = dmat3.rotateDegrees(0, 0, 90);
+
+            dvec3 counterClockwise = v * m;
+
+            Assert.True(Math.Abs(0- counterClockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(-1 - counterClockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - counterClockwise.z) < scalar.floatComparisonTolerance);
+
+            dvec3 clockwise = m * v;
+
+            Assert.True(Math.Abs(0 - clockwise.x) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(1 - clockwise.y) < scalar.floatComparisonTolerance);
+            Assert.True(Math.Abs(0 - clockwise.z) < scalar.floatComparisonTolerance);
+        }
     }
 }
