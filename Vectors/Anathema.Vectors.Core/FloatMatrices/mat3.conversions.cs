@@ -1,11 +1,8 @@
-﻿#if FLOATS_ENABLED
-#if THREED_ENABLED
+﻿#if FLOATS_ENABLED && THREED_ENABLED && NESTING_ENABLED && TEMPLATES_ENABLED
 namespace Anathema.Vectors.Core
 {
     public partial class mat3
     {
-#if NESTING_ENABLED
-#if TEMPLATES_ENABLED
         //todo: check if this causes a transpose
         public static mat3 fromNestedVector(tvec3<tvec3<float>> input)
         {
@@ -24,9 +21,6 @@ namespace Anathema.Vectors.Core
 
             return output;
         }
-#endif
-#endif
     }
 }
-#endif
 #endif

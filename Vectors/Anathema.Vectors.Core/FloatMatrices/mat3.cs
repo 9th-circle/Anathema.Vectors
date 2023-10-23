@@ -1,5 +1,4 @@
-﻿#if FLOATS_ENABLED
-#if THREED_ENABLED
+﻿#if FLOATS_ENABLED && THREED_ENABLED
 
 using System;
 
@@ -10,8 +9,8 @@ namespace Anathema.Vectors.Core
     /// </summary>
     public partial class mat3 : mat2
     {
-        public override int xLength { get { return 3; } }
-        public override int yLength { get { return 3; } }
+        public override int xLength => 3;
+        public override int yLength => 3;
 
         public mat3()
         {
@@ -29,5 +28,4 @@ namespace Anathema.Vectors.Core
 
     }
 }
-#endif
 #endif

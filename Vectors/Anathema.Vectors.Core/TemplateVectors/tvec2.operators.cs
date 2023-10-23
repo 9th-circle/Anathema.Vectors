@@ -1,5 +1,4 @@
-﻿#if TEMPLATES_ENABLED
-#if TEMPLATE_OPERATIONS_ENABLED
+﻿#if TEMPLATES_ENABLED && TEMPLATE_OPERATIONS_ENABLED
 using System;
 
 namespace Anathema.Vectors.Core
@@ -932,5 +931,4 @@ namespace Anathema.Vectors.Core
 
     }
 }
-#endif
 #endif

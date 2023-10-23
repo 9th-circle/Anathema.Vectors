@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Anathema.Vectors.Core;
+﻿using Anathema.Vectors.Core;
 using Xunit;
 
 namespace Anathema.Vectors.Tests.TemplateVectors
