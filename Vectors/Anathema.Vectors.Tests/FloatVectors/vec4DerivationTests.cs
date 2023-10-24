@@ -12,6 +12,15 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(100, a.length);
         }
         [Fact]
+        public void normalise()
+        {
+            vec4 a = new vec4(0, 0, 0, 100).normalised;
+            Assert.Equal(1, a.length);
+            vec4 b = new vec4(0, -50, 0, 0);
+            b.normalise();
+            Assert.Equal(1, b.length);
+        }
+        [Fact]
         public void dot()
         {
             vec4 a = new vec4(1, 1, 1, 1);
