@@ -58,6 +58,11 @@ namespace Anathema.Vectors.Core
         {
             var output = new tvec4<tvec4<double>>();
 
+            output.x = new tvec4<double>();
+            output.y = new tvec4<double>();
+            output.z = new tvec4<double>();
+            output.w = new tvec4<double>();
+
             output.x.x = input.getValue(0, 0);
             output.x.y = input.getValue(0, 1);
             output.x.z = input.getValue(0, 2);
@@ -85,6 +90,11 @@ namespace Anathema.Vectors.Core
         public static tvec4<tvec4<float>> fromMat4(mat4 input)
         {
             var output = new tvec4<tvec4<float>>();
+
+            output.x = new tvec4<float>();
+            output.y = new tvec4<float>();
+            output.z = new tvec4<float>();
+            output.w = new tvec4<float>();
 
             output.x.x = input.getValue(0, 0);
             output.x.y = input.getValue(0, 1);
