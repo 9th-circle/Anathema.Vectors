@@ -23,7 +23,7 @@
 - Exhaustive type matching (ie a dvec2 with a mat4)
   - Pretty major amount of work, but probably broadly useful
 
-- Homogenous coordinates in a vec2/mat3 (so you can translate)
+- Homogenous coordinates in a vec3/mat3 (so you can translate)
 
 - Colour-specific members (HSV etc)
   - Acceptably small and super useful, definitely worth playing with
