@@ -1,9 +1,6 @@
 ## To Do
 
 - Examine Arran's suggestions
-- Tests
-  - vec4
-  - dvec4
 - Capitals (XYZW and RGBA) for tvecs
 - Line up names with GLSL better
 - Simplify InlineData(values) rather than InlineData(new object[] { values })

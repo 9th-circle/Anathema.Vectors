@@ -4,12 +4,6 @@
 
 Basic linear algebra, mostly for computer graphics.
 
-## Status
-
-- The 2D math has been validated with unit tests and demos.
-- Most of the 3D math has been written but validation is ongoing.
-- Complex numbers and quaternions have not been written.
-
 ## Why?
 
 System.Numerics contains a native SIMD-enabled Vector class. It's extremely fast and is what most developers would expect. Why not just use that?
@@ -22,7 +16,7 @@ Anathema Vectors has a few benefits:
 - **Modularity**: Compile time preprocessor directives allow you to chop the library down to the features you're using, and nothing more. 
 - **Interoperability**: Aliases for many System.Numerics members, so code can be swapped over with minimal changes.
 - **Familiarity**: Syntax is as close to that of GLSL as practical.
-- **Full test suite**: Aiming for 100% coverage soon.
+- **Full test suite**: 100% test coverage.
 
 ## Approach
 

@@ -6,21 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
+namespace Anathema.Vectors.Tests.DoubleVectorMatrixOperations
 {
-    public class vec4mat4
+    public class dvec4dmat4
     {
         [Fact]
         public void identityMultiply()
         {
-            vec4 a = new vec4(1, 2, 3, 4);
-            mat4 m = mat4.identity();
-            dmat4 m2 = dmat4.identity();
-            tvec4<tvec4<float>> t = tvec4<tvec4<float>>.fromMat4(m);
-            vec4 b = t * a;
-            vec4 c = a * t;
-            vec4 d = m * a;
-            vec4 e = a * m;
+            dvec4 a = new dvec4(1, 2, 3, 4);
+            dmat4 m = dmat4.identity();
+            mat4 m2 = mat4.identity();
+            tvec4<tvec4<double>> t = tvec4<tvec4<double>>.fromDMat4(m);
+            dvec4 b = t * a;
+            dvec4 c = a * t;
+            dvec4 d = m * a;
+            dvec4 e = a * m;
             dvec4 f = m2 * a;
             dvec4 g = a * m2;
 
