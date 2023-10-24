@@ -205,7 +205,7 @@ public static dvec4 operator *(dvec4 a, double b)
         }
         public static dvec4 operator /(double b, dvec4 a)
         {
-            return new dvec4(a.x / b, a.y / b, a.z / b, a.w / b);
+            return new dvec4(b / a.x, b / a.y, b / a.z, b / a.w);
         }
         public static dvec4 operator +(double b, dvec4 a)
         {
@@ -213,7 +213,7 @@ public static dvec4 operator *(dvec4 a, double b)
         }
         public static dvec4 operator -(double b, dvec4 a)
         {
-            return new dvec4(a.x - b, a.y - b, a.z - b, a.w + b);
+            return new dvec4(b - a.x, b - a.y, b - a.z, b - a.w);
         }
         public static dvec4 operator -(dvec4 a)
         {
