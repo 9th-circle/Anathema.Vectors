@@ -79,6 +79,12 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(3, scalar2AndVec2.z);
             Assert.Equal(4, scalar2AndVec2.w);
 
+            tvec4<float> twoVec2s = new tvec4<float>(new tvec2<float>(1, 2), new tvec2<float>(3, 4));
+            Assert.Equal(1, twoVec2s.x);
+            Assert.Equal(2, twoVec2s.y);
+            Assert.Equal(3, twoVec2s.z);
+            Assert.Equal(4, twoVec2s.w);
+
             tvec4<float> vec3AndScalar = new tvec4<float>(new tvec3<float>(1, 2, 3), 4);
             Assert.Equal(1, vec3AndScalar.x);
             Assert.Equal(2, vec3AndScalar.y);
