@@ -13,6 +13,8 @@ namespace Anathema.Vectors.Tests.TemplateVectors
 
             a.w = 5;
             Assert.Equal(5, a.w);
+            a.W = 6;
+            Assert.Equal(6, a.w);
 
             a.xyzw = new vec4(4, 5, 6, 7);
             Assert.Equal(4, a.x);
