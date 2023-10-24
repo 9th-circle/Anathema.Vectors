@@ -1,10 +1,11 @@
 - Swizzles allowing repetition of values (ie vec4.xzzz)
   - Lots of permutations for not much gain
   - Could automate generation process, but large binary size for no real reason
+- Uppercase swizzles
+  - Lots of work for no gain
 - Mixed chromatic/Cartesian swizzles (ie vec3.xgb)
   - Extremely large amount of work and almost completely useless
   - Could automate generation process, but large binary size for no real reason
-
 - Swizzle extensions on native scalar types (ie float.xxxx)
   - Almost completely pointless, apart from copying GLSL
 - Compile time constrain to members available on System.Numerics vectors, allowing for transitioning back and forth trivially
@@ -14,7 +15,6 @@
 - Native integer types
   - Implementation straightforward, but is it really needed?
 - Tensors
-
 - Full aliases for System.Numerics equivalents (under their own preprocessor directive, say #NUMERICS_ENABLED)
   - Probably an acceptable amount of work for non-trivial benefit
 - Fixed-point implementation using integers for extremely resource constrained applications (eg JavaCards) as well as option to *only* compile this
@@ -22,3 +22,8 @@
 
 - Exhaustive type matching (ie a dvec2 with a mat4)
   - Pretty major amount of work, but probably broadly useful
+
+- Homogenous coordinates in a vec2/mat3 (so you can translate)
+
+- Colour-specific members (HSV etc)
+  - Acceptably small and super useful, definitely worth playing with

@@ -25,3 +25,4 @@
   - 3D penny arcade demo
   - 3D FPS demo
 - Clean up usings
+- Add vec4.cross ("a vec4 mostly represents a vector in 3D space, and the w value is 0 if it's a direction and 1 if it's a position, because that determines whether it's affected by the translation part of a mat4 - if you're storing a vertex in a mesh as a vec4 (with w = 1), you might want to calculate the normal of a triangle with cross(p2-p1, p3-p1) - mathematically fake as hell, but convenient")

@@ -140,3 +140,4 @@ Todo: fill out
 - Arran Ubels for reviewing the code (and suggesting partial classes)
 - Peter Berlin for reviewing the code (and suggesting joining #ifs with Boolean operators)
 - Matthew Mack for reviewing some of the maths
+- Finn Morgan for suggesting vec4.cross products
