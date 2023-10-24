@@ -10,7 +10,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 23 })]
         [InlineData(new object[] { -37, 0, 2, -5, 1})]
-        public void scalarAddition(float x1, float y1, float z1, float w1, float b)
+        public void scalarAddition(double x1, double y1, double z1, double w1, double b)
         {
             dvec4 a = new dvec4(x1, y1, z1, w1);
 
@@ -31,7 +31,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 23 })]
         [InlineData(new object[] { -37, 0, 2, -5, 1 })]
-        public void scalarSubtraction(float x1, float y1, float z1, float w1, float b)
+        public void scalarSubtraction(double x1, double y1, double z1, double w1, double b)
         {
             dvec4 a = new dvec4(x1, y1, z1, w1);
 
@@ -53,7 +53,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 23 })]
         [InlineData(new object[] { -37, 0, 2, -5, 1 })]
-        public void scalarMultiplication(float x1, float y1, float z1, float w1, float b)
+        public void scalarMultiplication(double x1, double y1, double z1, double w1, double b)
         {
             dvec4 a = new dvec4(x1, y1, z1, w1);
 
@@ -75,7 +75,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
         [InlineData(new object[] { 1, 2, 3, 4, 5 })]
         [InlineData(new object[] { 5.2f, 10.00001f, 15.23f, 20.99999999999f, 23 })]
         [InlineData(new object[] { -37, 0, 2, -5, 1 })]
-        public void scalarDivision(float x1, float y1, float z1, float w1, float b)
+        public void scalarDivision(double x1, double y1, double z1, double w1, double b)
         {
             dvec4 a = new dvec4(x1, y1, z1, w1);
 
