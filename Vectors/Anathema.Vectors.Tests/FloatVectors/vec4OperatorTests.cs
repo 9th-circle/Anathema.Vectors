@@ -19,6 +19,7 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(-1, b.x);
             Assert.Equal(-2, b.y);
             Assert.Equal(-3, b.z);
+            Assert.Equal(-4, b.w);
         }
 
         [Theory]
@@ -39,6 +40,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(y2 + y1, d.y);
             Assert.Equal(z1 + z2, c.z);
             Assert.Equal(z2 + z1, d.z);
+            Assert.Equal(w1 + w2, c.w);
+            Assert.Equal(w2 + w1, d.w);
         }
 
 
@@ -60,6 +63,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(y2 - y1, d.y);
             Assert.Equal(z1 - z2, c.z);
             Assert.Equal(z2 - z1, d.z);
+            Assert.Equal(w1 - w2, c.w);
+            Assert.Equal(w2 - w1, d.w);
         }
 
 
@@ -82,6 +87,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(y2 * y1, d.y);
             Assert.Equal(z1 * z2, c.z);
             Assert.Equal(z2 * z1, d.z);
+            Assert.Equal(w1 * w2, c.w);
+            Assert.Equal(w2 * w1, d.w);
         }
 
 
@@ -104,6 +111,8 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(y2 / y1, d.y);
             Assert.Equal(z1 / z2, c.z);
             Assert.Equal(z2 / z1, d.z);
+            Assert.Equal(w1 / w2, c.w);
+            Assert.Equal(w2 / w1, d.w);
         }
 
     }
