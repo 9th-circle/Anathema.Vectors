@@ -82,6 +82,12 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(3, scalar2AndVec2.z);
             Assert.Equal(4, scalar2AndVec2.w);
 
+            vec4 twoVec2s = new vec4(new vec2(1,2), new vec2(3, 4));
+            Assert.Equal(1, twoVec2s.x);
+            Assert.Equal(2, twoVec2s.y);
+            Assert.Equal(3, twoVec2s.z);
+            Assert.Equal(4, twoVec2s.w);
+
             vec4 vec3AndScalar = new vec4(new vec3(1, 2, 3), 4);
             Assert.Equal(1, vec3AndScalar.x);
             Assert.Equal(2, vec3AndScalar.y);
