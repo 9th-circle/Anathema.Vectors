@@ -86,6 +86,20 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(2, scalarAndVec3.y);
             Assert.Equal(3, scalarAndVec3.z);
             Assert.Equal(4, scalarAndVec3.w);
+
+
+            dvec4 twoVec2s = new dvec4(new dvec2(1, 2), new dvec2(3, 4));
+            Assert.Equal(1, twoVec2s.x);
+            Assert.Equal(2, twoVec2s.y);
+            Assert.Equal(3, twoVec2s.z);
+            Assert.Equal(4, twoVec2s.w);
+
+            vec4 fVec = new vec4(1, 2, 3, 4);
+            dvec4 copied = new dvec4(fVec);
+            Assert.Equal(1, copied.x);
+            Assert.Equal(2, copied.y);
+            Assert.Equal(3, copied.z);
+            Assert.Equal(4, copied.w);
         }
 
         [Fact]
