@@ -93,6 +93,27 @@ namespace Anathema.Vectors.Tests.FloatVectors
         }
 
         [Fact]
+        public void convert()
+        {
+            tvec4<float> vec = new tvec4<float>(1, 2, 3, 4);
+            vec4 fvec = vec.floatTVec4ToVec4();
+
+            Assert.Equal(1, fvec[0]);
+            Assert.Equal(2, fvec[1]);
+            Assert.Equal(3, fvec[2]);
+            Assert.Equal(4, fvec[3]);
+
+            tvec4<double> dvec = new tvec4<double>(1, 2, 3, 4);
+            dvec4 ddvec = dvec.doubleTVec4ToDVec4();
+
+            Assert.Equal(1, ddvec[0]);
+            Assert.Equal(2, ddvec[1]);
+            Assert.Equal(3, ddvec[2]);
+
+            Assert.Throws<ArgumentException>(delegate { var x = new tvec4<string>().doubleTVec4ToDVec4(); });
+            Assert.Throws<ArgumentException>(delegate { var x = new tvec4<string>().floatTVec4ToVec4(); });
+        }
+        [Fact]
         public void capitals()
         {
             //todo: implement capitals
