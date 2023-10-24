@@ -79,7 +79,7 @@ namespace Anathema.Vectors.Core
         }
         public static vec4 operator /(vec4 a, vec2 b)
         {
-            return new vec4(a.x / b.x, a.y / b.y, 1.0f/a.z, a.w);
+            return new vec4(a.x / b.x, a.y / b.y, a.z, a.w);
         }
         public static vec4 operator +(vec4 a, vec2 b)
         {
@@ -87,7 +87,7 @@ namespace Anathema.Vectors.Core
         }
         public static vec4 operator -(vec4 a, vec2 b)
         {
-            return new vec4(a.x - b.x, a.y - b.y, -a.z, -a.w);
+            return new vec4(a.x - b.x, a.y - b.y, a.z, a.w);
         }
 
 
