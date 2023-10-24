@@ -20,3 +20,5 @@
 - Fixed-point implementation using integers for extremely resource constrained applications (eg JavaCards) as well as option to *only* compile this
   - Pretty major amount of work, but probably very useful to a narrow group
 
+- Exhaustive type matching (ie a dvec2 with a mat4)
+  - Pretty major amount of work, but probably broadly useful

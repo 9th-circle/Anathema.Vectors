@@ -9,6 +9,7 @@
   - ///<> for each method
   - ///<> for each property
 - Use && on #ifs rather than nesting
+- mat4.createCamera
 - Documenting
   - README
     - Provide some examples

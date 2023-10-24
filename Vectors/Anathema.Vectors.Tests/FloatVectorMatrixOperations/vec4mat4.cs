@@ -1,9 +1,4 @@
 ﻿using Anathema.Vectors.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Anathema.Vectors.Tests.FloatVectorMatrixOperations
