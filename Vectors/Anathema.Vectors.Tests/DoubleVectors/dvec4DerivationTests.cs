@@ -30,11 +30,11 @@ namespace Anathema.Vectors.Tests.DoubleVectors
         {
             dvec4 a = new dvec4(1, 1, 1, 1);
             dvec4 b = new dvec4(1, 1, 1, 1);
-            Assert.Equal(1, a.dot(b));
+            Assert.Equal(4, a.dot(b));
 
             dvec4 c = new dvec4(1, 1, 1, 5);
             dvec4 d = new dvec4(1, 1, 1, 1);
-            Assert.Equal(5, a.dot(b));
+            Assert.Equal(8, c.dot(d));
         }
     }
 }
