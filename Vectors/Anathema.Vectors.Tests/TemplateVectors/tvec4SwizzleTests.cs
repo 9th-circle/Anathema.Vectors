@@ -471,6 +471,124 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(2, a.rgba.g);
             Assert.Equal(3, a.rgba.b);
             Assert.Equal(4, a.rgba.a);
+
+            Assert.Equal(1, a.rgab.r);
+            Assert.Equal(2, a.rgab.g);
+            Assert.Equal(4, a.rgab.b);
+            Assert.Equal(3, a.rgab.a);
+
+            Assert.Equal(1, a.rbag.r);
+            Assert.Equal(3, a.rbag.g);
+            Assert.Equal(4, a.rbag.b);
+            Assert.Equal(2, a.rbag.a);
+
+            Assert.Equal(1, a.rbga.r);
+            Assert.Equal(3, a.rbga.g);
+            Assert.Equal(2, a.rbga.b);
+            Assert.Equal(4, a.rbga.a);
+
+            Assert.Equal(1, a.ragb.r);
+            Assert.Equal(4, a.ragb.g);
+            Assert.Equal(2, a.ragb.b);
+            Assert.Equal(3, a.ragb.a);
+
+            Assert.Equal(1, a.rabg.r);
+            Assert.Equal(4, a.rabg.g);
+            Assert.Equal(3, a.rabg.b);
+            Assert.Equal(2, a.rabg.a);
+
+
+            Assert.Equal(2, a.grba.r);
+            Assert.Equal(1, a.grba.g);
+            Assert.Equal(3, a.grba.b);
+            Assert.Equal(4, a.grba.a);
+
+            Assert.Equal(2, a.grab.r);
+            Assert.Equal(1, a.grab.g);
+            Assert.Equal(4, a.grab.b);
+            Assert.Equal(3, a.grab.a);
+
+            Assert.Equal(2, a.garb.r);
+            Assert.Equal(4, a.garb.g);
+            Assert.Equal(1, a.garb.b);
+            Assert.Equal(3, a.garb.a);
+
+            Assert.Equal(2, a.gabr.r);
+            Assert.Equal(4, a.gabr.g);
+            Assert.Equal(3, a.gabr.b);
+            Assert.Equal(1, a.gabr.a);
+
+            Assert.Equal(2, a.gbra.r);
+            Assert.Equal(3, a.gbra.g);
+            Assert.Equal(1, a.gbra.b);
+            Assert.Equal(4, a.gbra.a);
+
+            Assert.Equal(2, a.gbar.r);
+            Assert.Equal(3, a.gbar.g);
+            Assert.Equal(4, a.gbar.b);
+            Assert.Equal(1, a.gbar.a);
+
+
+            Assert.Equal(3, a.brga.r);
+            Assert.Equal(1, a.brga.g);
+            Assert.Equal(2, a.brga.b);
+            Assert.Equal(4, a.brga.a);
+
+            Assert.Equal(3, a.brag.r);
+            Assert.Equal(1, a.brag.g);
+            Assert.Equal(4, a.brag.b);
+            Assert.Equal(2, a.brag.a);
+
+            Assert.Equal(3, a.bgra.r);
+            Assert.Equal(2, a.bgra.g);
+            Assert.Equal(1, a.bgra.b);
+            Assert.Equal(4, a.bgra.a);
+
+            Assert.Equal(3, a.bgar.r);
+            Assert.Equal(2, a.bgar.g);
+            Assert.Equal(4, a.bgar.b);
+            Assert.Equal(1, a.bgar.a);
+
+            Assert.Equal(3, a.barg.r);
+            Assert.Equal(4, a.barg.g);
+            Assert.Equal(1, a.barg.b);
+            Assert.Equal(2, a.barg.a);
+
+            Assert.Equal(3, a.bagr.r);
+            Assert.Equal(4, a.bagr.g);
+            Assert.Equal(2, a.bagr.b);
+            Assert.Equal(1, a.bagr.a);
+
+
+            Assert.Equal(4, a.argb.r);
+            Assert.Equal(1, a.argb.g);
+            Assert.Equal(2, a.argb.b);
+            Assert.Equal(3, a.argb.a);
+
+            Assert.Equal(4, a.arbg.r);
+            Assert.Equal(1, a.arbg.g);
+            Assert.Equal(3, a.arbg.b);
+            Assert.Equal(2, a.arbg.a);
+
+            Assert.Equal(4, a.agrb.r);
+            Assert.Equal(2, a.agrb.g);
+            Assert.Equal(1, a.agrb.b);
+            Assert.Equal(3, a.agrb.a);
+
+            Assert.Equal(4, a.agbr.r);
+            Assert.Equal(2, a.agbr.g);
+            Assert.Equal(3, a.agbr.b);
+            Assert.Equal(1, a.agbr.a);
+
+            Assert.Equal(4, a.abrg.r);
+            Assert.Equal(3, a.abrg.g);
+            Assert.Equal(1, a.abrg.b);
+            Assert.Equal(2, a.abrg.a);
+
+            Assert.Equal(4, a.abgr.r);
+            Assert.Equal(3, a.abgr.g);
+            Assert.Equal(2, a.abgr.b);
+            Assert.Equal(1, a.abgr.a);
         }
     }
 }
