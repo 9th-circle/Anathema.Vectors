@@ -180,6 +180,9 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             a.a = 5;
             Assert.Equal(5, a.a);
 
+            a.A = 6;
+            Assert.Equal(6, a.A);
+
             a.rgba = new vec4(4, 5, 6, 7);
             Assert.Equal(4, a.r);
             Assert.Equal(5, a.g);
