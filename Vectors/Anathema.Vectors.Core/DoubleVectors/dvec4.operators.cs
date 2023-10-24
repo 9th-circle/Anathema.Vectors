@@ -109,7 +109,7 @@ namespace Anathema.Vectors.Core
         }
         public static dvec4 operator /(dvec2 a, dvec4 b)
         {
-            return new dvec4(a.x / b.x, a.y / b.y, b.z, b.w);
+            return new dvec4(a.x / b.x, a.y / b.y, 1.0/b.z, 1.0/b.w);
         }
         public static dvec4 operator +(dvec2 a, dvec4 b)
         {
@@ -117,7 +117,7 @@ namespace Anathema.Vectors.Core
         }
         public static dvec4 operator -(dvec2 a, dvec4 b)
         {
-            return new dvec4(a.x - b.x, a.y - b.y, b.z, b.w);
+            return new dvec4(a.x - b.x, a.y - b.y, -b.z, -b.w);
         }
 
 
@@ -147,7 +147,7 @@ namespace Anathema.Vectors.Core
         }
         public static dvec4 operator /(dvec3 a, dvec4 b)
         {
-            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, b.w);
+            return new dvec4(a.x / b.x, a.y / b.y, a.z / b.z, 1.0/b.w);
         }
         public static dvec4 operator +(dvec3 a, dvec4 b)
         {
@@ -155,7 +155,7 @@ namespace Anathema.Vectors.Core
         }
         public static dvec4 operator -(dvec3 a, dvec4 b)
         {
-            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, b.w);
+            return new dvec4(a.x - b.x, a.y - b.y, a.z - b.z, -b.w);
         }
 
 
