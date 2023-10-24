@@ -368,6 +368,37 @@ namespace Anathema.Vectors.Tests.TemplateVectors
             Assert.Equal(4, a.xwzy.y);
             Assert.Equal(3, a.xwzy.z);
             Assert.Equal(2, a.xwzy.w);
+
+
+            Assert.Equal(2, a.yxzw.x);
+            Assert.Equal(1, a.yxzw.y);
+            Assert.Equal(3, a.yxzw.z);
+            Assert.Equal(4, a.yxzw.w);
+
+            Assert.Equal(2, a.yxwz.x);
+            Assert.Equal(1, a.yxwz.y);
+            Assert.Equal(4, a.yxwz.z);
+            Assert.Equal(3, a.yxwz.w);
+
+            Assert.Equal(2, a.ywxz.x);
+            Assert.Equal(4, a.ywxz.y);
+            Assert.Equal(1, a.ywxz.z);
+            Assert.Equal(3, a.ywxz.w);
+
+            Assert.Equal(2, a.ywzx.x);
+            Assert.Equal(4, a.ywzx.y);
+            Assert.Equal(3, a.ywzx.z);
+            Assert.Equal(1, a.ywzx.w);
+
+            Assert.Equal(2, a.yzxw.x);
+            Assert.Equal(3, a.yzxw.y);
+            Assert.Equal(1, a.yzxw.z);
+            Assert.Equal(4, a.yzxw.w);
+
+            Assert.Equal(2, a.yzwx.x);
+            Assert.Equal(3, a.yzwx.y);
+            Assert.Equal(4, a.yzwx.z);
+            Assert.Equal(1, a.yzwx.w);
         }
         [Fact]
         public void colourSwizzles()
