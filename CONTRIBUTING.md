@@ -1,7 +1,7 @@
 Checklist:
 * Implementation
 * Commenting including ///<> where appropriate
-* Unit tests (we're aiming for 100% coverage for this one)
+* Unit tests (we're aiming for 100% coverage for this one - JetBrains has a nice coverage tool)
 * Demos where appropriate
 * Add to README if needed
 * Add yourself to Special Thanks in README with what you've done
