@@ -25,7 +25,6 @@ namespace Anathema.Vectors.Core
             return quadraticBezierInterpolate(this, b, c, position);
         }
 
-        //todo: validate this
         public static vec2 cubicBezierInterpolate(vec2 a, vec2 b, vec2 c, vec2 d, float position)
         {
             return linearInterpolate(

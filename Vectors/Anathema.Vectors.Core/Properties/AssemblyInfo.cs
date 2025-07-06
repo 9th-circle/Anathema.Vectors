@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Anathema.Vectors.Core.Fx")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Basic linear algebra, mostly for graphics.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("9th Circle")]
 [assembly: AssemblyProduct("Anathema.Vectors.Core.Fx")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCopyright("Copyright © 9th Circle 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
