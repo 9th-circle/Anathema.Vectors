@@ -103,7 +103,7 @@ namespace Anathema.Vectors.Core
                     from.c + t * (to.c - from.c),
                     from.d + t * (to.d - from.d)
                 );
-                return Normalize(result);
+                return normalise(result);
             }
 
             float angle = (float)Math.Acos(cosTheta);
