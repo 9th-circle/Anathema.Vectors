@@ -34,12 +34,12 @@ namespace Anathema.Vectors.Core
 
         public dquat(double eulerX, double eulerY, double eulerZ)
         {
-            double cx = (double)Math.Cos(eulerX * 0.5f);
-            double sx = (double)Math.Sin(eulerX * 0.5f);
-            double cy = (double)Math.Cos(eulerY * 0.5f);
-            double sy = (double)Math.Sin(eulerY * 0.5f);
-            double cz = (double)Math.Cos(eulerZ * 0.5f);
-            double sz = (double)Math.Sin(eulerZ * 0.5f);
+            double cx = Math.Cos(eulerX * 0.5f);
+            double sx = Math.Sin(eulerX * 0.5f);
+            double cy = Math.Cos(eulerY * 0.5f);
+            double sy = Math.Sin(eulerY * 0.5f);
+            double cz = Math.Cos(eulerZ * 0.5f);
+            double sz = Math.Sin(eulerZ * 0.5f);
 
             this.a = cx * cy * cz + sx * sy * sz;
             this.b = sx * cy * cz - cx * sy * sz;
@@ -53,7 +53,7 @@ namespace Anathema.Vectors.Core
 
             if (trace > 0)
             {
-                double s = (double)Math.Sqrt(trace + 1.0f) * 2f;
+                double s = Math.Sqrt(trace + 1.0f) * 2f;
                 this.a = 0.25f * s;
                 this.b = (orientation[2, 1] - orientation[1, 2]) / s;
                 this.c = (orientation[0, 2] - orientation[2, 0]) / s;
@@ -61,7 +61,7 @@ namespace Anathema.Vectors.Core
             }
             else if ((orientation[0, 0] > orientation[1, 1]) && (orientation[0, 0] > orientation[2, 2]))
             {
-                double s = (double)Math.Sqrt(1.0f + orientation[0, 0] - orientation[1, 1] - orientation[2, 2]) * 2f;
+                double s = Math.Sqrt(1.0f + orientation[0, 0] - orientation[1, 1] - orientation[2, 2]) * 2f;
                 this.a = (orientation[2, 1] - orientation[1, 2]) / s;
                 this.b = 0.25f * s;
                 this.c = (orientation[0, 1] + orientation[1, 0]) / s;
@@ -69,7 +69,7 @@ namespace Anathema.Vectors.Core
             }
             else if (orientation[1, 1] > orientation[2, 2])
             {
-                double s = (double)Math.Sqrt(1.0f + orientation[1, 1] - orientation[0, 0] - orientation[2, 2]) * 2f;
+                double s = Math.Sqrt(1.0f + orientation[1, 1] - orientation[0, 0] - orientation[2, 2]) * 2f;
                 this.a = (orientation[0, 2] - orientation[2, 0]) / s;
                 this.b = (orientation[0, 1] + orientation[1, 0]) / s;
                 this.c = 0.25f * s;
@@ -77,7 +77,7 @@ namespace Anathema.Vectors.Core
             }
             else
             {
-                double s = (double)Math.Sqrt(1.0f + orientation[2, 2] - orientation[0, 0] - orientation[1, 1]) * 2f;
+                double s = Math.Sqrt(1.0f + orientation[2, 2] - orientation[0, 0] - orientation[1, 1]) * 2f;
                 this.a = (orientation[1, 0] - orientation[0, 1]) / s;
                 this.b = (orientation[0, 2] + orientation[2, 0]) / s;
                 this.c = (orientation[1, 2] + orientation[2, 1]) / s;
@@ -106,11 +106,11 @@ namespace Anathema.Vectors.Core
                 return Normalize(result);
             }
 
-            double angle = (double)Math.Acos(cosTheta);
-            double sinTheta = (double)Math.Sqrt(1.0f - cosTheta * cosTheta);
+            double angle = Math.Acos(cosTheta);
+            double sinTheta = Math.Sqrt(1.0f - cosTheta * cosTheta);
 
-            double w1 = (double)Math.Sin((1 - t) * angle) / sinTheta;
-            double w2 = (double)Math.Sin(t * angle) / sinTheta;
+            double w1 = Math.Sin((1 - t) * angle) / sinTheta;
+            double w2 = Math.Sin(t * angle) / sinTheta;
 
             return new dquat(
                 w1 * from.a + w2 * to.a,
@@ -146,23 +146,23 @@ namespace Anathema.Vectors.Core
 
             double sinr_cosp = 2 * (w * x + y * z);
             double cosr_cosp = 1 - 2 * (x * x + y * y);
-            double roll = (double)Math.Atan2(sinr_cosp, cosr_cosp);
+            double roll = Math.Atan2(sinr_cosp, cosr_cosp);
 
             double sinp = 2 * (w * y - z * x);
             double pitch = Math.Abs(sinp) >= 1
-                ? (double)(Math.PI / 2 * Math.Sign(sinp))
-                : (double)Math.Asin(sinp);
+                ? (Math.PI / 2 * Math.Sign(sinp))
+                : Math.Asin(sinp);
 
             double siny_cosp = 2 * (w * z + x * y);
             double cosy_cosp = 1 - 2 * (y * y + z * z);
-            double yaw = (double)Math.Atan2(siny_cosp, cosy_cosp);
+            double yaw = Math.Atan2(siny_cosp, cosy_cosp);
 
             return new dvec3(roll, pitch, yaw);
         }
 
         private static dquat Normalize(dquat q)
         {
-            double mag = (double)Math.Sqrt(q.a * q.a + q.b * q.b + q.c * q.c + q.d * q.d);
+            double mag = Math.Sqrt(q.a * q.a + q.b * q.b + q.c * q.c + q.d * q.d);
             return new dquat(q.a / mag, q.b / mag, q.c / mag, q.d / mag);
         }
     }
