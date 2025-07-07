@@ -160,7 +160,7 @@ namespace Anathema.Vectors.Core
             return new vec3(roll, pitch, yaw);
         }
 
-        private static quat Normalize(quat q)
+        private static quat normalise(quat q)
         {
             float mag = (float)Math.Sqrt(q.a * q.a + q.b * q.b + q.c * q.c + q.d * q.d);
             return new quat(q.a / mag, q.b / mag, q.c / mag, q.d / mag);
