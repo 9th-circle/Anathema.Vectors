@@ -56,6 +56,19 @@ namespace Anathema.Vectors.Core
                 x = value.y;
             }
         }
+#if SWIZZLE_DUPLICATES_ENABLED
+        public dvec2 xx
+        {
+            get { return new dvec2(x, x); }
+            set { x = value.x; x = value.y; }
+        }
+        public dvec2 yy
+        {
+            get { return new dvec2(y, y); }
+            set { y = value.x; y = value.y; }
+        }
+#endif
+
 #endif
 
 #if COLOURS_ENABLED
@@ -130,6 +143,19 @@ namespace Anathema.Vectors.Core
                 x = value.y;
             }
         }
+
+#if SWIZZLE_DUPLICATES_ENABLED
+        public dvec2 rr
+        {
+            get { return new dvec2(r, r); }
+            set { r = value.r; r = value.g; }
+        }
+        public dvec2 gg
+        {
+            get { return new dvec2(g, g); }
+            set { g = value.r; g = value.g; }
+        }
+#endif
 #endif
     }
 }

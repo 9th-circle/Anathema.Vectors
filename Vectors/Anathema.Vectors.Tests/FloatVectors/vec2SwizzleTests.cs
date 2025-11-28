@@ -106,5 +106,46 @@ namespace Anathema.Vectors.Tests.FloatVectors
             Assert.Equal(a.gr.r, a.y);
             Assert.Equal(a.gr.g, a.x);
         }
+
+        [Theory]
+        [InlineData(new object[] { 1, 2 })]
+        [InlineData(new object[] { 5.2f, 10.00001f })]
+        [InlineData(new object[] { -37, 0 })]
+        public void duplicateSwizzles_ALL(float x1, float y1)
+        {
+            vec2 a = new vec2(x1, y1);
+
+            // Test ALL 2 coordinate duplicate swizzles
+            Assert.Equal(a.xx.x, a.x);
+            Assert.Equal(a.xx.y, a.x);
+            Assert.Equal(a.yy.x, a.y);
+            Assert.Equal(a.yy.y, a.y);
+        }
+
+        [Theory]
+        [InlineData(new object[] { 1, 2 })]
+        [InlineData(new object[] { 5.2f, 10.00001f })]
+        [InlineData(new object[] { -37, 0 })]
+        public void duplicateColourSwizzles_ALL(float x1, float y1)
+        {
+            vec2 a = new vec2(x1, y1);
+
+            // Test ALL 2 color duplicate swizzles
+            Assert.Equal(a.rr.r, a.r);
+            Assert.Equal(a.rr.g, a.r);
+            Assert.Equal(a.gg.r, a.g);
+            Assert.Equal(a.gg.g, a.g);
+        }
+
+        [Fact]
+        public void duplicateSwizzleAssign()
+        {
+
+            vec2 a = new vec2(1, 2);
+            a.xx = new vec2(5, 6);
+            Assert.Equal(6, a.x);
+            Assert.Equal(2, a.y);
+
+        }
     }
 }
